@@ -33,7 +33,7 @@ IF YOU WANT A STABLE VERSION FOR ECLIPSE, MAKE SURE YOU ARE IN THE "MASTER" BRAN
 
 OR
 
-1. Import project from git option in eclipse
+1. Import project from git option in eclipse or IDEA
 2. Use the URL in the clone button (HTTPS)
 3. Import the project into working set.
 ```
