@@ -37,7 +37,7 @@ public class DriveWithXBox extends Command{
 
 			
 				double xVal = Robot.oi.getDriverStick().getRawAxis(1);
-				double zVal = Robot.oi.getDriverStick().getRawAxis(0);
+				double zVal = Robot.oi.getDriverStick().getRawAxis(4);
 				
 				TwilightDrive.getInstance().curvatureDrive(-xVal, zVal);
 	

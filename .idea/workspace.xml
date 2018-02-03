@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -34,11 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TurnToAngle.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TurnToAngle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1116">
-              <caret line="67" column="49" lean-forward="true" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+            <state relative-caret-position="1046">
+              <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriveWithXBox.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -47,8 +56,8 @@
       <file leaf-file-name="TwilightDrive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="279" selection-end-column="21" />
+            <state relative-caret-position="3749">
+              <caret line="281" column="5" lean-forward="true" selection-start-line="281" selection-start-column="5" selection-end-line="281" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -493,6 +502,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" />
       </list>
     </option>
   </component>
@@ -565,6 +575,16 @@
               <item name="robot" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
               <item name="auto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PowerUp_2018_Repo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PowerUp_2018_Repo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="robot" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="drive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PowerUp_2018_Repo" type="b2602c69:ProjectViewProjectNode" />
@@ -757,18 +777,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="279" selection-end-column="21" />
+        <state relative-caret-position="1046">
+          <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1116">
-          <caret line="67" column="49" lean-forward="true" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        <state relative-caret-position="3749">
+          <caret line="281" column="5" lean-forward="true" selection-start-line="281" selection-start-column="5" selection-end-line="281" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
           <folding />
         </state>
       </provider>
