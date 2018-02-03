@@ -8,8 +8,9 @@ import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class TurnToAngle extends Command{
-	
 
+    public final int DONE_COUNT_MAX = 10;
+    public  int currentDoneCount;
     
     double targetAngle;
     PIDController turnPIDController;
@@ -61,8 +62,9 @@ public class TurnToAngle extends Command{
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	
-    	TwilightDrive.getInstance().changeToPercentVBus();
+        currentDoneCount = 0;
+
+        TwilightDrive.getInstance().changeToPercentVBus();
     	TwilightDrive.getInstance().navX.reset();
         
         // Dev
@@ -95,9 +97,18 @@ public class TurnToAngle extends Command{
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        
-        return turnPIDController.onTarget();
-        
+
+        if (turnPIDController.onTarget())
+            currentDoneCount++;
+        else
+            currentDoneCount = 0;
+        if(currentDoneCount > DONE_COUNT_MAX)
+        {
+            currentDoneCount = 0;
+            return true;
+        }
+        return false;
+
     }
 
     // Called once after isFinished returns true
