@@ -12,6 +12,7 @@ import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.TestCommandGroup;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
 import frc.team2220.robot.commands.auto.TurnToAngle;
+import frc.team2220.robot.commands.miscellaneous.VelocityMotorCommand;
 import frc.team2220.robot.triggers.TwilightTrigger;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -31,8 +32,6 @@ public class OI {
 	Joystick climberStick = new Joystick(1);
 	
 	//Tank Drives
-	Button tankDrive = new JoystickButton(driverStick, 5);
-	Button autoTurnButton = new JoystickButton(driverStick, 11);
 	Button startCurvatureDrive = new JoystickButton(driverStick, 8);
 	
 	// Triggers
@@ -41,7 +40,8 @@ public class OI {
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
 
-	Button driveToDistance = new JoystickButton(driverStick, 4);
+	Button testCommandButton = new JoystickButton(driverStick, 4);
+	Button velocityMotorButton = new JoystickButton(driverStick, 5);
 
 	
 	
@@ -71,8 +71,10 @@ public class OI {
 		
 		turnRight90.whenPressed(new TurnToAngle(90));
 		turnLeft90.whenPressed(new TurnToAngle(-90));
+
+        velocityMotorButton.whileHeld(new VelocityMotorCommand(100));
 		//driveToDistance.whenPressed(new DriveToDistance(Converter.getInstance().ftToEncTicks(10)));
-		driveToDistance.whenPressed(new TestCommandGroup());
+		testCommandButton.whenPressed(new TestCommandGroup());
 		//driveToDistance.whenPressed(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
 		//driveToDistanceButton.whenPressed(new DriveStraightForDistance(finalTick));		
 		//driveToDistanceButton.whenPressed(new DriveForDistanceGroup(finalTick));

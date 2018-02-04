@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/VelocityTestSubsystem.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/VelocityTestSubsystem.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,44 +57,57 @@
       <file leaf-file-name="VelocityTestSubsystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/VelocityTestSubsystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="276">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VelocityMotorCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VelocityMotorCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#271#272#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
+      <file leaf-file-name="OI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.java" pinned="false" current-in-tab="true">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.2.2/896380ab80105b170e9570ac4aacc1ab92189abf/wpilibj-java-2018.2.2-sources.jar!/edu/wpi/first/wpilibj/buttons/Button.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
-                <element signature="e#0#5260#0" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
+                <element signature="e#1672#1673#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,8 +126,8 @@
       <file leaf-file-name="TwilightDrive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="178" column="36" lean-forward="true" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
+            <state relative-caret-position="184">
+              <caret line="65" column="25" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -583,7 +596,6 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ClockwiseTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TestCommandGroup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/WorstAutoGroup.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/LeftAutoHelper.java" />
@@ -599,6 +611,7 @@
         <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/openrio.mirror.third.ctre/CTRE-toolsuite-java/4_Legacy/12a818d6cbcf192fcc6a6245a44a619276e45c79/CTRE-toolsuite-java-4_Legacy.jar!/com/ctre/CANTalon.class" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/VelocityTestSubsystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
       </list>
     </option>
   </component>
@@ -954,14 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/WorstAutoGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1077,16 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/openrio.mirror.third.ctre/CTRE-toolsuite-java/4_Legacy/12a818d6cbcf192fcc6a6245a44a619276e45c79/CTRE-toolsuite-java-4_Legacy.jar!/com/ctre/CANTalon.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -1097,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="178" column="36" lean-forward="true" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
+        <state relative-caret-position="184">
+          <caret line="65" column="25" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1107,30 +1102,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/VelocityTestSubsystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="276">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/VelocityMotorCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="138">
+          <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5260#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.2.2/896380ab80105b170e9570ac4aacc1ab92189abf/wpilibj-java-2018.2.2-sources.jar!/edu/wpi/first/wpilibj/buttons/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
           </folding>
         </state>
       </provider>

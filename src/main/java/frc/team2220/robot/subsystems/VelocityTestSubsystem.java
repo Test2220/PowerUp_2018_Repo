@@ -6,6 +6,14 @@ import frc.team2220.robot.RobotMap;
 
 public class VelocityTestSubsystem extends Subsystem{
 
+    private static VelocityTestSubsystem instance_ = new VelocityTestSubsystem();
+
+    public static VelocityTestSubsystem getInstance()
+    {
+        return instance_;
+    }
+
+
     public CANTalon testMotor;
 
     double kp = 0;

@@ -2,22 +2,27 @@ package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
+import frc.team2220.robot.subsystems.VelocityTestSubsystem;
 
 public class VelocityMotorCommand extends Command{
 
-    public VelocityMotorCommand() {
+    double vel;
+
+    public VelocityMotorCommand(double vel) {
         requires(Robot.velocityTestSubsystem);
+        this.vel = vel;
     }
 
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-
+        VelocityTestSubsystem.getInstance().changeToVelocity();
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+        VelocityTestSubsystem.getInstance().motorSet(vel);
     }
 
     // Make this return true when this Command no longer needs to run execute()
