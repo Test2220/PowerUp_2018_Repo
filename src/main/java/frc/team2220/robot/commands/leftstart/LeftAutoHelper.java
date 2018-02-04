@@ -1,6 +1,7 @@
-package frc.team2220.robot.commands.auto;
+package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team2220.robot.commands.auto.WorstAutoGroup;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;

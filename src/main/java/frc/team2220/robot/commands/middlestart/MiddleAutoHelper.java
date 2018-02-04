@@ -1,4 +1,4 @@
-package frc.team2220.robot.commands.auto;
+package frc.team2220.robot.commands.middlestart;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import openrio.powerup.MatchData;

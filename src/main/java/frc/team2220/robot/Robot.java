@@ -8,12 +8,9 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.DriverStation;
-import frc.team2220.robot.commands.auto.LeftAutoHelper;
-import frc.team2220.robot.commands.auto.MiddleAutoHelper;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.drive.DriveOff;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
-import frc.team2220.robot.commands.leftstart.LStartLSwitch;
 import frc.team2220.robot.subsystems.ExampleSubsystem;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
