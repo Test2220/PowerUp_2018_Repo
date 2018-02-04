@@ -9,8 +9,8 @@ public class Constants {
     public static double wheelDiameter = 4;
     public static double wheelCircumference = Math.PI * wheelDiameter;
 
-    public static double frameWidth = 28;
-    public static double frameWidthFt = 28/12;
-    public static double frameLength = 33;
+    public static double frameWidthIn = 28;
+    public static double frameWidthFt = frameWidthIn/12;
+    public static double frameLengthIn = 33;
 
 }
