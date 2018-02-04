@@ -34,24 +34,39 @@ public class TwilightDrive extends Subsystem{
 	double ticksPerRev = 1440;
 	//double cyclesPerRev = 360;
 
-	int  maxRPMl = 1460;
-	int  maxRPMr = 1053;
+	int  maxVell = 1460;
+	int  maxVelr = 1053;
 	
 	double pLeft= Converter.getInstance().errorToPGain(8159, 23); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
-	double fLeft = Converter.getInstance().maxVelToFGain(maxRPMl, 1440);
+	double fLeft = Converter.getInstance().maxVelToFGain(maxVell, 1440);
 	int  iZoneLeft = 50;
 
 	
 	double pRight = Converter.getInstance().errorToPGain(10573, 35); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
-	double fRight = Converter.getInstance().maxVelToFGain(maxRPMr, 1440);
+	double fRight = Converter.getInstance().maxVelToFGain(maxVelr, 1440);
 	int  iZoneRight = 50;
-	 
-	double accel = maxRPMl * 0.75;
-	double cruise = maxRPMl * 0.75;
+
+	//------------VELOCITY STUFF-------------//
+
+    double pLeft2= Converter.getInstance().errorToPGain(8159, 23); //LEFT SIDE
+    double iLeft2 = 0.000;
+    double dLeft2 = 10 * pLeft;
+    double fLeft2 = Converter.getInstance().maxVelToFGain(maxVell, 1440);
+    int  iZoneLeft2 = 50;
+
+
+    double pRight2 = Converter.getInstance().errorToPGain(10573, 35); //RIGHT SIDE
+    double iRight2 = 0.0000;
+    double dRight2 = 0;
+    double fRight2 = Converter.getInstance().maxVelToFGain(maxVelr, 1440);
+    int  iZoneRight2 = 50;
+
+	double accel = maxVell * 0.75;
+	double cruise = maxVelr * 0.75;
 	
 	public final static int CLOSEDLOOPERROR = 50;
 	
@@ -121,20 +136,19 @@ public class TwilightDrive extends Subsystem{
 		
 		
 		//Set PID and Motion Magic Vals
-		
-		lDriveMaster.setPID(pLeft, iLeft, dLeft);
-		lDriveMaster.setIZone(iZoneLeft);
-		lDriveMaster.setF(fLeft);
+        lDriveMaster.setPID(pLeft, iLeft, dLeft, fLeft, iZoneLeft, 0, 0);
 		lDriveMaster.setMotionMagicAcceleration(accel);
 		lDriveMaster.setMotionMagicCruiseVelocity(cruise);
 		
-		rDriveMaster.setPID(pRight, iRight, dRight);
-		rDriveMaster.setIZone(iZoneRight);
-		rDriveMaster.setF(fRight);
+		rDriveMaster.setPID(pRight, iRight, dRight, fRight, iZoneRight, 0, 0);
 		rDriveMaster.setMotionMagicAcceleration(accel);
 		rDriveMaster.setMotionMagicCruiseVelocity(cruise);
-		
-		TwilightDrive = new DifferentialDrive(lDriveMaster, rDriveMaster);
+
+        lDriveMaster.setPID(pLeft2, iLeft2, dLeft2, fLeft2, iZoneLeft, 0, 0);
+        rDriveMaster.setPID(pRight2, iRight2, dRight2, fRight2, iZoneRight, 0, 0);
+
+
+        TwilightDrive = new DifferentialDrive(lDriveMaster, rDriveMaster);
 		TwilightDrive.setSafetyEnabled(false);
 		
 	}
@@ -193,25 +207,21 @@ public class TwilightDrive extends Subsystem{
 	
 	//-------------------DRIVE TYPE MODIFIERS-------------------//
 	
-	public void changeToMotionMagic()
-	{
-		
-		rDriveMaster.changeControlMode(TalonControlMode.MotionMagic);
+	public void changeToMotionMagic() {
 		lDriveMaster.changeControlMode(TalonControlMode.MotionMagic);
+		rDriveMaster.changeControlMode(TalonControlMode.MotionMagic);
 	}
+
+	public void changeToVelocity() {
+	    lDriveMaster.changeControlMode(TalonControlMode.Speed);
+        rDriveMaster.changeControlMode(TalonControlMode.Speed);
+    }
 	
-	public void changeToPercentVBus()
-	{
-		rDriveMaster.changeControlMode(TalonControlMode.PercentVbus);
+	public void changeToPercentVBus() {
 		lDriveMaster.changeControlMode(TalonControlMode.PercentVbus);
+		rDriveMaster.changeControlMode(TalonControlMode.PercentVbus);
 	}
-	
-	
-	public void changeToSpeed()
-	{
-		rDriveMaster.changeControlMode(TalonControlMode.Speed);
-		lDriveMaster.changeControlMode(TalonControlMode.Speed);
-	}
+
 
 	
 	//--------------------MOTION PROFILE SETTERS---------------//

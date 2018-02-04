@@ -20,6 +20,9 @@ public class ClockwiseTurn extends Command{
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
+        TwilightDrive.getInstance().lDriveMaster.setProfile(0);
+        TwilightDrive.getInstance().rDriveMaster.setProfile(0);
+
 		TwilightDrive.getInstance().resetEncoderPos();
 		
 		TwilightDrive.getInstance().setBothAccel(400);

@@ -10,6 +10,7 @@ package frc.team2220.robot;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
+import frc.team2220.robot.commands.auto.PathGen;
 import frc.team2220.robot.commands.auto.RightAutoHelper;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.drive.DriveOff;
@@ -46,6 +47,8 @@ public class Robot extends TimedRobot {
 	MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 	MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
+	public static PathGen pathGen;
+
 	public static OI oi;
 
 	public Command autonomousCommand;
@@ -58,7 +61,8 @@ public class Robot extends TimedRobot {
 	
 	@Override
 	public void robotInit() {
-		oi = new OI();	
+		oi = new OI();
+		pathGen = new PathGen();
 		
 		sideChooser.setName("SIDE");
 		sideChooser.addObject("LEFT", new LeftAutoHelper());

@@ -13,4 +13,6 @@ public class Constants {
     public static double frameWidthFt = 28/12;
     public static double frameLengthIn = 33;
 
+    public static final double PATH_MAX_SPEED = 2;
+
 }
