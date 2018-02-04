@@ -7,11 +7,8 @@
 
 package frc.team2220.robot;
 
-import frc.team2220.robot.commands.auto.ClockwiseTurn;
-import frc.team2220.robot.commands.auto.DriveToDistance;
-import frc.team2220.robot.commands.auto.TestCommandGroup;
+import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
-import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.miscellaneous.VelocityMotorCommand;
 import frc.team2220.robot.commands.miscellaneous.stopVelocityMotorCommand;
 import frc.team2220.robot.triggers.TwilightTrigger;
@@ -81,6 +78,7 @@ public class OI {
 
 		//driveToDistance.whenPressed(new DriveToDistance(Converter.getInstance().ftToEncTicks(10)));
 		testCommandButton.whenPressed(new TestCommandGroup());
+       // testCommandButton.whenPressed(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
 		//driveToDistance.whenPressed(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
 		//driveToDistanceButton.whenPressed(new DriveStraightForDistance(finalTick));		
 		//driveToDistanceButton.whenPressed(new DriveForDistanceGroup(finalTick));

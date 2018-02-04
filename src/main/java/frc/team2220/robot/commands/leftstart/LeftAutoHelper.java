@@ -22,13 +22,16 @@ public class LeftAutoHelper extends InstantCommand{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
+        switchAuto.start();
+
+        MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
         System.out.println("Ran once");
 
 		if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
 
             switchAuto.start();
+            System.out.println("Lxx");
 
 		} else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
 				

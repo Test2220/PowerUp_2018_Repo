@@ -47,7 +47,7 @@ public class AntiClockwiseTurn extends Command{
 	@Override
 	protected boolean isFinished() {
 	
-	return TwilightDrive.getInstance().hasHitBothSetpoints(targetTicks);
+	return TwilightDrive.getInstance().hasZeroBothVelocity();
 	
 	}
 

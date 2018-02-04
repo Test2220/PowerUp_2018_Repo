@@ -10,9 +10,13 @@ package frc.team2220.robot;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
+import frc.team2220.robot.commands.auto.RightAutoHelper;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.drive.DriveOff;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
+import frc.team2220.robot.commands.leftstart.LStartLSwitch;
+import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
+import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.subsystems.ExampleSubsystem;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
@@ -57,17 +61,15 @@ public class Robot extends TimedRobot {
 		oi = new OI();	
 		
 		sideChooser.setName("SIDE");
-		sideChooser.addDefault("CHOOSE AN AUTO SIDE", new DriveOff());
-		sideChooser.addObject("SWITCH", new TurnToAngle(90));
-		sideChooser.addObject("SCALE", new LStartLScale());
-
+		sideChooser.addObject("LEFT", new LeftAutoHelper());
+		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+		sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
 
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", sideChooser);
 
-		 autonomousCommand = sideChooser.getSelected();
 	}
 
 	/**
@@ -98,10 +100,6 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-        if (switchSide == MatchData.OwnedSide.LEFT) {System.out.println("OWNED SIDE LEFT");}
-        if (switchSide == MatchData.OwnedSide.RIGHT) {System.out.println("OWNED SIDE RIGHT");}
-
-
 
         System.out.println(DriverStation.getInstance().getGameSpecificMessage());
 
@@ -113,9 +111,13 @@ public class Robot extends TimedRobot {
 		 * = new MyAutoCommand(); break; case "Default Auto": default:
 		 * autonomousCommand = new ExampleCommand(); break; }
 		 */
-
+		if (autonomousCommand == null) {
+			System.out.println("NULL AUTO");
+		}
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null) {
+			System.out.println("NOT NULL AUTO" + autonomousCommand.toString());
+
 			autonomousCommand.start();
 		}
 	}
