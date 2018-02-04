@@ -1,7 +1,6 @@
 package frc.team2220.robot.subsystems;
 
 import frc.team2220.robot.RobotMap;
-import frc.team2220.robot.commands.drive.DriveWithXBox;
 
 import com.ctre.CANTalon;
 import com.ctre.CANTalon.FeedbackDevice;
@@ -41,14 +40,14 @@ public class TwilightDrive extends Subsystem{
 	double pLeft= Converter.getInstance().errorToPGain(8159, 23); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
-	double fLeft = Converter.getInstance().maxRPMToFGain(maxRPMl); 
+	double fLeft = Converter.getInstance().maxVelToFGain(maxRPMl, 1440);
 	int  iZoneLeft = 50;
 
 	
 	double pRight = Converter.getInstance().errorToPGain(10573, 35); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
-	double fRight = Converter.getInstance().maxRPMToFGain(maxRPMr);
+	double fRight = Converter.getInstance().maxVelToFGain(maxRPMr, 1440);
 	int  iZoneRight = 50;
 	 
 	double accel = maxRPMl * 0.75;

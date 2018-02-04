@@ -37,7 +37,7 @@ public class Converter {
 
 	}
 
-	public double maxRPMToFGain(int maxRPM) {
+	public double maxVelToFGain(int maxRPM, double encTickPerRev) {
 
 		if (maxRPM ==  0) {
 
@@ -45,7 +45,7 @@ public class Converter {
 
 		} else {
 
-			double fGainTemp = maxRPM * (1.0/60) * (1.0/10) * (Constants.encTickPerRev/1);
+			double fGainTemp = maxRPM * (1.0/60) * (1.0/10) * (encTickPerRev/1);
 			double fGain = 1023.0/fGainTemp;
 			System.out.println("FGain = " + fGain);
 			return fGain;

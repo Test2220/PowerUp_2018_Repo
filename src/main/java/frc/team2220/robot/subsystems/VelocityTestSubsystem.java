@@ -3,6 +3,7 @@ package frc.team2220.robot.subsystems;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
+import frc.team2220.robot.utils.Converter;
 
 public class VelocityTestSubsystem extends Subsystem{
 
@@ -16,10 +17,10 @@ public class VelocityTestSubsystem extends Subsystem{
 
     public CANTalon testMotor;
 
-    double kp = 0;
-    double ki = 0;
-    double kd = 0;
-    double kf = 0;
+    double kp = Converter.getInstance().errorToPGain(5154, 0.3);
+    double ki = 0.000001;
+    double kd = kp * 45;
+    double kf = Converter.getInstance().maxVelToFGain( 28691, 1024);
 
     @Override
     protected void initDefaultCommand() {
@@ -28,16 +29,17 @@ public class VelocityTestSubsystem extends Subsystem{
 
     public VelocityTestSubsystem() {
 
+
         testMotor = new CANTalon(RobotMap.TESTMOTOR);
         testMotor.enableBrakeMode(false);
 
         testMotor.setInverted(false);
-        testMotor.reverseOutput(false);
+        testMotor.reverseOutput(true);
 
         testMotor.setPID(kp, ki, kd);
         testMotor.setF(kf);
 
-        testMotor.configMaxOutputVoltage(9);
+        //testMotor.configMaxOutputVoltage(9);
 
     }
 
@@ -47,10 +49,15 @@ public class VelocityTestSubsystem extends Subsystem{
 
     public void changeToVelocity() {
         testMotor.changeControlMode(CANTalon.TalonControlMode.Speed);
+        System.out.println(kf);
     }
 
-    public void getEncVel() {
-        testMotor.getEncVelocity();
+    public void changeToPercentVBus() {
+        testMotor.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    }
+
+    public double getEncVel() {
+        return testMotor.getEncVelocity();
     }
 
 

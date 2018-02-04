@@ -1,32 +1,24 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.VelocityTestSubsystem;
 
-public class VelocityMotorCommand extends Command{
+public class stopVelocityMotorCommand extends Command{
 
-    double vel;
-
-    public VelocityMotorCommand(double vel) {
+    public stopVelocityMotorCommand() {
         requires(Robot.velocityTestSubsystem);
-        this.vel = vel;
     }
 
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        //VelocityTestSubsystem.getInstance().changeToPercentVBus();
-        VelocityTestSubsystem.getInstance().changeToVelocity();
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        //double xVal = Robot.oi.getDriverStick().getRawAxis(1);
-        SmartDashboard.putNumber("EXPECTED VELOCITY", vel);
-        VelocityTestSubsystem.getInstance().motorSet(vel);
+        VelocityTestSubsystem.getInstance().motorSet(0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -45,4 +37,5 @@ public class VelocityMotorCommand extends Command{
     @Override
     protected void interrupted() {
     }
+
 }
