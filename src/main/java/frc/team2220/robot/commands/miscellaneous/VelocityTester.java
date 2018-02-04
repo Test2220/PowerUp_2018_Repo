@@ -16,11 +16,14 @@ public class VelocityTester extends Command{
         TwilightDrive.getInstance().lDriveMaster.setProfile(1);
         TwilightDrive.getInstance().rDriveMaster.setProfile(1);
 
+        TwilightDrive.getInstance().changeToVelocity();
+
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+        TwilightDrive.getInstance().driveSet(300, 300);
     }
 
     // Make this return true when this Command no longer needs to run execute()
