@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -37,7 +38,7 @@ public class DriveToDistance extends Command{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		
+		SmartDashboard.putNumber("EXPECTED POSITION", targetTicks);
 		//System.out.println("RUNNING");
 		
 	}

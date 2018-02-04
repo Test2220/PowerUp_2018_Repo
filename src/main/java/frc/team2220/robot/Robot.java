@@ -7,6 +7,8 @@
 
 package frc.team2220.robot;
 
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.drive.DriveOff;
@@ -143,8 +145,9 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-	}
+		SmartDashboard.putNumber("CURRENT POSITION", TwilightDrive.getInstance().getAvgPosition());
 
+	}
 	/**
 	 * This function is called periodically during test mode.
 	 */
