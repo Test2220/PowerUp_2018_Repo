@@ -52,14 +52,14 @@ public class TwilightDrive extends Subsystem{
 
 	//------------VELOCITY STUFF-------------//
 
-    double pLeft2= Converter.getInstance().errorToPGain(8159, 23); //LEFT SIDE
+    double pLeft2= 0; //LEFT SIDE
     double iLeft2 = 0.000;
     double dLeft2 = 10 * pLeft;
     double fLeft2 = Converter.getInstance().maxVelToFGain(maxVell, 1440);
     int  iZoneLeft2 = 50;
 
 
-    double pRight2 = Converter.getInstance().errorToPGain(10573, 35); //RIGHT SIDE
+    double pRight2 = 0; //RIGHT SIDE
     double iRight2 = 0.0000;
     double dRight2 = 0;
     double fRight2 = Converter.getInstance().maxVelToFGain(maxVelr, 1440);
@@ -144,8 +144,8 @@ public class TwilightDrive extends Subsystem{
 		rDriveMaster.setMotionMagicAcceleration(accel);
 		rDriveMaster.setMotionMagicCruiseVelocity(cruise);
 
-        lDriveMaster.setPID(pLeft2, iLeft2, dLeft2, fLeft2, iZoneLeft, 0, 0);
-        rDriveMaster.setPID(pRight2, iRight2, dRight2, fRight2, iZoneRight, 0, 0);
+        lDriveMaster.setPID(pLeft2, iLeft2, dLeft2, fLeft2, iZoneLeft2, 0, 1);
+        rDriveMaster.setPID(pRight2, iRight2, dRight2, fRight2, iZoneRight2, 0, 1);
 
 
         TwilightDrive = new DifferentialDrive(lDriveMaster, rDriveMaster);
