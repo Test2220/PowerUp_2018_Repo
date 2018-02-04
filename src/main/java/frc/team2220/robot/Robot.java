@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team2220.robot.subsystems.VelocityTestSubsystem;
 import openrio.powerup.MatchData;
 
 /**
@@ -34,6 +35,7 @@ public class Robot extends TimedRobot {
 
 	public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
 	public static final TwilightDrive twilightDrive = new TwilightDrive();
+	public static final VelocityTestSubsystem velocityTestSubsystem = new VelocityTestSubsystem();
 
 	MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 	MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);

@@ -21,12 +21,15 @@ public class VelocityTestSubsystem extends Subsystem{
     public VelocityTestSubsystem() {
 
         testMotor = new CANTalon(RobotMap.TESTMOTOR);
+        testMotor.enableBrakeMode(false);
 
         testMotor.setInverted(false);
         testMotor.reverseOutput(false);
 
         testMotor.setPID(kp, ki, kd);
         testMotor.setF(kf);
+
+        testMotor.configMaxOutputVoltage(9);
 
     }
 
@@ -41,7 +44,6 @@ public class VelocityTestSubsystem extends Subsystem{
     public void getEncVel() {
         testMotor.getEncVelocity();
     }
-
 
 
 }
