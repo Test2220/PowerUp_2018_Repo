@@ -30,9 +30,7 @@ public class TwilightDrive extends Subsystem{
 	
 	
 	public AHRS navX;
-	
-	public static FeedbackDevice QuadEncoder;
-	
+
 	
 	double ticksPerRev = 1440;
 	//double cyclesPerRev = 360;

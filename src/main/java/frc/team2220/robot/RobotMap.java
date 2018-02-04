@@ -21,6 +21,8 @@ public class RobotMap {
             RIGHTMASTER = 2,
             RIGHTSLAVE = 8;
 
+    public static final int TESTMOTOR = 2220;
+
 
 
 
