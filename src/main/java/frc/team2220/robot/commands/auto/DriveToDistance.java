@@ -19,9 +19,10 @@ public class DriveToDistance extends Command{
 	@Override
 	protected void initialize() {
 		TwilightDrive.getInstance().resetEncoderPos();
-		
-		TwilightDrive.getInstance().setBothAccel(200);
-		TwilightDrive.getInstance().setBothCruiseVel(400);
+		TwilightDrive.getInstance().resetEncoderPos();
+
+		TwilightDrive.getInstance().setBothAccel(700);
+		TwilightDrive.getInstance().setBothCruiseVel(800);
 		TwilightDrive.getInstance().changeToMotionMagic();
 
 		

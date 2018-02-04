@@ -10,7 +10,10 @@ package frc.team2220.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import frc.team2220.robot.commands.auto.LeftAutoHelper;
 import frc.team2220.robot.commands.auto.MiddleAutoHelper;
+import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.drive.DriveOff;
+import frc.team2220.robot.commands.leftstart.LStartLScale;
+import frc.team2220.robot.commands.leftstart.LStartLSwitch;
 import frc.team2220.robot.subsystems.ExampleSubsystem;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
@@ -33,7 +36,7 @@ public class Robot extends TimedRobot {
     public static String side;
 
 	public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
-	public static TwilightDrive twilightDrive = new TwilightDrive();
+	public static final TwilightDrive twilightDrive = new TwilightDrive();
 
 	MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 	MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
@@ -54,14 +57,15 @@ public class Robot extends TimedRobot {
 		
 		sideChooser.setName("SIDE");
 		sideChooser.addDefault("CHOOSE AN AUTO SIDE", new DriveOff());
-		sideChooser.addObject("LEFT", new LeftAutoHelper());
-		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+		sideChooser.addObject("SWITCH", new TurnToAngle(90));
+		sideChooser.addObject("SCALE", new LStartLScale());
 
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
-		
+		//DriverStation.getInstance().getGameSpecificMessage()
+
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", sideChooser);
-		
+
 		 autonomousCommand = sideChooser.getSelected();
 	}
 

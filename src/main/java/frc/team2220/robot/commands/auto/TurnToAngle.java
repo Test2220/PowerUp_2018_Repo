@@ -24,7 +24,7 @@ public class TurnToAngle extends Command{
         public void pidWrite(double output) {
             
         	// Check if the output is in the deadzone
-        	if (Math.abs(output) <= .175) {
+        	if (Math.abs(output) <= .10) {
         		
         		// If we need to turn right...
         		if (output > 0) {
@@ -76,9 +76,9 @@ public class TurnToAngle extends Command{
         //twilightDrive.getInstance().navX.reset();
         TwilightDrive.getInstance().resetEncoderPos();
         // Start the PID Controller
-        turnPIDController = new PIDController(0.05, 0.0, 0.001, TwilightDrive.getInstance().navX, new Output());
+        turnPIDController = new PIDController(0.03, 0.0001, 0.01, TwilightDrive.getInstance().navX, new Output());
         turnPIDController.setSetpoint(targetAngle);
-        turnPIDController.setAbsoluteTolerance(1.3);
+        turnPIDController.setAbsoluteTolerance(1);
         turnPIDController.enable();
         
     }
@@ -98,7 +98,7 @@ public class TurnToAngle extends Command{
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
 
-        if (turnPIDController.onTarget())
+        if (Math.abs(turnPIDController.getError()) < 4)
             currentDoneCount++;
         else
             currentDoneCount = 0;

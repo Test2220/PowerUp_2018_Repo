@@ -1,7 +1,7 @@
 package frc.team2220.robot.subsystems;
 
 import frc.team2220.robot.RobotMap;
-//import frc.team2220.robot.commands.drive.DriveWithXBox;
+import frc.team2220.robot.commands.drive.DriveWithXBox;
 
 import com.ctre.CANTalon;
 import com.ctre.CANTalon.FeedbackDevice;
@@ -56,7 +56,7 @@ public class TwilightDrive extends Subsystem{
 	double accel = maxRPMl * 0.75;
 	double cruise = maxRPMl * 0.75;
 	
-	public final static int CLOSEDLOOPERROR = 40; 
+	public final static int CLOSEDLOOPERROR = 50;
 	
 	public static double rDriveMotorSetpoint = 0;
 	public static double lDriveMotorSetpoint = 0;
@@ -104,7 +104,7 @@ public class TwilightDrive extends Subsystem{
 		rDriveMaster.setInverted(false); //TODO Find out Correct Vals
 
 		lDriveMaster.reverseOutput(false);
-		rDriveMaster.reverseOutput(false);
+		rDriveMaster.reverseOutput(true);
 
 		/* FOR 2018 PRACTICE BOT
 		rDriveMaster.setInverted(true);
@@ -155,11 +155,10 @@ public class TwilightDrive extends Subsystem{
 	
 	public void curvatureDrive(double xVal, double zVal) {
 		System.out.println(xVal);
-		TwilightDrive.curvatureDrive(deadzone(xVal) * 0.25, deadzone(zVal) * 0.25, true);
+		TwilightDrive.curvatureDrive(deadzone(xVal) * 1, deadzone(zVal) * 1, true);
 		
 	}
-	
-	public void rightSet(double position){
+	public void rightSet(double position) {
 		rDriveMaster.set(position);
 	}
 	
@@ -256,10 +255,32 @@ public class TwilightDrive extends Subsystem{
 		return Math.abs(rDriveMaster.getClosedLoopError()) <= CLOSEDLOOPERROR;
 	}
 
-	public final int DONE_COUNT_MAX = 10;
+	public boolean hasZeroLVelocity() {
+		return Math.abs(lDriveMaster.getEncVelocity()) == 0;
+	}
+
+	public boolean hasZeroRVelocity() {
+		return Math.abs(rDriveMaster.getEncVelocity()) == 0;
+	}
+
+	public final int DONE_COUNT_MAX = 20;
 	public  int currentDoneCount = 0;
-	
-	
+
+	public boolean hasZeroBothVelocity() {
+			if (hasZeroLVelocity() && hasZeroRVelocity())
+			currentDoneCount++;
+		else
+			currentDoneCount = 0;
+		if(currentDoneCount > DONE_COUNT_MAX)
+		{
+			currentDoneCount = 0;
+			return true;
+		}
+		return false;
+	}
+
+
+
 	public boolean hasHitBothSetpoints(double checker) {
 		
 	/*	if (Math.abs(lDriveMaster.getClosedLoopError()) < CLOSEDLOOPERROR  && Math.abs(rDriveMaster.getClosedLoopError()) < CLOSEDLOOPERROR ) {
@@ -280,6 +301,8 @@ public class TwilightDrive extends Subsystem{
 		return false;
 		
 	}
+
+
 	
 	/*private final int DONE_COUNT_MAX = 10;
 	private int currentDoneCount = 0;

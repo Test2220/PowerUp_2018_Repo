@@ -10,7 +10,7 @@ public class Constants {
     public static double wheelCircumference = Math.PI * wheelDiameter;
 
     public static double frameWidth = 28;
-    public static double frameWidthFt = 27.5/12;
+    public static double frameWidthFt = 28/12;
     public static double frameLength = 33;
 
 }
