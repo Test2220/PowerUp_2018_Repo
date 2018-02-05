@@ -22,6 +22,9 @@ public class PathFollow extends Command{
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
+        TwilightDrive.getInstance().lDriveMaster.setProfile(1);
+        TwilightDrive.getInstance().rDriveMaster.setProfile(1);
+
         TwilightDrive.getInstance().resetEncoderPos();
         TwilightDrive.getInstance().changeToVelocity();
 
@@ -40,7 +43,7 @@ public class PathFollow extends Command{
 
         double leftVelo = leftTraj.segments[index].velocity;
         double rightVelo = rightTraj.segments[index].velocity;
-        TwilightDrive.getInstance().driveSet(leftVelo*250, rightVelo*250);
+        TwilightDrive.getInstance().driveSet(leftVelo*200, rightVelo*200);
         System.out.println(leftVelo);
     }
 

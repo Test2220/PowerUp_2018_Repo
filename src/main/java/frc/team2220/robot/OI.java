@@ -77,10 +77,10 @@ public class OI {
         velocityMotorButton.whileHeld(new VelocityMotorCommand(6000));
         velocityMotorButtonStop.whenPressed(new stopVelocityMotorCommand());
 
-		//testCommandButton.whenPressed(new TestCommandGroup());
+		testCommandButton.whenPressed(new TestCommandGroup());
 		//testCommandButton.whenPressed(new PathFollow());
        // testCommandButton.whenPressed(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
-        testCommandButton.whenPressed(new VelocityTester());
+       // testCommandButton.whenPressed(new VelocityTester());
 
 	}
 

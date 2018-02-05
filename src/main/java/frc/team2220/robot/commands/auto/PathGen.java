@@ -19,9 +19,9 @@ public class PathGen {
     private void genCenterToLeft() {
         System.out.println("Generating path, please wait...");
         Waypoint[] centerToLeft = new Waypoint[]{
-                new Waypoint(3, 5, 0),
-                new Waypoint(4, 10, 0),
-                new Waypoint(5, 15, 0)
+                new Waypoint(-4, -1, 0),
+                new Waypoint(-2, -2, 0),
+                new Waypoint(0, 0, 0)
         };
 
         Trajectory.Config config = new Trajectory.Config(

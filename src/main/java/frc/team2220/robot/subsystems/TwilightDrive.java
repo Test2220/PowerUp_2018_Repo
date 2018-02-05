@@ -40,14 +40,14 @@ public class TwilightDrive extends Subsystem{
 	double pLeft= Converter.getInstance().errorToPGain(8159, 23); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
-	double fLeft = Converter.getInstance().maxVelToFGain(maxVell, 1440);
+	double fLeft = Converter.getInstance().maxVelToFGainWRONG(maxVell, 1440);
 	int  iZoneLeft = 50;
 
 	
 	double pRight = Converter.getInstance().errorToPGain(10573, 35); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
-	double fRight = Converter.getInstance().maxVelToFGain(maxVelr, 1440);
+	double fRight = Converter.getInstance().maxVelToFGainWRONG(maxVelr, 1440);
 	int  iZoneRight = 50;
 
 	//------------VELOCITY STUFF-------------//
@@ -55,14 +55,14 @@ public class TwilightDrive extends Subsystem{
     double pLeft2= Converter.getInstance().errorToPGain(238, 0.5); //LEFT SIDE
     double iLeft2 = 0.000;
     double dLeft2 = 5 * pLeft2;
-    double fLeft2 = Converter.getInstance().maxVelToFGain(maxVell, 1440);
+    double fLeft2 = Converter.getInstance().maxVelToFGainWRONG(maxVell, 1440);
     int  iZoneLeft2 = 50;
 
 
     double pRight2 = Converter.getInstance().errorToPGain(233, 0.5); //RIGHT SIDE
     double iRight2 = 0.0000;
     double dRight2 = 5 * pRight2;
-    double fRight2 = Converter.getInstance().maxVelToFGain(maxVelr, 1440);
+    double fRight2 = Converter.getInstance().maxVelToFGainWRONG(maxVelr, 1440);
     int  iZoneRight2 = 50;
 
 	double accel = maxVell * 0.75;

@@ -152,7 +152,6 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		SmartDashboard.putNumber("CURRENT VELOCITY", VelocityTestSubsystem.getInstance().getEncVel());
 		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("CURRENT POSITION", TwilightDrive.getInstance().getAvgPosition());
 		SmartDashboard.putNumber("TEST MOTOR VOLTAGE", VelocityTestSubsystem.getInstance().testMotor.getOutputVoltage());
 	}
 	/**

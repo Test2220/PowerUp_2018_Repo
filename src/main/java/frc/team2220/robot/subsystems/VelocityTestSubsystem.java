@@ -20,7 +20,7 @@ public class VelocityTestSubsystem extends Subsystem{
     double kp = Converter.getInstance().errorToPGain(5154, 0.3);
     double ki = 0.000001;
     double kd = kp * 45;
-    double kf = Converter.getInstance().maxVelToFGain( 28691, 1024);
+    double kf = Converter.getInstance().maxVelToFGainWRONG( 28691, 1024);
 
     @Override
     protected void initDefaultCommand() {
