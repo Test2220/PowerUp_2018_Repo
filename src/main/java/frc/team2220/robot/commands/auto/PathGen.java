@@ -5,6 +5,8 @@ import frc.team2220.robot.utils.Constants;
 import jaci.pathfinder.*;
 import jaci.pathfinder.modifiers.TankModifier;
 
+import java.io.File;
+
 public class PathGen {
 
     // ------------------------THIS CODE IS ONLY FOR TESTING, WILL NOT BE USED IN COMPETITION. CREDIT TO BFR ROBOTICS----------------//
@@ -16,12 +18,22 @@ public class PathGen {
     private Trajectory centerToRightTraj;
     private TankModifier centerToRightMod;
 
+    private Trajectory testReadCSVLeftTraj;
+
+    public PathGen() {
+       File testFileLeft = new File("/home/lvuser/StraightForward_left.csv");
+       System.out.println(testFileLeft.exists());
+       System.out.println(testFileLeft.getAbsolutePath());
+      // testReadCSVLeftTraj = Pathfinder.readFromCSV(testFileLeft);
+    }
+
+
     private void genCenterToLeft() {
         System.out.println("Generating path, please wait...");
         Waypoint[] centerToLeft = new Waypoint[]{
-                new Waypoint(-4, -1, 0),
-                new Waypoint(-2, -2, 0),
-                new Waypoint(0, 0, 0)
+                new Waypoint(0, 4, 0),
+                new Waypoint(5, 4, 0),
+                new Waypoint(8, 4, 0)
         };
 
         Trajectory.Config config = new Trajectory.Config(
@@ -65,6 +77,15 @@ public class PathGen {
         return centerToRightTraj;
     }
 
+    public Trajectory getTestLeftTraj() {
+        if (getTestLeftTraj() == null) {
+            System.out.println("NULL TRAJECTORY");
+        }
+        return testReadCSVLeftTraj;
+    }
+
+
+
     public TankModifier getCenterToLeftMod() {
         if (centerToLeftMod == null) {
             this.genCenterToLeft();
@@ -78,4 +99,5 @@ public class PathGen {
         }
         return centerToRightMod;
     }
+
 }

@@ -52,17 +52,17 @@ public class TwilightDrive extends Subsystem{
 
 	//------------VELOCITY STUFF-------------//
 
-    double pLeft2= Converter.getInstance().errorToPGain(238, 0.5); //LEFT SIDE
+    double pLeft2= Converter.getInstance().errorToPGain(50, 0.11); //LEFT SIDE
     double iLeft2 = 0.000;
-    double dLeft2 = 5 * pLeft2;
-    double fLeft2 = Converter.getInstance().maxVelToFGainWrong(maxVell, 1440);
+    double dLeft2 = 0;
+    double fLeft2 = Converter.getInstance().maxVelToFGainCorrect(maxVell);
     int  iZoneLeft2 = 50;
 
 
-    double pRight2 = Converter.getInstance().errorToPGain(233, 0.5); //RIGHT SIDE
+    double pRight2 = Converter.getInstance().errorToPGain(-15, 0.1); //RIGHT SIDE
     double iRight2 = 0.0000;
-    double dRight2 = 5 * pRight2;
-    double fRight2 = Converter.getInstance().maxVelToFGainWrong(maxVelr, 1440);
+    double dRight2 = 0;
+    double fRight2 = Converter.getInstance().maxVelToFGainCorrect(maxVelr+15);
     int  iZoneRight2 = 50;
 
 	double accel = maxVell * 0.75;

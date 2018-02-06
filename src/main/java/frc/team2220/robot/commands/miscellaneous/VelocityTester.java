@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
@@ -24,6 +25,9 @@ public class VelocityTester extends Command{
     @Override
     protected void execute() {
         TwilightDrive.getInstance().driveSet(300, 300);
+        SmartDashboard.putNumber("LEFT MOTOR ERROR", TwilightDrive.getInstance().lDriveMaster.getClosedLoopError());
+        SmartDashboard.putNumber("RIGHT MOTOR ERROR", TwilightDrive.getInstance().rDriveMaster.getClosedLoopError());
+
     }
 
     // Make this return true when this Command no longer needs to run execute()

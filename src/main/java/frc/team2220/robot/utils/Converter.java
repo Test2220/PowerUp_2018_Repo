@@ -53,13 +53,13 @@ public class Converter {
 		}
 	}
 
-	public double maxVelToFGainCorrect(int maxVel, double encTickPerRev) {
+	public double maxVelToFGainCorrect(int maxVel) {
         if (maxVel == 0) {
 
             return 0;
 
         } else {
-            return 1023 / maxVel;
+            return 1023.0 / maxVel;
         }
     }
 

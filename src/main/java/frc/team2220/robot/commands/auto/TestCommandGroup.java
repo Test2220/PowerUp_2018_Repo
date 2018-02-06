@@ -4,12 +4,62 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.utils.Converter;
 
 public class TestCommandGroup extends CommandGroup{
-	
+
+    double target1 = Converter.getInstance().ftToEncTicks(1.5);
+
+    public TestCommandGroup() {
+
+        //addSequential(new DriveToDistance(target1));
+        //addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(120)));
+        //addSequential(new DriveToDistance(target1));
+        //addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(120)));
+        //addSequential(new DriveToDistance(target1));
+        //addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(120)));
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+        addSequential(new DriveToDistance(target1));
+        addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(30)));
+
+    }
+
+	/*
 	public TestCommandGroup() {
 		
 		System.out.println("RAN ONCE");
 		
 		double target1 = Converter.getInstance().ftToEncTicks(5);
+
 
 
 		//addSequential(new DriveToDistance(target1));
@@ -45,10 +95,8 @@ public class TestCommandGroup extends CommandGroup{
 		addSequential(new ResetEncoderPos());
 
 
-
-
-
+        */
 	}
 
 
-}
+

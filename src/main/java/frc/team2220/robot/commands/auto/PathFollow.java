@@ -31,6 +31,7 @@ public class PathFollow extends Command{
         TankModifier modifier = Robot.pathGen.getCenterToLeftMod();
 
         leftTraj = modifier.getLeftTrajectory();
+        //leftTraj = Robot.pathGen.getTestLeftTraj();
         rightTraj = modifier.getRightTrajectory();
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
@@ -43,6 +44,7 @@ public class PathFollow extends Command{
 
         double leftVelo = leftTraj.segments[index].velocity;
         double rightVelo = rightTraj.segments[index].velocity;
+        //double rightVelo = 0;
         TwilightDrive.getInstance().driveSet(leftVelo*200, rightVelo*200);
         System.out.println(leftVelo);
     }
