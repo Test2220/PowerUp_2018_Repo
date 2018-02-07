@@ -43,9 +43,9 @@ OR
 
 ```
 + Functional Tank Setup
-+ Basic Auto GameData Read
++ Match Data based chooser
 + Motion Magic
-+ P, I, D based turn to angle
++ P, I, D, F based turn to angle
 + Drivebase based turn to angle
 ```
 
@@ -53,10 +53,8 @@ OR
 ### TODO
 
 ```
-+ Tune Integral
-+ Pathfinder and Motion Profiling
++ Read file from CSV
 + Add paths and test autonomous completely
-+ Finish Game Data selector with Open-RIO
 + Vision based Cube detection
 ```
 
