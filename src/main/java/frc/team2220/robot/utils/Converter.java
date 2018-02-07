@@ -12,19 +12,19 @@ public class Converter {
 
 	}
 
-	public double ftToEncTicks(double inputFt) {
+	public static double ftToEncTicks(double inputFt) {
 
 		return (inputFt * 12) / (Constants.wheelCircumference) * Constants.encTickPerRev ;
 
 	}
 
-	public double inToEncTicks(double inputIn) {
+	public static double inToEncTicks(double inputIn) {
 
 		return (inputIn) / (Constants.wheelCircumference) * Constants.encTickPerRev ;
 
 	}
 
-	public double degreesTurnToEncTicks(double degreesToTurn) {
+	public static double degreesTurnToEncTicks(double degreesToTurn) {
 
 		double circumFt = Constants.frameWidthFt * Math.PI;
 		double turnRatio = (degreesToTurn + 15)/360;
@@ -37,7 +37,7 @@ public class Converter {
 
 	}
 
-	public double maxVelToFGainWrong(int maxVel, double encTickPerRev) {
+	public static double maxVelToFGainWrong(int maxVel, double encTickPerRev) {
 
 		if (maxVel ==  0) {
 
@@ -53,7 +53,7 @@ public class Converter {
 		}
 	}
 
-	public double maxVelToFGainCorrect(int maxVel) {
+	public static double maxVelToFGainCorrect(int maxVel) {
         if (maxVel == 0) {
 
             return 0;
@@ -63,7 +63,7 @@ public class Converter {
         }
     }
 
-	public double errorToPGain(double error, double pMultiplier) {
+	public static double errorToPGain(double error, double pMultiplier) {
 		if (error == 0) {
 
 			return 0;

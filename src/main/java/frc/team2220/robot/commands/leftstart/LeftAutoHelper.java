@@ -2,16 +2,18 @@ package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.commands.auto.WorstAutoGroup;
-import frc.team2220.robot.commands.leftstart.LStartLScale;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;
-import frc.team2220.robot.commands.leftstart.LStartLSwitch;
 import openrio.powerup.MatchData;
 
 public class LeftAutoHelper extends InstantCommand{
 
-	private Command switchAuto = new LStartLSwitch();
-	private Command scaleAuto = new LStartLScale();
+    //SS stand for SAME SIDE
+	private Command switchAutoSS = new LStartLSwitch();
+	private Command scaleAutoSS = new LStartLScale();
+
+	//OS stand for OPPOSITE SIDE
+
 	private Command WorstAuto = new WorstAutoGroup();
 	
 	@Override
@@ -22,7 +24,7 @@ public class LeftAutoHelper extends InstantCommand{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-        switchAuto.start();
+        switchAutoSS.start();
 
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
@@ -30,14 +32,13 @@ public class LeftAutoHelper extends InstantCommand{
 
 		if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
 
-            switchAuto.start();
-            System.out.println("Lxx");
+            switchAutoSS.start();
 
 		} else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
 				
 				if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
 					
-					scaleAuto.start();
+					scaleAutoSS.start();
 					
 				} else if (scaleSide == MatchData.OwnedSide.RIGHT) {
 

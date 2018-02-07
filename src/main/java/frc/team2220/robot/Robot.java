@@ -7,18 +7,12 @@
 
 package frc.team2220.robot;
 
-import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
 import frc.team2220.robot.commands.auto.PathGen;
 import frc.team2220.robot.commands.auto.RightAutoHelper;
-import frc.team2220.robot.commands.auto.TurnToAngle;
-import frc.team2220.robot.commands.drive.DriveOff;
-import frc.team2220.robot.commands.leftstart.LStartLScale;
-import frc.team2220.robot.commands.leftstart.LStartLSwitch;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
-import frc.team2220.robot.subsystems.ExampleSubsystem;
+import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.TimedRobot;

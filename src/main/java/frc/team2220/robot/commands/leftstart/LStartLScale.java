@@ -13,11 +13,11 @@ public class LStartLScale extends CommandGroup{
 	
 	public LStartLScale() {
 		//Division by 2 as Robot mid should be on target point
-		double target1 = Converter.getInstance().inToEncTicks(324) - Converter.getInstance().inToEncTicks(Constants.frameLengthIn/2);
-		double target2 = Converter.getInstance().inToEncTicks(12) - Converter.getInstance().inToEncTicks(Constants.frameLengthIn/2);
+		double target1 = Converter.inToEncTicks(324) - Converter.inToEncTicks(Constants.frameLengthIn/2);
+		double target2 = Converter.inToEncTicks(12) - Converter.inToEncTicks(Constants.frameLengthIn/2);
 		
 		addSequential(new DriveToDistance(target1));
-		addSequential(new AntiClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
+		addSequential(new AntiClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
 		addSequential(new DriveToDistance(target2));
 		
 	}

@@ -16,14 +16,14 @@ public class LStartLSwitch extends CommandGroup{
 	
 	public LStartLSwitch() {
 		
-		double target1 = Converter.getInstance().inToEncTicks(168) - Converter.getInstance().inToEncTicks(Constants.frameLengthIn/2);
-		double target2 = Converter.getInstance().inToEncTicks(73.25) -  Converter.getInstance().inToEncTicks(Constants.frameLengthIn/2);
+		double target1 = Converter.inToEncTicks(168) - Converter.inToEncTicks(Constants.frameLengthIn/2);
+		double target2 = Converter.inToEncTicks(73.25) -  Converter.inToEncTicks(Constants.frameLengthIn/2);
 
 
 		System.out.println("LStartLSwitch");
 		addSequential(new DriveToDistance(target1));
 
-		addSequential(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
+		addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
 
 		addSequential(new DriveToDistance(target2));
 	

@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.team2220.robot.subsystems;
+package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 

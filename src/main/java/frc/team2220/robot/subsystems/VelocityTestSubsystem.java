@@ -17,10 +17,10 @@ public class VelocityTestSubsystem extends Subsystem{
 
     public CANTalon testMotor;
 
-    double kp = Converter.getInstance().errorToPGain(5154, 0.3);
+    double kp = Converter.errorToPGain(5154, 0.3);
     double ki = 0.000001;
     double kd = kp * 45;
-    double kf = Converter.getInstance().maxVelToFGainWrong(28691, 1024);
+    double kf = Converter.maxVelToFGainWrong(28691, 1024);
 
     @Override
     protected void initDefaultCommand() {
@@ -32,6 +32,8 @@ public class VelocityTestSubsystem extends Subsystem{
 
         testMotor = new CANTalon(RobotMap.TESTMOTOR);
         testMotor.enableBrakeMode(false);
+
+        testMotor.setCurrentLimit(20);
 
         testMotor.setInverted(false);
         testMotor.reverseOutput(true);

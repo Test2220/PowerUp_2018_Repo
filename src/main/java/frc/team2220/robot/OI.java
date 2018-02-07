@@ -78,9 +78,9 @@ public class OI {
         velocityMotorButtonStop.whenPressed(new stopVelocityMotorCommand());
 
 		//testCommandButton.whenPressed(new TestCommandGroup());
-        //testCommandButton.whenPressed(new DriveToDistanceTestInput(Converter.getInstance().degreesTurnToEncTicks(800), 0.0));
+        //testCommandButton.whenPressed(new DriveToDistanceTestInput(Converter.degreesTurnToEncTicks(800), 0.0));
 		testCommandButton.whenPressed(new PathFollow());
-       // testCommandButton.whenPressed(new ClockwiseTurn(Converter.getInstance().degreesTurnToEncTicks(90)));
+       // testCommandButton.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
        //testCommandButton.whenPressed(new VelocityTester());
 
 	}
