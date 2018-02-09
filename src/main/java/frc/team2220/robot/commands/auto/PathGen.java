@@ -5,7 +5,10 @@ import frc.team2220.robot.utils.Constants;
 import jaci.pathfinder.*;
 import jaci.pathfinder.modifiers.TankModifier;
 
-import java.io.File;
+import java.io.*;
+import java.sql.Driver;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PathGen {
 
@@ -17,14 +20,40 @@ public class PathGen {
 
     private Trajectory centerToRightTraj;
     private TankModifier centerToRightMod;
-
     private Trajectory testReadCSVLeftTraj;
 
+
     public PathGen() {
-       File testFileLeft = new File("/home/lvuser/StraightForward_left.csv");
-       System.out.println(testFileLeft.exists());
-       System.out.println(testFileLeft.getAbsolutePath());
-      // testReadCSVLeftTraj = Pathfinder.readFromCSV(testFileLeft);
+/*
+        File testFileLeft = new File("/home/lvuser/StraightLine_left_detailed.csv);
+        System.out.println(testFileLeft.exists());
+        System.out.println(testFileLeft.getAbsolutePath());
+        System.out.println(testFileLeft.canRead());
+        testReadCSVLeftTraj = Pathfinder.readFromCSV(testFileLeft);
+*/
+
+        // System.out.println("REEEE" + classLoader.getResource("StraightForward_left.csv"));
+/*
+        try{
+
+            InputStream is = PathGen.class.getResourceAsStream("StraightForward_left.csv");
+            System.out.println(is == null);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            StringBuilder out = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                out.append(line);
+            }
+            System.out.println("REEEE" + out.toString());   //Prints the string content read from input stream
+            reader.close();
+
+       }catch (Exception FileReaderFailure){
+           System.out.println(FileReaderFailure);
+       }
+
+       //testReadCSVLeftTraj = Pathfinder.readFromCSV(testFileLeft);
+       */
     }
 
 
@@ -81,9 +110,9 @@ public class PathGen {
         if (getTestLeftTraj() == null) {
             System.out.println("NULL TRAJECTORY");
         }
-        return testReadCSVLeftTraj;
+        // return testReadCSVLeftTraj;
+        return getCenterToLeftTraj();
     }
-
 
 
     public TankModifier getCenterToLeftMod() {

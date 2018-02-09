@@ -79,7 +79,8 @@ public class OI {
 
 		//testCommandButton.whenPressed(new TestCommandGroup());
         //testCommandButton.whenPressed(new DriveToDistanceTestInput(Converter.degreesTurnToEncTicks(800), 0.0));
-		testCommandButton.whenPressed(new PathFollow());
+		testCommandButton.whenPressed(new PathReader("/home/lvuser/curvetry_left_detailed.csv", "/home/lvuser/curvetry_right_detailed.csv"));
+        //testCommandButton.whenPressed(new PathReader("/home/lvuser/paths/LStart/TestTurn_left_detailed.csv", "/home/lvuser/paths/LStart/TestTurn_right_detailed.csv"));
        // testCommandButton.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
        //testCommandButton.whenPressed(new VelocityTester());
 

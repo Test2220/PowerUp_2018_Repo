@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team2220.robot.commands.auto.PathReader;
 import frc.team2220.robot.commands.auto.WorstAutoGroup;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;
@@ -9,8 +10,11 @@ import openrio.powerup.MatchData;
 public class LeftAutoHelper extends InstantCommand{
 
     //SS stand for SAME SIDE
-	private Command switchAutoSS = new LStartLSwitch();
-	private Command scaleAutoSS = new LStartLScale();
+//	private Command switchAutoSS = new LStartLSwitch();
+//	private Command scaleAutoSS = new LStartLScale();
+
+    private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv");
+
 
 	//OS stand for OPPOSITE SIDE
 
@@ -38,7 +42,7 @@ public class LeftAutoHelper extends InstantCommand{
 				
 				if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
 					
-					scaleAutoSS.start();
+					//scaleAutoSS.start();
 					
 				} else if (scaleSide == MatchData.OwnedSide.RIGHT) {
 

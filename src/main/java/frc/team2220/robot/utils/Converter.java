@@ -34,10 +34,14 @@ public class Converter {
 
 
 		return arcLengthTicks;
+		}
 
-	}
+		public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {
+	        return ftToEncTicks(ftPerSecond) * (1.0/10);
 
-	public static double maxVelToFGainWrong(int maxVel, double encTickPerRev) {
+        }
+
+	public static double maxVelToFGainWrong(int maxVel, double encTicksPerRev) {
 
 		if (maxVel ==  0) {
 
@@ -45,7 +49,7 @@ public class Converter {
 
 		} else {
 
-			double fGainTemp = maxVel * (1.0/60) * (1.0/10) * (encTickPerRev/1);
+			double fGainTemp = maxVel * (1.0/60) * (1.0/10) * (encTicksPerRev/1);
 			double fGain = 1023.0/fGainTemp;
 			System.out.println("FGain = " + fGain);
 			return fGain;
@@ -62,6 +66,7 @@ public class Converter {
             return 1023.0 / maxVel;
         }
     }
+
 
 	public static double errorToPGain(double error, double pMultiplier) {
 		if (error == 0) {

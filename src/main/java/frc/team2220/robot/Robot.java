@@ -8,11 +8,12 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import frc.team2220.robot.commands.auto.PathGen;
-import frc.team2220.robot.commands.auto.RightAutoHelper;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
+import frc.team2220.robot.commands.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -58,10 +59,8 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		pathGen = new PathGen();
 		
-		sideChooser.setName("SIDE");
-		sideChooser.addObject("LEFT", new LeftAutoHelper());
-		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
-		sideChooser.addObject("RIGHT", new RightAutoHelper());
+
+		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
 
@@ -77,11 +76,15 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void disabledInit() {
-		
+        sideChooser.setName("SIDE");
+        sideChooser.addObject("LEFT", new LeftAutoHelper());
+        sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+        sideChooser.addObject("RIGHT", new RightAutoHelper());
 	}
 
 	@Override
 	public void disabledPeriodic() {
+
 		Scheduler.getInstance().run();
 	}
 
