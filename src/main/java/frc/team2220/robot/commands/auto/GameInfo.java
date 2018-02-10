@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 
 public class GameInfo
 {
-    private static String GAMEDATA_IP = "10.0.100.55";
+    private static String GAMEDATA_IP = "10.0.100.44";
     private static int GAMEDATA_PORT = 5555;
 
     public GameInfo()
@@ -28,7 +28,7 @@ public class GameInfo
         if (i >= 0) {
             DriverStation ds = DriverStation.getInstance();
             if (ds.getAlliance() == DriverStation.Alliance.Red) {
-                msg = gamedata_msg.substring(0, i-1);
+                msg = gamedata_msg.substring(0, i);
             } else {
                 msg = gamedata_msg.substring(i+1);
             }

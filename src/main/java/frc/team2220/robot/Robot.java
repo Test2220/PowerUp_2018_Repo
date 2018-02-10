@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
 import frc.team2220.robot.commands.auto.GameInfo;
@@ -56,21 +57,19 @@ public class Robot extends TimedRobot {
 	SendableChooser<Command> sideChooser = new SendableChooser<>();
 
     NetworkTableInstance offSeasonNetworkTable;
-	/**
+
+    /**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
-	
+
 	@Override
 	public void robotInit() {
 		oi = new OI();
 		pathGen = new PathGen();
-        NetworkTableInstance offSeasonNetworkTable = NetworkTableInstance.create();
-        offSeasonNetworkTable.startClient("10.0.100.5");
+        offSeasonNetworkTable = NetworkTableInstance.create();
+        offSeasonNetworkTable.startClient("10.0.100.5", 1735);
         offSeasonNetworkTable.getTable("OffseasonFMSInfo");
-        String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
-
-
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
@@ -88,10 +87,16 @@ public class Robot extends TimedRobot {
 	@Override
 	public void disabledInit() {
 
+/*
+        String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
+        System.out.println(gameData);
+*/
 	}
 
 	@Override
 	public void disabledPeriodic() {
+
+
         sideChooser.setName("SIDE");
         sideChooser.addObject("LEFT", new LeftAutoHelper());
         sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
@@ -114,14 +119,18 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit(){
 	  try{
-            String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
+          offSeasonNetworkTable = NetworkTableInstance.create();
+          offSeasonNetworkTable.startClient("10.0.100.5", 1735);
+          wait(2);
+          offSeasonNetworkTable.getTable("OffseasonFMSInfo");
+          String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
             System.out.println("OFFSEASON INFO " + gameData);
-        }catch (Exception error) {
-          System.out.println(error);
+          //System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
+      }catch (Exception error) {
+          //System.out.println(error);
       }
-        
 
-       // System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
+
 
         autonomousCommand = sideChooser.getSelected();
 
