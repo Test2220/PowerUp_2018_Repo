@@ -69,7 +69,6 @@ public class Robot extends TimedRobot {
 		pathGen = new PathGen();
         offSeasonNetworkTable = NetworkTableInstance.create();
         offSeasonNetworkTable.startClient("10.0.100.5", 1735);
-        offSeasonNetworkTable.getTable("OffseasonFMSInfo");
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
@@ -119,9 +118,6 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit(){
 	  try{
-          offSeasonNetworkTable = NetworkTableInstance.create();
-          offSeasonNetworkTable.startClient("10.0.100.5", 1735);
-          wait(2);
           offSeasonNetworkTable.getTable("OffseasonFMSInfo");
           String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
             System.out.println("OFFSEASON INFO " + gameData);
