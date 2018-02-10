@@ -166,7 +166,7 @@ public class TwilightDrive extends Subsystem{
 	
 	public void curvatureDrive(double xVal, double zVal) {
 		System.out.println(xVal);
-		TwilightDrive.curvatureDrive(deadzone(xVal) * 1, deadzone(zVal) * 1, true);
+		TwilightDrive.curvatureDrive(deadzone(xVal) * 0.5, deadzone(zVal) * 0.5, true);
 		
 	}
 	public void rightSet(double position) {

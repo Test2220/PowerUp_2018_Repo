@@ -9,8 +9,8 @@ public class Constants {
     public static double wheelDiameter = 4;
     public static double wheelCircumference = Math.PI * wheelDiameter;
 
-    public static double frameWidthIn = 28.0;
-    public static double frameWidthFt = 28/12;
+    public static double frameWidthIn = 27.5;
+    public static double frameWidthFt = 27.5/12;
     public static double frameLengthIn = 33;
 
     public static final double PATH_MAX_SPEED = 2;

@@ -1,4 +1,4 @@
-package frc.team2220.robot.commands.auto;
+package frc.team2220.robot.commands.miscellaneous;
 
 
 import frc.team2220.robot.utils.Constants;

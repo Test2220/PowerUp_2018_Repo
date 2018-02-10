@@ -17,7 +17,6 @@ public class RStartRSwitch extends CommandGroup{
         double target2 = Converter.inToEncTicks(73.25) -  Converter.inToEncTicks(Constants.frameLengthIn/2);
 
 
-        System.out.println("LStartLSwitch");
         addSequential(new DriveToDistance(target1));
 
         addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(-90)));

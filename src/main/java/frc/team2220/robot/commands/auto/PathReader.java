@@ -1,9 +1,11 @@
 package frc.team2220.robot.commands.auto;
 
+import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
+import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.subsystems.TwilightDrive;
 import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
@@ -12,6 +14,10 @@ import java.io.File;
 
 public class PathReader extends Command{
 
+    public CANTalon lDriveMaster;
+    public CANTalon lDriveSlave;
+    public CANTalon rDriveMaster;
+    public CANTalon rDriveSlave;
 
         private Trajectory left;
         private Trajectory right;
@@ -19,14 +25,18 @@ public class PathReader extends Command{
         private double startTime;
         private int index;
 
-        public PathReader(String leftFile, String rightFile) {
+        public double turnSensitivity;
+
+        public PathReader(String leftFile, String rightFile, double turnSensitivity) {
             requires(Robot.twilightDrive);
             left = Pathfinder.readFromCSV(new File(leftFile));
             right = Pathfinder.readFromCSV(new File(rightFile));
+            this.turnSensitivity = turnSensitivity;
         }
 
         @Override
         protected void initialize() {
+
             TwilightDrive.getInstance().resetEncoderPos();
             startTime = Timer.getFPGATimestamp() * 1000.0;
             TwilightDrive.getInstance().changeToVelocity();
@@ -57,9 +67,9 @@ public class PathReader extends Command{
             SmartDashboard.putNumber("Angle Difference", angle_difference);
             SmartDashboard.putNumber("Left Heading", left.segments[index].heading);
 
-            double turn =  0.0015 * angle_difference;
+            double turn =  turnSensitivity * angle_difference;
             System.out.println("TURN" + turn);
-            TwilightDrive.getInstance().driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(leftVelo + turn), Converter.ftPerSecondToNativeUnitsPer100Ms(rightVelo - turn));
+            TwilightDrive.getInstance().driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(-(rightVelo - turn)), Converter.ftPerSecondToNativeUnitsPer100Ms(-(leftVelo + turn)));
 
             System.out.println("Left Velo" + leftVelo);
 

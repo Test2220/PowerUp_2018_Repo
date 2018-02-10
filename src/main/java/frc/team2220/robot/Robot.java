@@ -7,9 +7,10 @@
 
 package frc.team2220.robot;
 
+import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.networktables.NetworkTable;
-import frc.team2220.robot.commands.auto.PathGen;
+import frc.team2220.robot.commands.auto.GameInfo;
+import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
@@ -23,6 +24,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.subsystems.VelocityTestSubsystem;
 import openrio.powerup.MatchData;
+
+import java.io.IOException;
+
+import static edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.getEntry;
+import static javax.swing.UIManager.getString;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -49,6 +55,7 @@ public class Robot extends TimedRobot {
 	public Command autonomousCommand;
 	SendableChooser<Command> sideChooser = new SendableChooser<>();
 
+    NetworkTableInstance offSeasonNetworkTable;
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
@@ -58,7 +65,11 @@ public class Robot extends TimedRobot {
 	public void robotInit() {
 		oi = new OI();
 		pathGen = new PathGen();
-		
+        NetworkTableInstance offSeasonNetworkTable = NetworkTableInstance.create();
+        offSeasonNetworkTable.startClient("10.0.100.5");
+        offSeasonNetworkTable.getTable("OffseasonFMSInfo");
+        String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
+
 
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
@@ -76,14 +87,15 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void disabledInit() {
-        sideChooser.setName("SIDE");
-        sideChooser.addObject("LEFT", new LeftAutoHelper());
-        sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
-        sideChooser.addObject("RIGHT", new RightAutoHelper());
+
 	}
 
 	@Override
 	public void disabledPeriodic() {
+        sideChooser.setName("SIDE");
+        sideChooser.addObject("LEFT", new LeftAutoHelper());
+        sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+        sideChooser.addObject("RIGHT", new RightAutoHelper());
 
 		Scheduler.getInstance().run();
 	}
@@ -100,9 +112,16 @@ public class Robot extends TimedRobot {
 	 * to the switch structure below with additional strings & commands.
 	 */
 	@Override
-	public void autonomousInit() {
+	public void autonomousInit(){
+	  try{
+            String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
+            System.out.println("OFFSEASON INFO " + gameData);
+        }catch (Exception error) {
+          System.out.println(error);
+      }
+        
 
-        System.out.println(DriverStation.getInstance().getGameSpecificMessage());
+       // System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
 
         autonomousCommand = sideChooser.getSelected();
 

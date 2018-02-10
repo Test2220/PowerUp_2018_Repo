@@ -52,8 +52,8 @@ public class DriveToDistance extends Command{
 	@Override
 	protected boolean isFinished() {
 	System.out.println(TwilightDrive.getInstance().rDriveMaster.getClosedLoopError());
-	return TwilightDrive.getInstance().hasHitBothSetpoints(targetTicks);
-	
+	//return TwilightDrive.getInstance().hasHitBothSetpoints(targetTicks);
+	return false;
 	}
 
 	// Called once after isFinished returns true

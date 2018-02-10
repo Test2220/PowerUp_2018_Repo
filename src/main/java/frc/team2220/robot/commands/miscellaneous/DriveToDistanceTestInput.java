@@ -1,4 +1,4 @@
-package frc.team2220.robot.commands.auto;
+package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.subsystems.TwilightDrive;

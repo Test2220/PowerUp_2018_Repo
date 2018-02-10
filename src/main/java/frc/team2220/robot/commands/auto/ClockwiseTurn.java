@@ -25,12 +25,13 @@ public class ClockwiseTurn extends Command{
 
 		TwilightDrive.getInstance().resetEncoderPos();
 		
-		TwilightDrive.getInstance().setBothAccel(400);
-		TwilightDrive.getInstance().setBothCruiseVel(500);
+		TwilightDrive.getInstance().setBothAccel(600);
+		TwilightDrive.getInstance().setBothCruiseVel(1000);
 		TwilightDrive.getInstance().changeToMotionMagic();
 
 		
-		
+
+
 		System.out.println("Initialized");
 		System.out.println(targetTicks);
 		
