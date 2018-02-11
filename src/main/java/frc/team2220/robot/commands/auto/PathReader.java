@@ -69,7 +69,7 @@ public class PathReader extends Command{
 
             double turn =  turnSensitivity * angle_difference;
             System.out.println("TURN" + turn);
-            TwilightDrive.getInstance().driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(-(rightVelo - turn)), Converter.ftPerSecondToNativeUnitsPer100Ms(-(leftVelo + turn)));
+            TwilightDrive.getInstance().driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo - turn)), Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo + turn)));
 
             System.out.println("Left Velo" + leftVelo);
 
