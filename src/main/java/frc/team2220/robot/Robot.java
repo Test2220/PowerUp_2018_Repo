@@ -118,8 +118,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit(){
 	  try{
-          offSeasonNetworkTable.getTable("OffseasonFMSInfo");
-          String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
+          String gameData = offSeasonNetworkTable.getTable("OffseasonFMSInfo").getEntry("GameData").getString("defaultValue");
             System.out.println("OFFSEASON INFO " + gameData);
           //System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
       }catch (Exception error) {
