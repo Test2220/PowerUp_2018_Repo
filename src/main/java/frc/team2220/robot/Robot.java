@@ -118,9 +118,9 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit(){
 	  try{
-          String gameData = offSeasonNetworkTable.getTable("OffseasonFMSInfo").getEntry("GameData").getString("defaultValue");
-            System.out.println("OFFSEASON INFO " + gameData);
-          //System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
+         // String gameData = offSeasonNetworkTable.getTable("OffseasonFMSInfo").getEntry("GameData").getString("defaultValue");
+           // System.out.println("OFFSEASON INFO " + gameData);
+          System.out.println(GameInfo.getGameSpecificMessage_WeekZero()); //GIT FLOW CHECKER
       }catch (Exception error) {
           //System.out.println(error);
       }
