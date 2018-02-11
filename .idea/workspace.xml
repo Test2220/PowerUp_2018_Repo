@@ -50,6 +50,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="467">
               <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+
+            <state relative-caret-position="513">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,7 +66,7 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
+  </component>fe
   <component name="FindInProjectRecents">
     <findStrings>
       <find>donecount</find>
@@ -1224,6 +1227,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+
+        <state relative-caret-position="513">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding />
         </state>
       </provider>
