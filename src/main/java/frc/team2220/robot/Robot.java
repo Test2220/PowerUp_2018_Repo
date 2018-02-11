@@ -68,7 +68,7 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		pathGen = new PathGen();
         offSeasonNetworkTable = NetworkTableInstance.create();
-        offSeasonNetworkTable.startClient("10.0.100.5", 1735);
+        offSeasonNetworkTable.startClient("10.22.20.31", 1735);
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
