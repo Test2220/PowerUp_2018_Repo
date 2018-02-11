@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReader.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReader.java" />
-    </list>
+    <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="PathReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="67" column="83" lean-forward="true" selection-start-line="67" selection-start-column="83" selection-end-line="67" selection-end-column="83" />
+            <state relative-caret-position="241">
+              <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1245,8 +1243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="67" column="83" lean-forward="true" selection-start-line="67" selection-start-column="83" selection-end-line="67" selection-end-column="83" />
+        <state relative-caret-position="241">
+          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
