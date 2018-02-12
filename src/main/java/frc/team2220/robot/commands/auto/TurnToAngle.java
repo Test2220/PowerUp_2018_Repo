@@ -28,12 +28,12 @@ public class TurnToAngle extends Command{
         		
         		// If we need to turn right...
         		if (output > 0) {
-        			TwilightDrive.getInstance().leftSet(Math.abs(output));
+        			Robot.twilightDrive.leftSet(Math.abs(output));
         		}
         		
         		// If we need to turn left...
         		if (output < 0) {
-        			TwilightDrive.getInstance().rightSet(Math.abs(output));
+        			Robot.twilightDrive.rightSet(Math.abs(output));
         		}
         		
         	}
@@ -45,8 +45,8 @@ public class TurnToAngle extends Command{
         		output = output * .5;
             
             	// Set the speeds
-	        	TwilightDrive.getInstance().rightSet(output);
-	            TwilightDrive.getInstance().leftSet(output);
+	        	Robot.twilightDrive.rightSet(output);
+	            Robot.twilightDrive.leftSet(output);
 	            
             }
         }
@@ -64,8 +64,8 @@ public class TurnToAngle extends Command{
     protected void initialize() {
         currentDoneCount = 0;
 
-        TwilightDrive.getInstance().changeToPercentVBus();
-    	TwilightDrive.getInstance().navX.reset();
+        Robot.twilightDrive.changeToPercentVBus();
+    	Robot.twilightDrive.navX.reset();
         
         // Dev
         System.out.println("--------------------------------------------------");
@@ -73,10 +73,10 @@ public class TurnToAngle extends Command{
         System.out.println("Target angle: " + targetAngle);
         
         // Reset
-        //twilightDrive.getInstance().navX.reset();
-        TwilightDrive.getInstance().resetEncoderPos();
+        //Robot.twilightDrive.navX.reset();
+        Robot.twilightDrive.resetEncoderPos();
         // Start the PID Controller
-        turnPIDController = new PIDController(0.03, 0.0001, 0.01, TwilightDrive.getInstance().navX, new Output());
+        turnPIDController = new PIDController(0.03, 0.0001, 0.01, Robot.twilightDrive.navX, new Output());
         turnPIDController.setSetpoint(targetAngle);
         turnPIDController.setAbsoluteTolerance(1);
         turnPIDController.enable();
@@ -89,7 +89,7 @@ public class TurnToAngle extends Command{
         // Dev
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn running!");
-        System.out.println("Angle: " + TwilightDrive.getInstance().navX.getAngle());
+        System.out.println("Angle: " + Robot.twilightDrive.navX.getAngle());
         System.out.println("Error: " + turnPIDController.getError());
         System.out.println("Output: " + turnPIDController.get());
         
@@ -120,8 +120,8 @@ public class TurnToAngle extends Command{
         System.out.println("Error: " + turnPIDController.getError());
         
         // Stop the motors
-        TwilightDrive.getInstance().rightSet(0);
-        TwilightDrive.getInstance().leftSet(0);
+        Robot.twilightDrive.rightSet(0);
+        Robot.twilightDrive.leftSet(0);
         
         // Reset the PID Controller
         turnPIDController.disable();

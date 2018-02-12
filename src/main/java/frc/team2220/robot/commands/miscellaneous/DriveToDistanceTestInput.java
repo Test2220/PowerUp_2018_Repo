@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -14,7 +15,7 @@ public class DriveToDistanceTestInput extends Command{
 
     public DriveToDistanceTestInput(double targetTicksLeft, double targetTicksRight) {
 
-        requires(TwilightDrive.getInstance());
+        requires(Robot.twilightDrive);
         this.targetTicks = targetTicks;
         this.targetTicksLeft = targetTicksLeft;
         this.targetTicksRight = targetTicksRight;
@@ -24,22 +25,22 @@ public class DriveToDistanceTestInput extends Command{
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        TwilightDrive.getInstance().lDriveMaster.setProfile(0);
-        TwilightDrive.getInstance().rDriveMaster.setProfile(0);
+        Robot.twilightDrive.lDriveMaster.setProfile(0);
+        Robot.twilightDrive.rDriveMaster.setProfile(0);
 
-        TwilightDrive.getInstance().resetEncoderPos();
-        TwilightDrive.getInstance().resetEncoderPos();
+        Robot.twilightDrive.resetEncoderPos();
+        Robot.twilightDrive.resetEncoderPos();
 
-        TwilightDrive.getInstance().setBothAccel(700);
-        TwilightDrive.getInstance().setBothCruiseVel(800);
-        TwilightDrive.getInstance().changeToMotionMagic();
+        Robot.twilightDrive.setBothAccel(700);
+        Robot.twilightDrive.setBothCruiseVel(800);
+        Robot.twilightDrive.changeToMotionMagic();
 
 
 
         System.out.println("Initialized");
         System.out.println(targetTicks);
 
-        TwilightDrive.getInstance().driveSet(targetTicksLeft, targetTicksRight);
+        Robot.twilightDrive.driveSet(targetTicksLeft, targetTicksRight);
 
     }
 
@@ -47,7 +48,7 @@ public class DriveToDistanceTestInput extends Command{
     @Override
     protected void execute() {
         SmartDashboard.putNumber("EXPECTED POSITION", targetTicks);
-        SmartDashboard.putNumber("CURRENT POSITION", TwilightDrive.getInstance().getAvgPosition());
+        SmartDashboard.putNumber("CURRENT POSITION", Robot.twilightDrive.getAvgPosition());
         //System.out.println("RUNNING");
 
     }
@@ -56,8 +57,8 @@ public class DriveToDistanceTestInput extends Command{
     @SuppressWarnings("deprecation")
     @Override
     protected boolean isFinished() {
-        System.out.println(TwilightDrive.getInstance().rDriveMaster.getClosedLoopError());
-        return TwilightDrive.getInstance().hasHitBothSetpoints(targetTicks);
+        System.out.println(Robot.twilightDrive.rDriveMaster.getClosedLoopError());
+        return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
 
     }
 
@@ -65,9 +66,9 @@ public class DriveToDistanceTestInput extends Command{
     @Override
     protected void end() {
         System.out.println("ENDED DRIVE TO DISTANCE ");
-        TwilightDrive.getInstance().currentDoneCount = 0;
+        Robot.twilightDrive.currentDoneCount = 0;
 
-        TwilightDrive.getInstance().changeToPercentVBus();
+        Robot.twilightDrive.changeToPercentVBus();
 
     }
 

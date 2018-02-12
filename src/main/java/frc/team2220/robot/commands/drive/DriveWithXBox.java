@@ -18,7 +18,7 @@ public class DriveWithXBox extends Command{
 		@Override
 		protected void initialize() {
 			
-			TwilightDrive.getInstance().changeToPercentVBus();
+			Robot.twilightDrive.changeToPercentVBus();
 			
 		}
 
@@ -28,18 +28,19 @@ public class DriveWithXBox extends Command{
 			
 			//Negated for appropriation
 			
-//			double leftSet = -twilightDrive.getInstance().deadzone(Robot.oi.getDriverStick().getRawAxis(1));
-//			double rightSet = -twilightDrive.getInstance().deadzone(Robot.oi.getDriverStick().getRawAxis(5));
+//			double leftSet = -Robot.twilightDrive.deadzone(Robot.oi.getDriverStick().getRawAxis(1));
+//			double rightSet = -Robot.twilightDrive.deadzone(Robot.oi.getDriverStick().getRawAxis(5));
 //			
 //			Robot.DriveTrain.driveSet(leftSet, -rightSet);
-			//System.out.println(twilightDrive.getInstance().getLPosition());
-			//System.out.println(twilightDrive.getInstance().getRPosition());
+			//System.out.println(Robot.twilightDrive.getLPosition());
+			//System.out.println(Robot.twilightDrive.getRPosition());
 
 			
 				double xVal = Robot.oi.getDriverStick().getRawAxis(1);
 				double zVal = Robot.oi.getDriverStick().getRawAxis(4);
-				
-				TwilightDrive.getInstance().curvatureDrive(-xVal, zVal);
+
+
+				Robot.twilightDrive.curvatureDrive(-xVal, zVal);
 	
 			}
 			

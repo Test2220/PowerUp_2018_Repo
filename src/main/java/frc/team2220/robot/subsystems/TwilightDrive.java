@@ -25,8 +25,7 @@ public class TwilightDrive extends Subsystem{
 	public CANTalon rDriveMaster;
 	public CANTalon rDriveSlave;
 
-	private static TwilightDrive instance_ = new TwilightDrive();
-	
+
 	
 	public AHRS navX;
 
@@ -75,14 +74,7 @@ public class TwilightDrive extends Subsystem{
 	
 	public DifferentialDrive TwilightDrive;
 	
-	
-	
-	public static TwilightDrive getInstance()
-	{
-		return instance_;
-	}
 
-	
 	
 	@Override
 	protected void initDefaultCommand() {
@@ -111,19 +103,18 @@ public class TwilightDrive extends Subsystem{
 		
 		rDriveSlave.changeControlMode(TalonControlMode.Follower);
 		rDriveSlave.set(rDriveMaster.getDeviceID());
-		
-		lDriveMaster.setInverted(false); //TODO Find out Correct Vals
-		rDriveMaster.setInverted(false); //TODO Find out Correct Vals
 
 		lDriveMaster.reverseOutput(false);
 		rDriveMaster.reverseOutput(true);
 
-		/* FOR 2018 PRACTICE BOT
-		rDriveMaster.setInverted(true);
+
+		rDriveMaster.setInverted(false);
+
+
 		lDriveMaster.reverseOutput(false);
 		rDriveMaster.reverseOutput(true);
 		rDriveSlave.reverseOutput(true);
-		*/
+
 		// Encoder Stuff
 		
 		lDriveMaster.setFeedbackDevice(FeedbackDevice.QuadEncoder);
@@ -166,7 +157,7 @@ public class TwilightDrive extends Subsystem{
 	
 	public void curvatureDrive(double xVal, double zVal) {
 		System.out.println(xVal);
-		TwilightDrive.curvatureDrive(deadzone(xVal) * 0.5, deadzone(zVal) * 0.5, true);
+		TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 0.5, Converter.deadzone(zVal) * 0.5, true);
 		
 	}
 	public void rightSet(double position) {
@@ -326,12 +317,8 @@ public class TwilightDrive extends Subsystem{
 		}
 		return false;
 	}*/
-	
-	//Super Basic Deadzone function
-	public double deadzone(double val) {
-		double signum = Math.signum(val);
-		return signum * Math.pow(Math.abs(val), 1.6);
-  }
+
+
 	
 	//----------------MOTION PROFILE STUFF-------------------//
 //	

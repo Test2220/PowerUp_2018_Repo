@@ -7,15 +7,14 @@
 
 package frc.team2220.robot;
 
-import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.DriverStation;
-import frc.team2220.robot.commands.auto.GameInfo;
 import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
+import frc.team2220.robot.subsystems.Intake;
+import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -23,12 +22,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team2220.robot.subsystems.VelocityTestSubsystem;
 import openrio.powerup.MatchData;
 
-import java.io.IOException;
-
-import static edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.getEntry;
 import static javax.swing.UIManager.getString;
 
 /**
@@ -44,9 +39,11 @@ public class Robot extends TimedRobot {
 
 	public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
 	public static final TwilightDrive twilightDrive = new TwilightDrive();
-	public static final VelocityTestSubsystem velocityTestSubsystem = new VelocityTestSubsystem();
+	public static final Shooter shooter = new Shooter();
+    public static final Intake intake = new Intake();
 
-	MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
+
+    MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 	MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
 	public static PathGen pathGen;
@@ -97,10 +94,11 @@ public class Robot extends TimedRobot {
 
 
         sideChooser.setName("SIDE");
+        /*
         sideChooser.addObject("LEFT", new LeftAutoHelper());
         sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
         sideChooser.addObject("RIGHT", new RightAutoHelper());
-
+*/
 		Scheduler.getInstance().run();
 	}
 
@@ -171,9 +169,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		SmartDashboard.putNumber("CURRENT VELOCITY", VelocityTestSubsystem.getInstance().getEncVel());
-		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("TEST MOTOR VOLTAGE", VelocityTestSubsystem.getInstance().testMotor.getOutputVoltage());
+        Scheduler.getInstance().run();
 	}
 	/**
 	 * This function is called periodically during test mode.

@@ -14,19 +14,19 @@ public class VelocityTester extends Command{
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        TwilightDrive.getInstance().lDriveMaster.setProfile(1);
-        TwilightDrive.getInstance().rDriveMaster.setProfile(1);
+        Robot.twilightDrive.lDriveMaster.setProfile(1);
+        Robot.twilightDrive.rDriveMaster.setProfile(1);
 
-        TwilightDrive.getInstance().changeToVelocity();
+        Robot.twilightDrive.changeToVelocity();
 
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        TwilightDrive.getInstance().driveSet(300, 300);
-        SmartDashboard.putNumber("LEFT MOTOR ERROR", TwilightDrive.getInstance().lDriveMaster.getClosedLoopError());
-        SmartDashboard.putNumber("RIGHT MOTOR ERROR", TwilightDrive.getInstance().rDriveMaster.getClosedLoopError());
+        Robot.twilightDrive.driveSet(300, 300);
+        SmartDashboard.putNumber("LEFT MOTOR ERROR", Robot.twilightDrive.lDriveMaster.getClosedLoopError());
+        SmartDashboard.putNumber("RIGHT MOTOR ERROR", Robot.twilightDrive.rDriveMaster.getClosedLoopError());
 
     }
 

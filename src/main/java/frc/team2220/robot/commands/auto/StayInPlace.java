@@ -30,18 +30,18 @@ public class StayInPlace extends Command{
 
     @Override
     protected void initialize() {
-        TwilightDrive.getInstance().resetEncoderPos();
+        Robot.twilightDrive.resetEncoderPos();
         startTime = Timer.getFPGATimestamp() * 1000.0;
-        TwilightDrive.getInstance().changeToVelocity();
+        Robot.twilightDrive.changeToVelocity();
 
-        TwilightDrive.getInstance().lDriveMaster.setProfile(1);
-        TwilightDrive.getInstance().rDriveMaster.setProfile(1);
+        Robot.twilightDrive.lDriveMaster.setProfile(1);
+        Robot.twilightDrive.rDriveMaster.setProfile(1);
 
 
-        TwilightDrive.getInstance().navX.zeroYaw();
-        TwilightDrive.getInstance().navX.zeroYaw();
-        TwilightDrive.getInstance().navX.zeroYaw();
-        TwilightDrive.getInstance().navX.zeroYaw();
+        Robot.twilightDrive.navX.zeroYaw();
+        Robot.twilightDrive.navX.zeroYaw();
+        Robot.twilightDrive.navX.zeroYaw();
+        Robot.twilightDrive.navX.zeroYaw();
 
     }
 
@@ -49,7 +49,7 @@ public class StayInPlace extends Command{
     protected void execute() {
         index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
-        double gyro_heading = TwilightDrive.getInstance().navX.getAngle();    // Assuming gyro angle is given in degrees
+        double gyro_heading = Robot.twilightDrive.navX.getAngle();    // Assuming gyro angle is given in degrees
         double desired_heading = 0;
 
         double angle_difference = desired_heading - gyro_heading;// Make sure to bound this from -180 to 180, otherwise you will get super large values
@@ -57,7 +57,7 @@ public class StayInPlace extends Command{
 
         double turn =  turnSensitivity * angle_difference;
         System.out.println("TURN" + turn);
-        TwilightDrive.getInstance().driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(turn), Converter.ftPerSecondToNativeUnitsPer100Ms(-turn));
+        Robot.twilightDrive.driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(turn), Converter.ftPerSecondToNativeUnitsPer100Ms(-turn));
 
 
 
@@ -73,7 +73,7 @@ public class StayInPlace extends Command{
     }
 
     protected void end() {
-        TwilightDrive.getInstance().changeToPercentVBus();
+        Robot.twilightDrive.changeToPercentVBus();
     }
 
 }

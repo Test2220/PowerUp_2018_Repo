@@ -1,32 +1,39 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.VelocityTestSubsystem;
+import frc.team2220.robot.subsystems.Shooter;
+import frc.team2220.robot.utils.Converter;
 
-public class VelocityMotorCommand extends Command{
+import static frc.team2220.robot.Robot.oi;
+import static frc.team2220.robot.Robot.shooter;
 
-    double vel;
+public class ControlShooter extends Command{
 
-    public VelocityMotorCommand(double vel) {
-        requires(Robot.velocityTestSubsystem);
-        this.vel = vel;
+
+
+    public ControlShooter() {
+        requires(Robot.shooter);
+
     }
 
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        //VelocityTestSubsystem.getInstance().changeToPercentVBus();
-        VelocityTestSubsystem.getInstance().changeToVelocity();
+
+        Robot.shooter.changeToPercentVBus();
+
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        //double xVal = Robot.oi.getDriverStick().getRawAxis(1);
-        SmartDashboard.putNumber("EXPECTED VELOCITY", vel);
-        VelocityTestSubsystem.getInstance().motorSet(vel);
+
+        double value = Robot.oi.getManipulatorStick().getRawAxis(1);
+
+        Robot.shooter.spinAllMotors(value);
+
+
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.miscellaneous;
 
+import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -12,7 +13,7 @@ public class AntiClockwiseTurn extends Command{
 	
 	public AntiClockwiseTurn(double targetTicks) {
 		
-		requires(TwilightDrive.getInstance());
+		requires(Robot.twilightDrive);
 		this.targetTicks = targetTicks;
 		
 	}
@@ -20,21 +21,21 @@ public class AntiClockwiseTurn extends Command{
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
-        TwilightDrive.getInstance().lDriveMaster.setProfile(0);
-        TwilightDrive.getInstance().rDriveMaster.setProfile(0);
+        Robot.twilightDrive.lDriveMaster.setProfile(0);
+        Robot.twilightDrive.rDriveMaster.setProfile(0);
 
-		TwilightDrive.getInstance().resetEncoderPos();
+		Robot.twilightDrive.resetEncoderPos();
 		
-		TwilightDrive.getInstance().setBothAccel(200);
-		TwilightDrive.getInstance().setBothCruiseVel(400);
-		TwilightDrive.getInstance().changeToMotionMagic();
+		Robot.twilightDrive.setBothAccel(200);
+		Robot.twilightDrive.setBothCruiseVel(400);
+		Robot.twilightDrive.changeToMotionMagic();
 
 		
 		
 		System.out.println("Initialized");
 		System.out.println(targetTicks);
 		
-		TwilightDrive.getInstance().driveSet(-targetTicks, targetTicks);
+		Robot.twilightDrive.driveSet(-targetTicks, targetTicks);
 
 	}
 
@@ -50,7 +51,7 @@ public class AntiClockwiseTurn extends Command{
 	@Override
 	protected boolean isFinished() {
 	
-	return TwilightDrive.getInstance().hasZeroBothVelocity();
+	return Robot.twilightDrive.hasZeroBothVelocity();
 	
 	}
 
@@ -58,7 +59,7 @@ public class AntiClockwiseTurn extends Command{
 	@Override
 	protected void end() {
 		System.out.println("ENDED?");
-    	TwilightDrive.getInstance().changeToPercentVBus();
+    	Robot.twilightDrive.changeToPercentVBus();
 
 	}
 
