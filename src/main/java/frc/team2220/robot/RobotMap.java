@@ -27,7 +27,7 @@ public class RobotMap {
             SHOOTER_BTM_RIGHT = 9;
 
     public static final int TRANSFER_LEFT = 13,
-            TRANSFER_RIGHT = 6; //ACTUALLY 6
+            TRANSFER_RIGHT = 6;
 
     public static final int COLLECTOR_LEFT = 8,
             COLLECTOR_RIGHT = 7;

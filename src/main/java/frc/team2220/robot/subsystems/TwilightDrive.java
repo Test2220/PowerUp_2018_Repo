@@ -36,32 +36,32 @@ public class TwilightDrive extends Subsystem{
 	int  maxVell = 1460;
 	int  maxVelr = 1053;
 	
-	double pLeft= Converter.errorToPGain(8159, 23); //LEFT SIDE
+	double pLeft= Converter.errorToPGain(0, 0); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
-	double fLeft = Converter.maxVelToFGainWrong(maxVell, 1440);
+	double fLeft = Converter.maxVelToFGainWrong(maxVell, 4096);
 	int  iZoneLeft = 50;
 
 	
-	double pRight = Converter.errorToPGain(10573, 35); //RIGHT SIDE
+	double pRight = Converter.errorToPGain(0, 0); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
-	double fRight = Converter.maxVelToFGainWrong(maxVelr, 1440);
+	double fRight = Converter.maxVelToFGainWrong(maxVelr, 0);
 	int  iZoneRight = 50;
 
 	//------------VELOCITY STUFF-------------//
 
-    double pLeft2= Converter.errorToPGain(50, 0.11); //LEFT SIDE
+    double pLeft2= Converter.errorToPGain(0, 0); //LEFT SIDE
     double iLeft2 = 0.000;
     double dLeft2 = 0;
     double fLeft2 = Converter.maxVelToFGainCorrect(maxVell);
     int  iZoneLeft2 = 50;
 
 
-    double pRight2 = Converter.errorToPGain(-15, 0.1); //RIGHT SIDE
+    double pRight2 = Converter.errorToPGain(-0, 0); //RIGHT SIDE
     double iRight2 = 0.0000;
     double dRight2 = 0;
-    double fRight2 = Converter.maxVelToFGainCorrect(maxVelr+15);
+    double fRight2 = Converter.maxVelToFGainCorrect(maxVelr);
     int  iZoneRight2 = 50;
 
 	double accel = maxVell * 0.75;
