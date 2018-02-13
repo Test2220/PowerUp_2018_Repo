@@ -10,9 +10,7 @@ package frc.team2220.robot;
 import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
 import frc.team2220.robot.commands.middlestart.MStartRSwitch;
-import frc.team2220.robot.commands.miscellaneous.VelocityMotorCommand;
-import frc.team2220.robot.commands.miscellaneous.VelocityTester;
-import frc.team2220.robot.commands.miscellaneous.stopVelocityMotorCommand;
+import frc.team2220.robot.commands.miscellaneous.*;
 import frc.team2220.robot.triggers.TwilightTrigger;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -84,11 +82,11 @@ public class OI {
         stickInPlace.whenPressed(new DriveToDistance(0));
 		//testCommandButton.whenPressed(new TestCommandGroup());
         //testCommandButton.whenPressed(new DriveToDistanceTestInput(Converter.degreesTurnToEncTicks(800), 0.0));
-        testCommandButton.whenPressed(new MStartRSwitch());
+        //testCommandButton.whenPressed(new TestCommandGroup());
 
 		//testCommandButton.whenPressed(new PathReader("/home/lvuser/paths/MStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MStart/MStartRSwitch_right_detailed.csv", 0.00092));
         //testCommandButton.whenPressed(new PathReader("/home/lvuser/paths/LStart/TestTurn_left_detailed.csv", "/home/lvuser/paths/LStart/TestTurn_right_detailed.csv"));
-       // testCommandButton.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
+       testCommandButton.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
        //testCommandButton.whenPressed(new VelocityTester());
 
 	}

@@ -11,47 +11,14 @@ public class TestCommandGroup extends CommandGroup{
 
     public TestCommandGroup() {
 
-        //addSequential(new DriveToDistance(target1));
-        //addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(120)));
-        //addSequential(new DriveToDistance(target1));
-        //addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(120)));
-        //addSequential(new DriveToDistance(target1));
-        //addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(120)));
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
-
-        addSequential(new DriveToDistance(target1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(30)));
+        addSequential(new DriveToDistance(Converter.ftToEncTicks(3)));
+        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
+        addSequential(new DriveToDistance(Converter.ftToEncTicks(3)));
+        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
+        addSequential(new DriveToDistance(Converter.ftToEncTicks(3)));
+        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
+        addSequential(new DriveToDistance(Converter.ftToEncTicks(3)));
+        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
 
     }
 

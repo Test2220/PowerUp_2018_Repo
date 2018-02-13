@@ -1,4 +1,5 @@
 package frc.team2220.robot.commands.drive;
+import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;
@@ -10,14 +11,14 @@ public class DriveOff extends InstantCommand
 	public DriveOff()
 	{
 		super();
-		requires(TwilightDrive.getInstance());
+		requires(Robot.twilightDrive);
 	}
 
 	// Called once when the command executes
 	protected void initialize()
 	{
-		TwilightDrive.getInstance().changeToPercentVBus();
-		TwilightDrive.getInstance().stopMotors();
+		Robot.twilightDrive.changeToPercentVBus();
+		Robot.twilightDrive.stopMotors();
 		SmartDashboard.putBoolean("isRunningTeleMotion", false);
 	}
 

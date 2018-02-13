@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -8,13 +9,13 @@ public class ResetEncoderPos extends Command{
 
 	public ResetEncoderPos() {
 		
-		requires(TwilightDrive.getInstance());
+		requires(Robot.twilightDrive);
 		
 	}
 	
 protected void initialize() {
 		
-		TwilightDrive.getInstance().changeToPercentVBus();
+		Robot.twilightDrive.changeToPercentVBus();
 		System.out.println("RAN ONCE");
 	}
 

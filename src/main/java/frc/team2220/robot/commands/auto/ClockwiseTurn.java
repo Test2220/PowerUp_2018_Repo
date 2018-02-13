@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -12,7 +13,7 @@ public class ClockwiseTurn extends Command{
 	
 	public ClockwiseTurn(double targetTicks) {
 		
-		requires(TwilightDrive.getInstance());
+		requires(Robot.twilightDrive);
 		this.targetTicks = targetTicks;
 		
 	}
@@ -20,14 +21,14 @@ public class ClockwiseTurn extends Command{
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
-        TwilightDrive.getInstance().lDriveMaster.setProfile(0);
-        TwilightDrive.getInstance().rDriveMaster.setProfile(0);
+        Robot.twilightDrive.lDriveMaster.setProfile(0);
+        Robot.twilightDrive.rDriveMaster.setProfile(0);
 
-		TwilightDrive.getInstance().resetEncoderPos();
+		Robot.twilightDrive.resetEncoderPos();
 		
-		TwilightDrive.getInstance().setBothAccel(600);
-		TwilightDrive.getInstance().setBothCruiseVel(1000);
-		TwilightDrive.getInstance().changeToMotionMagic();
+		Robot.twilightDrive.setBothAccel(1500);
+		Robot.twilightDrive.setBothCruiseVel(1500);
+		Robot.twilightDrive.changeToMotionMagic();
 
 		
 
@@ -35,14 +36,14 @@ public class ClockwiseTurn extends Command{
 		System.out.println("Initialized");
 		System.out.println(targetTicks);
 		
-		TwilightDrive.getInstance().driveSet(targetTicks, -targetTicks);
+		Robot.twilightDrive.driveSet(targetTicks+85, -targetTicks-85);
 
 	}
 
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		System.out.println(TwilightDrive.getInstance().rDriveMaster.getClosedLoopError());
+		System.out.println(Robot.twilightDrive.rDriveMaster.getClosedLoopError());
 
 		//System.out.println("CLOCKWISE TURN");
 		
@@ -51,17 +52,17 @@ public class ClockwiseTurn extends Command{
 	// Make this return true when this sCommand no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		//System.out.println(Math.abs(twilightDrive.getInstance().lDriveMaster.getPosition()) - targetTicks  < 30);
-	//return TwilightDrive.getInstance().hasHitBothSetpoints(targetTicks);
-		return TwilightDrive.getInstance().hasZeroBothVelocity();
+		//System.out.println(Math.abs(Robot.twilightDrive.lDriveMaster.getPosition()) - targetTicks  < 30);
+	//return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
+		return Robot.twilightDrive.hasZeroBothVelocity();
 	}
 
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
 		System.out.println("ENDED TURN TO ANGLE CLOCKWISE");
-		//TwilightDrive.getInstance().currentDoneCount = 0;
-    	TwilightDrive.getInstance().changeToPercentVBus();
+		//Robot.twilightDrive.currentDoneCount = 0;
+    	Robot.twilightDrive.changeToPercentVBus();
 
 	}
 
