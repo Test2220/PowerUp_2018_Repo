@@ -44,6 +44,7 @@ public class RobotMap {
     public static final int RAMP_PISTON1 = 6,
             RAMP_PISTON2 = 7;
 
+    public static final int AIR_COMPRESSOR = 0;
 
     public static final int CLIMBER = 0;
 

@@ -8,6 +8,8 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.wpilibj.Compressor;
+import frc.team2220.robot.commands.miscellaneous.MatchData;
 import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
@@ -22,7 +24,6 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import openrio.powerup.MatchData;
 
 import static javax.swing.UIManager.getString;
 
@@ -42,18 +43,12 @@ public class Robot extends TimedRobot {
 	public static final Shooter shooter = new Shooter();
     public static final Intake intake = new Intake();
 
-
-    MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
-	MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
-
 	public static PathGen pathGen;
 
 	public static OI oi;
 
 	public Command autonomousCommand;
 	SendableChooser<Command> sideChooser = new SendableChooser<>();
-
-    NetworkTableInstance offSeasonNetworkTable;
 
     /**
 	 * This function is run when the robot is first started up and should be
@@ -64,8 +59,10 @@ public class Robot extends TimedRobot {
 	public void robotInit() {
 		oi = new OI();
 		pathGen = new PathGen();
-        offSeasonNetworkTable = NetworkTableInstance.create();
-        offSeasonNetworkTable.startClient("10.22.20.31", 1735);
+
+        Compressor airCompressor = new Compressor(RobotMap.AIR_COMPRESSOR);
+        airCompressor.start();
+
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
@@ -90,15 +87,7 @@ public class Robot extends TimedRobot {
 	}
 
 	@Override
-	public void disabledPeriodic() {
-
-
-        sideChooser.setName("SIDE");
-        /*
-        sideChooser.addObject("LEFT", new LeftAutoHelper());
-        sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
-        sideChooser.addObject("RIGHT", new RightAutoHelper());
-*/
+	public void disabledPeriodic(){
 		Scheduler.getInstance().run();
 	}
 
@@ -115,25 +104,9 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit(){
-	  try{
-//         String gameData = offSeasonNetworkTable.getTable("OffseasonFMSInfo").getEntry("GameData").getString("defaultValue");
-//            System.out.println("OFFSEASON INFO " + gameData);
-//          System.out.println(GameInfo.getGameSpecificMessage_WeekZero());
-//          System.out.println("MERGE CHECKER");
-      }catch (Exception error) {
-          //System.out.println(error);
-      }
-
-
 
         autonomousCommand = sideChooser.getSelected();
 
-		/*
-		 * String autoSelected = SmartDashboard.getString("Auto Selector",
-		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
-		 * = new MyAutoCommand(); break; case "Default Auto": default:
-		 * autonomousCommand = new ExampleCommand(); break; }
-		 */
 		if (autonomousCommand == null) {
 			System.out.println("NULL AUTO");
 		}

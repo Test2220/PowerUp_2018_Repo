@@ -2,7 +2,6 @@ package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.InstantCommand;
-import openrio.powerup.MatchData;
 
 public class SelectorNotChosen extends InstantCommand{
 
