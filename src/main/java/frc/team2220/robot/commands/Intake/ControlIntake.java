@@ -22,8 +22,22 @@ public class ControlIntake extends Command{
     protected void execute() {
         double value = Robot.oi.getManipulatorStick().getRawAxis(5);
 
-        Robot.intake.spinBothIntake(Converter.deadzone(value));
-        Robot.intake.spinBothTransfer(Converter.deadzone(value));
+        if (Math.abs(Converter.deadzone(value)) > 0.2) {
+            Robot.intake.setRampDown();
+        } else {
+            Robot.intake.setRampUp();
+        }
+
+        if (Converter.deadzone(value) > 0.2) {
+            Robot.intake.spinBothIntake(0.5);
+            Robot.intake.spinBothTransfer(0.5);
+        } else if (Converter.deadzone(value) < -0.2){
+            Robot.intake.spinBothIntake(-0.5);
+            Robot.intake.spinBothTransfer(-0.5);
+        } else {
+            Robot.intake.spinBothIntake(0);
+            Robot.intake.spinBothTransfer(0);
+        }
 
     }
 

@@ -9,6 +9,7 @@ package frc.team2220.robot;
 
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import frc.team2220.robot.commands.miscellaneous.MatchData;
 import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
@@ -24,6 +25,10 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import static javax.swing.UIManager.getString;
 
@@ -60,8 +65,15 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		pathGen = new PathGen();
 
-        Compressor airCompressor = new Compressor(RobotMap.AIR_COMPRESSOR);
+        Compressor airCompressor = new Compressor();
         airCompressor.start();
+//        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("resources/MStartRSwitch_left.csv");
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+//        try {
+//            System.out.println("bufferedReader.readLine() = " + bufferedReader.readLine());
+//        } catch (Exception error) {
+//            System.out.println("ERROR IN READING CSV FILE = " + error);
+//        }
 
 		//sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());

@@ -32,19 +32,18 @@ public class RobotMap {
     public static final int COLLECTOR_LEFT = 8,
             COLLECTOR_RIGHT = 7;
 
-    public static final int CUBE_PISTON1 = 0,
-            CUBE_PISTON2 = 1;
+    public static final int CUBE_PISTON_UP = 0,
+            CUBE_PISTON_DOWN = 1;
 
-    public static final int LIFT_PISTON1 = 2,
-            LIFT_PISTON2 = 3;
+    public static final int LIFT_PISTON_EXTEND = 2,
+            LIFT_PISTON_RETRACT = 3;
 
-    public static final int INTAKE_PISTON1 = 4,
-            INTAKE_PISTON2 = 5;
+    public static final int INTAKE_PISTON_EXTEND = 4,
+            INTAKE_PISTON_RETRACT = 5;
 
-    public static final int RAMP_PISTON1 = 6,
-            RAMP_PISTON2 = 7;
+    public static final int RAMP_PISTON_EXTENDED = 6,
+            RAMP_PISTON_RETRACTED = 7;
 
-    public static final int AIR_COMPRESSOR = 0;
 
     public static final int CLIMBER = 0;
 

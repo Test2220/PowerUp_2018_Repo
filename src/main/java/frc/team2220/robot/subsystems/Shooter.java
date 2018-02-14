@@ -12,7 +12,12 @@ public class Shooter extends Subsystem{
     private CANTalon topRight;
     private CANTalon btmLeft;
     private CANTalon btmRight;
-/*
+
+    private DoubleSolenoid liftPistons;
+    private DoubleSolenoid cubePiston;
+
+
+    /*
     private static Shooter instance_ = new Shooter();
 
     public static Shooter getInstance()
@@ -33,8 +38,9 @@ public class Shooter extends Subsystem{
         btmLeft.setInverted(true);
         btmRight.setInverted(false);
 
-        DoubleSolenoid liftPistons = new DoubleSolenoid(RobotMap.LIFT_PISTON1, RobotMap.LIFT_PISTON2);
-        DoubleSolenoid cubePiston = new DoubleSolenoid(RobotMap.CUBE_PISTON1, RobotMap.CUBE_PISTON2);   
+        liftPistons = new DoubleSolenoid(RobotMap.LIFT_PISTON_EXTEND, RobotMap.LIFT_PISTON_RETRACT);
+        cubePiston = new DoubleSolenoid(RobotMap.CUBE_PISTON_UP, RobotMap.CUBE_PISTON_DOWN);
+
     }
 
     public void spinAllMotors(double value) {
@@ -42,25 +48,38 @@ public class Shooter extends Subsystem{
         topRight.set(value);
         btmLeft.set(value);
         btmRight.set(value);
-
     }
 
     public void changeToPercentVBus() {
-
         topLeft.changeControlMode(TalonControlMode.PercentVbus);
         topRight.changeControlMode(TalonControlMode.PercentVbus);
         btmLeft.changeControlMode(TalonControlMode.PercentVbus);
         btmRight.changeControlMode(TalonControlMode.PercentVbus);
+    }
 
+    //Lift Stuff
+
+    public void setShooterUp() {
+        liftPistons.set(DoubleSolenoid.Value.kForward);
+    }
+
+    public void setShooterDown() {
+        liftPistons.set(DoubleSolenoid.Value.kReverse);
+    }
+
+    //Cube Piston
+
+    public void setCubePistonDown() {
+        cubePiston.set(DoubleSolenoid.Value.kReverse);
     }
 
 
-
+    public void setCubePistonUp() {
+        cubePiston.set(DoubleSolenoid.Value.kForward);
+    }
 
     @Override
     protected void initDefaultCommand() {
-
        // setDefaultCommand(Con);
-
     }
 }

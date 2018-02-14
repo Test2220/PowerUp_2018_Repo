@@ -42,6 +42,11 @@ jar {
     manifest jaci.openrio.gradle.GradleRIOPlugin.javaManifest(ROBOT_CLASS)
 }
 
+task copyTestResources(type: Copy) {
+    from "${projectDir}/src/resources"
+    into "${buildDir}/classes/resources"
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '4.4'
 }
