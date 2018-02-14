@@ -1,10 +1,10 @@
 package frc.team2220.robot.subsystems;
 
 import com.ctre.CANTalon;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
 import com.ctre.CANTalon.TalonControlMode;
-import frc.team2220.robot.commands.miscellaneous.ControlShooter;
 
 public class Shooter extends Subsystem{
 
@@ -33,6 +33,8 @@ public class Shooter extends Subsystem{
         btmLeft.setInverted(true);
         btmRight.setInverted(false);
 
+        DoubleSolenoid liftPistons = new DoubleSolenoid(RobotMap.LIFT_PISTON1, RobotMap.LIFT_PISTON2);
+        DoubleSolenoid cubePiston = new DoubleSolenoid(RobotMap.CUBE_PISTON1, RobotMap.CUBE_PISTON2);   
     }
 
     public void spinAllMotors(double value) {

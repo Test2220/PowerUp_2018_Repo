@@ -11,14 +11,12 @@ import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
 import frc.team2220.robot.commands.middlestart.MStartRSwitch;
 
-import frc.team2220.robot.commands.miscellaneous.ControlIntake;
-import frc.team2220.robot.commands.miscellaneous.ControlShooter;
-import frc.team2220.robot.triggers.TwilightTrigger;
+import frc.team2220.robot.commands.Intake.ControlIntake;
+import frc.team2220.robot.commands.Shooter.ControlShooter;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team2220.robot.utils.Converter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
