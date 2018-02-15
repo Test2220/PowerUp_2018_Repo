@@ -38,14 +38,14 @@ public class RobotMap {
     public static final int LIFT_PISTON_EXTEND = 2,
             LIFT_PISTON_RETRACT = 3;
 
-    public static final int INTAKE_PISTON_EXTEND = 4,
-            INTAKE_PISTON_RETRACT = 5;
+    public static final int INTAKE_PISTON_EXTEND = 5,
+            INTAKE_PISTON_RETRACT = 4;
 
-    public static final int RAMP_PISTON_EXTENDED = 6,
-            RAMP_PISTON_RETRACTED = 7;
+    public static final int RAMP_PISTON_EXTENDED = 7,
+            RAMP_PISTON_RETRACTED = 6;
 
 
-    public static final int CLIMBER = 0;
+    public static final int CLIMBER = 14;
 
 
 }

@@ -14,7 +14,7 @@ public class TurnToAngle extends Command{
     public  int currentDoneCount;
     
     double targetAngle;
-    PIDController turnPIDController;
+    private PIDController turnPIDController;
     
     double kP;
     double kI;
@@ -54,7 +54,6 @@ public class TurnToAngle extends Command{
     }
     
     public TurnToAngle(double angle) {
-        SmartDashboard.putData(turnPIDController);
         requires(Robot.twilightDrive);
 
         this.targetAngle = angle;
@@ -98,7 +97,7 @@ public class TurnToAngle extends Command{
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-
+        SmartDashboard.putData(turnPIDController);
         if (Math.abs(turnPIDController.getError()) < 4)
             currentDoneCount++;
         else

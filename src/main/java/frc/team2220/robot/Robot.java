@@ -16,6 +16,7 @@ import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
+import frc.team2220.robot.subsystems.Climber;
 import frc.team2220.robot.subsystems.Intake;
 import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
@@ -47,6 +48,7 @@ public class Robot extends TimedRobot {
 	public static final TwilightDrive twilightDrive = new TwilightDrive();
 	public static final Shooter shooter = new Shooter();
     public static final Intake intake = new Intake();
+    public static final Climber climber = new Climber();
 
 	public static PathGen pathGen;
 

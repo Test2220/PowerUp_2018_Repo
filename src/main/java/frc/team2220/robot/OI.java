@@ -13,6 +13,7 @@ import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.climber.SpinClimber;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
 
 import frc.team2220.robot.commands.Intake.ControlIntake;
@@ -39,6 +40,7 @@ public class OI {
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
     Button intakePistonTest = new JoystickButton(driverStick, 6);
+    Button climberTest = new JoystickButton(driverStick, 1);
 
 
     //BUTTONS ON MANIPULATOR STICK
@@ -69,8 +71,9 @@ public class OI {
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
-        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.EXTEND));
-        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.RETRACT));
+        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
+        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
+        climberTest.whileHeld(new SpinClimber());
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
