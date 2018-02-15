@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
 import com.ctre.CANTalon.TalonControlMode;
+import frc.team2220.robot.utils.Converter;
 
 public class Shooter extends Subsystem{
 
@@ -17,21 +18,49 @@ public class Shooter extends Subsystem{
     private DoubleSolenoid cubePiston;
 
 
-    /*
-    private static Shooter instance_ = new Shooter();
+    int maxVelTopleft;
+    double topLeftF = Converter.maxVelToFGainCorrect(maxVelTopleft);
+    double topLeftP = Converter.errorToPGain(0, 0);
+    double topLeftI;
+    double topLeftD;
 
-    public static Shooter getInstance()
-    {
-        return instance_;
-    }
+    int maxVelTopRight;
+    double topRightF = Converter.maxVelToFGainCorrect(maxVelTopRight);
+    double topRightP = Converter.errorToPGain(0, 0);
+    double topRightI;
+    double topRightD;
 
-*/
+    int maxVelBtmLeft;
+    double btmLeftF = Converter.maxVelToFGainCorrect(maxVelBtmLeft);
+    double btmLeftP = Converter.errorToPGain(0, 0);
+    double btmLeftI;
+    double btmLeftD;
+
+    int maxVelBtmRight;
+    double btmRightF = Converter.maxVelToFGainCorrect(maxVelBtmRight);
+    double btmRightP = Converter.errorToPGain(0, 0);
+    double btmRightI;
+    double btmRightD;
+
+
     public Shooter() {
 
         topLeft = new CANTalon(RobotMap.SHOOTER_TOP_LEFT);
         topRight = new CANTalon(RobotMap.SHOOTER_TOP_RIGHT);
         btmLeft = new CANTalon(RobotMap.SHOOTER_BTM_LEFT);
         btmRight = new CANTalon(RobotMap.SHOOTER_BTM_RIGHT);
+
+        topLeft.setF(topLeftF);
+        topLeft.setPID(topLeftP, topLeftI, topLeftD);
+
+        topRight.setF(topRightF);
+        topRight.setPID(topRightP, topRightI, topRightD);
+
+        btmLeft.setF(btmLeftF);
+        btmLeft.setPID(btmLeftP, btmLeftI, btmLeftD);
+
+        btmRight.setF(btmRightF);
+        btmRight.setPID(btmRightP, btmRightI, btmRightD);
 
         topLeft.setInverted(true); //TODO FIND THE RIGHT VALS
         topRight.setInverted(false);
@@ -55,6 +84,13 @@ public class Shooter extends Subsystem{
         topRight.changeControlMode(TalonControlMode.PercentVbus);
         btmLeft.changeControlMode(TalonControlMode.PercentVbus);
         btmRight.changeControlMode(TalonControlMode.PercentVbus);
+    }
+
+    public void changeToVelocity(){
+        topLeft.changeControlMode(TalonControlMode.Speed);
+        topRight.changeControlMode(TalonControlMode.Speed);
+        btmLeft.changeControlMode(TalonControlMode.Speed);
+        btmRight.changeControlMode(TalonControlMode.Speed);
     }
 
     //Lift Stuff

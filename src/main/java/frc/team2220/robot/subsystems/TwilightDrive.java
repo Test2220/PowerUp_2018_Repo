@@ -39,14 +39,14 @@ public class TwilightDrive extends Subsystem{
 	double pLeft= Converter.errorToPGain(0, 0); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
-	double fLeft = Converter.maxVelToFGainWrong(maxVell, 4096);
+	double fLeft = Converter.maxVelToFGainCorrect(maxVell);
 	int  iZoneLeft = 50;
 
 	
 	double pRight = Converter.errorToPGain(0, 0); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
-	double fRight = Converter.maxVelToFGainWrong(maxVelr, 0);
+	double fRight = Converter.maxVelToFGainCorrect(maxVelr);
 	int  iZoneRight = 50;
 
 	//------------VELOCITY STUFF-------------//
