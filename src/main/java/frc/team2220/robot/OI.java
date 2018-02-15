@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import frc.team2220.robot.commands.Shooter.CubePiston;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.ShootScale;
@@ -36,11 +37,14 @@ public class OI {
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
+    Button driverShootRetract = new JoystickButton(driverStick, 6);
+
 
     //BUTTONS ON MANIPULATOR STICK
 	Button shootSwitch = new JoystickButton(manipulatorStick, 1);
     Button shootScale = new JoystickButton(manipulatorStick, 2);
     Button controlIntake = new JoystickButton(manipulatorStick, 6);
+
 
 
 
@@ -64,6 +68,8 @@ public class OI {
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
+        //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
+        //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
 
         shootSwitch.whenActive(new ShootSwitch());

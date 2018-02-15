@@ -7,7 +7,7 @@ import frc.team2220.robot.Robot;
 
 public class Shoot extends CommandGroup{
 
-    public void Shoot() {
+    public Shoot() {
 
         addSequential(new CubePiston(CubePiston.Position.UP));
         addSequential(new WaitCommand(1));
