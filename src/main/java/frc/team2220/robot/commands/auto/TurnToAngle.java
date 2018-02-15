@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
@@ -53,7 +54,7 @@ public class TurnToAngle extends Command{
     }
     
     public TurnToAngle(double angle) {
-    	
+        SmartDashboard.putData(turnPIDController);
         requires(Robot.twilightDrive);
 
         this.targetAngle = angle;

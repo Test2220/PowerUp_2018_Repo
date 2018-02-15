@@ -3,6 +3,7 @@ package frc.team2220.robot.subsystems;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
 import com.ctre.CANTalon.TalonControlMode;
 import frc.team2220.robot.utils.Converter;
@@ -66,6 +67,7 @@ public class Shooter extends Subsystem{
         topRight.setInverted(false);
         btmLeft.setInverted(true);
         btmRight.setInverted(false);
+
 
         liftPistons = new DoubleSolenoid(RobotMap.LIFT_PISTON_EXTEND, RobotMap.LIFT_PISTON_RETRACT);
         cubePiston = new DoubleSolenoid(RobotMap.CUBE_PISTON_UP, RobotMap.CUBE_PISTON_DOWN);

@@ -14,6 +14,7 @@ public class Intake extends Subsystem{
     private CANTalon rightTransfer;
 
     private DoubleSolenoid rampPiston;
+    private DoubleSolenoid intakePistons;
 
     public Intake() {
 
@@ -30,6 +31,9 @@ public class Intake extends Subsystem{
         rightTransfer.setInverted(false);
 
         rampPiston = new DoubleSolenoid(RobotMap.RAMP_PISTON_EXTENDED, RobotMap.RAMP_PISTON_RETRACTED);
+
+        intakePistons = new DoubleSolenoid(RobotMap.INTAKE_PISTON_EXTEND, RobotMap.INTAKE_PISTON_RETRACT);
+
     }
 
     public void changeToPercentVBus() {
@@ -45,6 +49,14 @@ public class Intake extends Subsystem{
     public void spinBothTransfer(double value) {
         leftTransfer.set(value);
         rightTransfer.set(value);
+    }
+
+    public void setIntakePistonsExtend() {
+        intakePistons.set(DoubleSolenoid.Value.kForward);
+    }
+
+    public void setIntakePistonsRetract() {
+        intakePistons.set(DoubleSolenoid.Value.kReverse);
     }
 
     public void setRampDown() {

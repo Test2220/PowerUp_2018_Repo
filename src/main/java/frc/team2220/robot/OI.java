@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.Shooter.CubePiston;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
@@ -37,7 +38,7 @@ public class OI {
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
-    Button driverShootRetract = new JoystickButton(driverStick, 6);
+    Button intakePistonTest = new JoystickButton(driverStick, 6);
 
 
     //BUTTONS ON MANIPULATOR STICK
@@ -68,6 +69,8 @@ public class OI {
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
+        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.EXTEND));
+        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.RETRACT));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 

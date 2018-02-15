@@ -7,7 +7,6 @@ import frc.team2220.robot.utils.Converter;
 public class ControlIntake extends Command{
 
     public ControlIntake() {
-
         requires(Robot.intake);
     }
 
