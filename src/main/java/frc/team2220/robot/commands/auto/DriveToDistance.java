@@ -43,8 +43,10 @@ public class DriveToDistance extends Command{
 	@Override
 	protected void execute() {
 		SmartDashboard.putNumber("EXPECTED POSITION", targetTicks);
-		SmartDashboard.putNumber("CURRENT POSITION", Robot.twilightDrive.getAvgPosition());
-		//System.out.println("RUNNING");
+		SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
+        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+
+        //System.out.println("RUNNING");
 		
 	}
 

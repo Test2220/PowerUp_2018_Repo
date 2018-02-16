@@ -18,6 +18,8 @@ import frc.team2220.robot.commands.Intake.ControlIntake;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.team2220.robot.commands.miscellaneous.VelocityTester;
+import frc.team2220.robot.utils.Converter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -32,19 +34,19 @@ public class OI {
 	Joystick manipulatorStick = new Joystick(1);
 
 	//BUTTONS ON DRIVERSTICK
-    Button startCurvatureDrive = new JoystickButton(driverStick, 8);
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
-    Button intakePistonTest = new JoystickButton(driverStick, 6);
     Button climberTest = new JoystickButton(driverStick, 1);
+    Button motionMagic = new JoystickButton(driverStick, 8);
+    Button velocityTester = new JoystickButton(driverStick, 7);
+
 
 
     //BUTTONS ON MANIPULATOR STICK
 	Button shootSwitch = new JoystickButton(manipulatorStick, 1);
     Button shootScale = new JoystickButton(manipulatorStick, 2);
-    Button controlIntake = new JoystickButton(manipulatorStick, 6);
-
+    Button intakePistonTest = new JoystickButton(manipulatorStick, 5);
 
 
 
@@ -64,14 +66,14 @@ public class OI {
 
     public OI(){
 
-		startCurvatureDrive.whenPressed(new DriveWithXBox());
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
         intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
         climberTest.whileHeld(new SpinClimber());
-        
+        motionMagic.whenPressed(new DriveToDistance(Converter.ftToEncTicks(5)));
+        velocityTester.whenPressed(new VelocityTester());
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
@@ -80,7 +82,6 @@ public class OI {
         shootSwitch.whenReleased(new StopShooter());
         shootScale.whenPressed(new ShootScale());
         shootScale.whenReleased(new StopShooter());
-        controlIntake.whenPressed(new ControlIntake());
 
 
 

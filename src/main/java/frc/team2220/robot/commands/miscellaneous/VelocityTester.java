@@ -25,8 +25,8 @@ public class VelocityTester extends Command{
     @Override
     protected void execute() {
         Robot.twilightDrive.driveSet(300, 300);
-        SmartDashboard.putNumber("LEFT MOTOR ERROR", Robot.twilightDrive.lDriveMaster.getClosedLoopError());
-        SmartDashboard.putNumber("RIGHT MOTOR ERROR", Robot.twilightDrive.rDriveMaster.getClosedLoopError());
+        SmartDashboard.putNumber("LEFT MOTOR VEL", Robot.twilightDrive.lDriveMaster.getEncVelocity());
+        SmartDashboard.putNumber("RIGHT MOTOR VEL", Robot.twilightDrive.rDriveMaster.getEncVelocity());
 
     }
 

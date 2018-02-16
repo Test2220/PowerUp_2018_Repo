@@ -30,9 +30,11 @@ public class ControlIntake extends Command{
         if (Converter.deadzone(value) > 0.2) {
             Robot.intake.spinBothIntake(0.5);
             Robot.intake.spinBothTransfer(0.5);
+            Robot.shooter.setShooterDown();
         } else if (Converter.deadzone(value) < -0.2){
             Robot.intake.spinBothIntake(-0.5);
             Robot.intake.spinBothTransfer(-0.5);
+            Robot.shooter.setShooterDown();
         } else {
             Robot.intake.spinBothIntake(0);
             Robot.intake.spinBothTransfer(0);

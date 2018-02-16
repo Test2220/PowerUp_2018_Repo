@@ -74,7 +74,7 @@ public class Robot extends TimedRobot {
 //        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("resources/MStartRSwitch_left.csv");
 //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 //        try {
-//            System.out.println("bufferedReader.readLine() = " + bufferedReader.readLine());
+//            System.out.println("bufferedReader.readLine() = " + bufferedReader.sreadLine());
 //        } catch (Exception error) {
 //            System.out.println("ERROR IN READING CSV FILE = " + error);
 //        }
@@ -120,12 +120,12 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit(){
-
-        try {
-            System.out.println("GameInfo.getGameSpecificMessage_WeekZero()" + GameInfo.getGameSpecificMessage_WeekZero());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//            System.out.println("GameInfo.getGameSpecificMessage_WeekZero()" + GameInfo.getGameSpecificMessage_WeekZero());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         autonomousCommand = sideChooser.getSelected();
 

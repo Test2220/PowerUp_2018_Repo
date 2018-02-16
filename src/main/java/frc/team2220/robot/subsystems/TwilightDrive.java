@@ -1,5 +1,6 @@
 package frc.team2220.robot.subsystems;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
 
 import com.ctre.CANTalon;
@@ -31,20 +32,18 @@ public class TwilightDrive extends Subsystem{
 	public AHRS navX;
 
 	
-	double ticksPerRev = 1440;
-	//double cyclesPerRev = 360;
 
-	int  maxVell = 1460;
-	int  maxVelr = 1053;
+	int  maxVell = 3155;
+	int  maxVelr = 3155;
 	
-	double pLeft= Converter.errorToPGain(0, 0); //LEFT SIDE
+	double pLeft= Converter.errorToPGain(19556.9594071321 - 18442.0, 1.45); //LEFT SIDE
 	double iLeft = 0.000;
 	double dLeft = 10 * pLeft;
 	double fLeft = Converter.maxVelToFGainCorrect(maxVell);
 	int  iZoneLeft = 50;
 
 	
-	double pRight = Converter.errorToPGain(0, 0); //RIGHT SIDE
+	double pRight = Converter.errorToPGain(19556.9594071321 - 18900.0, 0.90); //RIGHT SIDE
 	double iRight = 0.0000;
 	double dRight = 0;
 	double fRight = Converter.maxVelToFGainCorrect(maxVelr);
@@ -59,7 +58,7 @@ public class TwilightDrive extends Subsystem{
     int  iZoneLeft2 = 50;
 
 
-    double pRight2 = Converter.errorToPGain(-0, 0); //RIGHT SIDE
+    double pRight2 = Converter.errorToPGain(0, 0); //RIGHT SIDE
     double iRight2 = 0.0000;
     double dRight2 = 0;
     double fRight2 = Converter.maxVelToFGainCorrect(maxVelr);
@@ -79,9 +78,7 @@ public class TwilightDrive extends Subsystem{
 	
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
-		//setDefaultCommand(new DriveWithXBox());
-	
+		setDefaultCommand(new DriveWithXBox());
 	}
 	
 
@@ -104,9 +101,6 @@ public class TwilightDrive extends Subsystem{
 		
 		rDriveSlave.changeControlMode(TalonControlMode.Follower);
 		rDriveSlave.set(rDriveMaster.getDeviceID());
-
-		lDriveMaster.reverseOutput(false);
-		rDriveMaster.reverseOutput(true);
 
 
 		rDriveMaster.setInverted(false);
@@ -158,9 +152,11 @@ public class TwilightDrive extends Subsystem{
 	
 	public void curvatureDrive(double xVal, double zVal) {
 		System.out.println(xVal);
-		TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 0.5, Converter.deadzone(zVal) * 0.5, true);
-		
-	}
+		TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
+        SmartDashboard.putNumber("LEFT VELOCITY",lDriveMaster.getEncVelocity());
+        SmartDashboard.putNumber("RIGHT VELOCITY",lDriveMaster.getEncVelocity());
+
+    }
 	public void rightSet(double position) {
 		rDriveMaster.set(position);
 	}
