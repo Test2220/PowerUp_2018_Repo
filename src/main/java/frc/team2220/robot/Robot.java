@@ -10,6 +10,7 @@ package frc.team2220.robot;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import frc.team2220.robot.commands.auto.GameInfo;
 import frc.team2220.robot.commands.miscellaneous.MatchData;
 import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
@@ -28,6 +29,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -77,7 +79,7 @@ public class Robot extends TimedRobot {
 //            System.out.println("ERROR IN READING CSV FILE = " + error);
 //        }
 
-		//sideChooser.addObject("RIGHT", new RightAutoHelper());
+		sideChooser.addObject("RIGHT", new RightAutoHelper());
 		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
 		//DriverStation.getInstance().getGameSpecificMessage()
 
@@ -118,6 +120,12 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit(){
+
+        try {
+            System.out.println("GameInfo.getGameSpecificMessage_WeekZero()" + GameInfo.getGameSpecificMessage_WeekZero());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         autonomousCommand = sideChooser.getSelected();
 
