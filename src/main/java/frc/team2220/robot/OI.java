@@ -8,10 +8,7 @@
 package frc.team2220.robot;
 
 import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Shooter.CubePiston;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootSwitch;
-import frc.team2220.robot.commands.Shooter.ShootScale;
+import frc.team2220.robot.commands.Shooter.*;
 import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.climber.SpinClimber;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
@@ -74,12 +71,15 @@ public class OI {
         intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
         climberTest.whileHeld(new SpinClimber());
+        
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
 
-        shootSwitch.whenActive(new ShootSwitch());
-        shootScale.whenActive(new ShootScale());
+        shootSwitch.whenPressed(new ShootSwitch());
+        shootSwitch.whenReleased(new StopShooter());
+        shootScale.whenPressed(new ShootScale());
+        shootScale.whenReleased(new StopShooter());
         controlIntake.whenPressed(new ControlIntake());
 
 

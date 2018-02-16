@@ -10,7 +10,7 @@ public class Shoot extends CommandGroup{
     public Shoot() {
 
         addSequential(new CubePiston(CubePiston.Position.UP));
-        addSequential(new WaitCommand(1));
+        addSequential(new WaitCommand(2));
         addSequential(new CubePiston(CubePiston.Position.DOWN));
 
     }

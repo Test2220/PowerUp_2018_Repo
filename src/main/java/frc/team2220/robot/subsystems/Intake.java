@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
+import frc.team2220.robot.commands.Intake.ControlIntake;
 
 public class Intake extends Subsystem{
 
@@ -70,6 +71,6 @@ public class Intake extends Subsystem{
 
     @Override
     protected void initDefaultCommand() {
-
+        setDefaultCommand(new ControlIntake());
     }
 }

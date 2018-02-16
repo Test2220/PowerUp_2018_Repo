@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
 import com.ctre.CANTalon.TalonControlMode;
+import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.utils.Converter;
 
 public class Shooter extends Subsystem{
@@ -63,10 +64,10 @@ public class Shooter extends Subsystem{
         btmRight.setF(btmRightF);
         btmRight.setPID(btmRightP, btmRightI, btmRightD);
 
-        topLeft.setInverted(true); //TODO FIND THE RIGHT VALS
-        topRight.setInverted(false);
-        btmLeft.setInverted(true);
-        btmRight.setInverted(false);
+        topLeft.setInverted(false); //TODO FIND THE RIGHT VALS
+        topRight.setInverted(true);
+        btmLeft.setInverted(false);
+        btmRight.setInverted(true);
 
 
         liftPistons = new DoubleSolenoid(RobotMap.LIFT_PISTON_EXTEND, RobotMap.LIFT_PISTON_RETRACT);
@@ -118,6 +119,6 @@ public class Shooter extends Subsystem{
 
     @Override
     protected void initDefaultCommand() {
-       // setDefaultCommand(Con);
+        //setDefaultCommand(new StopShooter());
     }
 }
