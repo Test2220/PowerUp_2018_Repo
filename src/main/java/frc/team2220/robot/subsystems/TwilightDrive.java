@@ -151,10 +151,7 @@ public class TwilightDrive extends Subsystem{
 	}
 	
 	public void curvatureDrive(double xVal, double zVal) {
-		System.out.println(xVal);
 		TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
-        SmartDashboard.putNumber("LEFT VELOCITY",lDriveMaster.getEncVelocity());
-        SmartDashboard.putNumber("RIGHT VELOCITY",lDriveMaster.getEncVelocity());
 
     }
 	public void rightSet(double position) {
@@ -176,8 +173,8 @@ public class TwilightDrive extends Subsystem{
 	public void resetEncoderPos(){
 		lDriveMaster.setEncPosition(0);
 		rDriveMaster.setEncPosition(0);
-		lDriveMaster.setPosition(0);//TODO Figure out the difference between these two
-		rDriveMaster.setPosition(0);
+//		lDriveMaster.setPosition(0);//TODO Figure out the difference between these two
+//		rDriveMaster.setPosition(0);
 		System.out.printf("ZERO ENCODERS %d %d", lDriveMaster.getEncPosition(), rDriveMaster.getEncPosition());
 	}
 	
@@ -261,19 +258,26 @@ public class TwilightDrive extends Subsystem{
 	public final int DONE_COUNT_MAX = 20;
 	public  int currentDoneCount = 0;
 
-	public boolean hasZeroBothVelocity() {
-			if (hasZeroLVelocity() && hasZeroRVelocity())
-			currentDoneCount++;
-		else
-			currentDoneCount = 0;
-		if(currentDoneCount > DONE_COUNT_MAX)
-		{
-			currentDoneCount = 0;
-			return true;
-		}
-		return false;
+	public boolean hasZeroBothVelocity(double targetTicks) {
+	    if (targetTicks - getAvgPosition() < 400) {
+
+            if (hasZeroLVelocity() && hasZeroRVelocity())
+                currentDoneCount++;
+            else
+                currentDoneCount = 0;
+            if (currentDoneCount > DONE_COUNT_MAX) {
+                currentDoneCount = 0;
+                System.out.println("TRUE");
+                return true;
+            }
+        }
+            return false;
+
 	}
 
+	public boolean hasReachedTargetTicks(double targetTicks){
+        return targetTicks - getAvgPosition() < 100;
+    }
 
 
 	public boolean hasHitBothSetpoints(double checker) {

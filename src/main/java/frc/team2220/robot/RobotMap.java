@@ -45,7 +45,8 @@ public class RobotMap {
             RAMP_PISTON_RETRACTED = 6;
 
 
-    public static final int CLIMBER = 5;
+    public static final int FISHING_POLE = 14,
+            CLIMBER = 5;
 
 
 }

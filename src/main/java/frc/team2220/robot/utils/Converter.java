@@ -3,24 +3,16 @@ package frc.team2220.robot.utils;
 public class Converter {
 
 
-	
-	private static Converter _instance = new Converter();
-
-	public static Converter getInstance() {
-
-		return _instance;
-
-	}
 
 	public static double ftToEncTicks(double inputFt) {
 
-		return (inputFt * 12) / (Constants.wheelCircumference) * Constants.encTickPerRev ;
+		return ((inputFt * 12) / (Constants.wheelCircumference)) * Constants.encTickPerRev ;
 
 	}
 
 	public static double inToEncTicks(double inputIn) {
 
-		return (inputIn) / (Constants.wheelCircumference) * Constants.encTickPerRev ;
+		return ((inputIn) / (Constants.wheelCircumference)) * Constants.encTickPerRev ;
 
 	}
 

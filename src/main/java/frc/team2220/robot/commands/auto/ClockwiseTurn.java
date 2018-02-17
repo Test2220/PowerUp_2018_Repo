@@ -54,7 +54,7 @@ public class ClockwiseTurn extends Command{
 	protected boolean isFinished() {
 		//System.out.println(Math.abs(Robot.twilightDrive.lDriveMaster.getPosition()) - targetTicks  < 30);
 	//return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
-		return Robot.twilightDrive.hasZeroBothVelocity();
+		return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
 	}
 
 	// Called once after isFinished returns true

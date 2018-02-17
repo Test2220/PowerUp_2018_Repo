@@ -14,7 +14,7 @@ public class ShootScale extends InstantCommand {
     }
 
     protected void execute() {
-        Robot.shooter.spinAllMotors(0.7);
+        Robot.shooter.spinAllMotors(0.6);
     }
 
 }

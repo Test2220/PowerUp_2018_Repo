@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class DriveToDistance extends Command{
 
-	public static double targetTicks;
+	public double targetTicks;
 	
 	public DriveToDistance(double targetTicks) {
 		
@@ -26,14 +26,14 @@ public class DriveToDistance extends Command{
 		Robot.twilightDrive.resetEncoderPos();
 		Robot.twilightDrive.resetEncoderPos();
 
-		Robot.twilightDrive.setBothAccel(800);
-		Robot.twilightDrive.setBothCruiseVel(800);
-		Robot.twilightDrive.changeToMotionMagic();
+        Robot.twilightDrive.changeToMotionMagic();
+		Robot.twilightDrive.setBothAccel(2000);
+		Robot.twilightDrive.setBothCruiseVel(3155);
 
 		
 		
 		System.out.println("Initialized");
-		System.out.println(targetTicks);
+		System.out.println("targetTicks = " + targetTicks);
 		
 		Robot.twilightDrive.driveSet(targetTicks, targetTicks);
 
@@ -53,7 +53,7 @@ public class DriveToDistance extends Command{
 	@Override
 	protected boolean isFinished() {
 	System.out.println(Robot.twilightDrive.rDriveMaster.getClosedLoopError());
-	return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
+	return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
 	}
 
 	// Called once after isFinished returns true

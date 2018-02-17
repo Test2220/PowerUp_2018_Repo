@@ -6,7 +6,7 @@ import frc.team2220.robot.Robot;
 public class StopCimber extends InstantCommand{
 
     protected void execute() {
-        Robot.climber.spinClimber(0);
+        Robot.climber.spinFishingPole(0);
     }
 
 }

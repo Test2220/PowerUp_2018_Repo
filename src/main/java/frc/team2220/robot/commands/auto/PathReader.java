@@ -65,13 +65,10 @@ public class PathReader extends Command{
 
             double angle_difference = desired_heading - gyro_heading;// Make sure to bound this from -180 to 180, otherwise you will get super large values
             SmartDashboard.putNumber("Angle Difference", angle_difference);
-            SmartDashboard.putNumber("Left Heading", left.segments[index].heading);
 
             double turn =  turnSensitivity * angle_difference;
-            System.out.println("TURN" + turn);
-            Robot.twilightDrive.driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(-(rightVelo - turn)), Converter.ftPerSecondToNativeUnitsPer100Ms(-(leftVelo + turn)));
+            Robot.twilightDrive.driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo + turn)), Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo - turn)));
 
-            System.out.println("Left Velo" + leftVelo);
 
 
 
@@ -80,8 +77,8 @@ public class PathReader extends Command{
         @Override
         protected boolean isFinished() {
 
-            return index + 2 >= left.segments.length;
-
+            return index + 1 >= left.segments.length;
+            //return false;
         }
 
         protected void end() {

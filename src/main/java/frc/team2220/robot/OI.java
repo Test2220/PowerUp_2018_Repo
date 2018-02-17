@@ -15,6 +15,10 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.auto.VelocityTester;
+import frc.team2220.robot.commands.leftstart.LStartLScale;
+import frc.team2220.robot.commands.leftstart.LStartLSwitch;
+import frc.team2220.robot.commands.rightstart.RStartRScale;
+import frc.team2220.robot.commands.rightstart.RStartRSwitch;
 import frc.team2220.robot.utils.Converter;
 
 /**
@@ -67,9 +71,10 @@ public class OI {
         driverShoot.whenPressed(new Shoot());
         intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        motionMagic.whenPressed(new DriveToDistance(Converter.ftToEncTicks(5)));
-        velocityTester.whenPressed(new VelocityTester());
-        pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.000));
+        motionMagic.whenPressed(new RStartRScale());
+        //.whenPressed(new LStartLScale());
+        velocityTester.whenPressed(new DriveToDistance(0));
+        pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.007));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 

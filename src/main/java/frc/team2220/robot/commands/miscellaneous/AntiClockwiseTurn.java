@@ -51,7 +51,7 @@ public class AntiClockwiseTurn extends Command{
 	@Override
 	protected boolean isFinished() {
 	
-	return Robot.twilightDrive.hasZeroBothVelocity();
+	return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
 	
 	}
 

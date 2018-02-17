@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
@@ -15,6 +16,8 @@ public class TurnToAngle extends Command{
     
     double targetAngle;
     private PIDController turnPIDController;
+
+    private double startTime;
     
     double kP;
     double kI;
@@ -63,7 +66,7 @@ public class TurnToAngle extends Command{
     // Called just before this Command runs the first time
     protected void initialize() {
         currentDoneCount = 0;
-
+        startTime = Timer.getFPGATimestamp() * 1000.0;
         Robot.twilightDrive.changeToPercentVBus();
     	Robot.twilightDrive.navX.reset();
         
@@ -76,7 +79,7 @@ public class TurnToAngle extends Command{
         //Robot.twilightDrive.navX.reset();
         Robot.twilightDrive.resetEncoderPos();
         // Start the PID Controller
-        turnPIDController = new PIDController(0.03, 0.0001, 0.01, Robot.twilightDrive.navX, new Output());
+        turnPIDController = new PIDController(0.024, 0.0002, 0.02, Robot.twilightDrive.navX, new Output());
         turnPIDController.setSetpoint(targetAngle);
         turnPIDController.setAbsoluteTolerance(1);
         turnPIDController.enable();
@@ -87,6 +90,7 @@ public class TurnToAngle extends Command{
     protected void execute() {
     	
         // Dev
+
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn running!");
         System.out.println("Angle: " + Robot.twilightDrive.navX.getAngle());
@@ -98,6 +102,12 @@ public class TurnToAngle extends Command{
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         SmartDashboard.putData(turnPIDController);
+        double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
+        if (difference > 2000) {
+            System.out.println("TIME UP");
+            return true;
+        }
+
         if (Math.abs(turnPIDController.getError()) < 4)
             currentDoneCount++;
         else

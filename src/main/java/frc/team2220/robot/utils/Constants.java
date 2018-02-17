@@ -6,7 +6,7 @@ public class Constants {
 
     public static double encTickPerRev = 4096;
 
-    public static double wheelDiameter = 4;
+    public static double wheelDiameter = 6.0;
     public static double wheelCircumference = Math.PI * wheelDiameter;
 
     public static double frameWidthIn = 23.25;

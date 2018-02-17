@@ -32,9 +32,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
-import static frc.team2220.robot.commands.auto.DriveToDistance.targetTicks;
 import static javax.swing.UIManager.getString;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -166,7 +165,6 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("EXPECTED POSITION", targetTicks);
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
         SmartDashboard.putNumber("LEFT MOTOR VEL", Robot.twilightDrive.lDriveMaster.getEncVelocity());
