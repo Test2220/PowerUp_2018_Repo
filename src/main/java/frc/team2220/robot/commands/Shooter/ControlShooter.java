@@ -10,11 +10,11 @@ import static frc.team2220.robot.Robot.shooter;
 
 public class ControlShooter extends Command{
 
+    private double value;
 
-
-    public ControlShooter() {
+    public ControlShooter(double value) {
         requires(Robot.shooter);
-
+        this.value = value;
     }
 
     // Called just before this Command runs the first time
@@ -29,10 +29,7 @@ public class ControlShooter extends Command{
     @Override
     protected void execute() {
 
-        double value = Robot.oi.getManipulatorStick().getRawAxis(1);
-
         Robot.shooter.spinAllMotors(value);
-
 
     }
 

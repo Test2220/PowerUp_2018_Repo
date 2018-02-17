@@ -11,7 +11,7 @@ import frc.team2220.robot.utils.Converter;
 
 public class Shooter extends Subsystem{
 
-    private CANTalon topLeft;
+    public CANTalon topLeft;
     private CANTalon topRight;
     private CANTalon btmLeft;
     private CANTalon btmRight;
@@ -20,9 +20,9 @@ public class Shooter extends Subsystem{
     private DoubleSolenoid cubePiston;
 
 
-    int maxVelTopleft;
+    int maxVelTopleft = 28583;
     double topLeftF = Converter.maxVelToFGainCorrect(maxVelTopleft);
-    double topLeftP = Converter.errorToPGain(0, 0);
+    double topLeftP = Converter.errorToPGain(0, 0.1);
     double topLeftI;
     double topLeftD;
 

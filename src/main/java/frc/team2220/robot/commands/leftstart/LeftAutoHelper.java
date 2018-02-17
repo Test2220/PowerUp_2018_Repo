@@ -10,15 +10,15 @@ import edu.wpi.first.wpilibj.command.InstantCommand;
 public class LeftAutoHelper extends InstantCommand{
 
     //SS stand for SAME SIDE
-//	private Command switchAutoSS = new LStartLSwitch();
-//	private Command scaleAutoSS = new LStartLScale();
+	private Command switchAutoSS = new LStartLSwitch();
+	private Command scaleAutoSS = new LStartLScale();
 
-    private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
+   // private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
 
 
 	//OS stand for OPPOSITE SIDE
 
-	private Command WorstAuto = new WorstAutoGroup();
+	private Command WorstAuto = new WorstAutoGroup(WorstAutoGroup.Position.LEFT);
 	
 	@Override
 	protected void initialize() {
@@ -28,8 +28,7 @@ public class LeftAutoHelper extends InstantCommand{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-        switchAutoSS.start();
-
+	    scaleAutoSS.start();
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
         System.out.println("Ran once");
@@ -42,7 +41,7 @@ public class LeftAutoHelper extends InstantCommand{
 				
 				if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
 					
-					//scaleAutoSS.start();
+					scaleAutoSS.start();
 					
 				} else if (scaleSide == MatchData.OwnedSide.RIGHT) {
 

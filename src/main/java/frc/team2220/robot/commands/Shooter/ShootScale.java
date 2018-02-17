@@ -10,6 +10,7 @@ public class ShootScale extends InstantCommand {
     }
 
     protected void initialize() {
+        Robot.shooter.changeToPercentVBus();
         Robot.shooter.setShooterUp();
     }
 

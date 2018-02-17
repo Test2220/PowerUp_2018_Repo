@@ -255,7 +255,7 @@ public class TwilightDrive extends Subsystem{
 		return Math.abs(rDriveMaster.getEncVelocity()) == 0;
 	}
 
-	public final int DONE_COUNT_MAX = 20;
+	public final int DONE_COUNT_MAX = 1;
 	public  int currentDoneCount = 0;
 
 	public boolean hasZeroBothVelocity(double targetTicks) {

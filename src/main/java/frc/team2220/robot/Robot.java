@@ -7,7 +7,9 @@
 
 package frc.team2220.robot;
 
+import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import frc.team2220.robot.commands.auto.GameInfo;
@@ -71,6 +73,9 @@ public class Robot extends TimedRobot {
 
         Compressor airCompressor = new Compressor();
         airCompressor.start();
+        UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+        camera.setResolution(128, 173);
+        camera.setFPS(30);
 //        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("resources/MStartRSwitch_left.csv");
 //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 //        try {
@@ -78,9 +83,9 @@ public class Robot extends TimedRobot {
 //        } catch (Exception error) {
 //            System.out.println("ERROR IN READING CSV FILE = " + error);
 //        }
-
+        sideChooser.addDefault("LEFT", new LeftAutoHelper());
 		sideChooser.addObject("RIGHT", new RightAutoHelper());
-		//sideChooser.addDefault("RIGHT", new LStartLSwitch());
+		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
 		//DriverStation.getInstance().getGameSpecificMessage()
 
 		// chooser.addObject("My Auto", new MyAutoCommand());
@@ -154,6 +159,7 @@ public class Robot extends TimedRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
+        Robot.shooter.setCubePistonDown();
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}	

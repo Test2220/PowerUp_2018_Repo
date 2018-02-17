@@ -23,8 +23,8 @@ public class RStartRScale extends CommandGroup{
 
         addSequential(new DriveToDistance(target1));
         addSequential(new TurnToAngle(90));
-        addParallel(new ShootScale());
         addSequential(new DriveToDistance(target2));
+        addParallel(new ShootScale());
         addSequential(new Shoot());
         addSequential(new Shoot());
         addSequential(new StopShooter());

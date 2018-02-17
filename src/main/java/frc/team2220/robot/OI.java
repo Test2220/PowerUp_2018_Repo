@@ -14,12 +14,7 @@ import frc.team2220.robot.commands.auto.*;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team2220.robot.commands.auto.VelocityTester;
-import frc.team2220.robot.commands.leftstart.LStartLScale;
-import frc.team2220.robot.commands.leftstart.LStartLSwitch;
-import frc.team2220.robot.commands.rightstart.RStartRScale;
-import frc.team2220.robot.commands.rightstart.RStartRSwitch;
-import frc.team2220.robot.utils.Converter;
+import frc.team2220.robot.commands.drive.DriveWithXBox;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -37,9 +32,10 @@ public class OI {
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
-    Button motionMagic = new JoystickButton(driverStick, 8);
+    Button preMatchSetup = new JoystickButton(driverStick, 8);
     Button velocityTester = new JoystickButton(driverStick, 7);
     Button pathTester = new JoystickButton(driverStick, 1);
+    Button stickInPlace = new JoystickButton(driverStick, 1);
 
 
 
@@ -69,12 +65,14 @@ public class OI {
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
-        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
-        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        motionMagic.whenPressed(new RStartRScale());
+        stickInPlace.whenPressed(new DriveToDistance(0));
+        stickInPlace.whenReleased(new DriveWithXBox());
+
+        preMatchSetup.whileHeld(new PreMatchDefault());
         //.whenPressed(new LStartLScale());
-        velocityTester.whenPressed(new DriveToDistance(0));
-        pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.007));
+        velocityTester.whenPressed(new VelocityShooter());
+        velocityTester.whenReleased(new StopShooter());
+        //pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.007));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
@@ -83,7 +81,8 @@ public class OI {
         shootSwitch.whenReleased(new StopShooter());
         shootScale.whenPressed(new ShootScale());
         shootScale.whenReleased(new StopShooter());
-
+        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
+        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
 
 
 

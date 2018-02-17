@@ -26,7 +26,7 @@ public class Climber extends Subsystem{
     }
 
     public void spinFishingPole(double val) {
-        fishingPole.set(Converter.deadzone(val) * 0.15);
+        fishingPole.set(Converter.deadzone(val) * 0.3);
     }
 
     public void spinWinch(double val) {

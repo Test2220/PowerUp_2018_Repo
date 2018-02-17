@@ -11,8 +11,7 @@ public class RightAutoHelper extends InstantCommand {
     private Command scaleAutoSS = new RStartRScale();
 
     //OS stand for OPPOSITE SIDE
-
-    private Command WorstAuto = new WorstAutoGroup();
+    private Command WorstAuto = new WorstAutoGroup(WorstAutoGroup.Position.RIGHT);
 
     @Override
     protected void initialize() {
@@ -22,8 +21,7 @@ public class RightAutoHelper extends InstantCommand {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        switchAutoSS.start();
-
+        scaleAutoSS.start();
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
         MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 

@@ -10,11 +10,12 @@ public class ShootSwitch extends InstantCommand{
     }
 
     protected void initialize() {
+        Robot.shooter.changeToPercentVBus();
         Robot.shooter.setShooterDown();
     }
 
     protected void execute() {
-        Robot.shooter.spinAllMotors(0.4);
+        Robot.shooter.spinAllMotors(0.24);
     }
 
 }

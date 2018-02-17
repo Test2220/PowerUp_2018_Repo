@@ -56,7 +56,6 @@ public class PathReader extends Command{
         protected void execute() {
             index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
-
             double leftVelo = left.segments[index].velocity;
             double rightVelo = right.segments[index].velocity;
 
@@ -68,9 +67,6 @@ public class PathReader extends Command{
 
             double turn =  turnSensitivity * angle_difference;
             Robot.twilightDrive.driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo + turn)), Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo - turn)));
-
-
-
 
         }
 

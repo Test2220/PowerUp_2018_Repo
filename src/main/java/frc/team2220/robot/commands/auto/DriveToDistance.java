@@ -52,7 +52,7 @@ public class DriveToDistance extends Command{
 	@SuppressWarnings("deprecation")
 	@Override
 	protected boolean isFinished() {
-	System.out.println(Robot.twilightDrive.rDriveMaster.getClosedLoopError());
+	System.out.println("CLOSED LOOP ERROR" + Robot.twilightDrive.rDriveMaster.getClosedLoopError());
 	return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
 	}
 

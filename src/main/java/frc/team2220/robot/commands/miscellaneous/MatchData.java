@@ -1,6 +1,9 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.DriverStation;
+import frc.team2220.robot.commands.auto.GameInfo;
+
+import java.io.IOException;
 
 /**
  * The MatchData class provides an easy interface to the 2018 Match Data
@@ -40,7 +43,14 @@ public class MatchData {
      *          check for UNKNOWN.
      */
     public static OwnedSide getOwnedSide(GameFeature feature) {
-        String gsm = DriverStation.getInstance().getGameSpecificMessage();
+
+        String gsm = null;
+        try {
+            gsm = GameInfo.getGameSpecificMessage_WeekZero();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         if (gsm == null)
             return OwnedSide.UNKNOWN;
 
