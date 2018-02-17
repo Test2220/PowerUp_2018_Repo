@@ -1,3 +1,6 @@
+import jaci.openrio.gradle.frc.*
+import jaci.gradle.deploy.artifact.*
+
 plugins {
     id "java"
     id "eclipse"
@@ -12,14 +15,32 @@ def ROBOT_CLASS = "frc.team2220.robot.Robot"
 // This is added by GradleRIO's backing project EmbeddedTools.
 deploy {
     targets {
-        target("roborio", jaci.openrio.gradle.frc.RoboRIO) {
+        target("roborio", RoboRIO) {
             team = TEAM
             user = 'admin'         // User to login as. Required.
             password = '2220'
         }
     }
     artifacts {
-        artifact('frcJava', jaci.openrio.gradle.frc.FRCJavaArtifact) {
+        artifact('frcJava', FRCJavaArtifact) {
+            targets << "roborio"
+        }
+
+        artifact('leftPaths', FileCollectionArtifact) {
+            files = project.fileTree(dir: 'src/paths/LeftStart', include: '*.csv')
+            directory = '/home/lvuser/paths/LeftStart/'
+            targets << "roborio"
+        }
+
+        artifact('middlePaths', FileCollectionArtifact) {
+            files = project.fileTree(dir: 'src/paths/MiddleStart', include: '*.csv')
+            directory = '/home/lvuser/paths/MiddleStart/'
+            targets << "roborio"
+        }
+
+        artifact('rightPaths', FileCollectionArtifact) {
+            files = project.fileTree(dir: 'src/paths/RightStart', include: '*.csv')
+            directory = '/home/lvuser/paths/RightStart/'
             targets << "roborio"
         }
     }

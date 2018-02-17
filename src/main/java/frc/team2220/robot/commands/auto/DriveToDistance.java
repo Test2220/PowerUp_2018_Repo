@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class DriveToDistance extends Command{
 
-	double targetTicks;
+	public static double targetTicks;
 	
 	public DriveToDistance(double targetTicks) {
 		
@@ -26,7 +26,7 @@ public class DriveToDistance extends Command{
 		Robot.twilightDrive.resetEncoderPos();
 		Robot.twilightDrive.resetEncoderPos();
 
-		Robot.twilightDrive.setBothAccel(700);
+		Robot.twilightDrive.setBothAccel(800);
 		Robot.twilightDrive.setBothCruiseVel(800);
 		Robot.twilightDrive.changeToMotionMagic();
 
@@ -42,9 +42,7 @@ public class DriveToDistance extends Command{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		SmartDashboard.putNumber("EXPECTED POSITION", targetTicks);
-		SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
-        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+
 
         //System.out.println("RUNNING");
 		
@@ -55,8 +53,7 @@ public class DriveToDistance extends Command{
 	@Override
 	protected boolean isFinished() {
 	System.out.println(Robot.twilightDrive.rDriveMaster.getClosedLoopError());
-	//return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
-	return false;
+	return Robot.twilightDrive.hasHitBothSetpoints(targetTicks);
 	}
 
 	// Called once after isFinished returns true

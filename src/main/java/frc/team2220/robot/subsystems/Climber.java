@@ -3,6 +3,8 @@ package frc.team2220.robot.subsystems;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
+import frc.team2220.robot.commands.climber.ControlClimber;
+import frc.team2220.robot.utils.Converter;
 
 public class Climber extends Subsystem{
 
@@ -11,17 +13,17 @@ public class Climber extends Subsystem{
     public Climber() {
 
         climber = new CANTalon(RobotMap.CLIMBER);
-
-        climber.setInverted(false);
+        climber.setInverted(true);
 
     }
 
     @Override
     protected void initDefaultCommand() {
+        setDefaultCommand(new ControlClimber());
     }
 
-    public void spinClimber() {
-        climber.set(0.3);
+    public void spinClimber(double val) {
+        climber.set(Converter.deadzone(val));
     }
 
 }

@@ -10,15 +10,11 @@ package frc.team2220.robot;
 import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.Shooter.*;
 import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.commands.climber.SpinClimber;
-import frc.team2220.robot.commands.drive.DriveWithXBox;
-
-import frc.team2220.robot.commands.Intake.ControlIntake;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team2220.robot.commands.miscellaneous.VelocityTester;
+import frc.team2220.robot.commands.auto.VelocityTester;
 import frc.team2220.robot.utils.Converter;
 
 /**
@@ -37,9 +33,9 @@ public class OI {
 	Button turnRight90 = new JoystickButton(driverStick, 2);
 	Button turnLeft90 = new JoystickButton(driverStick, 3);
     Button driverShoot = new JoystickButton(driverStick, 5);
-    Button climberTest = new JoystickButton(driverStick, 1);
     Button motionMagic = new JoystickButton(driverStick, 8);
     Button velocityTester = new JoystickButton(driverStick, 7);
+    Button pathTester = new JoystickButton(driverStick, 1);
 
 
 
@@ -71,9 +67,9 @@ public class OI {
         driverShoot.whenPressed(new Shoot());
         intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        climberTest.whileHeld(new SpinClimber());
         motionMagic.whenPressed(new DriveToDistance(Converter.ftToEncTicks(5)));
         velocityTester.whenPressed(new VelocityTester());
+        pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.000));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 
