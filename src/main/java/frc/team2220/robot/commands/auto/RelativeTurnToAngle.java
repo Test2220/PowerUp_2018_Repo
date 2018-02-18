@@ -67,8 +67,6 @@ public class RelativeTurnToAngle extends Command{
         currentDoneCount = 0;
         startTime = Timer.getFPGATimestamp() * 1000.0;
         Robot.twilightDrive.changeToPercentVBus();
-        Robot.twilightDrive.navX.reset();
-
         // Dev
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn started!");
@@ -102,7 +100,7 @@ public class RelativeTurnToAngle extends Command{
     protected boolean isFinished() {
         SmartDashboard.putData(turnPIDController);
         double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
-        if (difference > 2000) {
+        if (difference > 4000) {
             System.out.println("TIME UP");
             return true;
         }

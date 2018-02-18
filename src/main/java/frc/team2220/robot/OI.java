@@ -72,7 +72,7 @@ public class OI {
         //.whenPressed(new LStartLScale());0
         velocityTester.whenPressed(new VelocityShooter());
         velocityTester.whenReleased(new StopShooter());
-        pathTester.whenPressed(new PathReader("/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", "/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", 0.007));
+        pathTester.whenPressed(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", 0.0035));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 

@@ -25,6 +25,7 @@ public class PathReader extends Command{
         private double startTime;
         private int index;
 
+
         public double turnSensitivity;
 
         public PathReader(String leftFile, String rightFile, double turnSensitivity) {
@@ -36,7 +37,7 @@ public class PathReader extends Command{
 
         @Override
         protected void initialize() {
-
+            System.out.println("PATH READER INIT ");
             startTime = Timer.getFPGATimestamp() * 1000.0;
             Robot.twilightDrive.changeToVelocity();
 
@@ -53,8 +54,10 @@ public class PathReader extends Command{
 
         @Override
         protected void execute() {
+
             index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
+            if (isFinished()) return;
             double leftVelo = left.segments[index].velocity;
             double rightVelo = right.segments[index].velocity;
 
@@ -72,7 +75,7 @@ public class PathReader extends Command{
         @Override
         protected boolean isFinished() {
 
-            return index + 2 >= left.segments.length;
+            return index + 1 >= left.segments.length || index + 1 >= right.segments.length;
             //return false;
         }
 

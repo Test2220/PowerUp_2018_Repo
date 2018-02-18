@@ -18,7 +18,7 @@ public class LeftAutoHelper extends InstantCommand{
 
 	//OS stand for OPPOSITE SIDE
 
-	private Command WorstAuto = new WorstAutoGroup(WorstAutoGroup.Position.LEFT);
+	private Command WorstAuto = new LStartRScale();
 	
 	@Override
 	protected void initialize() {
@@ -28,7 +28,6 @@ public class LeftAutoHelper extends InstantCommand{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-	    scaleAutoSS.start();
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
         System.out.println("Ran once");

@@ -155,6 +155,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void teleopInit() {
+	    Robot.twilightDrive.navX.zeroYaw();
 		// This makes sure that the autonomous stops running when
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
@@ -171,6 +172,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
         SmartDashboard.putNumber("LEFT MOTOR VEL", Robot.twilightDrive.lDriveMaster.getEncVelocity());

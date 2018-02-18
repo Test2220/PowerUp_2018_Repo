@@ -13,7 +13,6 @@ public class Shoot extends CommandGroup{
 
         addSequential(new CubePiston(CubePiston.Position.UP));
         addSequential(new SpinBothTransfer());
-        addSequential(new WaitCommand(2));
         addSequential(new StopTransfer());
         addSequential(new CubePiston(CubePiston.Position.DOWN));
     }

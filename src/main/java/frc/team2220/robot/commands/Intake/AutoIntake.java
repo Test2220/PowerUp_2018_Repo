@@ -1,26 +1,31 @@
 package frc.team2220.robot.commands.Intake;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.InstantCommand;
-import edu.wpi.first.wpilibj.command.TimedCommand;
-import edu.wpi.first.wpilibj.command.WaitCommand;
 import frc.team2220.robot.Robot;
 
-public class SpinBothTransfer extends Command{
-
-    public SpinBothTransfer() {
-        super(2);
+public class AutoIntake extends Command{
+    double value;
+    public AutoIntake(double value) {
+        this.value = value;
     }
 
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
+        Robot.intake.setRampUp();
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.intake.spinBothTransfer(-0.5);
+        Robot.intake.spinBothIntake(value);
+        Robot.intake.spinBothTransfer(value);
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    @Override
+    protected boolean isFinished() {
+        return false;
     }
 
     // Called once after isFinished returns true
@@ -32,10 +37,6 @@ public class SpinBothTransfer extends Command{
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
-    }
-
-    protected boolean isFinished() {
-        return isTimedOut();
     }
 
 }

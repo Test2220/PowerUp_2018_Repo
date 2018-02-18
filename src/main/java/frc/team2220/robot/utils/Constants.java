@@ -15,4 +15,6 @@ public class Constants {
 
     public static final double PATH_MAX_SPEED = 2;
 
+    public static final int maxDrivetrainVelocity = 3155;
+
 }
