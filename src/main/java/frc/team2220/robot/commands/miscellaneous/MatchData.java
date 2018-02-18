@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.DriverStation;
+import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.GameInfo;
 
 import java.io.IOException;
@@ -45,11 +46,7 @@ public class MatchData {
     public static OwnedSide getOwnedSide(GameFeature feature) {
 
         String gsm = null;
-        try {
-            gsm = GameInfo.getGameSpecificMessage_WeekZero();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        gsm = DriverStation.getInstance().getGameSpecificMessage();
 
         if (gsm == null)
             return OwnedSide.UNKNOWN;

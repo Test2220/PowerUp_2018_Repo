@@ -35,7 +35,7 @@ public class OI {
     Button preMatchSetup = new JoystickButton(driverStick, 8);
     Button velocityTester = new JoystickButton(driverStick, 7);
     Button pathTester = new JoystickButton(driverStick, 1);
-    Button stickInPlace = new JoystickButton(driverStick, 1);
+    //Button stickInPlace = new JoystickButton(driverStick, 1);
 
 
 
@@ -65,14 +65,14 @@ public class OI {
         turnRight90.whenPressed(new TurnToAngle(90));
         turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
-        stickInPlace.whenPressed(new DriveToDistance(0));
-        stickInPlace.whenReleased(new DriveWithXBox());
+//        stickInPlace.whenPressed(new DriveToDistance(0));
+//        stickInPlace.whenReleased(new DriveWithXBox());
 
         preMatchSetup.whileHeld(new PreMatchDefault());
-        //.whenPressed(new LStartLScale());
+        //.whenPressed(new LStartLScale());0
         velocityTester.whenPressed(new VelocityShooter());
         velocityTester.whenReleased(new StopShooter());
-        //pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv", 0.007));
+        pathTester.whenPressed(new PathReader("/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", "/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", 0.007));
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
 

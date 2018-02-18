@@ -37,7 +37,6 @@ public class PathReader extends Command{
         @Override
         protected void initialize() {
 
-            Robot.twilightDrive.resetEncoderPos();
             startTime = Timer.getFPGATimestamp() * 1000.0;
             Robot.twilightDrive.changeToVelocity();
 
@@ -73,7 +72,7 @@ public class PathReader extends Command{
         @Override
         protected boolean isFinished() {
 
-            return index + 1 >= left.segments.length;
+            return index + 2 >= left.segments.length;
             //return false;
         }
 

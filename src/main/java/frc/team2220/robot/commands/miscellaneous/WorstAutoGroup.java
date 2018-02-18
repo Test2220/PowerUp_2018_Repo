@@ -28,14 +28,14 @@ public class WorstAutoGroup extends CommandGroup{
                 addSequential(new Shoot());
 
             case RIGHT:
-                addSequential(new DriveToDistance(Converter.inToEncTicks(228)));
+                addSequential(new DriveToDistance(Converter.inToEncTicks(226)));
                 addSequential(new TurnToAngle(-90));
                 addSequential(new DriveToDistance(Converter.inToEncTicks(240)));
                 addSequential(new TurnToAngle(90));
-                addSequential(new DriveToDistance(Converter.inToEncTicks(36)));
+                addSequential(new DriveToDistance(Converter.inToEncTicks(80)));
                 addSequential(new TurnToAngle(-90));
+                addSequential(new DriveToDistance(Converter.inToEncTicks(40)));
                 addParallel(new ShootScale());
-                addSequential(new DriveToDistance(Converter.inToEncTicks(20)));
                 addSequential(new Shoot());
                 addSequential(new Shoot());
         }
