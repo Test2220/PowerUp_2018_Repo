@@ -15,6 +15,9 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
+import frc.team2220.robot.commands.leftstart.LStartLSwitch;
+import frc.team2220.robot.commands.leftstart.LStartRScale;
+import frc.team2220.robot.utils.Converter;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -69,14 +72,16 @@ public class OI {
 //        stickInPlace.whenReleased(new DriveWithXBox());
 
         preMatchSetup.whileHeld(new PreMatchDefault());
-        //.whenPressed(new LStartLScale());0
-        velocityTester.whenPressed(new VelocityShooter());
-        velocityTester.whenReleased(new StopShooter());
-        pathTester.whenPressed(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", 0.0035));
-        //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
+      //.whenPressed(new LStartLScale());0
+        velocityTester.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(180)));
+        //pathTester.whenPressed(new PathReader("/home/lvuser/paths/LeftStart/LStartLScale_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLScale_right_detailed.csv", 0.005));
+        //pathTester.whenPressed(new PathReader("/home/lvuser/paths/LeftStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLSwitch_right_detailed.csv", 0.0021));
+        pathTester.whenPressed(new PathReaderMultiDirectional("/home/lvuser/paths/RightStart/RStartLScale_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartLScale_right_detailed.csv", 0.015, 0.0067));
+        //pathTester.whenPressed(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", -0.01));
+        //pathTester.whenPressed(new LStartLSwitch());
+
+        /// /driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
-
-
         shootSwitch.whenPressed(new ShootSwitch());
         shootSwitch.whenReleased(new StopShooter());
         shootScale.whenPressed(new ShootScale());

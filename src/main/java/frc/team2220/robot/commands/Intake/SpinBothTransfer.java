@@ -12,6 +12,10 @@ public class SpinBothTransfer extends Command{
         super(2);
     }
 
+    public SpinBothTransfer(double timeout) {
+        super(timeout);
+    }
+
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {

@@ -7,11 +7,8 @@ import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.PathReader;
-import frc.team2220.robot.commands.auto.RelativeTurnToAngle;
-import frc.team2220.robot.commands.auto.TurnToAngle;
+import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.miscellaneous.AntiClockwiseTurn;
-import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.utils.Constants;
 import frc.team2220.robot.utils.Converter;
 
@@ -33,22 +30,30 @@ public class RStartRScale extends CommandGroup{
 //        addSequential(new Shoot());
 //        addSequential(new Shoot());
 //        addSequential(new StopShooter());
-          addSequential(new PathReader("/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", "/home/lvuser/paths/LeftStart/RStartRScale_right_detailed.csv", 0.0067));
-          addParallel(new ShootScale());
-          addParallel(new Shoot());
-          addSequential(new Shoot());
-          addParallel(new Shoot());
-          addSequential(new StopShooter());
-          addSequential(new RelativeTurnToAngle(230));
-          addParallel(new AutoIntake(0.5));
-          addSequential(new DriveToDistance(Converter.ftToEncTicks(7.3)));
-          addParallel(new AutoIntake(0));
-          addSequential(new RelativeTurnToAngle(45));
-          addParallel(new ShootSwitch());
-          addSequential(new DriveToDistance(Converter.ftToEncTicks(-2)));
-          addSequential(new Shoot());
-          addSequential(new Shoot());
-          addSequential(new StopShooter());
+
+
+//        addSequential(new PathReader("/home/lvuser/paths/RightStart/RStartRScale_right_detailed.csv", "/home/lvuser/paths/RightStart/RStartRScale_right_detailed.csv", 0.0067));
+//          addParallel(new ShootScale());
+//          addParallel(new Shoot());
+//          addSequential(new Shoot());
+//          addParallel(new Shoot());
+//          addSequential(new StopShooter());
+//          addSequential(new RelativeTurnToAngle(230));
+//          addParallel(new AutoIntake(0.5));
+//          addSequential(new DriveToDistance(Converter.ftToEncTicks(7.3)));
+//          addParallel(new AutoIntake(0));
+//          addSequential(new RelativeTurnToAngle(45));
+//          addParallel(new ShootSwitch());
+//          addSequential(new DriveToDistance(Converter.ftToEncTicks(-2)));
+//          addSequential(new Shoot());
+//          addSequential(new Shoot());
+//          addSequential(new StopShooter());
+
+        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        addSequential(new PathReader("/home/lvuser/paths/RightStart/RStartRScale_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRScale_right_detailed.csv", -0.004));
+        addSequential(new ShootScale());
+        addSequential(new Shoot());
+        addSequential(new StopShooter());
 
     }
 

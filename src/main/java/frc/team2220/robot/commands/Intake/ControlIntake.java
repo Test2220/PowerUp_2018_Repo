@@ -6,6 +6,7 @@ import frc.team2220.robot.utils.Converter;
 
 public class ControlIntake extends Command{
 
+
     public ControlIntake() {
         requires(Robot.intake);
     }
@@ -21,28 +22,33 @@ public class ControlIntake extends Command{
     protected void execute() {
         double value = Robot.oi.getManipulatorStick().getRawAxis(1);
 
-        if (Math.abs(Converter.deadzone(value)) > 0.2) {
-            Robot.intake.setRampDown();
-        } else {
-            Robot.intake.setRampUp();
+
+            if (Math.abs(Converter.deadzone(value)) > 0.2) {
+                Robot.intake.defaultCommandRun = true;
+                Robot.intake.setRampDown();
+            } else {
+                if (Robot.intake.defaultCommandRun) {
+                    Robot.intake.setRampUp();
+                }
+            }
+
+            if (Converter.deadzone(value) > 0.2) {
+                Robot.intake.setIntakePistonsExtend();
+                Robot.intake.spinBothIntake(0.25);
+                Robot.intake.spinBothTransfer(0.25);
+                Robot.shooter.setShooterDown();
+            } else if (Converter.deadzone(value) < -0.2) {
+                Robot.intake.setIntakePistonsExtend();
+                Robot.intake.spinBothIntake(-0.65);
+                Robot.intake.spinBothTransfer(-0.65);
+                Robot.shooter.setShooterDown();
+            } else {
+                Robot.intake.spinBothIntake(0);
+                Robot.intake.spinBothTransfer(0);
+            }
+
         }
 
-        if (Converter.deadzone(value) > 0.2) {
-            Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinBothIntake(0.25);
-            Robot.intake.spinBothTransfer(0.25);
-            Robot.shooter.setShooterDown();
-        } else if (Converter.deadzone(value) < -0.2){
-            Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinBothIntake(-0.65);
-            Robot.intake.spinBothTransfer(-0.65);
-            Robot.shooter.setShooterDown();
-        } else {
-            Robot.intake.spinBothIntake(0);
-            Robot.intake.spinBothTransfer(0);
-        }
-
-    }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override

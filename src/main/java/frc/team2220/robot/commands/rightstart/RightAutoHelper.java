@@ -11,7 +11,7 @@ public class RightAutoHelper extends InstantCommand {
     private Command scaleAutoSS = new RStartRScale();
 
     //OS stand for OPPOSITE SIDE
-    private Command WorstAuto = new WorstAutoGroup(WorstAutoGroup.Position.RIGHT);
+    private Command WorstAuto = new RStartLScale();
 
     @Override
     protected void initialize() {

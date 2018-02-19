@@ -26,8 +26,8 @@ public class ClockwiseTurn extends Command{
 
 		Robot.twilightDrive.resetEncoderPos();
 		
-		Robot.twilightDrive.setBothAccel(600);
-		Robot.twilightDrive.setBothCruiseVel(1000);
+		Robot.twilightDrive.setBothAccel(2500);
+		Robot.twilightDrive.setBothCruiseVel(3150);
 		Robot.twilightDrive.changeToMotionMagic();
 
 		

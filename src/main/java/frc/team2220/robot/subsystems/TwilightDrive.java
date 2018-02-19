@@ -181,7 +181,7 @@ public class TwilightDrive extends Subsystem{
 	}
 	
 	public double getAvgPosition() {
-		return (getLPosition() + getRPosition()) / 2;
+		return (Math.abs((getLPosition()) + Math.abs(getRPosition()))) / 2;
 	}
 	
 	//-------------------DRIVE TYPE MODIFIERS-------------------//
@@ -256,12 +256,15 @@ public class TwilightDrive extends Subsystem{
 	public  int currentDoneCount = 0;
 
 	public boolean hasZeroBothVelocity(double targetTicks) {
-	    if (targetTicks - getAvgPosition() < 400) {
+	   System.out.println("Average Ticks = " + getAvgPosition());
 
-            if (hasZeroLVelocity() && hasZeroRVelocity())
+        // System.out.println("TARGET TICKS - AVERAGE = " + (targetTicks - getAvgPosition()));
+	    if (targetTicks - getAvgPosition() < 400) {
+            if (hasZeroLVelocity() && hasZeroRVelocity()) {
                 currentDoneCount++;
-            else
+            }else {
                 currentDoneCount = 0;
+            }
             if (currentDoneCount > DONE_COUNT_MAX) {
                 currentDoneCount = 0;
                 System.out.println("TRUE");

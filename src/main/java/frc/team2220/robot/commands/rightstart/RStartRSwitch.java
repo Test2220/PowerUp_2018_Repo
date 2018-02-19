@@ -5,10 +5,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.ClockwiseTurn;
-import frc.team2220.robot.commands.auto.DriveToDistance;
-import frc.team2220.robot.commands.auto.PathReader;
-import frc.team2220.robot.commands.auto.TurnToAngle;
+import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.utils.Constants;
 import frc.team2220.robot.utils.Converter;
 
@@ -29,8 +26,8 @@ public class RStartRSwitch extends CommandGroup{
 //        addSequential(new Shoot());
 //        addSequential(new Shoot());
 //        addSequential(new StopShooter());
-        addSequential(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", 0.0035));
-        addSequential(new DriveToDistance(Converter.ftToEncTicks(-3.7)));
+        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
+        addSequential(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", -0.025));
         addParallel(new ShootSwitch());
         addSequential(new Shoot());
         addSequential(new StopShooter());

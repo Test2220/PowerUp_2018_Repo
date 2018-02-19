@@ -17,6 +17,9 @@ public class Intake extends Subsystem{
     private DoubleSolenoid rampPiston;
     private DoubleSolenoid intakePistons;
 
+    public boolean defaultCommandRun = true;
+
+
     public Intake() {
 
         leftIntake = new CANTalon(RobotMap.COLLECTOR_LEFT);

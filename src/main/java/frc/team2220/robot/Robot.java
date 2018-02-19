@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import frc.team2220.robot.commands.auto.GameInfo;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.miscellaneous.MatchData;
 import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
@@ -100,8 +101,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void disabledInit() {
-
-/*
+	    /*
         String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
         System.out.println(gameData);
 */
@@ -172,12 +172,10 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
         SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
-        SmartDashboard.putNumber("LEFT MOTOR VEL", Robot.twilightDrive.lDriveMaster.getEncVelocity());
-        SmartDashboard.putNumber("RIGHT MOTOR VEL", Robot.twilightDrive.rDriveMaster.getEncVelocity());
-
 	}
 	/**
 	 * This function is called periodically during test mode.
