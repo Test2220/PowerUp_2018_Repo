@@ -1,11 +1,9 @@
 package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.TwilightDrive;
 
-public class VelocityTester extends Command{
+public class VelocityTester extends Command {
 
     public VelocityTester() {
         requires(Robot.twilightDrive);

@@ -9,7 +9,7 @@ import frc.team2220.robot.commands.auto.PathReaderMultiDirectional;
 import frc.team2220.robot.commands.auto.PreAutoDefault;
 import frc.team2220.robot.utils.Converter;
 
-public class RStartLScale extends CommandGroup{
+public class RStartLScale extends CommandGroup {
 
     public RStartLScale() {
         addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));

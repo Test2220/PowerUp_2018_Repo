@@ -1,19 +1,16 @@
 package frc.team2220.robot.commands.leftstart;
 
+import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.commands.miscellaneous.AntiClockwiseTurn;
+import frc.team2220.robot.commands.auto.PathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
 
-import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Converter;
+public class LStartLScale extends CommandGroup {
 
-public class LStartLScale extends CommandGroup{
-	
-	public LStartLScale() {
-		//Division by 2 as Robot mid should be on target point
+    public LStartLScale() {
+        //Division by 2 as Robot mid should be on target point
 
 
 //		double target1 = Converter.inToEncTicks(324) - Converter.inToEncTicks(Constants.frameLengthIn/2);
@@ -35,6 +32,6 @@ public class LStartLScale extends CommandGroup{
         addSequential(new Shoot());
         addSequential(new StopShooter());
 
-	}
+    }
 
 }

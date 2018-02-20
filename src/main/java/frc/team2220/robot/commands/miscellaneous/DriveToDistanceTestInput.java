@@ -1,12 +1,10 @@
 package frc.team2220.robot.commands.miscellaneous;
 
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.TwilightDrive;
 
-import edu.wpi.first.wpilibj.command.Command;
-
-public class DriveToDistanceTestInput extends Command{
+public class DriveToDistanceTestInput extends Command {
 
     double targetTicks;
 
@@ -34,7 +32,6 @@ public class DriveToDistanceTestInput extends Command{
         Robot.twilightDrive.setBothAccel(700);
         Robot.twilightDrive.setBothCruiseVel(800);
         Robot.twilightDrive.changeToMotionMagic();
-
 
 
         System.out.println("Initialized");
@@ -76,7 +73,6 @@ public class DriveToDistanceTestInput extends Command{
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
-
 
 
     }

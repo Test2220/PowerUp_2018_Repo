@@ -3,52 +3,51 @@ package frc.team2220.robot.utils;
 public class Converter {
 
 
+    public static double ftToEncTicks(double inputFt) {
 
-	public static double ftToEncTicks(double inputFt) {
+        return ((inputFt * 12) / (Constants.wheelCircumference)) * Constants.encTickPerRev;
 
-		return ((inputFt * 12) / (Constants.wheelCircumference)) * Constants.encTickPerRev ;
+    }
 
-	}
+    public static double inToEncTicks(double inputIn) {
 
-	public static double inToEncTicks(double inputIn) {
+        return ((inputIn) / (Constants.wheelCircumference)) * Constants.encTickPerRev;
 
-		return ((inputIn) / (Constants.wheelCircumference)) * Constants.encTickPerRev ;
+    }
 
-	}
+    public static double degreesTurnToEncTicks(double degreesToTurn) {
 
-	public static double degreesTurnToEncTicks(double degreesToTurn) {
+        double circumFt = Constants.frameWidthFt * Math.PI;
+        double turnRatio = (degreesToTurn + 15) / 360;
 
-		double circumFt = Constants.frameWidthFt * Math.PI;
-		double turnRatio = (degreesToTurn + 15)/360;
-
-		double arcLengthFt = turnRatio * circumFt;
-		double arcLengthTicks = ftToEncTicks(arcLengthFt);
+        double arcLengthFt = turnRatio * circumFt;
+        double arcLengthTicks = ftToEncTicks(arcLengthFt);
 
 
-		return arcLengthTicks;
-		}
+        return arcLengthTicks;
+    }
 
-		public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {
-	        return ftToEncTicks(ftPerSecond) * (1.0/10);
+    public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {
+        return ftToEncTicks(ftPerSecond) * (1.0 / 10);
+
+    }
+
+    public static double maxVelToFGainWrong(int maxVel, double encTicksPerRev) {
+
+        if (maxVel == 0) {
+
+            return 0;
+
+        } else {
+
+            double fGainTemp = maxVel * (1.0 / 60) * (1.0 / 10) * (encTicksPerRev / 1);
+            double fGain = 1023.0 / fGainTemp;
+            return fGain;
 
         }
+    }
 
-	public static double maxVelToFGainWrong(int maxVel, double encTicksPerRev) {
-
-		if (maxVel ==  0) {
-
-			return 0;
-
-		} else {
-
-			double fGainTemp = maxVel * (1.0/60) * (1.0/10) * (encTicksPerRev/1);
-			double fGain = 1023.0/fGainTemp;
-			return fGain;
-
-		}
-	}
-
-	public static double maxVelToFGainCorrect(int maxVel) {
+    public static double maxVelToFGainCorrect(int maxVel) {
         if (maxVel == 0) {
 
             return 0;
@@ -59,18 +58,18 @@ public class Converter {
     }
 
 
-	public static double errorToPGain(double error, double pMultiplier) {
-		if (error == 0) {
+    public static double errorToPGain(double error, double pMultiplier) {
+        if (error == 0) {
 
-			return 0;
+            return 0;
 
-		} else {
+        } else {
 
-			double pGain = (pMultiplier*1023) / error;
-			return pGain;
+            double pGain = (pMultiplier * 1023) / error;
+            return pGain;
 
-		}
-	}
+        }
+    }
 
     //Super Basic Deadzone function
     public static double deadzone(double val) {

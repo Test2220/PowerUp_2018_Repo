@@ -10,7 +10,7 @@ public class Constants {
     public static double wheelCircumference = Math.PI * wheelDiameter;
 
     public static double frameWidthIn = 23.25;
-    public static double frameWidthFt = frameWidthIn/12.0;
+    public static double frameWidthFt = frameWidthIn / 12.0;
     public static double frameLengthIn = 32.2;
 
     public static final double PATH_MAX_SPEED = 2;

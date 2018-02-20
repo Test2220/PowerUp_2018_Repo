@@ -2,12 +2,11 @@ package frc.team2220.robot.commands.drive;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.utils.Constants;
 
 //-----------------------------DO NOT USE-------------------------------//
 //Using speed control isn't worth it as Talons are in brake mode and it stops just as well using PID.
 
-public class VelocityDrive extends Command{
+public class VelocityDrive extends Command {
 
     public VelocityDrive() {
         requires(Robot.twilightDrive);

@@ -2,13 +2,10 @@ package frc.team2220.robot.commands.miscellaneous;
 
 
 import frc.team2220.robot.utils.Constants;
-import jaci.pathfinder.*;
+import jaci.pathfinder.Pathfinder;
+import jaci.pathfinder.Trajectory;
+import jaci.pathfinder.Waypoint;
 import jaci.pathfinder.modifiers.TankModifier;
-
-import java.io.*;
-import java.sql.Driver;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PathGen {
 

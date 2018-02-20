@@ -1,8 +1,7 @@
 package frc.team2220.robot.commands.auto;
 
-import frc.team2220.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team2220.robot.Robot;
 
 @SuppressWarnings("deprecation")
 

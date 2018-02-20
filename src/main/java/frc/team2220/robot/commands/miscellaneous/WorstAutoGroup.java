@@ -7,11 +7,11 @@ import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.utils.Converter;
 
-public class WorstAutoGroup extends CommandGroup{
+public class WorstAutoGroup extends CommandGroup {
 
     Position position;
 
-    public WorstAutoGroup(Position position){
+    public WorstAutoGroup(Position position) {
         this.position = position;
 
         switch (position) {

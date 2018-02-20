@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Converter;
 
-public class ControlIntake extends Command{
+public class ControlIntake extends Command {
 
 
     public ControlIntake() {
@@ -20,34 +20,52 @@ public class ControlIntake extends Command{
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        double value = Robot.oi.getManipulatorStick().getRawAxis(1);
+        double leftYAxis = Robot.oi.getManipulatorStick().getRawAxis(1);
+        double rightYAxis = Robot.oi.getManipulatorStick().getRawAxis(5);
 
-
-            if (Math.abs(Converter.deadzone(value)) > 0.2) {
-                Robot.intake.defaultCommandRun = true;
-                Robot.intake.setRampDown();
-            } else {
-                if (Robot.intake.defaultCommandRun) {
-                    Robot.intake.setRampUp();
-                }
+        if (Math.abs(Converter.deadzone(leftYAxis)) > 0.2 || Math.abs(Converter.deadzone(rightYAxis)) > 0.2) {
+            Robot.intake.defaultCommandRun = true;
+            Robot.intake.setRampDown();
+        } else {
+            if (Robot.intake.defaultCommandRun) {
+                Robot.intake.setRampUp();
             }
+        }
 
-            if (Converter.deadzone(value) > 0.2) {
+
+        if (Converter.deadzone(leftYAxis) > 0.2) {
+            Robot.intake.setIntakePistonsExtend();
+            Robot.intake.spinBothIntake(0.25);
+            Robot.intake.spinBothTransfer(0.25);
+            Robot.shooter.setShooterDown();
+        } else if (Converter.deadzone(leftYAxis) < -0.2) {
+            Robot.intake.setIntakePistonsExtend();
+            Robot.intake.spinBothIntake(-0.65);
+            Robot.intake.spinBothTransfer(-0.65);
+            Robot.shooter.setShooterDown();
+        } else if (Converter.deadzone(rightYAxis) > 0.2) {
+
+            if (Robot.intake.isBlockHalfWayLoaded()) {
+                Robot.intake.spinBothIntake(0);
+                Robot.intake.spinBothTransfer(0);
+            } else {
                 Robot.intake.setIntakePistonsExtend();
                 Robot.intake.spinBothIntake(0.25);
                 Robot.intake.spinBothTransfer(0.25);
                 Robot.shooter.setShooterDown();
-            } else if (Converter.deadzone(value) < -0.2) {
-                Robot.intake.setIntakePistonsExtend();
-                Robot.intake.spinBothIntake(-0.65);
-                Robot.intake.spinBothTransfer(-0.65);
-                Robot.shooter.setShooterDown();
-            } else {
-                Robot.intake.spinBothIntake(0);
-                Robot.intake.spinBothTransfer(0);
             }
-
+        } else if (Converter.deadzone(rightYAxis) < -0.2) {
+            Robot.intake.setIntakePistonsExtend();
+            Robot.intake.spinBothIntake(-0.65);
+            Robot.intake.spinBothTransfer(-0.65);
+            Robot.shooter.setShooterDown();
+        } else {
+            Robot.intake.spinBothTransfer(0);
+            Robot.intake.spinBothIntake(0);
         }
+
+
+    }
 
 
     // Make this return true when this Command no longer needs to run execute()

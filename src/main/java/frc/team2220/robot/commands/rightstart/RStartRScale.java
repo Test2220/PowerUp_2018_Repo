@@ -1,18 +1,13 @@
 package frc.team2220.robot.commands.rightstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.commands.Intake.AutoIntake;
-import frc.team2220.robot.commands.Intake.ControlIntake;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.commands.miscellaneous.AntiClockwiseTurn;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Converter;
+import frc.team2220.robot.commands.auto.PathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
 
-public class RStartRScale extends CommandGroup{
+public class RStartRScale extends CommandGroup {
 
     public RStartRScale() {
 //        //Division by 2 as Robot mid should be on target point

@@ -1,12 +1,13 @@
 package frc.team2220.robot.subsystems;
 
 import com.ctre.CANTalon;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.commands.Intake.ControlIntake;
 
-public class Intake extends Subsystem{
+public class Intake extends Subsystem {
 
     private CANTalon leftIntake;
     private CANTalon rightIntake;
@@ -19,6 +20,7 @@ public class Intake extends Subsystem{
 
     public boolean defaultCommandRun = true;
 
+    private DigitalInput limitSwitch;
 
     public Intake() {
 
@@ -35,8 +37,9 @@ public class Intake extends Subsystem{
         rightTransfer.setInverted(false);
 
         rampPiston = new DoubleSolenoid(RobotMap.RAMP_PISTON_EXTENDED, RobotMap.RAMP_PISTON_RETRACTED);
-
         intakePistons = new DoubleSolenoid(RobotMap.INTAKE_PISTON_EXTEND, RobotMap.INTAKE_PISTON_RETRACT);
+
+        DigitalInput limitSwitch = new DigitalInput(RobotMap.INTAKE_LIMIT_SWITCH);
 
     }
 
@@ -71,6 +74,9 @@ public class Intake extends Subsystem{
         rampPiston.set(DoubleSolenoid.Value.kForward);
     }
 
+    public boolean isBlockHalfWayLoaded() {
+        return limitSwitch.get();
+    }
 
     @Override
     protected void initDefaultCommand() {

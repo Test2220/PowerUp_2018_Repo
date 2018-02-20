@@ -2,18 +2,10 @@ package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.TwilightDrive;
 import frc.team2220.robot.utils.Converter;
-import jaci.pathfinder.Pathfinder;
-import jaci.pathfinder.Trajectory;
-
-import java.io.File;
 
 public class StayInPlace extends Command {
-
-
 
 
     private double startTime;

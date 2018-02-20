@@ -1,12 +1,9 @@
 package frc.team2220.robot.commands.Intake;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.InstantCommand;
-import edu.wpi.first.wpilibj.command.TimedCommand;
-import edu.wpi.first.wpilibj.command.WaitCommand;
 import frc.team2220.robot.Robot;
 
-public class SpinBothTransfer extends Command{
+public class SpinBothTransfer extends Command {
 
     public SpinBothTransfer() {
         super(2);

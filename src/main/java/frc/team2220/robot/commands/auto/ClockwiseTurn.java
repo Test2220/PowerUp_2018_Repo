@@ -1,9 +1,7 @@
 package frc.team2220.robot.commands.auto;
 
-import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.TwilightDrive;
-
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team2220.robot.Robot;
 
 public class ClockwiseTurn extends Command {
     @SuppressWarnings("deprecation")

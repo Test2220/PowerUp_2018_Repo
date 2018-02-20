@@ -1,15 +1,13 @@
 package frc.team2220.robot.subsystems;
 
 import com.ctre.CANTalon;
+import com.ctre.CANTalon.TalonControlMode;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
-import com.ctre.CANTalon.TalonControlMode;
-import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.utils.Converter;
 
-public class Shooter extends Subsystem{
+public class Shooter extends Subsystem {
 
     public CANTalon topLeft;
     private CANTalon topRight;
@@ -89,7 +87,7 @@ public class Shooter extends Subsystem{
         btmRight.changeControlMode(TalonControlMode.PercentVbus);
     }
 
-    public void changeToVelocity(){
+    public void changeToVelocity() {
         topLeft.changeControlMode(TalonControlMode.Speed);
         topRight.changeControlMode(TalonControlMode.Speed);
         btmLeft.changeControlMode(TalonControlMode.Speed);

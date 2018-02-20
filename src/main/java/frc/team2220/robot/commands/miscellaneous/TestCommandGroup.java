@@ -5,7 +5,7 @@ import frc.team2220.robot.commands.auto.ClockwiseTurn;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.utils.Converter;
 
-public class TestCommandGroup extends CommandGroup{
+public class TestCommandGroup extends CommandGroup {
 
     double target1 = Converter.ftToEncTicks(1.5);
 
@@ -98,7 +98,7 @@ public class TestCommandGroup extends CommandGroup{
 
 
         */
-	}
+}
 
 
 

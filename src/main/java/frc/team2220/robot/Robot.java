@@ -8,56 +8,44 @@
 package frc.team2220.robot;
 
 import edu.wpi.cscore.UsbCamera;
-import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.PowerDistributionPanel;
-import frc.team2220.robot.commands.auto.GameInfo;
-import frc.team2220.robot.commands.auto.PreMatchDefault;
-import frc.team2220.robot.commands.miscellaneous.MatchData;
-import frc.team2220.robot.commands.miscellaneous.PathGen;
+import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
+import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.Climber;
 import frc.team2220.robot.subsystems.Intake;
 import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
 
-import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import static javax.swing.UIManager.getString;
-
 
 public class Robot extends TimedRobot {
 
 
-	public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
-	public static final TwilightDrive twilightDrive = new TwilightDrive();
-	public static final Shooter shooter = new Shooter();
+    public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
+    public static final TwilightDrive twilightDrive = new TwilightDrive();
+    public static final Shooter shooter = new Shooter();
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
 
-	private static PathGen pathGen;
+    private static PathGen pathGen;
 
-	public static OI oi;
+    public static OI oi;
 
-	private Command autonomousCommand;
-	private SendableChooser<Command> sideChooser = new SendableChooser<>();
+    private Command autonomousCommand;
+    private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
-	@Override
-	public void robotInit() {
-		oi = new OI();
-		pathGen = new PathGen();
+    @Override
+    public void robotInit() {
+        oi = new OI();
+        pathGen = new PathGen();
 
         Compressor airCompressor = new Compressor();
         airCompressor.start();
@@ -65,65 +53,65 @@ public class Robot extends TimedRobot {
         camera.setResolution(128, 173);
         camera.setFPS(30);
         sideChooser.addDefault("LEFT", new LeftAutoHelper());
-		sideChooser.addObject("RIGHT", new RightAutoHelper());
-		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+        sideChooser.addObject("RIGHT", new RightAutoHelper());
+        sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
 
-		SmartDashboard.putData("Auto mode", sideChooser);
+        SmartDashboard.putData("Auto mode", sideChooser);
 
-	}
+    }
 
 
-	@Override
-	public void disabledInit() {
-	}
+    @Override
+    public void disabledInit() {
+    }
 
-	@Override
-	public void disabledPeriodic(){
-		Scheduler.getInstance().run();
-	}
+    @Override
+    public void disabledPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
-	@Override
-	public void autonomousInit(){
+    @Override
+    public void autonomousInit() {
 
         autonomousCommand = sideChooser.getSelected();
 
-		if (autonomousCommand == null) {
-			System.out.println("NULL AUTO");
-		}
-		if (autonomousCommand != null) {
-			System.out.println("NOT NULL AUTO" + autonomousCommand.toString());
+        if (autonomousCommand == null) {
+            System.out.println("NULL AUTO");
+        }
+        if (autonomousCommand != null) {
+            System.out.println("NOT NULL AUTO" + autonomousCommand.toString());
 
-			autonomousCommand.start();
-		}
-	}
+            autonomousCommand.start();
+        }
+    }
 
-	@Override
-	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
-	}
+    @Override
+    public void autonomousPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
-	@Override
-	public void teleopInit() {
-	    Robot.twilightDrive.navX.zeroYaw();
+    @Override
+    public void teleopInit() {
+        Robot.twilightDrive.navX.zeroYaw();
 
         Robot.shooter.setCubePistonDown();
-		if (autonomousCommand != null) {
-			autonomousCommand.cancel();
-		}	
-	}
+        if (autonomousCommand != null) {
+            autonomousCommand.cancel();
+        }
+    }
 
 
-	@Override
-	public void teleopPeriodic() {
+    @Override
+    public void teleopPeriodic() {
         Scheduler.getInstance().run();
         SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
         SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
-	}
+    }
 
-	@Override
-	public void testPeriodic() {
+    @Override
+    public void testPeriodic() {
 
-	}
+    }
 }

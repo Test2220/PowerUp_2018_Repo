@@ -6,9 +6,10 @@ import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
+
 import java.io.File;
 
-public class PathReaderMultiDirectional extends Command{
+public class PathReaderMultiDirectional extends Command {
 
     private Trajectory left;
     private Trajectory right;
@@ -48,7 +49,6 @@ public class PathReaderMultiDirectional extends Command{
     protected void execute() {
 
 
-
         index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
         if (isFinished()) return;
@@ -61,10 +61,10 @@ public class PathReaderMultiDirectional extends Command{
 
         double turn = 0;
         if (Robot.twilightDrive.navX.getRate() < -0.05) {
-             turn =  -absTurnSensitivityLeft * angle_difference;
-        } else if (Robot.twilightDrive.navX.getRate() > 0.05 && left.segments.length/2 > index) {
-             turn =  absTurnSensitivityRight * angle_difference;
-        } else if (Robot.twilightDrive.navX.getRate() > 0.05 && left.segments.length/2 < index){
+            turn = -absTurnSensitivityLeft * angle_difference;
+        } else if (Robot.twilightDrive.navX.getRate() > 0.05 && left.segments.length / 2 > index) {
+            turn = absTurnSensitivityRight * angle_difference;
+        } else if (Robot.twilightDrive.navX.getRate() > 0.05 && left.segments.length / 2 < index) {
             turn = (0.02) * angle_difference;
         }
 

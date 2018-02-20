@@ -1,16 +1,13 @@
 package frc.team2220.robot.commands.rightstart;
 
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Converter;
+import frc.team2220.robot.commands.auto.PathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
 
-public class RStartRSwitch extends CommandGroup{
-
+public class RStartRSwitch extends CommandGroup {
 
 
     public RStartRSwitch() {

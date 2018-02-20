@@ -3,7 +3,7 @@ package frc.team2220.robot.commands.Shooter;
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.team2220.robot.Robot;
 
-public class LiftPistons extends InstantCommand{
+public class LiftPistons extends InstantCommand {
 
     public enum Position {
         RETRACTED, EXTENDED;
@@ -16,7 +16,7 @@ public class LiftPistons extends InstantCommand{
     }
 
     protected void execute() {
-        switch (position){
+        switch (position) {
             case RETRACTED:
                 Robot.shooter.setShooterDown();
                 break;

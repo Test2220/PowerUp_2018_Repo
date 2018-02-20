@@ -3,8 +3,9 @@ package frc.team2220.robot.commands.Intake;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
 
-public class AutoIntake extends Command{
+public class AutoIntake extends Command {
     double value;
+
     public AutoIntake(double value) {
         this.value = value;
     }

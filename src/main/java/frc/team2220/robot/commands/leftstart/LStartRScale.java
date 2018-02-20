@@ -1,6 +1,5 @@
 package frc.team2220.robot.commands.leftstart;
 
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
@@ -8,10 +7,9 @@ import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.ClockwiseTurn;
 import frc.team2220.robot.commands.auto.PathReader;
 import frc.team2220.robot.commands.auto.PreAutoDefault;
-import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.utils.Converter;
 
-public class LStartRScale extends CommandGroup{
+public class LStartRScale extends CommandGroup {
 
     public LStartRScale() {
         addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));

@@ -6,7 +6,7 @@ import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.commands.climber.ControlClimber;
 import frc.team2220.robot.utils.Converter;
 
-public class Climber extends Subsystem{
+public class Climber extends Subsystem {
 
     private CANTalon fishingPole;
     private CANTalon winch;

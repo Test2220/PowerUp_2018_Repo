@@ -10,37 +10,36 @@ package frc.team2220.robot.commands.miscellaneous;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 
 
-
 public class ExampleSubsystem extends PIDSubsystem {
 
-double p;
-double i;
-double d;
-double period;
-double f;
+    double p;
+    double i;
+    double d;
+    double period;
+    double f;
 
-	public ExampleSubsystem(double p, double i, double d, double period, double f) {
-		super(p, i, d, period, f);
-		// TODO Auto-generated constructor stub
-	}
+    public ExampleSubsystem(double p, double i, double d, double period, double f) {
+        super(p, i, d, period, f);
+        // TODO Auto-generated constructor stub
+    }
 
-	// Put methods for controlling this subsystem
-	// here. Call these from Commands.
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
 
-	public void initDefaultCommand() {
-		// Set the default command for a subsystem here.
-		// setDefaultCommand(new MySpecialCommand());
-	}
+    public void initDefaultCommand() {
+        // Set the default command for a subsystem here.
+        // setDefaultCommand(new MySpecialCommand());
+    }
 
-	@Override
-	protected double returnPIDInput() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @Override
+    protected double returnPIDInput() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	protected void usePIDOutput(double output) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    protected void usePIDOutput(double output) {
+        // TODO Auto-generated method stub
+
+    }
 }
