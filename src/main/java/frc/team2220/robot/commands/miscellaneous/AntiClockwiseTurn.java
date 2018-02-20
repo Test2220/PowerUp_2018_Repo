@@ -29,25 +29,16 @@ public class AntiClockwiseTurn extends Command{
 		Robot.twilightDrive.setBothAccel(200);
 		Robot.twilightDrive.setBothCruiseVel(400);
 		Robot.twilightDrive.changeToMotionMagic();
-
-		
-		
-		System.out.println("Initialized");
-		System.out.println(targetTicks);
 		
 		Robot.twilightDrive.driveSet(-targetTicks, targetTicks);
 
 	}
 
-	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		
-		//System.out.println("RUNNING");
-		
+
 	}
 
-	// Make this return true when this sCommand no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
 	

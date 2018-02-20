@@ -36,7 +36,6 @@ public class ControlShooter extends Command {
     protected boolean isFinished() {
         double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
         if (difference > 500) {
-            System.out.println("TIME UP");
             return true;
         }
         return false;
@@ -47,7 +46,6 @@ public class ControlShooter extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
-        System.out.println("ENDED CONTROL SHOOTER");
         Robot.shooter.spinAllMotors(0);
     }
 

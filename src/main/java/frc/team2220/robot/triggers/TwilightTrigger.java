@@ -16,8 +16,7 @@ public class TwilightTrigger extends Trigger{
 
 	public boolean get()
 	{
-		//System.out.println(Robot.oi == null);
-		if(Math.abs(driverStick.getRawAxis(1)) > 0.12 || 
+		if(Math.abs(driverStick.getRawAxis(1)) > 0.12 ||
 				Math.abs(driverStick.getRawAxis(5)) > 0.12 || Math.abs(driverStick.getRawAxis(4)) > 0.12)
 			return true;
 		return false;

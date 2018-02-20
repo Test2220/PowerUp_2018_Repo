@@ -38,16 +38,8 @@ import java.io.InputStreamReader;
 import static javax.swing.UIManager.getString;
 
 
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the TimedRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the build.properties file in the
- * project.
- */
 public class Robot extends TimedRobot {
 
-    public static String side;
 
 	public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
 	public static final TwilightDrive twilightDrive = new TwilightDrive();
@@ -55,17 +47,12 @@ public class Robot extends TimedRobot {
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
 
-	public static PathGen pathGen;
+	private static PathGen pathGen;
 
 	public static OI oi;
 
-	public Command autonomousCommand;
-	SendableChooser<Command> sideChooser = new SendableChooser<>();
-
-    /**
-	 * This function is run when the robot is first started up and should be
-	 * used for any initialization code.
-	 */
+	private Command autonomousCommand;
+	private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
 	@Override
 	public void robotInit() {
@@ -77,34 +64,17 @@ public class Robot extends TimedRobot {
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
         camera.setResolution(128, 173);
         camera.setFPS(30);
-//        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("resources/MStartRSwitch_left.csv");
-//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//        try {
-//            System.out.println("bufferedReader.readLine() = " + bufferedReader.sreadLine());
-//        } catch (Exception error) {
-//            System.out.println("ERROR IN READING CSV FILE = " + error);
-//        }
         sideChooser.addDefault("LEFT", new LeftAutoHelper());
 		sideChooser.addObject("RIGHT", new RightAutoHelper());
 		sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
-		//DriverStation.getInstance().getGameSpecificMessage()
 
-		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", sideChooser);
 
 	}
 
-	/**
-	 * This function is called once each time the robot enters Disabled mode.o
-	 * You can use it to reset any subsystem information you want to clear when
-	 * the robot is disabled.
-	 */
+
 	@Override
 	public void disabledInit() {
-	    /*
-        String gameData = offSeasonNetworkTable.getEntry("GameData").getString("defaultValue");
-        System.out.println(gameData);
-*/
 	}
 
 	@Override
@@ -112,32 +82,14 @@ public class Robot extends TimedRobot {
 		Scheduler.getInstance().run();
 	}
 
-	/**
-	 * This autonomous (along with the chooser code above) shows how to select
-	 * between different autonomous modes using the dashboard. The sendable
-	 * chooser code works with the Java SmartDashboard. If you prefer the
-	 * LabVIEW Dashboard, remove all of the chooser code and uncomment the
-	 * getString code to get the auto name from the text box below the Gyro
-	 *
-	 * <p>You can add additional auto modes by adding additional commands to the
-	 * chooser code above (like the commented example) or additional comparisons
-	 * to the switch structure below with additional strings & commands.
-	 */
 	@Override
 	public void autonomousInit(){
-//
-//        try {
-//            System.out.println("GameInfo.getGameSpecificMessage_WeekZero()" + GameInfo.getGameSpecificMessage_WeekZero());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         autonomousCommand = sideChooser.getSelected();
 
 		if (autonomousCommand == null) {
 			System.out.println("NULL AUTO");
 		}
-		// schedule the autonomous command (example)
 		if (autonomousCommand != null) {
 			System.out.println("NOT NULL AUTO" + autonomousCommand.toString());
 
@@ -145,9 +97,6 @@ public class Robot extends TimedRobot {
 		}
 	}
 
-	/**
-	 * This function is called periodically during autonomous.
-	 */
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
@@ -156,19 +105,14 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopInit() {
 	    Robot.twilightDrive.navX.zeroYaw();
-		// This makes sure that the autonomous stops running when
-		// teleop starts running. If you want the autonomous to
-		// continue until interrupted by another command, remove
-		// this line or comment it out.
+
         Robot.shooter.setCubePistonDown();
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}	
 	}
 
-	/**
-	 * This function is called periodically during operator control.
-	 */
+
 	@Override
 	public void teleopPeriodic() {
         Scheduler.getInstance().run();
@@ -177,9 +121,7 @@ public class Robot extends TimedRobot {
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
 	}
-	/**
-	 * This function is called periodically during test mode.
-	 */
+
 	@Override
 	public void testPeriodic() {
 

@@ -16,7 +16,6 @@ public class VelocityShooter extends Command{
 
     protected void execute() {
         Robot.shooter.topLeft.set(300);
-        System.out.println("TOP LEFT VELOCITY = " + Robot.shooter.topLeft.getEncVelocity());
     }
 
     @Override

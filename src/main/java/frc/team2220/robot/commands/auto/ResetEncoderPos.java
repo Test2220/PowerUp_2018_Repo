@@ -5,27 +5,22 @@ import frc.team2220.robot.subsystems.TwilightDrive;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class ResetEncoderPos extends Command{
+public class ResetEncoderPos extends Command {
 
-	public ResetEncoderPos() {
-		
-		requires(Robot.twilightDrive);
-		
-	}
-	
-protected void initialize() {
-		
-		Robot.twilightDrive.changeToPercentVBus();
-		System.out.println("RAN ONCE");
-	}
+    public ResetEncoderPos() {
 
-	@Override
-	protected boolean isFinished() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-	
-	
-	
+        requires(Robot.twilightDrive);
+
+    }
+
+    protected void initialize() {
+
+        Robot.twilightDrive.changeToPercentVBus();
+    }
+
+    @Override
+    protected boolean isFinished() {
+        return true;
+    }
 
 }

@@ -30,7 +30,6 @@ public class VelocityDrive extends Command{
 
         double xVal = Robot.oi.getDriverStick().getRawAxis(1);
         double zVal = Robot.oi.getDriverStick().getRawAxis(5);
-        System.out.println("Control Mode" + Robot.twilightDrive.lDriveMaster.getControlMode());
         Robot.twilightDrive.driveSet(-xVal, zVal);
 
     }

@@ -7,7 +7,7 @@ import frc.team2220.robot.commands.Intake.RampControl;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 
-public class PreMatchDefault extends CommandGroup{
+public class PreMatchDefault extends CommandGroup {
 
     public PreMatchDefault() {
         addSequential(new IntakeBoolean(false));

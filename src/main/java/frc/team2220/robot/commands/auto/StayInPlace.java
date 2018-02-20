@@ -8,19 +8,17 @@ import frc.team2220.robot.subsystems.TwilightDrive;
 import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
+
 import java.io.File;
 
-public class StayInPlace extends Command{
+public class StayInPlace extends Command {
 
 
-    private Trajectory left;
-    private Trajectory right;
 
 
     private double startTime;
-    private int index;
 
-    public double turnSensitivity;
+    private double turnSensitivity;
 
     public StayInPlace(double turnSensitivity) {
         requires(Robot.twilightDrive);
@@ -47,29 +45,20 @@ public class StayInPlace extends Command{
 
     @Override
     protected void execute() {
-        index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
         double gyro_heading = Robot.twilightDrive.navX.getAngle();    // Assuming gyro angle is given in degrees
         double desired_heading = 0;
 
         double angle_difference = desired_heading - gyro_heading;// Make sure to bound this from -180 to 180, otherwise you will get super large values
 
-
-        double turn =  turnSensitivity * angle_difference;
-        System.out.println("TURN" + turn);
+        double turn = turnSensitivity * angle_difference;
         Robot.twilightDrive.driveSet(Converter.ftPerSecondToNativeUnitsPer100Ms(turn), Converter.ftPerSecondToNativeUnitsPer100Ms(-turn));
-
-
-
 
     }
 
     @Override
     protected boolean isFinished() {
-
-        //eturn index + 2 >= left.segments.length;
         return false;
-
     }
 
     protected void end() {

@@ -30,7 +30,6 @@ public class PathReaderMultiDirectional extends Command{
     @Override
     protected void initialize() {
 
-        System.out.println("PATH READER INIT ");
         startTime = Timer.getFPGATimestamp() * 1000.0;
         Robot.twilightDrive.changeToVelocity();
 
@@ -59,7 +58,6 @@ public class PathReaderMultiDirectional extends Command{
         double gyro_heading = Robot.twilightDrive.navX.getAngle();// Assuming gyro angle is given in degrees
         double desired_heading = Pathfinder.r2d(left.segments[index].heading);
         double angle_difference = (desired_heading - gyro_heading) % 180;// Make sure to bound this from -180 to 180, otherwise you will get super large values
-        System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, absTurnSensitivityLeft);
 
         double turn = 0;
         if (Robot.twilightDrive.navX.getRate() < -0.05) {
@@ -76,9 +74,7 @@ public class PathReaderMultiDirectional extends Command{
 
     @Override
     protected boolean isFinished() {
-
         return index + 1 >= left.segments.length || index + 1 >= right.segments.length;
-        //return false;
     }
 
     protected void end() {

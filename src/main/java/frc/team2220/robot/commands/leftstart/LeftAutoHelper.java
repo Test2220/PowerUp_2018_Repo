@@ -30,7 +30,6 @@ public class LeftAutoHelper extends InstantCommand{
 	protected void execute() {
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
-        System.out.println("Ran once");
 
 		if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
 

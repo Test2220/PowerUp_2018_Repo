@@ -43,7 +43,6 @@ public class Converter {
 
 			double fGainTemp = maxVel * (1.0/60) * (1.0/10) * (encTicksPerRev/1);
 			double fGain = 1023.0/fGainTemp;
-			System.out.println("FGain = " + fGain);
 			return fGain;
 
 		}

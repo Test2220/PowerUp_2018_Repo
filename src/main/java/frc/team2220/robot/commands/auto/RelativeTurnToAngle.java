@@ -7,20 +7,16 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 
-public class RelativeTurnToAngle extends Command{
+public class RelativeTurnToAngle extends Command {
 
 
-    public final int DONE_COUNT_MAX = 10;
-    public  int currentDoneCount;
+    private int DONE_COUNT_MAX = 10;
+    private int currentDoneCount;
 
-    double targetAngle;
+    private double targetAngle;
     private PIDController turnPIDController;
 
     private double startTime;
-
-    double kP;
-    double kI;
-    double kD;
 
     public class Output implements PIDOutput {
         @Override
@@ -72,7 +68,6 @@ public class RelativeTurnToAngle extends Command{
         System.out.println("DriveTurn started!");
         System.out.println("Target angle: " + targetAngle);
 
-        // Reset
         //Robot.twilightDrive.navX.reset();
         Robot.twilightDrive.resetEncoderPos();
         // Start the PID Controller
@@ -83,11 +78,7 @@ public class RelativeTurnToAngle extends Command{
 
     }
 
-    // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
-        // Dev
-
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn running!");
         System.out.println("Angle: " + Robot.twilightDrive.navX.getAngle());
@@ -96,7 +87,6 @@ public class RelativeTurnToAngle extends Command{
 
     }
 
-    // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         SmartDashboard.putData(turnPIDController);
         double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
@@ -109,8 +99,7 @@ public class RelativeTurnToAngle extends Command{
             currentDoneCount++;
         else
             currentDoneCount = 0;
-        if(currentDoneCount > DONE_COUNT_MAX)
-        {
+        if (currentDoneCount > DONE_COUNT_MAX) {
             currentDoneCount = 0;
             return true;
         }
@@ -118,10 +107,8 @@ public class RelativeTurnToAngle extends Command{
 
     }
 
-    // Called once after isFinished returns true
     protected void end() {
 
-        // Dev
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn ended!");
         System.out.println("Error: " + turnPIDController.getError());
@@ -136,16 +123,12 @@ public class RelativeTurnToAngle extends Command{
 
     }
 
-    // Called when another command which requires one or more of the same
-    // subsystems is scheduled to run
     protected void interrupted() {
 
-        // Dev
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn interrupted!");
         System.out.println("Error: " + turnPIDController.getError());
 
-        // Reset the PID Controller
         turnPIDController.disable();
         turnPIDController.reset();
 
