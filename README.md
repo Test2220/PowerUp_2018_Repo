@@ -1,11 +1,11 @@
 # 2018 Power Up Repo
 
-This is the code for the 2018 Test Bot. 
+This is the code for the 2018 Competition Bot.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-Do note that this is a gradleRio project which is different compared to the projects we have used before
+Do note that this is a gradleRio project which is different compared to the projects we have used before.
 
 ### Prerequisites
 
