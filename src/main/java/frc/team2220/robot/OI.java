@@ -16,6 +16,7 @@ import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.ClockwiseTurn;
+import frc.team2220.robot.commands.auto.PathReader;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.auto.TurnToAngle;
 import frc.team2220.robot.commands.rightstart.RStartRScale;
@@ -64,8 +65,8 @@ public class OI {
 
     public OI() {
 
-        turnRight90.whenPressed(new TurnToAngle(90));
-        turnLeft90.whenPressed(new TurnToAngle(-90));
+//        turnRight90.whenPressed(new TurnToAngle(90));
+//        turnLeft90.whenPressed(new TurnToAngle(-90));
         driverShoot.whenPressed(new Shoot());
 //        stickInPlace.whenPressed(new DriveToDistance(0));
 //        stickInPlace.whenReleased(new DriveWithXBox());
@@ -77,9 +78,10 @@ public class OI {
         //pathTester.whenPressed(new PathReader("/home/lvuser/paths/LeftStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLSwitch_right_detailed.csv", 0.0021));
         // pathTester.whenPressed(new PathReaderMultiDirectional("/home/lvuser/paths/RightStart/RStartLScale_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartLScale_right_detailed.csv", 0.015, 0.0067));
         //pathTester.whenPressed(new PathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", -0.01));
-        pathTester.whenPressed(new RStartRScale());
+        //pathTester.whenPressed(new RStartRScale());
+        pathTester.whenPressed(new PathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", 0));
 
-        /// /driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
+        //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
         shootSwitch.whenPressed(new ShootSwitch());
         shootSwitch.whenReleased(new StopShooter());

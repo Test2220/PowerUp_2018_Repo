@@ -21,7 +21,8 @@ public class ControlIntake extends Command {
     @Override
     protected void execute() {
         double leftYAxis = Robot.oi.getManipulatorStick().getRawAxis(1);
-        double rightYAxis = Robot.oi.getManipulatorStick().getRawAxis(5);
+        double rightYAxis = -Robot.oi.getManipulatorStick().getRawAxis(5);
+
 
         if (Math.abs(Converter.deadzone(leftYAxis)) > 0.2 || Math.abs(Converter.deadzone(rightYAxis)) > 0.2) {
             Robot.intake.defaultCommandRun = true;
@@ -33,35 +34,37 @@ public class ControlIntake extends Command {
         }
 
 
+
+
+
         if (Converter.deadzone(leftYAxis) > 0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinBothIntake(0.25);
-            Robot.intake.spinBothTransfer(0.25);
+            Robot.intake.spinEntireIntake(0.25);
             Robot.shooter.setShooterDown();
+            System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(leftYAxis) < -0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinBothIntake(-0.65);
-            Robot.intake.spinBothTransfer(-0.65);
+            Robot.intake.spinEntireIntake(-0.65);
             Robot.shooter.setShooterDown();
+            System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(rightYAxis) > 0.2) {
-
+                System.out.println("RIGHT AXIS > 0.2");
             if (Robot.intake.isBlockHalfWayLoaded()) {
-                Robot.intake.spinBothIntake(0);
-                Robot.intake.spinBothTransfer(0);
+                Robot.intake.spinEntireIntake(0);
+                System.out.println("LIMIT SWITCH TRUE");
             } else {
                 Robot.intake.setIntakePistonsExtend();
                 Robot.intake.spinBothIntake(0.25);
                 Robot.intake.spinBothTransfer(0.25);
                 Robot.shooter.setShooterDown();
+                System.out.println("LIMIT SWITCH FALSE");
             }
         } else if (Converter.deadzone(rightYAxis) < -0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinBothIntake(-0.65);
-            Robot.intake.spinBothTransfer(-0.65);
+            Robot.intake.spinEntireIntake(-0.65);
             Robot.shooter.setShooterDown();
         } else {
-            Robot.intake.spinBothTransfer(0);
-            Robot.intake.spinBothIntake(0);
+            Robot.intake.spinEntireIntake(0);
         }
 
 

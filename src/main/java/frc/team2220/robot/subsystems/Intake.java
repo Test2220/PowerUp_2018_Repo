@@ -39,7 +39,7 @@ public class Intake extends Subsystem {
         rampPiston = new DoubleSolenoid(RobotMap.RAMP_PISTON_EXTENDED, RobotMap.RAMP_PISTON_RETRACTED);
         intakePistons = new DoubleSolenoid(RobotMap.INTAKE_PISTON_EXTEND, RobotMap.INTAKE_PISTON_RETRACT);
 
-        DigitalInput limitSwitch = new DigitalInput(RobotMap.INTAKE_LIMIT_SWITCH);
+        limitSwitch = new DigitalInput(RobotMap.INTAKE_LIMIT_SWITCH);
 
     }
 
@@ -56,6 +56,11 @@ public class Intake extends Subsystem {
     public void spinBothTransfer(double value) {
         leftTransfer.set(value);
         rightTransfer.set(value);
+    }
+
+    public void spinEntireIntake(double value) {
+        spinBothIntake(value);
+        spinBothTransfer(value);
     }
 
     public void setIntakePistonsExtend() {
@@ -75,7 +80,7 @@ public class Intake extends Subsystem {
     }
 
     public boolean isBlockHalfWayLoaded() {
-        return limitSwitch.get();
+        return !limitSwitch.get();
     }
 
     @Override
