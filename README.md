@@ -1,6 +1,6 @@
 # 2018 Power Up Repo
 
-This is the code for the 2018 Test Bot and IKEA bot (mostly ikea), updated often with new features constantly. 
+This is the code for the 2018 Test Bot. 
 
 ## Getting Started
 
