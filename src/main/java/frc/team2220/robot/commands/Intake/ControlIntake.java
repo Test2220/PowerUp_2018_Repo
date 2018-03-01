@@ -23,7 +23,6 @@ public class ControlIntake extends Command {
         double leftYAxis = Robot.oi.getManipulatorStick().getRawAxis(1);
         double rightYAxis = -Robot.oi.getManipulatorStick().getRawAxis(5);
 
-
         if (Math.abs(Converter.deadzone(leftYAxis)) > 0.2 || Math.abs(Converter.deadzone(rightYAxis)) > 0.2) {
             Robot.intake.defaultCommandRun = true;
             Robot.intake.setRampDown();
@@ -54,14 +53,14 @@ public class ControlIntake extends Command {
                 System.out.println("LIMIT SWITCH TRUE");
             } else {
                 Robot.intake.setIntakePistonsExtend();
-                Robot.intake.spinBothIntake(0.25);
-                Robot.intake.spinBothTransfer(0.25);
+                Robot.intake.spinBothIntake(-0.3);
+                Robot.intake.spinBothTransfer(-0.3);
                 Robot.shooter.setShooterDown();
                 System.out.println("LIMIT SWITCH FALSE");
             }
         } else if (Converter.deadzone(rightYAxis) < -0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinEntireIntake(-0.65);
+            Robot.intake.spinEntireIntake(0.25);
             Robot.shooter.setShooterDown();
         } else {
             Robot.intake.spinEntireIntake(0);

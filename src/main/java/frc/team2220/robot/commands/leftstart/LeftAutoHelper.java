@@ -29,17 +29,18 @@ public class LeftAutoHelper extends InstantCommand {
         MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
         if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
-
+            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
             switchAutoSS.start();
 
         } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
+            System.out.println("SWITCH OPPOSITE; Check for Scale");
 
             if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
-
+                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
                 scaleAutoSS.start();
 
             } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
-
+                System.out.println("SCALE IS ON THE RIGHT; LStartRScale");
                 WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
 
             }

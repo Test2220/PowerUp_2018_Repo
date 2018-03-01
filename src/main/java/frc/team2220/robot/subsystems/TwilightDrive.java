@@ -140,6 +140,11 @@ public class TwilightDrive extends Subsystem {
 
     }
 
+    public void scaledDriveSet(double leftVal, double rightVal) {
+        lDriveMaster.set(leftVal * Constants.drivetrainMultiplier);
+        rDriveMaster.set(rightVal * Constants.drivetrainMultiplier);
+    }
+
     public void curvatureDrive(double xVal, double zVal) {
         TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
 

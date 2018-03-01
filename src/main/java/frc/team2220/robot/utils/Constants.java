@@ -17,4 +17,6 @@ public class Constants {
 
     public static final int maxDrivetrainVelocity = 3155;
 
+    public static final int drivetrainMultiplier = 1;
+
 }

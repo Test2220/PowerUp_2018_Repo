@@ -13,6 +13,7 @@ public class IntakeBoolean extends InstantCommand {
 
     protected void execute() {
         Robot.intake.defaultCommandRun = defaultCommandRun;
+        Robot.intake.setRampDown();
     }
 
 }

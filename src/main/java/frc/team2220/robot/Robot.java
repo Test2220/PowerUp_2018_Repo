@@ -10,6 +10,7 @@ package frc.team2220.robot;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -24,6 +25,7 @@ import frc.team2220.robot.subsystems.Climber;
 import frc.team2220.robot.subsystems.Intake;
 import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
+import frc.team2220.robot.utils.Logger;
 
 
 public class Robot extends TimedRobot {
@@ -53,11 +55,11 @@ public class Robot extends TimedRobot {
         camera.setResolution(128, 173);
         camera.setFPS(30);
         sideChooser.addDefault("LEFT", new LeftAutoHelper());
-        sideChooser.addObject("RIGHT", new RightAutoHelper());
         sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
+        sideChooser.addObject("RIGHT", new RightAutoHelper());
 
         SmartDashboard.putData("Auto mode", sideChooser);
-
+        Logger.writeLog("YES ITS WORKING HAHAHAHHAHHA");
     }
 
 
@@ -74,6 +76,8 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
 
         autonomousCommand = sideChooser.getSelected();
+
+        System.out.println(DriverStation.getInstance().getGameSpecificMessage());
 
         if (autonomousCommand == null) {
             System.out.println("NULL AUTO");
