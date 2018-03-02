@@ -25,6 +25,7 @@ import frc.team2220.robot.subsystems.Climber;
 import frc.team2220.robot.subsystems.Intake;
 import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
+import frc.team2220.robot.utils.Constants;
 import frc.team2220.robot.utils.Logger;
 
 
@@ -59,7 +60,7 @@ public class Robot extends TimedRobot {
         sideChooser.addObject("RIGHT", new RightAutoHelper());
 
         SmartDashboard.putData("Auto mode", sideChooser);
-        Logger.writeLog("YES ITS WORKING HAHAHAHHAHHA");
+        //Logger.writeLog("YES ITS WORKING HAHAHAHHAHHA");
     }
 
 
@@ -70,6 +71,8 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.getNumber("multiplier", 0);
+        System.out.println("multiplier = " + SmartDashboard.getNumber("multiplier", 0));
     }
 
     @Override

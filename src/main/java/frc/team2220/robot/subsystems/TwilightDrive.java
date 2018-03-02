@@ -7,6 +7,7 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.commands.drive.DriveWithXBox;
 import frc.team2220.robot.utils.Constants;
@@ -143,6 +144,10 @@ public class TwilightDrive extends Subsystem {
     public void scaledDriveSet(double leftVal, double rightVal) {
         lDriveMaster.set(leftVal * Constants.drivetrainMultiplier);
         rDriveMaster.set(rightVal * Constants.drivetrainMultiplier);
+//        lDriveMaster.set(leftVal * SmartDashboard.getNumber("multiplier", 0));
+//        rDriveMaster.set(rightVal * SmartDashboard.getNumber("multiplier", 0));
+
+
     }
 
     public void curvatureDrive(double xVal, double zVal) {

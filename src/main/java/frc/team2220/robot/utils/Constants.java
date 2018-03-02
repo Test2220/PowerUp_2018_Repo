@@ -13,10 +13,10 @@ public class Constants {
     public static double frameWidthFt = frameWidthIn / 12.0;
     public static double frameLengthIn = 32.2;
 
-    public static final double PATH_MAX_SPEED = 2;
+    public static final double PATH_MAX_SPEED = 1.75;
 
     public static final int maxDrivetrainVelocity = 3155;
 
-    public static final int drivetrainMultiplier = 1;
-
+    //public static final double drivetrainMultiplier = 1.93; //GOES PERFECT WHILE DRIVING 5 FT
+    public static final double drivetrainMultiplier = 1.3;
 }
