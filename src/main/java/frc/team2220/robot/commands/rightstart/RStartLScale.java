@@ -19,6 +19,8 @@ public class RStartLScale extends CommandGroup {
         addSequential(new ShootScale());
         addSequential(new Shoot());
         addSequential(new StopShooter());
-    }
+        addSequential(new StopShooter());
 
+    }
 }
+

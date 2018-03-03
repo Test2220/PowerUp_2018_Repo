@@ -17,7 +17,7 @@ public class LStartLSwitch extends CommandGroup {
 //        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
         addParallel(new LiftPistons(LiftPistons.Position.RETRACTED));
         addSequential(new PathReader("/home/lvuser/paths/LeftStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLSwitch_right_detailed.csv", 0.015));
-        addParallel(new ShootSwitch());
+        addSequential(new ShootSwitch());
         addSequential(new Shoot());
         addSequential(new StopShooter());
 //

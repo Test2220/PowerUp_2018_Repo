@@ -16,6 +16,8 @@ import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.leftstart.LStartLScale;
+import frc.team2220.robot.commands.leftstart.LStartLSwitch;
 import frc.team2220.robot.commands.middlestart.MStartRSwitch;
 import frc.team2220.robot.commands.rightstart.RStartRScale;
 import frc.team2220.robot.commands.rightstart.RStartRSwitch;
@@ -46,6 +48,7 @@ public class OI {
     //BUTTONS ON MANIPULATOR STICK
     Button shootSwitch = new JoystickButton(manipulatorStick, 1);
     Button shootScale = new JoystickButton(manipulatorStick, 2);
+    Button shootScaleHigher = new JoystickButton(manipulatorStick, 4);
     Button intakePistonTest = new JoystickButton(manipulatorStick, 5);
 
 
@@ -77,13 +80,16 @@ public class OI {
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
-        pathTester.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        //pathTester.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        pathTester.whenPressed(new LStartLScale());
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
         shootSwitch.whenPressed(new ShootSwitch());
         shootSwitch.whenReleased(new StopShooter());
-        shootScale.whenPressed(new ShootScale());
+        shootScale.whenPressed(new ShootScale(0.63));
         shootScale.whenReleased(new StopShooter());
+        shootScaleHigher.whenPressed(new ShootScale());
+        shootScaleHigher.whenReleased(new StopShooter());
         intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
 
