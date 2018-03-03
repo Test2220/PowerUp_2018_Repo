@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.rightstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.team2220.robot.commands.Shooter.LiftPistons;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
@@ -24,9 +25,10 @@ public class RStartRSwitch extends CommandGroup {
 //        addSequential(new Shoot());
 //        addSequential(new Shoot());
 //        addSequential(new StopShooter());
-        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
+        //addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
+        addParallel(new LiftPistons(LiftPistons.Position.RETRACTED));
         addSequential(new ScaledPathReader("/home/lvuser/paths/RightStart/RStartRSwitch_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRSwitch_right_detailed.csv", 0));
-        addParallel(new ShootSwitch());
+        addSequential(new ShootSwitch());
         addSequential(new Shoot());
         addSequential(new StopShooter());
 
