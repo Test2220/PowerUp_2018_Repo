@@ -50,7 +50,7 @@ public class RStartRScale extends CommandGroup {
         //addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
         addParallel(new LiftPistons(LiftPistons.Position.EXTENDED));
         addSequential(new ScaledPathReader("/home/lvuser/paths/RightStart/RStartRScale_left_detailed.csv", "/home/lvuser/paths/RightStart/RStartRScale_right_detailed.csv", 0));
-        addSequential(new DriveToDistance(Converter.inToEncTicks(20), 1.5));
+        //addSequential(new DriveToDistance(Converter.inToEncTicks(20), 1.5));
         //addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(-30)));
         //addSequential(new TurnToAngle(-10));
         addSequential(new ShootScale());

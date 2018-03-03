@@ -21,4 +21,5 @@ public class ShootSwitch extends InstantCommand {
         Robot.shooter.spinAllMotors(0.24);
     }
 
+
 }

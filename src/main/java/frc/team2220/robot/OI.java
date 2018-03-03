@@ -84,7 +84,7 @@ public class OI {
         pathTester.whenPressed(new LStartLScale());
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
-        shootSwitch.whenPressed(new ShootSwitch());
+        shootSwitch.whileHeld(new ShootSwitch());
         shootSwitch.whenReleased(new StopShooter());
         shootScale.whenPressed(new ShootScale(0.63));
         shootScale.whenReleased(new StopShooter());
