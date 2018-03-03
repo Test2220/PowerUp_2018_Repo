@@ -17,10 +17,6 @@ public class PreAutoDefault extends CommandGroup {
     public PreAutoDefault(FinalShooterPosition finalShooterPosition) {
 
         addSequential(new IntakePistons(IntakePistons.Position.EXTEND));
-        addSequential(new LiftPistons(LiftPistons.Position.RETRACTED));
-        addSequential(new ControlShooter(-0.2));
-        addSequential(new StopShooter());
-        addSequential(new SpinBothTransfer(0.5));
         switch (finalShooterPosition) {
             case SWITCH:
                 addSequential(new LiftPistons(LiftPistons.Position.RETRACTED));
@@ -29,6 +25,10 @@ public class PreAutoDefault extends CommandGroup {
                 addSequential(new LiftPistons(LiftPistons.Position.EXTENDED));
                 break;
         }
+        addSequential(new ControlShooter(-0.2));
+        addParallel(new SpinBothTransfer(0.5));
+        addSequential(new StopShooter());
+
 
     }
 

@@ -101,7 +101,7 @@ public class TurnToAngle extends Command {
     protected boolean isFinished() {
         SmartDashboard.putData(turnPIDController);
         double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
-        if (difference > 2000) {
+        if (difference > 1000) {
             System.out.println("TIME UP");
             return true;
         }

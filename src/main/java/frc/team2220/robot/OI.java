@@ -16,7 +16,9 @@ import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.middlestart.MStartRSwitch;
 import frc.team2220.robot.commands.rightstart.RStartRScale;
+import frc.team2220.robot.commands.rightstart.RStartRSwitch;
 import frc.team2220.robot.utils.Converter;
 
 /**
@@ -73,9 +75,9 @@ public class OI {
         velocityTester.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(180)));
 
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
+        //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
-
+        pathTester.whenPressed(new RStartRScale());
         //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
         //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
         shootSwitch.whenPressed(new ShootSwitch());

@@ -8,6 +8,7 @@ public class ClockwiseTurn extends Command {
 
 
     private double targetTicks;
+    private double startTime;
 
     public ClockwiseTurn(double targetTicks) {
         requires(Robot.twilightDrive);

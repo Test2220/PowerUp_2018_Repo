@@ -72,7 +72,6 @@ public class Robot extends TimedRobot {
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
         SmartDashboard.getNumber("multiplier", 0);
-        System.out.println("multiplier = " + SmartDashboard.getNumber("multiplier", 0));
     }
 
     @Override
