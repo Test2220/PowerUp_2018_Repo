@@ -14,6 +14,12 @@ public class DriveToDistance extends Command {
         this.targetTicks = targetTicks;
     }
 
+    public DriveToDistance(double targetTicks, double timeout) {
+        super(timeout);
+        requires(Robot.twilightDrive);
+        this.targetTicks = targetTicks;
+    }
+
     @Override
     protected void initialize() {
         Robot.twilightDrive.lDriveMaster.setProfile(0);
@@ -32,7 +38,7 @@ public class DriveToDistance extends Command {
 
     @Override
     protected boolean isFinished() {
-        return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
+        return Robot.twilightDrive.hasZeroBothVelocity(targetTicks) || isTimedOut();
     }
 
     @Override

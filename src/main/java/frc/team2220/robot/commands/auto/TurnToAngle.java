@@ -86,15 +86,12 @@ public class TurnToAngle extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
         // Dev
-
         System.out.println("--------------------------------------------------");
         System.out.println("DriveTurn running!");
         System.out.println("Angle: " + Robot.twilightDrive.navX.getAngle());
         System.out.println("Error: " + turnPIDController.getError());
         System.out.println("Output: " + turnPIDController.get());
-
     }
 
     // Make this return true when this Command no longer needs to run execute()

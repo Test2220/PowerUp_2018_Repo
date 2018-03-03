@@ -26,7 +26,7 @@ public class PreAutoDefault extends CommandGroup {
                 break;
         }
         addSequential(new ControlShooter(-0.2));
-        addParallel(new SpinBothTransfer(0.5));
+        addParallel(new SpinBothTransfer(1.5));
         addSequential(new StopShooter());
 
 
