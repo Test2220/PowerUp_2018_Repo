@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.team2220.robot.commands.Shooter.LiftPistons;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.StopShooter;
@@ -29,7 +30,7 @@ public class LStartLScale extends CommandGroup {
 //        addSequential(new StopShooter());
 
 
-        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+//        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
         addSequential(new ScaledPathReader("/home/lvuser/paths/LeftStart/LStartLScale_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLScale_right_detailed.csv", 0));
         addSequential(new ShootScale());
         addSequential(new Shoot());
