@@ -8,6 +8,7 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.Intake.IntakePistons;
@@ -17,16 +18,6 @@ import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
-import frc.team2220.robot.commands.leftstart.LStartLSwitch;
-import frc.team2220.robot.commands.middlestart.MStartRSwitch;
-import frc.team2220.robot.commands.rightstart.RStartRScale;
-import frc.team2220.robot.commands.rightstart.RStartRSwitch;
-import frc.team2220.robot.utils.Converter;
-
-/**
- * This class is the glue that binds the controls on the physical operator
- * interface to the commands and command groups that allow control of the robot.
- */
 
 public class OI {
 
@@ -36,14 +27,9 @@ public class OI {
     Joystick manipulatorStick = new Joystick(1);
 
     //BUTTONS ON DRIVERSTICK
-    Button turnRight90 = new JoystickButton(driverStick, 2);
-    Button turnLeft90 = new JoystickButton(driverStick, 3);
-    Button driverShoot = new JoystickButton(driverStick, 5);
-    Button preMatchSetup = new JoystickButton(driverStick, 8);
-    Button velocityTester = new JoystickButton(driverStick, 7);
+    Button driverShootLB = new JoystickButton(driverStick, 5);
+    Button preMatchSetupStart = new JoystickButton(driverStick, 8);
     Button pathTester = new JoystickButton(driverStick, 1);
-    //Button stickInPlace = new JoystickButton(driverStick, 1);
-
 
     //BUTTONS ON MANIPULATOR STICK
     Button shootSwitch = new JoystickButton(manipulatorStick, 1);
@@ -67,23 +53,14 @@ public class OI {
 
     public OI() {
 
-//        turnRight90.whenPressed(new TurnToAngle(90));
-//        turnLeft90.whenPressed(new TurnToAngle(-90));
-        driverShoot.whenPressed(new Shoot());
-//        stickInPlace.whenPressed(new DriveToDistance(0));
-//        stickInPlace.whenReleased(new DriveWithXBox());
-
-        preMatchSetup.whileHeld(new PreMatchDefault());
-        //.whenPressed(new LStartLScale());0
-        velocityTester.whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(180)));
-
+        driverShootLB.whenPressed(new Shoot());
+        preMatchSetupStart.whileHeld(new PreMatchDefault());
+        pathTester.whenPressed(new LStartLScale());
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
         //pathTester.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
-        pathTester.whenPressed(new LStartLScale());
-        //driverShoot.whenPressed(new CubePiston(CubePiston.Position.UP));
-        //driverShootRetract.whenPressed(new CubePiston(CubePiston.Position.DOWN));
+
         shootSwitch.whileHeld(new ShootSwitch());
         shootSwitch.whenReleased(new StopShooter());
         shootScale.whenPressed(new ShootScale(0.63));
