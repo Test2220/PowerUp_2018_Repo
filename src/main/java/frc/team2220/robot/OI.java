@@ -8,7 +8,6 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.Intake.IntakePistons;
@@ -28,14 +27,14 @@ public class OI {
 
     //BUTTONS ON DRIVERSTICK
     Button driverShootLB = new JoystickButton(driverStick, 5);
-    Button preMatchSetupStart = new JoystickButton(driverStick, 8);
-    Button pathTester = new JoystickButton(driverStick, 1);
+    Button preMatchSetupSTART = new JoystickButton(driverStick, 8);
+    Button pathTesterBACK = new JoystickButton(driverStick, 1);
 
     //BUTTONS ON MANIPULATOR STICK
-    Button shootSwitch = new JoystickButton(manipulatorStick, 1);
-    Button shootScale = new JoystickButton(manipulatorStick, 2);
-    Button shootScaleHigher = new JoystickButton(manipulatorStick, 4);
-    Button intakePistonTest = new JoystickButton(manipulatorStick, 5);
+    Button shootSwitchA = new JoystickButton(manipulatorStick, 1);
+    Button shootScaleB = new JoystickButton(manipulatorStick, 2);
+    Button shootScaleHigherY = new JoystickButton(manipulatorStick, 4);
+    Button intakePistonLB = new JoystickButton(manipulatorStick, 5);
 
 
     public Joystick getDriverStick() {
@@ -54,21 +53,21 @@ public class OI {
     public OI() {
 
         driverShootLB.whenPressed(new Shoot());
-        preMatchSetupStart.whileHeld(new PreMatchDefault());
-        pathTester.whenPressed(new LStartLScale());
-        //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
-        //pathTester.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
-        //pathTester.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        preMatchSetupSTART.whileHeld(new PreMatchDefault());
+        pathTesterBACK.whenPressed(new LStartLScale());
+        //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
+        //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
+        //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
+        //pathTesterBACK.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
 
-        shootSwitch.whileHeld(new ShootSwitch());
-        shootSwitch.whenReleased(new StopShooter());
-        shootScale.whenPressed(new ShootScale(0.63));
-        shootScale.whenReleased(new StopShooter());
-        shootScaleHigher.whenPressed(new ShootScale());
-        shootScaleHigher.whenReleased(new StopShooter());
-        intakePistonTest.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
-        intakePistonTest.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
+        shootSwitchA.whileHeld(new ShootSwitch());
+        shootSwitchA.whenReleased(new StopShooter());
+        shootScaleB.whenPressed(new ShootScale(0.63));
+        shootScaleB.whenReleased(new StopShooter());
+        shootScaleHigherY.whenPressed(new ShootScale());
+        shootScaleHigherY.whenReleased(new StopShooter());
+        intakePistonLB.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
+        intakePistonLB.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
 
 
     }
