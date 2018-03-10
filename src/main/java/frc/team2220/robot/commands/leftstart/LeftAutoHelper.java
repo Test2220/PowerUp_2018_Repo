@@ -13,7 +13,7 @@ public class LeftAutoHelper extends InstantCommand{
 //	private Command switchAutoSS = new LStartLSwitch();
 //	private Command scaleAutoSS = new LStartLScale();
 
-    private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
+//    private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
 
 
 	//OS stand for OPPOSITE SIDE
@@ -28,7 +28,7 @@ public class LeftAutoHelper extends InstantCommand{
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-        switchAutoSS.start();
+//        switchAutoSS.start();
 
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
 		MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
@@ -36,7 +36,7 @@ public class LeftAutoHelper extends InstantCommand{
 
 		if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
 
-            switchAutoSS.start();
+//            switchAutoSS.start();
 
 		} else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
 				
