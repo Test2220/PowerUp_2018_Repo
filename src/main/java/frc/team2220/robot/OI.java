@@ -55,7 +55,7 @@ public class OI {
         driverShootLB.whenPressed(new Shoot());
         preMatchSetupSTART.whileHeld(new PreMatchDefault());
         pathTesterBACK.whenPressed(new LStartLScale());
-        pathTesterBACK.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
+        pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
         //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
         //pathTesterBACK.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));

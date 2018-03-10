@@ -4,7 +4,7 @@ public class Constants {
 
     //All Measurements in Inches unless specified otherwise
 
-    public static int encTickPerRev = 4096;
+    public static int encTickPerRev = 1024;
 
     public static double wheelDiameterIn = 6.0;
     public static double wheelDiameterMetres = 0.1524;

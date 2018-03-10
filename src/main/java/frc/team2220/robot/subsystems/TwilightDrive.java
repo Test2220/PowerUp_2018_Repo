@@ -98,14 +98,18 @@ public class TwilightDrive extends Subsystem {
         rDriveSlave.changeControlMode(TalonControlMode.Follower);
         rDriveSlave.set(rDriveMaster.getDeviceID());
 
-
-        rDriveMaster.setInverted(false);
-
+        lDriveMaster.setInverted(false); //TODO Find out Correct Vals
+        rDriveMaster.setInverted(false); //TODO Find out Correct Vals
 
         lDriveMaster.reverseOutput(false);
         rDriveMaster.reverseOutput(true);
-        rDriveSlave.reverseOutput(true);
 
+		/* FOR 2018 PRACTICE BOT
+		rDriveMaster.setInverted(true);
+		lDriveMaster.reverseOutput(false);
+		rDriveMaster.reverseOutput(true);
+		rDriveSlave.reverseOutput(true);
+		*/
         // Encoder Stuff
 
         lDriveMaster.setFeedbackDevice(FeedbackDevice.QuadEncoder);
@@ -115,7 +119,6 @@ public class TwilightDrive extends Subsystem {
         rDriveMaster.setFeedbackDevice(FeedbackDevice.QuadEncoder);
         rDriveMaster.reverseSensor(false); // TODO Check real boolean in Web Client
         rDriveMaster.setAllowableClosedLoopErr(CLOSEDLOOPERROR);
-
 
         //Set PID and Motion Magic Vals
         lDriveMaster.setPID(pLeft, iLeft, dLeft, fLeft, iZoneLeft, 0, 0);
