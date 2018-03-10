@@ -38,8 +38,6 @@ public class Robot extends TimedRobot {
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
 
-    private static PathGen pathGen;
-
     public static OI oi;
 
     private Command autonomousCommand;
@@ -48,8 +46,6 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
         oi = new OI();
-        pathGen = new PathGen();
-
         Compressor airCompressor = new Compressor();
         airCompressor.start();
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();

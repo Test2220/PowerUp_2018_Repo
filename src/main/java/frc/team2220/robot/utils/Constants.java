@@ -4,10 +4,12 @@ public class Constants {
 
     //All Measurements in Inches unless specified otherwise
 
-    public static double encTickPerRev = 4096;
+    public static int encTickPerRev = 4096;
 
-    public static double wheelDiameter = 6.0;
-    public static double wheelCircumference = Math.PI * wheelDiameter;
+    public static double wheelDiameterIn = 6.0;
+    public static double wheelDiameterMetres = 0.1524;
+    public static double wheelCircumferenceIn = Math.PI * wheelDiameterIn;
+    public static double wheelCircumferenceMetres = Math.PI * wheelDiameterMetres;
 
     public static double frameWidthIn = 23.25;
     public static double frameWidthFt = frameWidthIn / 12.0;

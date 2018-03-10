@@ -179,12 +179,12 @@ public class TwilightDrive extends Subsystem {
         System.out.printf("ZERO ENCODERS %d %d", lDriveMaster.getEncPosition(), rDriveMaster.getEncPosition());
     }
 
-    public double getLPosition() {
-        return lDriveMaster.getPosition();
+    public int getLPosition() {
+        return ((int) lDriveMaster.getPosition());
     }
 
-    public double getRPosition() {
-        return rDriveMaster.getPosition();
+    public int getRPosition() {
+        return ((int) rDriveMaster.getPosition());
     }
 
     public double getAvgPosition() {

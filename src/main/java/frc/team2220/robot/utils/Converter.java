@@ -5,13 +5,13 @@ public class Converter {
 
     public static double ftToEncTicks(double inputFt) {
 
-        return ((inputFt * 12) / (Constants.wheelCircumference)) * Constants.encTickPerRev;
+        return ((inputFt * 12) / (Constants.wheelCircumferenceIn)) * Constants.encTickPerRev;
 
     }
 
     public static double inToEncTicks(double inputIn) {
 
-        return ((inputIn) / (Constants.wheelCircumference)) * Constants.encTickPerRev;
+        return ((inputIn) / (Constants.wheelCircumferenceIn)) * Constants.encTickPerRev;
 
     }
 
@@ -30,6 +30,10 @@ public class Converter {
     public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {
         return ftToEncTicks(ftPerSecond) * (1.0 / 10);
 
+    }
+
+    public static double NativeUnitsToMetresPerSecond(double nativeUnits) {
+        return ((nativeUnits * 10) / Constants.encTickPerRev) * Constants.wheelCircumferenceMetres;
     }
 
     public static double maxVelToFGainWrong(int maxVel, double encTicksPerRev) {
