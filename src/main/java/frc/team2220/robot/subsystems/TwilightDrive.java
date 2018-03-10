@@ -27,43 +27,47 @@ public class TwilightDrive extends Subsystem {
     public CANTalon rDriveMaster;
     public CANTalon rDriveSlave;
 
+    public final static int CLOSEDLOOPERROR = 50;
+
     public AHRS navX;
 
-    double pLeft = Converter.errorToPGain(19556.9594071321 - 18442.0, 1.45); //LEFT SIDE
+    int  maxVell = 1460;
+    int  maxVelr = 1053;
+
+    double pLeft= Converter.errorToPGain(8159, 23); //LEFT SIDE
     double iLeft = 0.000;
     double dLeft = 10 * pLeft;
-    double fLeft = Converter.maxVelToFGainCorrect(Constants.maxDrivetrainVelocity);
-    int iZoneLeft = 50;
+    double fLeft = Converter.maxVelToFGainWrong(maxVell, 1440);
+    int  iZoneLeft = 50;
 
 
-    double pRight = Converter.errorToPGain(19556.9594071321 - 18900.0, 0.8); //RIGHT SIDE
+    double pRight = Converter.errorToPGain(10573, 35); //RIGHT SIDE
     double iRight = 0.0000;
     double dRight = 0;
-    double fRight = Converter.maxVelToFGainCorrect(Constants.maxDrivetrainVelocity);
-    int iZoneRight = 50;
+    double fRight = Converter.maxVelToFGainWrong(maxVelr, 1440);
+    int  iZoneRight = 50;
 
     //------------VELOCITY STUFF-------------//
 
-    double pLeft2 = Converter.errorToPGain(40, 0.0175); //LEFT SIDE
+    double pLeft2= Converter.errorToPGain(50, 0.11); //LEFT SIDE
     double iLeft2 = 0.000;
-    double dLeft2 = pLeft2 * 15;
-    double fLeft2 = Converter.maxVelToFGainCorrect(Constants.maxDrivetrainVelocity);
-    int iZoneLeft2 = 50;
+    double dLeft2 = 0;
+    double fLeft2 = Converter.maxVelToFGainCorrect(maxVell);
+    int  iZoneLeft2 = 50;
 
 
-    double pRight2 = Converter.errorToPGain(55, 0.018); //RIGHT SIDE
+    double pRight2 = Converter.errorToPGain(-15, 0.1); //RIGHT SIDE
     double iRight2 = 0.0000;
     double dRight2 = 0;
-    double fRight2 = Converter.maxVelToFGainCorrect(Constants.maxDrivetrainVelocity);
-    int iZoneRight2 = 50;
+    double fRight2 = Converter.maxVelToFGainCorrect(maxVelr+15);
+    int  iZoneRight2 = 50;
 
-    double accel = Constants.maxDrivetrainVelocity * 0.75;
-    double cruise = Constants.maxDrivetrainVelocity * 0.75;
-
-    public final static int CLOSEDLOOPERROR = 50;
 
     public static double rDriveMotorSetpoint = 0;
     public static double lDriveMotorSetpoint = 0;
+
+    double accel = maxVell * 0.75;
+    double cruise = maxVelr * 0.75;
 
     public DifferentialDrive TwilightDrive;
 

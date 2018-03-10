@@ -16,10 +16,11 @@ package frc.team2220.robot;
 public class RobotMap {
 
 
-    public static final int LEFTMASTER = 1,
-            LEFTSLAVE = 3,
+    public static final int LEFTMASTER = 15,
+            LEFTSLAVE = 6,
             RIGHTMASTER = 2,
-            RIGHTSLAVE = 4;
+            RIGHTSLAVE = 8;
+
 
     public static final int SHOOTER_TOP_LEFT = 10,
             SHOOTER_TOP_RIGHT = 11,
