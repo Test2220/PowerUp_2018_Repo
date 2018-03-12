@@ -2,6 +2,7 @@ package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.TwilightDrive;
 import frc.team2220.robot.utils.Constants;
@@ -37,14 +38,24 @@ public class PathEncoderFollower extends Command{
         this.turnSensitivity = turnSensitivity;
     }
 
+
+    public PathEncoderFollower(String baseFilePath, double turnSensitivity) {
+
+        this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
+        requires(Robot.twilightDrive);
+
+    }
+
     @Override
     protected void initialize() {
         Robot.twilightDrive.changeToPercentVBus();
 
+        Robot.twilightDrive.resetEncoderPos();
+
         leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        leftFollow.configurePIDVA(1, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
+        leftFollow.configurePIDVA(0.7, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
         rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        rightFollow.configurePIDVA(1, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
+        rightFollow.configurePIDVA(0.7, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
 
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
@@ -52,6 +63,7 @@ public class PathEncoderFollower extends Command{
 
 //        Robot.twilightDrive.lDriveMaster.setProfile(1);
 //        Robot.twilightDrive.rDriveMaster.setProfile(1);
+
 
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
@@ -62,13 +74,17 @@ public class PathEncoderFollower extends Command{
 
     @Override
     protected void execute() {
+
         index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
+        SmartDashboard.putNumber("INDEX", index);
 
         if (isFinished()) return;
 
         double leftSet = leftFollow.calculate(Robot.twilightDrive.getLPosition());
         double rightSet = rightFollow.calculate(Robot.twilightDrive.getRPosition());
+
+        SmartDashboard.putNumber("LEFT CALCULATE", leftSet);
 
 
 //        double leftVelo = leftTraj.segments[index].velocity;

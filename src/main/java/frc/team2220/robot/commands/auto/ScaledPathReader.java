@@ -29,6 +29,14 @@ public class ScaledPathReader extends Command{
         this.turnSensitivity = turnSensitivity;
     }
 
+    public ScaledPathReader(String baseFilePath, double turnSensitivity) {
+
+        this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
+        requires(Robot.twilightDrive);
+
+    }
+
+
     @Override
     protected void initialize() {
 
@@ -55,11 +63,15 @@ public class ScaledPathReader extends Command{
         double rightVelo = right.segments[index].velocity;
 
         double gyro_heading = Robot.twilightDrive.navX.getAngle();// Assuming gyro angle is given in degrees
-        double desired_heading = Pathfinder.r2d(left.segments[index].heading);
-        double angle_difference = (desired_heading - gyro_heading) % 180;// Make sure to bound this from -180 to 180, otherwise you will get super large values
-        System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
+        double desired_heading = -Pathfinder.r2d(left.segments[index].heading);
+        double angle_difference = Pathfinder.boundHalfDegrees(desired_heading - gyro_heading);// Make sure to bound this from -180 to 180, otherwise you will get super large values
+//        System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
+
         double turn = turnSensitivity * angle_difference;
-        Robot.twilightDrive.scaledDriveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo - turn)), -Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo + turn)));
+        System.out.printf("Turn = %03.2f ; Left Velocity = %03.2f ; Right Velocity = %03.2f ; \n", turn, leftVelo, rightVelo);
+
+        Robot.twilightDrive.scaledDriveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
+//        Robot.twilightDrive.scaledDriveSet(leftVelo + turn, -turn);
 
     }
 

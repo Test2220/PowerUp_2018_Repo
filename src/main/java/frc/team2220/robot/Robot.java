@@ -110,6 +110,7 @@ public class Robot extends TimedRobot {
         SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
         SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
         SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
+        SmartDashboard.putNumber("LEFT 'enc' postiion", Robot.twilightDrive.lDriveMaster.getEncPosition());
         SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
     }
 

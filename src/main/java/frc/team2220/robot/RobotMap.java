@@ -28,9 +28,9 @@ public class RobotMap {
             SHOOTER_BTM_RIGHT = 9;
 
     public static final int TRANSFER_LEFT = 13,
-            TRANSFER_RIGHT = 6;
+            TRANSFER_RIGHT = 9;
 
-    public static final int COLLECTOR_LEFT = 8,
+    public static final int COLLECTOR_LEFT = 10,
             COLLECTOR_RIGHT = 7;
 
     public static final int CUBE_PISTON_UP = 0,
@@ -46,7 +46,7 @@ public class RobotMap {
             RAMP_PISTON_RETRACTED = 6;
 
 
-    public static final int FISHING_POLE = 14,
+    public static final int FISHING_POLE = 123,
             CLIMBER = 5;
 
     public static final int INTAKE_LIMIT_SWITCH = 0;

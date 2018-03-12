@@ -6,8 +6,8 @@ public class Constants {
 
     public static int encTickPerRev = 1024;
 
-    public static double wheelDiameterIn = 6.0;
-    public static double wheelDiameterMetres = 0.1524;
+    public static double wheelDiameterIn = 4;
+    public static double wheelDiameterMetres = 0.1016;
     public static double wheelCircumferenceIn = Math.PI * wheelDiameterIn;
     public static double wheelCircumferenceMetres = Math.PI * wheelDiameterMetres;
 
@@ -17,8 +17,8 @@ public class Constants {
 
     public static final double PATH_MAX_SPEED = 1.75;
 
-    public static final int maxDrivetrainVelocity = 3155;
+    public static final int maxDrivetrainVelocity = 1000;
 
     //public static final double drivetrainMultiplier = 1.93; //GOES PERFECT WHILE DRIVING 5 FT
-    public static final double drivetrainMultiplier = 1.3;
+    public static final double drivetrainMultiplier = 1.4;
 }
