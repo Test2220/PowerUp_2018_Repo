@@ -95,12 +95,10 @@ public class TwilightDrive extends Subsystem {
         rDriveSlave.set(rDriveMaster.getDeviceID());
 
 
-        rDriveMaster.setInverted(false);
-
-
         lDriveMaster.reverseOutput(false);
-        rDriveMaster.reverseOutput(true);
-        rDriveSlave.reverseOutput(true);
+        lDriveSlave.reverseOutput(false);
+        rDriveMaster.reverseOutput(false);
+        rDriveSlave.reverseOutput(false);
 
         // Encoder Stuff
 

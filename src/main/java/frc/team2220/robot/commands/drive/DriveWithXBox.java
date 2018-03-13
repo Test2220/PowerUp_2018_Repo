@@ -33,12 +33,12 @@ public class DriveWithXBox extends Command {
         //System.out.println(Robot.twilightDrive.getLPosition());
         //System.out.println(Robot.twilightDrive.getRPosition());
 
-
         double xVal = Robot.oi.getDriverStick().getRawAxis(1);
         double zVal = Robot.oi.getDriverStick().getRawAxis(4);
 
-
+//        Robot.twilightDrive.driveSet(xVal, zVal);
         Robot.twilightDrive.curvatureDrive(-xVal, zVal);
+
 
     }
 
