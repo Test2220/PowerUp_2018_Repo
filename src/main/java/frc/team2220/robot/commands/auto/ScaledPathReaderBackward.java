@@ -10,7 +10,7 @@ import jaci.pathfinder.Trajectory;
 
 import java.io.File;
 
-public class ScaledPathReader extends Command{
+public class ScaledPathReaderBackward extends Command{
 
 
     private Trajectory left;
@@ -22,14 +22,14 @@ public class ScaledPathReader extends Command{
 
     public double turnSensitivity;
 
-    public ScaledPathReader(String leftFile, String rightFile, double turnSensitivity) {
+    public ScaledPathReaderBackward(String leftFile, String rightFile, double turnSensitivity) {
         requires(Robot.twilightDrive);
         left = Pathfinder.readFromCSV(new File(leftFile));
         right = Pathfinder.readFromCSV(new File(rightFile));
         this.turnSensitivity = turnSensitivity;
     }
 
-    public ScaledPathReader(String baseFilePath, double turnSensitivity) {
+    public ScaledPathReaderBackward(String baseFilePath, double turnSensitivity) {
 
         this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
         requires(Robot.twilightDrive);
@@ -70,8 +70,8 @@ public class ScaledPathReader extends Command{
         double turn = turnSensitivity * angle_difference;
         System.out.printf("Turn = %03.2f ; Left Velocity = %03.2f ; Right Velocity = %03.2f ; \n", turn, leftVelo, rightVelo);
 
-        Robot.twilightDrive.scaledDriveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
-//        Robot.twilightDrive.scaledDriveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, -Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
+//        Robot.twilightDrive.scaledDriveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
+        Robot.twilightDrive.scaledDriveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, -Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
 
 
     }

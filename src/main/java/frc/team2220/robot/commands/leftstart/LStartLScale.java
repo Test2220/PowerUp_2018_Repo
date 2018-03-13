@@ -31,10 +31,9 @@ public class LStartLScale extends CommandGroup {
 
 
 //        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
-        addSequential(new ScaledPathReader("/home/lvuser/paths/LeftStart/LStartLScale_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLScale_right_detailed.csv", 0));
-        addSequential(new ShootScale(0.6));
-        addSequential(new Shoot());
-        addSequential(new StopShooter());
+        addSequential(new ScaledPathReaderBackward("MiddleStart/MovementTest1", 25));
+        addSequential(new ScaledPathReader("MiddleStart/MovementTest12", 25));
+        addSequential(new ScaledPathReaderBackward("MiddleStart/MovementTest12", 25));
 
     }
 

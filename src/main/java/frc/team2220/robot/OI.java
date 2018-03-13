@@ -28,7 +28,8 @@ public class OI {
     //BUTTONS ON DRIVERSTICK
     Button driverShootLB = new JoystickButton(driverStick, 5);
     Button preMatchSetupSTART = new JoystickButton(driverStick, 8);
-    Button pathTesterBACK = new JoystickButton(driverStick, 1);
+    Button pathTesterBACK = new JoystickButton(driverStick, 7);
+    Button pathTesterA = new JoystickButton(driverStick, 1);
 
     //BUTTONS ON MANIPULATOR STICK
     Button shootSwitchA = new JoystickButton(manipulatorStick, 1);
@@ -54,12 +55,14 @@ public class OI {
 
         driverShootLB.whenPressed(new Shoot());
         preMatchSetupSTART.whileHeld(new PreMatchDefault());
+//        pathTesterBACK.whenPressed(new ScaledPathReaderBackward("MiddleStart/MovementTest1", 25));
         pathTesterBACK.whenPressed(new LStartLScale());
-//        pathTesterBACK.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        pathTesterBACK.whenReleased(new ScaledPathReader("MiddleStart/MovementTest12", 20));
-        //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
-        //pathTesterBACK.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
-        //pathTesterBACK.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+//        pathTesterA.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
+        pathTesterA.whenReleased(new ScaledPathReader("MiddleStart/MovementTest12", 25));
+
+        //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
+        //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
+        //pathTesterA.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
 
         shootSwitchA.whileHeld(new ShootSwitch());
         shootSwitchA.whenReleased(new StopShooter());
