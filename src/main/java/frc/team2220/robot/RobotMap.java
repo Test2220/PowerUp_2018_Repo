@@ -12,9 +12,11 @@ package frc.team2220.robot;
  * to a variable name. This provides flexibility changing wiring, makes checking
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
+ *
  */
 public class RobotMap {
 
+    //CONFIG FOR BOX NUMBER 2
 
     public static final int LEFTMASTER = 1,
             LEFTSLAVE = 3,
@@ -33,16 +35,16 @@ public class RobotMap {
             COLLECTOR_RIGHT = 7;
 
     public static final int CUBE_PISTON_UP = 0,
-            CUBE_PISTON_DOWN = 1;
+            CUBE_PISTON_DOWN = 7;
 
-    public static final int LIFT_PISTON_EXTEND = 2,
-            LIFT_PISTON_RETRACT = 3;
+    public static final int LIFT_PISTON_EXTEND = 1,
+            LIFT_PISTON_RETRACT = 6;
 
-    public static final int INTAKE_PISTON_EXTEND = 5,
-            INTAKE_PISTON_RETRACT = 4;
+    public static final int INTAKE_PISTON_EXTEND = 2,
+            INTAKE_PISTON_RETRACT = 5;
 
-    public static final int RAMP_PISTON_EXTENDED = 7,
-            RAMP_PISTON_RETRACTED = 6;
+    public static final int RAMP_PISTON_EXTENDED = 3,
+            RAMP_PISTON_RETRACTED = 4;
 
 
     public static final int FISHING_POLE = 14,
