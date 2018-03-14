@@ -8,6 +8,7 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.Intake.IntakePistons;
@@ -19,7 +20,6 @@ import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
 
 public class OI {
-
 
     //Joysticks
     Joystick driverStick = new Joystick(0);
@@ -53,12 +53,12 @@ public class OI {
 
     public OI() {
 
-        driverShootLB.whenPressed(new Shoot());
+        driverShootLB.whenPressed(new ReversiblePathReader("TestPaths/CurvedPath", 25, ReversiblePathReader.Direction.BACKWARD));
         preMatchSetupSTART.whileHeld(new PreMatchDefault());
 //        pathTesterBACK.whenPressed(new ScaledPathReaderBackward("MiddleStart/MovementTest1", 25));
         pathTesterBACK.whenPressed(new LStartLScale());
 //        pathTesterA.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        pathTesterA.whenReleased(new ScaledPathReader("MiddleStart/MovementTest12", 25));
+        pathTesterA.whenReleased(new ReversiblePathReader("TestPaths/CurvedPath", 25, ReversiblePathReader.Direction.FORWARD));
 
         //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
