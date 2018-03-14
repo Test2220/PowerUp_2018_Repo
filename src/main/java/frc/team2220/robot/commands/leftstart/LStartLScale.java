@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.team2220.robot.commands.Intake.AutoIntake;
 import frc.team2220.robot.commands.Shooter.LiftPistons;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;

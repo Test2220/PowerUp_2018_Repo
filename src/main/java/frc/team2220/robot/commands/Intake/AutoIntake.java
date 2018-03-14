@@ -4,11 +4,17 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
 
 public class AutoIntake extends Command {
-    double value;
+    private double speed;
 
-    public AutoIntake(double value) {
-        this.value = value;
+    public AutoIntake(double speed) {
+        this.speed = speed;
     }
+
+    public AutoIntake(double speed, double timeout) {
+        super(timeout);
+        this.speed = speed;
+    }
+
 
     // Called just before this Command runs the first time
     @Override
@@ -19,14 +25,14 @@ public class AutoIntake extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.intake.spinBothIntake(value);
-        Robot.intake.spinBothTransfer(value);
+        Robot.intake.spinBothIntake(speed);
+        Robot.intake.spinBothTransfer(speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return false;
+        return isTimedOut();
     }
 
     // Called once after isFinished returns true
