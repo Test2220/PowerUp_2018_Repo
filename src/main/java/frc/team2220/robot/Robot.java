@@ -81,7 +81,7 @@ public class Robot extends TimedRobot {
             System.out.println("NULL AUTO");
         }
         if (autonomousCommand != null) {
-            System.out.println("NOT NULL AUTO" + autonomousCommand.toString());
+            System.out.println("NOT NU  LL AUTO" + autonomousCommand.toString());
 
             autonomousCommand.start();
         }

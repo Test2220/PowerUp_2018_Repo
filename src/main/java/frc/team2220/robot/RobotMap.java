@@ -45,6 +45,21 @@ public class RobotMap {
             RAMP_PISTON_RETRACTED = 6;
 
 
+    //CONFIGURATION FOR BOX NUMBER 2
+
+//    public static final int CUBE_PISTON_UP = 0,
+//            CUBE_PISTON_DOWN = 7;
+//
+//    public static final int LIFT_PISTON_EXTEND = 1,
+//            LIFT_PISTON_RETRACT = 6;
+//
+//    public static final int INTAKE_PISTON_EXTEND = 2,
+//            INTAKE_PISTON_RETRACT = 5;
+//
+//    public static final int RAMP_PISTON_EXTENDED = 3,
+//            RAMP_PISTON_RETRACTED = 4;
+
+
     public static final int FISHING_POLE = 14,
             CLIMBER = 5;
 
