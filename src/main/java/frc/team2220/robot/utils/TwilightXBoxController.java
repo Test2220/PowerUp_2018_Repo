@@ -6,9 +6,10 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-public class XBox{
+public class TwilightXBoxController {
 
     private XboxController xbox;
+
 
     private Button aButton;
     private Button bButton;
@@ -19,7 +20,7 @@ public class XBox{
     private Button backButton;
     private Button startButton;
 
-    public XBox(int port) {
+    public TwilightXBoxController(int port) {
 
         xbox = new XboxController(port);
 
@@ -42,6 +43,7 @@ public class XBox{
     public double getXAxis(GenericHID.Hand hand) {
         return xbox.getX(hand);
     }
+
 
     public double getTrigger(GenericHID.Hand hand){
         return xbox.getTriggerAxis(hand);
@@ -78,4 +80,11 @@ public class XBox{
     public Button getStartButton() {
         return startButton;
     }
+
+    public void setRumble(double intensity) {
+        xbox.setRumble(GenericHID.RumbleType.kLeftRumble, intensity);
+        xbox.setRumble(GenericHID.RumbleType.kRightRumble, intensity);
+
+    }
+
 }
