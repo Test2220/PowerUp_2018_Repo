@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/OI.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/OI.class" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" afterPath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight123_Preferences.bot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight123_left.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight123_right.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight_Preferences.bot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight_left.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight_left_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight_right.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurnRight_right_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurn_Preferences.bot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurn_left.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurn_left_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurn_right.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTestTurn_right_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTest_Preferences.bot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTest_left.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTest_left_detailed.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTest_right.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MovementTest_right_detailed.csv" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -36,12 +65,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="522">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+              <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+            <state relative-caret-position="299">
+              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -108,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+              <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -119,16 +160,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
               <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="9" column="54" lean-forward="false" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -509,8 +540,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3033160509195" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2262201793" />
+        <entry key="$PROJECT_DIR$" value="3035058191819" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2811540320" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1741342742" />
       </map>
     </option>
@@ -658,7 +689,6 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ControlLifts.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/LiftPistons.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java" />
@@ -694,13 +724,14 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootScale.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Converter.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
       </list>
     </option>
   </component>
@@ -1008,6 +1039,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30965006" sideWeight="0.49479166" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1025,7 +1057,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1090,13 +1121,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/AntiClockwiseTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/GameInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1319,6 +1343,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#274#275#0" expanded="false" />
+            <element signature="e#313#314#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1348,6 +1376,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1366,14 +1395,6 @@
           <folding>
             <marker date="1520903227880" expanded="true" signature="2112:2306" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1443,7 +1464,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1451,15 +1472,33 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        <state relative-caret-position="299">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>

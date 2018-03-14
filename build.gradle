@@ -44,6 +44,11 @@ deploy {
             directory = '/home/lvuser/paths/RightStart/'
             targets << "roborio"
         }
+        artifact('testPaths', FileCollectionArtifact) {
+            files = project.fileTree(dir: 'src/paths/TestPaths', include: '*.csv')
+            directory = '/home/lvuser/paths/TestPaths/'
+            targets << "roborio"
+        }
     }
 }
 
