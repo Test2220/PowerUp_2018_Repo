@@ -13,6 +13,7 @@ import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.utils.Converter;
 import frc.team2220.robot.utils.TwilightXBoxController;
 
 public class OI {
@@ -35,6 +36,9 @@ public class OI {
 
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
+
+        driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
+        driverController.getbButton().whenPressed(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(195), 3));
 
         manipulatorController.getAButton().whileHeld(new ShootSwitch());
         manipulatorController.getAButton().whenReleased(new StopShooter());

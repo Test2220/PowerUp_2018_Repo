@@ -20,6 +20,7 @@ public class AutoIntake extends Command {
     @Override
     protected void initialize() {
         Robot.intake.setRampUp();
+        Robot.intake.setIntakePistonsExtend();
     }
 
     // Called repeatedly when this Command is scheduled to run

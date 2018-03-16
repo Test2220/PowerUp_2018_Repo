@@ -33,18 +33,18 @@ public class LStartLScale extends CommandGroup {
 
 //        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
         addSequential(new ScaledPathReader("/home/lvuser/paths/LeftStart/LStartLScale_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLScale_right_detailed.csv", 0));
-        addSequential(new DriveToDistance(Converter.inToEncTicks(5)));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(20)));
+//        addSequential(new DriveToDistance(Converter.inToEncTicks(5)));
+//        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(20)));
         addSequential(new ShootScale(0.6));
         addSequential(new Shoot());
         addSequential(new StopShooter());
-        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(70)));
-        addParallel(new AutoIntake(0.6, 4));
-        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);
-        addSequential(new DriveToDistance(-Converter.ftToEncTicks(6)));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(70)));
-        addSequential(new Shoot());
-        addSequential(new StopShooter());
+//        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(70)));
+//        addParallel(new AutoIntake(0.6, 4));
+//        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);
+//        addSequential(new DriveToDistance(-Converter.ftToEncTicks(6)));
+//        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(70)));
+//        addSequential(new Shoot());
+//        addSequential(new StopShooter());M
     }
 
 }

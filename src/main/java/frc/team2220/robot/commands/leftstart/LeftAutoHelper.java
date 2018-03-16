@@ -28,32 +28,32 @@ public class LeftAutoHelper extends InstantCommand {
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
         MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
-
-        if (scaleSide == MatchData.OwnedSide.LEFT){
-            scaleAutoSS.start();
-        } else {
-            WorstAuto.start();
-        }
-
-//        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
-//            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
-//            switchAutoSS.start();
 //
-//        } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
-//            System.out.println("SWITCH OPPOSITE; Check for Scale");
-//
-//            if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
-//                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
-//                scaleAutoSS.start();
-//
-//            } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
-//                System.out.println("SCALE IS ON THE RIGHT; LStartRScale");
-//                WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
-//
-//            }
-//
-//
+//        if (scaleSide == MatchData.OwnedSide.LEFT){
+//            scaleAutoSS.start();
+//        } else {
+//            WorstAuto.start();
 //        }
+
+        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
+            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
+            switchAutoSS.start();
+
+        } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
+            System.out.println("SWITCH OPPOSITE; Check for Scale");
+
+            if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
+                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
+                scaleAutoSS.start();
+
+            } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
+                System.out.println("SCALE IS ON THE RIGHT; LStartRScale");
+                WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
+
+            }
+
+
+        }
 
     }
 

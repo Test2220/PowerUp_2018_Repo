@@ -20,13 +20,14 @@ public class LStartRScale extends CommandGroup {
         addSequential(new ShootScale());
         addSequential(new Shoot());
         addSequential(new StopShooter());
-        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(120)));
-        addParallel(new AutoIntake(0.6, 4));
-        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);
-        addSequential(new DriveToDistance(-Converter.ftToEncTicks(6)));
-        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(90)));
-        addSequential(new ShootScale());
-        addSequential(new StopShooter());
+//        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(120)));
+//        addParallel(new AutoIntake(0.6, 4));
+//        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);
+//        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);
+//        addSequential(new DriveToDistance(-Converter.ftToEncTicks(6)));
+//        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(90)));
+//        addSequential(new ShootScale());
+//        addSequential(new StopShooter());
 
     }
 

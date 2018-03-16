@@ -15,6 +15,12 @@ public class ClockwiseTurn extends Command {
         this.targetTicks = targetTicks;
     }
 
+    public ClockwiseTurn(double targetTicks, double timeout) {
+        super(timeout);
+        requires(Robot.twilightDrive);
+        this.targetTicks = targetTicks;
+    }
+
     @Override
     protected void initialize() {
         Robot.twilightDrive.lDriveMaster.setProfile(0);
@@ -36,7 +42,7 @@ public class ClockwiseTurn extends Command {
 
     @Override
     protected boolean isFinished() {
-        return Robot.twilightDrive.hasZeroBothVelocity(targetTicks);
+        return Robot.twilightDrive.hasZeroBothVelocity(targetTicks) || isTimedOut();
     }
 
     @Override

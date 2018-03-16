@@ -8,6 +8,8 @@ import frc.team2220.robot.Robot;
 public class DriveToDistance extends Command {
 
     private double targetTicks;
+    private double maxSpeed = 3155;
+
 
     public DriveToDistance(double targetTicks) {
         requires(Robot.twilightDrive);
@@ -20,6 +22,14 @@ public class DriveToDistance extends Command {
         this.targetTicks = targetTicks;
     }
 
+
+    public DriveToDistance(double targetTicks, double timeout, double maxSpeed) {
+        super(timeout);
+        requires(Robot.twilightDrive);
+        this.targetTicks = targetTicks;
+        this.maxSpeed = maxSpeed;
+    }
+
     @Override
     protected void initialize() {
         Robot.twilightDrive.lDriveMaster.setProfile(0);
@@ -29,8 +39,8 @@ public class DriveToDistance extends Command {
         Robot.twilightDrive.resetEncoderPos();
 
         Robot.twilightDrive.changeToMotionMagic();
-        Robot.twilightDrive.setBothAccel(2000);
-        Robot.twilightDrive.setBothCruiseVel(3155);
+        Robot.twilightDrive.setBothAccel(maxSpeed/(3155/2000));
+        Robot.twilightDrive.setBothCruiseVel(maxSpeed);
 
         Robot.twilightDrive.driveSet(targetTicks, targetTicks);
 
@@ -43,6 +53,7 @@ public class DriveToDistance extends Command {
 
     @Override
     protected void end() {
+        System.out.println("FINISHED");
         Robot.twilightDrive.currentDoneCount = 0;
         Robot.twilightDrive.changeToPercentVBus();
 
