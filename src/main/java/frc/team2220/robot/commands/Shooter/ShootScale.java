@@ -17,6 +17,12 @@ public class ShootScale extends InstantCommand {
         this.speed = speed;
     }
 
+
+    public  ShootScale(double speed, double timeout) {
+        requires(Robot.shooter);
+        this.speed = speed;
+    }
+
     protected void initialize() {
         Robot.shooter.changeToPercentVBus();
         Robot.shooter.setShooterUp();

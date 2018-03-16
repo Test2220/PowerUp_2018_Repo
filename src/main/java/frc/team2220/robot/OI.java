@@ -43,6 +43,7 @@ public class OI {
         manipulatorController.getyButton().whenPressed(new ShootScale());
         manipulatorController.getyButton().whenReleased(new StopShooter());
         manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
+        manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
         manipulatorController.getRightBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
         manipulatorController.getRightBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
 

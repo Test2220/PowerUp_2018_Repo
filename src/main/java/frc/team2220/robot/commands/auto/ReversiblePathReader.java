@@ -88,11 +88,11 @@ public class ReversiblePathReader extends Command{
 
         switch (direction) {
             case FORWARD:
-                Robot.twilightDrive.scaledDriveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
+                Robot.twilightDrive.scaledDriveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) + turn, -Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) - turn);
                 break;
 
             case BACKWARD:
-                Robot.twilightDrive.scaledDriveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) + turn, -Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) - turn);
+                Robot.twilightDrive.scaledDriveSet(Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo)) + turn, Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo)) - turn);
                 break;
         }
 
