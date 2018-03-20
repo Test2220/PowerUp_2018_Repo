@@ -1,4 +1,4 @@
-[![license](https://img.shields.io/github/license/team401/SnakeSkin.svg)] (https://github.com/Test2220/PowerUp_2018_Repo)
+![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)
 
 # 2018 Power Up Repo
 
