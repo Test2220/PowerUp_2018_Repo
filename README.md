@@ -1,3 +1,5 @@
+[![license](https://img.shields.io/github/license/team401/SnakeSkin.svg)] (https://github.com/Test2220/PowerUp_2018_Repo)
+
 # 2018 Power Up Repo
 
 This is the code for the 2018 Competition Bot.
