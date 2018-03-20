@@ -10,7 +10,7 @@ Do note that this is a gradleRio project which is different compared to the proj
 ### Prerequisites
 
 ```
-Eclipse or IDEA  (Recommended to use IDEA)
+Eclipse or IDEA  (Recommended to use IDEA as this is an IDEA project)
 
 Gradle Includes (You literally don't have to download) : 
 CTRE v4 Legacy Toolsuite
@@ -24,7 +24,6 @@ Some patience
 
 ### Installing
 
-IF YOU WANT A STABLE VERSION FOR ECLIPSE, MAKE SURE YOU ARE IN THE "MASTER" BRANCH. 
 
 ```
 1. Clone (download) the repository to your desktop
@@ -43,6 +42,8 @@ OR
 
 ```
 + Functional Tank Setup
++ Motion Profiling 
++ Automatic CSV File Write/Read
 + Match Data based chooser
 + Motion Magic
 + P, I, D, F based turn to angle
@@ -53,8 +54,6 @@ OR
 ### TODO
 
 ```
-+ Read file from CSV
-+ Add paths and test autonomous completely
 + Vision based Cube detection
 ```
 
