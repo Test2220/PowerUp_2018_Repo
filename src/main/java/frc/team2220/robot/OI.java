@@ -8,10 +8,8 @@
 package frc.team2220.robot;
 
 import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.ShootSwitch;
-import frc.team2220.robot.commands.Shooter.StopShooter;
+import frc.team2220.robot.commands.Intake.UnjamNow;
+import frc.team2220.robot.commands.Shooter.*;
 import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.utils.Converter;
 import frc.team2220.robot.utils.TwilightXBoxController;
@@ -38,7 +36,7 @@ public class OI {
         driverController.getStartButton().whileHeld(new PreMatchDefault());
 
         driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
-        driverController.getbButton().whenPressed(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(195), 3));
+        driverController.getbButton().whenPressed(new MultiReversiblePathReader("TestPaths/TwoCubeGrabABox", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
 
         manipulatorController.getAButton().whileHeld(new ShootSwitch());
         manipulatorController.getAButton().whenReleased(new StopShooter());
@@ -48,10 +46,14 @@ public class OI {
         manipulatorController.getyButton().whenReleased(new StopShooter());
         manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        manipulatorController.getRightBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        manipulatorController.getRightBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
+        manipulatorController.getxButton().whileHeld(new ShootSwitchHigh());
+        manipulatorController.getxButton().whenReleased(new StopShooter());
+
+        manipulatorController.getRightBumper().whileHeld(new UnjamNow());
+        manipulatorController.getRightBumper().whenReleased(new StopShooter());
 
     }
 
 
 }
+

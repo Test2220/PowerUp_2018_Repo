@@ -37,12 +37,12 @@ public class ControlIntake extends Command {
 
         if (Converter.deadzone(leftYAxis) > 0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinEntireIntake(0.25);
+            Robot.intake.spinEntireIntake(0.3);
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(leftYAxis) < -0.2) {
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinEntireIntake(-0.65);
+            Robot.intake.spinEntireIntake(-0.8);
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(rightYAxis) > 0.2) {

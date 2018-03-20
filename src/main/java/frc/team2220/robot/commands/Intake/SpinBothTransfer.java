@@ -6,7 +6,7 @@ import frc.team2220.robot.Robot;
 public class SpinBothTransfer extends Command {
 
     public SpinBothTransfer() {
-        super(2);
+        super(1);
     }
 
     public SpinBothTransfer(double timeout) {

@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
@@ -67,7 +68,8 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.getNumber("multiplier", 0);
+        SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
+        SmartDashboard.putData(new PreMatchDefault());
     }
 
     @Override
