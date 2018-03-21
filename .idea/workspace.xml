@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/PowerUp_Profile.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/UnjamNow.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/UnjamNow.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootSwitchHigh.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Shooter/ShootSwitchHigh.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ScaledPathReader.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ScaledPathReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/SingleMotorTester.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/SingleMotorTester.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/PeoriaMStartLSwitch.xml" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/PeoriaMStartLSwitch.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/PeoriaMStartRSwitch.xml" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/PeoriaMStartRSwitch.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/RightStart/PeoriaRStartLScale.xml" afterPath="$PROJECT_DIR$/src/paths/RightStart/PeoriaRStartLScale.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/RightStart/PeoriaRStartRScale.xml" afterPath="$PROJECT_DIR$/src/paths/RightStart/PeoriaRStartRScale.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/TwoCubeGrabABox.xml" afterPath="$PROJECT_DIR$/src/paths/TestPaths/TwoCubeGrabABox.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/TwoCubeGrabABoxRSwitch.xml" afterPath="$PROJECT_DIR$/src/paths/TestPaths/TwoCubeGrabABoxRSwitch.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -78,16 +47,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MStartRSwitch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MiddleAutoHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/middlestart/MiddleAutoHelper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,15 +87,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="-196">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="e#0#4168#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelativeTurnToAngle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-104">
+              <caret line="99" column="48" lean-forward="true" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -683,7 +652,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathReaderMultiDirectional.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ResetEncoderPos.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/StayInPlace.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java" />
@@ -732,6 +700,7 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Converter.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java" />
       </list>
     </option>
   </component>
@@ -801,7 +770,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Motion_Profile_Generator" />
-    <property name="SearchEverywhereHistoryKey" value="Copyright&#9;ACTION&#9;GenerateCopyright&#10;Pathrea&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;Twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LEf&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;LeftA&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;MS&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MiddleAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MiddleAutoHelper.java&#10;MStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStartLSwitch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;MSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Sho&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;Shoo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;Intake&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;MSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Mstar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;LeftAut&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;LeftAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;Mst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Rever&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java&#10;Clock&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/ClockwiseTurn.java&#10;Drive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;PreMat&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Lstart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java&#10;Tw&#9;null&#9;null&#10;Twilight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;MiddleAut&#9;PSI&#9;JAVA://frc.team2220.robot.commands.middlestart.MiddleAutoHelper&#10;Converter&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;TwilightDrive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;RStartRScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java&#10;RStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java&#10;LStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java&#10;DriveToDis&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;turn to angle&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java&#10;System.out.println&#9;null&#9;null&#10;control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;TurnTo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;prematch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;Worst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/WorstAutoGroup.java&#10;MatchData&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java&#10;Winch&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.Climber#winch&#10;drivewi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Twil&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" />
+    <property name="SearchEverywhereHistoryKey" value="Relati&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.RelativeTurnToAngle&#10;Copyright&#9;ACTION&#9;GenerateCopyright&#10;Pathrea&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;Twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LEf&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;LeftA&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;MS&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MiddleAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MiddleAutoHelper.java&#10;MStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStartLSwitch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;MSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Sho&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;Shoo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;Intake&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;MSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;MStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Mstar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartRSwitch.java&#10;LeftAut&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;LeftAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;Mst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MStartLSwitch.java&#10;Rever&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java&#10;Clock&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/ClockwiseTurn.java&#10;Drive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;PreMat&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Lstart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java&#10;Tw&#9;null&#9;null&#10;Twilight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;MiddleAut&#9;PSI&#9;JAVA://frc.team2220.robot.commands.middlestart.MiddleAutoHelper&#10;Converter&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;TwilightDrive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;RStartRScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java&#10;RStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java&#10;LStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java&#10;DriveToDis&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;turn to angle&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java&#10;System.out.println&#9;null&#9;null&#10;control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;TurnTo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;prematch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;Worst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/WorstAutoGroup.java&#10;MatchData&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java&#10;Winch&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.Climber#winch&#10;drivewi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" />
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
   </component>
   <component name="RecentsManager">
@@ -1031,13 +1000,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4482">
@@ -1415,12 +1377,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="-196">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#4168#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/RelativeTurnToAngle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="99" column="48" lean-forward="true" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

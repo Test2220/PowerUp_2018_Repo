@@ -53,9 +53,7 @@ public class RelativeTurnToAngle extends Command {
 
     public RelativeTurnToAngle(double angle) {
         requires(Robot.twilightDrive);
-
         this.targetAngle = angle;
-
     }
 
     // Called just before this Command runs the first time
