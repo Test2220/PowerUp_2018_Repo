@@ -39,7 +39,7 @@ public class DriveToDistance extends Command {
         Robot.twilightDrive.resetEncoderPos();
 
         Robot.twilightDrive.changeToMotionMagic();
-        Robot.twilightDrive.setBothAccel(maxSpeed/(3155/2000));
+        Robot.twilightDrive.setBothAccel(maxSpeed / (3155 / 2000));
         Robot.twilightDrive.setBothCruiseVel(maxSpeed);
 
         Robot.twilightDrive.driveSet(targetTicks, targetTicks);

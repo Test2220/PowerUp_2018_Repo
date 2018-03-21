@@ -20,14 +20,11 @@ import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
-import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.Climber;
 import frc.team2220.robot.subsystems.Intake;
 import frc.team2220.robot.subsystems.Shooter;
 import frc.team2220.robot.subsystems.TwilightDrive;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Logger;
 
 
 public class Robot extends TimedRobot {

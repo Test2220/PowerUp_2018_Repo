@@ -29,7 +29,7 @@ public class LeftAutoHelper extends InstantCommand {
         MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
 
-        if (scaleSide == MatchData.OwnedSide.LEFT){
+        if (scaleSide == MatchData.OwnedSide.LEFT) {
             scaleAutoSS.start();
         } else {
             WorstAuto.start();

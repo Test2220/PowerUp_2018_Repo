@@ -1,13 +1,11 @@
 package frc.team2220.robot.commands.rightstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.commands.Shooter.LiftPistons;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.ClockwiseTurn;
 import frc.team2220.robot.commands.auto.PathReaderMultiDirectional;
-import frc.team2220.robot.commands.auto.PreAutoDefault;
 import frc.team2220.robot.utils.Converter;
 
 public class RStartLScale extends CommandGroup {

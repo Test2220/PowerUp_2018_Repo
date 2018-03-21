@@ -1,7 +1,6 @@
 package frc.team2220.robot.utils;
 
 import edu.wpi.first.wpilibj.GenericHID;
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -24,10 +23,10 @@ public class TwilightXBoxController {
 
         xbox = new XboxController(port);
 
-        aButton =  new JoystickButton(xbox, 1);
-        bButton =  new JoystickButton(xbox, 2);
-        xButton =  new JoystickButton(xbox, 3);
-        yButton =  new JoystickButton(xbox, 4);
+        aButton = new JoystickButton(xbox, 1);
+        bButton = new JoystickButton(xbox, 2);
+        xButton = new JoystickButton(xbox, 3);
+        yButton = new JoystickButton(xbox, 4);
         leftBumper = new JoystickButton(xbox, 5);
         rightBumper = new JoystickButton(xbox, 6);
         backButton = new JoystickButton(xbox, 7);
@@ -45,7 +44,7 @@ public class TwilightXBoxController {
     }
 
 
-    public double getTrigger(GenericHID.Hand hand){
+    public double getTrigger(GenericHID.Hand hand) {
         return xbox.getTriggerAxis(hand);
     }
 

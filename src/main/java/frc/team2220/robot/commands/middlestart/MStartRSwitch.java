@@ -5,10 +5,12 @@ import frc.team2220.robot.commands.Intake.AutoIntake;
 import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
+import frc.team2220.robot.commands.auto.ReversiblePathReader;
 
 public class MStartRSwitch extends CommandGroup {
-//
+    //
 //    String leftPath = "/home/lvuser/paths/MiddleStart/MStartRSwitch_left_detailed.csv";
 //    String rightPath = "/home/lvuser/paths/MiddleStart/MStartRSwitch_right_detailed.csv";
 //
@@ -23,8 +25,6 @@ public class MStartRSwitch extends CommandGroup {
         addSequential(new AutoIntake(0.8, 1));
         addSequential(new AutoIntake(-0.25, 0.4));
         addSequential(new AutoIntake(0.8, 1));
-
-
 
 
     }

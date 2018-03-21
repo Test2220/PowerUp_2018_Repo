@@ -6,7 +6,6 @@ import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
 import frc.team2220.robot.commands.auto.PathReader;
-import frc.team2220.robot.commands.auto.PreAutoDefault;
 
 
 public class LStartLSwitch extends CommandGroup {

@@ -32,9 +32,6 @@ public class ControlIntake extends Command {
         }
 
 
-
-
-
         if (Converter.deadzone(leftYAxis) > 0.2) {
             Robot.intake.setIntakePistonsExtend();
             Robot.intake.spinEntireIntake(0.3);
@@ -46,7 +43,7 @@ public class ControlIntake extends Command {
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(rightYAxis) > 0.2) {
-                System.out.println("RIGHT AXIS > 0.2");
+            System.out.println("RIGHT AXIS > 0.2");
             if (Robot.intake.isBlockHalfWayLoaded()) {
                 Robot.intake.spinEntireIntake(0);
                 System.out.println("LIMIT SWITCH TRUE");

@@ -2,18 +2,19 @@ package frc.team2220.robot.commands.middlestart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Intake.AutoIntake;
-import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.Shooter.ShootSwitch;
 import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.auto.ClockwiseTurn;
+import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
+import frc.team2220.robot.commands.auto.ReversiblePathReader;
 import frc.team2220.robot.utils.Converter;
 
 public class MStartLSwitch extends CommandGroup {
 
 
-	public MStartLSwitch() {
+    public MStartLSwitch() {
         addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
         addSequential(new ReversiblePathReader("MiddleStart/MStartLSwitch", 50, ReversiblePathReader.Direction.FORWARD));
         addSequential(new ShootSwitch());
@@ -37,7 +38,6 @@ public class MStartLSwitch extends CommandGroup {
 //        addSequential(new DriveToDistance(Converter.ftToEncTicks(5), 10, 1000));
 
     }
-
 
 
 }

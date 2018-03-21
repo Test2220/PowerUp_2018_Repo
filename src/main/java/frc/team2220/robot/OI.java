@@ -10,7 +10,9 @@ package frc.team2220.robot;
 import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.Intake.UnjamNow;
 import frc.team2220.robot.commands.Shooter.*;
-import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.auto.DriveToDistance;
+import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.utils.Converter;
 import frc.team2220.robot.utils.TwilightXBoxController;
 

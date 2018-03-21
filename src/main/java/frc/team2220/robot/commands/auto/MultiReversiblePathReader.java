@@ -9,7 +9,7 @@ import jaci.pathfinder.Trajectory;
 
 import java.io.File;
 
-public class MultiReversiblePathReader extends Command{
+public class MultiReversiblePathReader extends Command {
 
 
     private Trajectory left;
