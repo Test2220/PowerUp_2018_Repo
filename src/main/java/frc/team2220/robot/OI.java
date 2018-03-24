@@ -7,74 +7,38 @@
 
 package frc.team2220.robot;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.ShootSwitch;
-import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.commands.leftstart.LStartLScale;
+import frc.team2220.robot.commands.Shooter.*;
+import frc.team2220.robot.commands.auto.DriveToDistance;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
+import frc.team2220.robot.utils.Converter;
+import frc.team2220.robot.utils.TwilightXBoxController;
 
 public class OI {
 
-    //Joysticks
-    Joystick driverStick = new Joystick(0);
-    Joystick manipulatorStick = new Joystick(1);
+    private TwilightXBoxController driverController;
+    private TwilightXBoxController manipulatorController;
 
-    //BUTTONS ON DRIVERSTICK
-    Button driverShootLB = new JoystickButton(driverStick, 5);
-    Button preMatchSetupSTART = new JoystickButton(driverStick, 8);
-    Button pathTesterBACK = new JoystickButton(driverStick, 7);
-    Button pathTesterA = new JoystickButton(driverStick, 1);
-
-    //BUTTONS ON MANIPULATOR STICK
-    Button shootSwitchA = new JoystickButton(manipulatorStick, 1);
-    Button shootScaleB = new JoystickButton(manipulatorStick, 2);
-    Button shootScaleHigherY = new JoystickButton(manipulatorStick, 4);
-    Button intakePistonLB = new JoystickButton(manipulatorStick, 5);
-
-
-    public Joystick getDriverStick() {
-
-        return driverStick;
-
+    public TwilightXBoxController getDriverController() {
+        return driverController;
     }
 
-    public Joystick getManipulatorStick() {
-
-        return manipulatorStick;
-
+    public TwilightXBoxController getManipulatorController() {
+        return manipulatorController;
     }
-
 
     public OI() {
 
-        driverShootLB.whenPressed(new ReversiblePathReader("TestPaths/CurvedPath", 25, ReversiblePathReader.Direction.BACKWARD));
-        preMatchSetupSTART.whileHeld(new PreMatchDefault());
-//        pathTesterBACK.whenPressed(new ScaledPathReaderBackward("MiddleStart/MovementTest1", 25));
-        pathTesterBACK.whenPressed(new LStartLScale());
-//        pathTesterA.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        pathTesterA.whenReleased(new ReversiblePathReader("TestPaths/CurvedPath", 25, ReversiblePathReader.Direction.FORWARD));
+        driverController = new TwilightXBoxController(0);
+        manipulatorController = new TwilightXBoxController(1);
 
-        //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
-        //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));
-        //pathTesterA.whenPressed(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        driverController.getLeftBumper().whenPressed(new Shoot());
+        driverController.getStartButton().whileHeld(new PreMatchDefault());
 
-        shootSwitchA.whileHeld(new ShootSwitch());
-        shootSwitchA.whenReleased(new StopShooter());
-        shootScaleB.whenPressed(new ShootScale(0.63));
-        shootScaleB.whenReleased(new StopShooter());
-        shootScaleHigherY.whenPressed(new ShootScale());
-        shootScaleHigherY.whenReleased(new StopShooter());
-        intakePistonLB.whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
-        intakePistonLB.whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
+        driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
 
 
     }
 
 
 }
+
