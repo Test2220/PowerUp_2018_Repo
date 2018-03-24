@@ -1,15 +1,14 @@
 package frc.team2220.robot.commands.drive;
 
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.team2220.robot.Robot;
 
-public class CubeTracker extends InstantCommand{
+public class CubeTracker extends InstantCommand {
 
     private double angleError;
-    private double angleDividend = 1/27.0;
+    private double angleDividend = 1 / 27.0;
 
-    public CubeTracker(){
+    public CubeTracker() {
         requires(Robot.twilightDrive);
     }
 

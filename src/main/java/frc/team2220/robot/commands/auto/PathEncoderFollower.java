@@ -4,16 +4,14 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
-import frc.team2220.robot.subsystems.TwilightDrive;
 import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.followers.EncoderFollower;
 
 import java.io.File;
 
-public class PathEncoderFollower extends Command{
+public class PathEncoderFollower extends Command {
 
     EncoderFollower leftFollow;
     EncoderFollower rightFollow;

@@ -8,11 +8,11 @@ public class ShootScale extends InstantCommand {
 
     double speed = 0.7;
 
-    public  ShootScale() {
+    public ShootScale() {
         requires(Robot.shooter);
     }
 
-    public  ShootScale(double speed) {
+    public ShootScale(double speed) {
         requires(Robot.shooter);
         this.speed = speed;
     }

@@ -7,7 +7,7 @@
 
 package frc.team2220.robot;
 
-import frc.team2220.robot.commands.Shooter.*;
+import frc.team2220.robot.commands.Shooter.Shoot;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.utils.Converter;

@@ -1,13 +1,8 @@
 package frc.team2220.robot.commands.leftstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.commands.Shooter.LiftPistons;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Converter;
+import frc.team2220.robot.commands.auto.ScaledPathReader;
+import frc.team2220.robot.commands.auto.ScaledPathReaderBackward;
 
 public class LStartLScale extends CommandGroup {
 

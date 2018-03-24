@@ -63,7 +63,7 @@ public class PathReader extends Command {
         double desired_heading = Pathfinder.r2d(left.segments[index].heading);
         double angle_difference = Pathfinder.boundHalfDegrees(desired_heading - gyro_heading);// Make sure to bound this from -180 to 180, otherwise you will get super large values
         System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
-        double turn =  0.8 * (-1.0/80.0) * angle_difference;
+        double turn = 0.8 * (-1.0 / 80.0) * angle_difference;
         Robot.twilightDrive.driveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((rightVelo - turn)), -Converter.ftPerSecondToNativeUnitsPer100Ms((leftVelo + turn)));
 
     }

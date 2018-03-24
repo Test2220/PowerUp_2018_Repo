@@ -19,11 +19,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
-import frc.team2220.robot.commands.miscellaneous.PathGen;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.*;
-import frc.team2220.robot.utils.Constants;
-import frc.team2220.robot.utils.Logger;
 
 
 public class Robot extends TimedRobot {
@@ -32,7 +29,7 @@ public class Robot extends TimedRobot {
     public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
     public static final TwilightDrive twilightDrive = new TwilightDrive();
     public static final Shooter shooter = new Shooter();
-    public static final Intake intake    = new Intake();
+    public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
     public static final Limelight limelight = new Limelight();
 
