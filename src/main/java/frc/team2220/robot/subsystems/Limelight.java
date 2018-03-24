@@ -10,6 +10,7 @@ public class Limelight extends Subsystem {
     private NetworkTable limeTable = NetworkTableInstance.getDefault().getTable("limelight");
 
     public Limelight() {
+        limeTable.getEntry("camMode").setNumber(CAM_MODE.VISION_PROCESSING.val);
 
     }
 
@@ -39,8 +40,12 @@ public class Limelight extends Subsystem {
         limeTable.getEntry("camMode").setNumber(camMode.val);
     }
 
+    public void setPipeline(int pipeline) {
+        limeTable.getEntry("pipeline").setNumber(pipeline);
+    }
+
     public enum LED_MODE {
-        OFF(0), ON(1), BLINKING(2);
+        OFF(1), ON(0), BLINKING(2);
 
         public int val;
 

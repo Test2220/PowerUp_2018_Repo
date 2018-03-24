@@ -2,11 +2,12 @@ package frc.team2220.robot.commands.drive;
 
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.team2220.robot.Robot;
+import frc.team2220.robot.subsystems.Limelight;
 
 public class CubeTracker extends InstantCommand {
 
     private double angleError;
-    private double angleDividend = 1 / 27.0;
+    private double angleDividend = 1 / 50;
 
     public CubeTracker() {
         requires(Robot.twilightDrive);
@@ -14,6 +15,9 @@ public class CubeTracker extends InstantCommand {
 
     protected void initialize() {
         Robot.twilightDrive.changeToPercentVBus();
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.ON);
+        Robot.limelight.setCamMode(Limelight.CAM_MODE.VISION_PROCESSING);
+        Robot.limelight.setPipeline(3);
     }
 
     protected void execute() {

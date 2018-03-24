@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.PIDController;
 import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.Timer;
@@ -130,7 +131,6 @@ public class TurnToAngle extends Command {
         // Reset the PID Controller
         turnPIDController.disable();
         turnPIDController.reset();
-
     }
 
     // Called when another command which requires one or more of the same

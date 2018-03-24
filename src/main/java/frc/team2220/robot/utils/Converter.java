@@ -78,7 +78,7 @@ public class Converter {
     //Super Basic Deadzone function
     public static double deadzone(double val) {
         double signum = Math.signum(val);
-        return signum * Math.pow(Math.abs(val), 1.3);
+        return signum * Math.pow(Math.abs(val), 1);
     }
 
 }

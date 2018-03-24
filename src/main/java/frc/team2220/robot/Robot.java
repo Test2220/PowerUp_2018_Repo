@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
+import frc.team2220.robot.commands.drive.CubeTracker;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
@@ -40,6 +41,7 @@ public class Robot extends TimedRobot {
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
     private Command PreMatchDefault = new PreMatchDefault();
+    private Command CubeTracker = new CubeTracker();
 
     @Override
     public void robotInit() {
@@ -92,6 +94,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
+        Robot.limelight.setCamMode(Limelight.CAM_MODE.VISION_PROCESSING);
+        Robot.limelight.setPipeline(9);
         Robot.twilightDrive.navX.zeroYaw();
 
         Robot.shooter.setCubePistonDown();
@@ -105,11 +110,12 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
-        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
-        SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
-        SmartDashboard.putNumber("LEFT 'enc' postiion", Robot.twilightDrive.lDriveMaster.getEncPosition());
-        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+//        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
+//        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
+//        SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
+//        SmartDashboard.putNumber("LEFT 'enc' postiion", Robot.twilightDrive.lDriveMaster.getEncPosition());
+//        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+        SmartDashboard.putNumber("ANGLE", Robot.limelight.getTX());
     }
 
     @Override
@@ -119,5 +125,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void testPeriodic() {
+        Scheduler.getInstance().run();
+        CubeTracker.start();
     }
 }

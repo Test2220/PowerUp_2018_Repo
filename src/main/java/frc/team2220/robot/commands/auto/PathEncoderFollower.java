@@ -50,10 +50,10 @@ public class PathEncoderFollower extends Command {
 
         Robot.twilightDrive.resetEncoderPos();
 
-        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        leftFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
-        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        rightFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
+        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelDiameterIn);
+        leftFollow.configurePIDVA(1, 0, 0, 1 / 120 , 0);
+        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelDiameterIn);
+        rightFollow.configurePIDVA(1, 0, 0, 1 / 120 , 0);
 
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
