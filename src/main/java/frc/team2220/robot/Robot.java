@@ -38,6 +38,7 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
+
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
@@ -71,6 +72,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
+        Robot.twilightDrive.navX.zeroYaw();
 
         autonomousCommand = sideChooser.getSelected();
 
