@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
@@ -37,6 +38,8 @@ public class Robot extends TimedRobot {
 
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
+
+    private Command PreMatchDefault = new PreMatchDefault();
 
     @Override
     public void robotInit() {
@@ -110,7 +113,11 @@ public class Robot extends TimedRobot {
     }
 
     @Override
-    public void testPeriodic() {
+    public void testInit() {
+        PreMatchDefault.start();
+    }
 
+    @Override
+    public void testPeriodic() {
     }
 }
