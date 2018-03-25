@@ -7,7 +7,7 @@ import frc.team2220.robot.subsystems.Limelight;
 public class CubeTracker extends InstantCommand {
 
     private double angleError;
-    private double angleDividend = 1 / 50;
+    private double angleDividend = 1 / 50.0;
 
     public CubeTracker() {
         requires(Robot.twilightDrive);
