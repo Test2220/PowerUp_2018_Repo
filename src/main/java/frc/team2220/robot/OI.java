@@ -7,9 +7,9 @@
 
 package frc.team2220.robot;
 
-import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Intake.UnjamNow;
-import frc.team2220.robot.commands.Shooter.*;
+import frc.team2220.robot.commands.mechanisms.intake.IntakePistons;
+import frc.team2220.robot.commands.mechanisms.intake.UnjamNow;
+import frc.team2220.robot.commands.mechanisms.shooter.*;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
@@ -34,23 +34,24 @@ public class OI {
         driverController = new TwilightXBoxController(0);
         manipulatorController = new TwilightXBoxController(1);
 
+        //Gagan's Side
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
-
         driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
-        driverController.getbButton().whenPressed(new MultiReversiblePathReader("TestPaths/TwoCubeGrabABox", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
+        driverController.getBButton().whenPressed(new MultiReversiblePathReader("TestPaths/TwoCubeGrabABox", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
 
+
+        //Nick's Side
         manipulatorController.getAButton().whileHeld(new ShootSwitch());
         manipulatorController.getAButton().whenReleased(new StopShooter());
-        manipulatorController.getbButton().whenPressed(new ShootScale(0.63));
-        manipulatorController.getbButton().whenReleased(new StopShooter());
-        manipulatorController.getyButton().whenPressed(new ShootScale());
-        manipulatorController.getyButton().whenReleased(new StopShooter());
+        manipulatorController.getBButton().whenPressed(new ShootScale(0.63));
+        manipulatorController.getBButton().whenReleased(new StopShooter());
+        manipulatorController.getYButton().whenPressed(new ShootScale());
+        manipulatorController.getYButton().whenReleased(new StopShooter());
         manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
         manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        manipulatorController.getxButton().whileHeld(new ShootSwitchHigh());
-        manipulatorController.getxButton().whenReleased(new StopShooter());
-
+        manipulatorController.getXButton().whileHeld(new ShootSwitchHigh());
+        manipulatorController.getXButton().whenReleased(new StopShooter());
         manipulatorController.getRightBumper().whileHeld(new UnjamNow());
         manipulatorController.getRightBumper().whenReleased(new StopShooter());
 

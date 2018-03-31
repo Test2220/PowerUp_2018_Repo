@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2220.robot.RobotMap;
-import frc.team2220.robot.commands.Intake.ControlIntake;
+import frc.team2220.robot.commands.mechanisms.intake.ControlIntake;
 
 public class Intake extends Subsystem {
 

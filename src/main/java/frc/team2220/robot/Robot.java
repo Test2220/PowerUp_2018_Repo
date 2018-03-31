@@ -17,14 +17,11 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
-import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
-import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
+import frc.team2220.robot.commands.paths.leftstart.LeftAutoHelper;
+import frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
-import frc.team2220.robot.commands.rightstart.RightAutoHelper;
-import frc.team2220.robot.subsystems.Climber;
-import frc.team2220.robot.subsystems.Intake;
-import frc.team2220.robot.subsystems.Shooter;
-import frc.team2220.robot.subsystems.TwilightDrive;
+import frc.team2220.robot.commands.paths.rightstart.RightAutoHelper;
+import frc.team2220.robot.subsystems.*;
 
 
 public class Robot extends TimedRobot {
@@ -35,6 +32,7 @@ public class Robot extends TimedRobot {
     public static final Shooter shooter = new Shooter();
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
+    public static final Limelight limelight = new Limelight();
 
     public static OI oi;
 
@@ -108,10 +106,7 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
-        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
-        SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
-        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+
     }
 
     @Override

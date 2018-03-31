@@ -1,11 +1,11 @@
 package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Intake.SpinBothTransfer;
-import frc.team2220.robot.commands.Shooter.ControlShooter;
-import frc.team2220.robot.commands.Shooter.LiftPistons;
-import frc.team2220.robot.commands.Shooter.StopShooter;
+import frc.team2220.robot.commands.mechanisms.intake.IntakePistons;
+import frc.team2220.robot.commands.mechanisms.intake.SpinBothTransfer;
+import frc.team2220.robot.commands.mechanisms.shooter.ControlShooter;
+import frc.team2220.robot.commands.mechanisms.shooter.LiftPistons;
+import frc.team2220.robot.commands.mechanisms.shooter.StopShooter;
 
 public class PreAutoDefault extends CommandGroup {
 
