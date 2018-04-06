@@ -19,7 +19,6 @@ deploy {
         target("roborio", RoboRIO) {
             team = TEAM
             user = 'admin'         // User to login as. Required.
-            password = '2220'
         }
     }
     artifacts {

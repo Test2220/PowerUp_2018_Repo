@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import com.ctre.CANTalon;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
@@ -23,6 +24,7 @@ import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
 import frc.team2220.robot.commands.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.*;
+import frc.team2220.robot.utils.TemperatureLogger;
 
 
 public class Robot extends TimedRobot {
@@ -34,6 +36,7 @@ public class Robot extends TimedRobot {
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
     public static final Limelight limelight = new Limelight();
+    public static TemperatureLogger tempLogger;
 
     public static OI oi;
 
@@ -46,6 +49,7 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
         oi = new OI();
+        tempLogger = new TemperatureLogger(new CANTalon[] {Robot.twilightDrive.rDriveMaster});
         Compressor airCompressor = new Compressor();
         airCompressor.start();
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
@@ -62,6 +66,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledInit() {
+
     }
 
     @Override
@@ -110,6 +115,8 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        tempLogger.logTalons();
+//        Logger.writeLog("boiboi");
 //        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
 //        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());
 //        SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());

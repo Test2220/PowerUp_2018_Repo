@@ -1,7 +1,9 @@
 package frc.team2220.robot.utils;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,22 +22,23 @@ public class Logger {
         return sdfDate.format(now);
     }
 
-    private FileWriter filewriter;
+    private PrintStream filewriter;
 
-    private Logger(String fileName) {
+    public Logger(String fileName) {
         try {
-            filewriter = new FileWriter(fileName);
+            File logFile = new File(fileName);
+            filewriter = new PrintStream(logFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void log(String string) {
-        try {
-            filewriter.append(string);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println(filewriter);
+            filewriter.println(string);
+//            filewriter.append("\n");
+//            filewriter.flush();
+
     }
 
     public static void writeLog(String string) {
@@ -43,10 +46,7 @@ public class Logger {
     }
 
     public void close() {
-        try {
             filewriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 }

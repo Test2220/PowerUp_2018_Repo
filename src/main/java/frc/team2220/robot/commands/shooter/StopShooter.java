@@ -1,4 +1,4 @@
-package frc.team2220.robot.commands.Shooter;
+package frc.team2220.robot.commands.shooter;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.InstantCommand;

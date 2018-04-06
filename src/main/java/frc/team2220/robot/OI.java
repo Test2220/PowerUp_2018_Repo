@@ -8,19 +8,15 @@
 package frc.team2220.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.ShootSwitch;
-import frc.team2220.robot.commands.Shooter.StopShooter;
-import frc.team2220.robot.commands.auto.*;
+import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.drive.CubeTracker;
-import frc.team2220.robot.commands.drive.LimelightConfig;
 import frc.team2220.robot.commands.leftstart.LStartLScale;
-import frc.team2220.robot.subsystems.Limelight;
+import frc.team2220.robot.commands.shooter.ShootScale;
+import frc.team2220.robot.commands.shooter.ShootSwitch;
+import frc.team2220.robot.commands.shooter.StopShooter;
 
 public class OI {
 
@@ -61,9 +57,10 @@ public class OI {
 //        pathTesterBACK.whenPressed(new ScaledPathReaderBackward("MiddleStart/MovementTest1", 25));
         pathTesterBACK.whenPressed(new LStartLScale());
 //        pathTesterA.whenPressed(new PathEncoderFollower("/home/lvuser/paths/MiddleStart/MovementTest_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTest_right_detailed.csv", 0));
-        pathTesterA.whenReleased(new PathEncoderFollower("TestPaths/ForwardFiveFeet", 25));
+//        pathTesterA.whenReleased(new ("TestPaths/ForwardFiveFeet", 25, ReversiblePathReader.Direction.FORWARD));
+//        driverShootLB.whenPressed(new CubeFollower(5, 25));
         driverShootLB.whileHeld(new CubeTracker());
-        driverShootLB.whenReleased(new LimelightConfig(Limelight.LED_MODE.OFF));
+//        driverShootLB.whenReleased(new LimelightConfig(Limelight.LED_MODE.OFF));
 
         //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurn_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurn_right_detailed.csv", 0));
         //pathTesterA.whenPressed(new ScaledPathReader("/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_left_detailed.csv", "/home/lvuser/paths/MiddleStart/MovementTestTurnRight123_right_detailed.csv", 0));

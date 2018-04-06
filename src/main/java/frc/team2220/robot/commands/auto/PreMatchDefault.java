@@ -4,9 +4,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.Intake.IntakeBoolean;
 import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.Intake.RampControl;
-import frc.team2220.robot.commands.Shooter.CubePiston;
-import frc.team2220.robot.commands.Shooter.ShootScale;
-import frc.team2220.robot.commands.Shooter.StopShooter;
+import frc.team2220.robot.commands.shooter.CubePiston;
+import frc.team2220.robot.commands.shooter.ShootScale;
+import frc.team2220.robot.commands.shooter.StopShooter;
 
 public class PreMatchDefault extends CommandGroup {
 

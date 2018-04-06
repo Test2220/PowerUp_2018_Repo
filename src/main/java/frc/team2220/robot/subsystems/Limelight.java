@@ -26,6 +26,12 @@ public class Limelight extends Subsystem {
         return ty.getDouble(0);
     }
 
+    //Target Area (0% of image to 100% of image)
+    public double getTA() {
+        NetworkTableEntry ta = limeTable.getEntry("ta");
+        return ta.getDouble(0);
+    }
+
     //Whether the limelight has any valid targets (0 or 1)
     public boolean hasTarget() {
         NetworkTableEntry tv = limeTable.getEntry("tv");

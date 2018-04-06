@@ -1,10 +1,10 @@
 package frc.team2220.robot.commands.miscellaneous;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import frc.team2220.robot.commands.Shooter.Shoot;
-import frc.team2220.robot.commands.Shooter.ShootScale;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.TurnToAngle;
+import frc.team2220.robot.commands.shooter.Shoot;
+import frc.team2220.robot.commands.shooter.ShootScale;
 import frc.team2220.robot.utils.Converter;
 
 public class WorstAutoGroup extends CommandGroup {

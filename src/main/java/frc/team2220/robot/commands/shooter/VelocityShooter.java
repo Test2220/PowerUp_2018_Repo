@@ -1,4 +1,4 @@
-package frc.team2220.robot.commands.Shooter;
+package frc.team2220.robot.commands.shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
