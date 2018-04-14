@@ -1,0 +1,12 @@
+language: java
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: script
+    script: ./gradlew build
+    skip_cleanup: true
+    on:
+      tags: true
+
