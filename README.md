@@ -1,5 +1,6 @@
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)
-![travis_ci](https://travis-ci.com/Test2220/PowerUp_2018_Repo.svg?token=KKeK9q5aqdJAxweSfmZH&branch=IkeaBot)
+
+[![Build Status](https://travis-ci.com/Test2220/PowerUp_2018_Repo.svg?token=KKeK9q5aqdJAxweSfmZH&branch=IkeaBot)](https://travis-ci.com/Test2220/PowerUp_2018_Repo)
 
 # 2018 Power Up Repo
 
