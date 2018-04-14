@@ -52,15 +52,15 @@ public class TwilightXBoxController {
         return aButton;
     }
 
-    public Button getbButton() {
+    public Button getBButton() {
         return bButton;
     }
 
-    public Button getxButton() {
+    public Button getXButton() {
         return xButton;
     }
 
-    public Button getyButton() {
+    public Button getYButton() {
         return yButton;
     }
 

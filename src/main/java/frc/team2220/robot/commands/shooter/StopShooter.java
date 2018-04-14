@@ -12,8 +12,7 @@ public class StopShooter extends InstantCommand {
 
     protected void execute() {
         Robot.shooter.spinAllMotors(0);
-        Robot.oi.getDriverStick().setRumble(GenericHID.RumbleType.kLeftRumble, 0);
-        Robot.oi.getDriverStick().setRumble(GenericHID.RumbleType.kRightRumble, 0);
+        Robot.oi.getDriverController().setRumble(0);
     }
 
 }

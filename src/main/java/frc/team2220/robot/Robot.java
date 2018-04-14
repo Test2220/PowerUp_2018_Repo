@@ -9,10 +9,7 @@ package frc.team2220.robot;
 
 import com.ctre.CANTalon;
 import edu.wpi.cscore.UsbCamera;
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -49,7 +46,11 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
         oi = new OI();
-        tempLogger = new TemperatureLogger(new CANTalon[] {Robot.twilightDrive.rDriveMaster});
+        tempLogger = new TemperatureLogger(new CANTalon[] {
+                Robot.twilightDrive.rDriveMaster,
+                Robot.twilightDrive.rDriveSlave,
+                Robot.twilightDrive.lDriveMaster,
+                Robot.twilightDrive.lDriveSlave});
         Compressor airCompressor = new Compressor();
         airCompressor.start();
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
@@ -72,7 +73,6 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.getNumber("multiplier", 0);
     }
 
     @Override
@@ -100,21 +100,23 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
         Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
-        Robot.limelight.setCamMode(Limelight.CAM_MODE.VISION_PROCESSING);
-        Robot.limelight.setPipeline(9);
+        Robot.limelight.setCamMode(Limelight.CAM_MODE.DRIVERSTATION_FEEDBACK);
+        Robot.limelight.setPipeline(1);
         Robot.twilightDrive.navX.zeroYaw();
 
         Robot.shooter.setCubePistonDown();
         if (autonomousCommand != null) {
             autonomousCommand.cancel();
         }
-
+        Robot.twilightDrive.lDriveMaster.setName("lDriveMaster");
+        tempLogger.addHeader();
     }
 
 
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        System.out.println(Robot.twilightDrive.lDriveMaster.getName());
         tempLogger.logTalons();
 //        Logger.writeLog("boiboi");
 //        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
@@ -122,8 +124,10 @@ public class Robot extends TimedRobot {
 //        SmartDashboard.putNumber("LEFT POSITION", Robot.twilightDrive.getLPosition());
 //        SmartDashboard.putNumber("LEFT 'enc' postiion", Robot.twilightDrive.lDriveMaster.getEncPosition());
 //        SmartDashboard.putNumber("RIGHT POSITION", Robot.twilightDrive.getRPosition());
+        SmartDashboard.putNumber("lDriveMaster", Robot.twilightDrive.lDriveMaster.getTemperature());
         SmartDashboard.putNumber("ANGLE", Robot.limelight.getTX());
     }
+
 
     @Override
     public void testInit() {

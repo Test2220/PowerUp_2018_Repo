@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.Intake;
 
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Converter;
@@ -20,8 +21,8 @@ public class ControlIntake extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        double leftYAxis = Robot.oi.getManipulatorStick().getRawAxis(1);
-        double rightYAxis = -Robot.oi.getManipulatorStick().getRawAxis(5);
+        double leftYAxis = Robot.oi.getManipulatorController().getYAxis(GenericHID.Hand.kLeft);
+        double rightYAxis = -Robot.oi.getManipulatorController().getYAxis(GenericHID.Hand.kRight);
 
         if (Math.abs(Converter.deadzone(leftYAxis)) > 0.2 || Math.abs(Converter.deadzone(rightYAxis)) > 0.2) {
             Robot.intake.defaultCommandRun = true;

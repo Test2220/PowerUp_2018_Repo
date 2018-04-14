@@ -15,7 +15,17 @@ public class TemperatureLogger{
         StringBuilder builder = new StringBuilder();
         for(CANTalon talon : talons) {
             double temperature = talon.getTemperature();
-            builder.append(temperature);
+            builder.append(Math.round(temperature * 100.0) / 100.0);
+            builder.append(',');
+        }
+        Logger.writeLog(builder.toString());
+    }
+
+    public void addHeader() {
+        StringBuilder builder = new StringBuilder();
+        for(CANTalon talon : talons) {
+            String talonName = talon.getDescription();
+            builder.append(talonName);
             builder.append(',');
         }
         Logger.writeLog(builder.toString());
@@ -23,4 +33,3 @@ public class TemperatureLogger{
 
 
 }
-    

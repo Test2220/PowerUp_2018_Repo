@@ -16,8 +16,7 @@ public class ShootSwitch extends InstantCommand {
     }
 
     protected void execute() {
-        Robot.oi.getDriverStick().setRumble(GenericHID.RumbleType.kLeftRumble, 0.1);
-        Robot.oi.getDriverStick().setRumble(GenericHID.RumbleType.kRightRumble, 0.1);
+        Robot.oi.getDriverController().setRumble(0.1);
         Robot.shooter.spinAllMotors(0.24);
     }
 

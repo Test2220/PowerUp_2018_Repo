@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.drive;
 
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.Limelight;
@@ -24,7 +25,7 @@ public class CubeTracker extends InstantCommand {
         angleError = Robot.limelight.getTX();
         double turn = angleError * angleDividend;
 
-        double yVal = Robot.oi.getDriverStick().getRawAxis(1);
+        double yVal = Robot.oi.getDriverController().getYAxis(GenericHID.Hand.kLeft);
 
         Robot.twilightDrive.curvatureDrive(-yVal, turn);
 

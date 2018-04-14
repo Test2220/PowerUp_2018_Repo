@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.drive;
 
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2220.robot.Robot;
 
@@ -34,8 +35,8 @@ public class DriveWithXBox extends Command {
         //System.out.println(Robot.twilightDrive.getRPosition());
 
 
-        double yVal = Robot.oi.getDriverStick().getRawAxis(1);
-        double zVal = Robot.oi.getDriverStick().getRawAxis(4);
+        double yVal = Robot.oi.getDriverController().getYAxis(GenericHID.Hand.kLeft);
+        double zVal = Robot.oi.getDriverController().getXAxis(GenericHID.Hand.kRight);
 
 
         Robot.twilightDrive.curvatureDrive(-yVal, zVal);
