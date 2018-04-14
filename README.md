@@ -1,3 +1,6 @@
+![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)
+![travis_ci](https://travis-ci.com/Test2220/PowerUp_2018_Repo.svg?token=KKeK9q5aqdJAxweSfmZH&branch=IkeaBot)
+
 # 2018 Power Up Repo
 
 This is the code for the 2018 Competition Bot.
