@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/OI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/RobotMap.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Intake/ControlIntake.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Intake/ControlIntake.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/ShootScale.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/ShootScale.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/ShootSwitch.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/ShootSwitch.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/StopShooter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/Shooter/VelocityShooter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/climber/ControlClimber.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/climber/ControlClimber.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/CubeTracker.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/CubeTracker.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/DriveWithXBox.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/DriveWithXBox.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/VelocityDrive.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/VelocityDrive.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/subsystems/Climber.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/subsystems/Intake.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/subsystems/Shooter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/subsystems/TwilightDrive.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/triggers/TwilightTrigger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/utils/Constants.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/utils/Converter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/utils/Logger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/utils/TemperatureLogger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/utils/TwilightXBoxController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" afterPath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/climber/ControlClimber.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/climber/ControlClimber.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootScale.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootScale.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/StopShooter.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/StopShooter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" />
-      <change beforePath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_left_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_left_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_right_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_right_detailed.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -77,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2622">
-              <caret line="139" column="28" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,7 +47,7 @@
       <file leaf-file-name="DriveWithXBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="897">
               <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
               <folding />
             </state>
@@ -100,7 +57,7 @@
       <file leaf-file-name="ShootSwitch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="207">
               <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
@@ -120,7 +77,7 @@
       <file leaf-file-name="VelocityDrive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
+            <state relative-caret-position="805">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
@@ -130,7 +87,7 @@
       <file leaf-file-name="ControlIntake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="391">
               <caret line="24" column="89" lean-forward="false" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
               <folding />
             </state>
@@ -140,7 +97,7 @@
       <file leaf-file-name="ShootScale.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootScale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="483">
               <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
@@ -178,7 +135,7 @@
       <file leaf-file-name="CubeTracker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
+            <state relative-caret-position="506">
               <caret line="27" column="85" lean-forward="false" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
               <folding />
             </state>
@@ -771,7 +728,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -857,8 +814,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -890,7 +847,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Build">
+  <component name="RunManager" selected="Gradle.Deploy">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="WIDTH" value="400" />
@@ -1332,7 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,26 +1349,12 @@
         <state relative-caret-position="908">
           <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1429#1430#0" expanded="false" />
+            <element signature="e#1463#1464#0" expanded="false" />
+            <element signature="e#1493#1494#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1427,7 +1369,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
+        <state relative-caret-position="506">
           <caret line="27" column="85" lean-forward="false" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
           <folding />
         </state>
@@ -1435,7 +1377,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
+        <state relative-caret-position="805">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
@@ -1443,7 +1385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="391">
           <caret line="24" column="89" lean-forward="false" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
           <folding />
         </state>
@@ -1451,7 +1393,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="897">
           <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
           <folding />
         </state>
@@ -1459,7 +1401,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootScale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="483">
           <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1469,7 +1411,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="207">
           <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding />
         </state>
@@ -1485,9 +1427,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="139" column="28" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+        <state relative-caret-position="207">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
