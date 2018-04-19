@@ -34,7 +34,6 @@ public class Logger {
     }
 
     private void log(String string) {
-        System.out.println(filewriter);
             filewriter.println(string);
 //            filewriter.append("\n");
 //            filewriter.flush();

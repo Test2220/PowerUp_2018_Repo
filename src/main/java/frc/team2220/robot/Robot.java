@@ -108,7 +108,6 @@ public class Robot extends TimedRobot {
         if (autonomousCommand != null) {
             autonomousCommand.cancel();
         }
-        Robot.twilightDrive.lDriveMaster.setName("lDriveMaster");
         tempLogger.addHeader();
     }
 
@@ -116,7 +115,6 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        System.out.println(Robot.twilightDrive.lDriveMaster.getName());
         tempLogger.logTalons();
 //        Logger.writeLog("boiboi");
 //        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());

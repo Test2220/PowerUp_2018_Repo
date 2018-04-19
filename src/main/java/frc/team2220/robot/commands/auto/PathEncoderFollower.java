@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Constants;
+import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.followers.EncoderFollower;
@@ -22,6 +23,7 @@ public class PathEncoderFollower extends Command {
     private double startTime;
     private int index;
 
+    private int encTicksPerRev = 1440;
 
     public double turnSensitivity;
 
@@ -50,10 +52,10 @@ public class PathEncoderFollower extends Command {
 
         Robot.twilightDrive.resetEncoderPos();
 
-        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelDiameterIn);
-        leftFollow.configurePIDVA(1, 0, 0, 1 / 120 , 0);
-        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelDiameterIn);
-        rightFollow.configurePIDVA(1, 0, 0, 1 / 120 , 0);
+        leftFollow.configureEncoder(Robot.twilightDrive.getLEncPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
+        leftFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
+        rightFollow.configureEncoder(Robot.twilightDrive.getREncPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
+        rightFollow.configurePIDVA(0.1, 0, 0, 1 / 10 , 0);
 
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
@@ -67,6 +69,7 @@ public class PathEncoderFollower extends Command {
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
+            
 
     }
 
@@ -79,8 +82,8 @@ public class PathEncoderFollower extends Command {
 
         if (isFinished()) return;
 
-        double leftSet = leftFollow.calculate(Robot.twilightDrive.getLPosition());
-        double rightSet = rightFollow.calculate(Robot.twilightDrive.getRPosition());
+        double leftSet = leftFollow.calculate(Robot.twilightDrive.getLEncPosition());
+        double rightSet = rightFollow.calculate(Robot.twilightDrive.getREncPosition());
 
         SmartDashboard.putNumber("LEFT CALCULATE", leftSet);
         SmartDashboard.putNumber("RIGHT CALCULATE", rightSet);
@@ -94,7 +97,7 @@ public class PathEncoderFollower extends Command {
         double angle_difference = Pathfinder.boundHalfDegrees(desired_heading - gyro_heading);// Make sure to bound this from -180 to 180, otherwise you will get super large values
 //        System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
         double turn = turnSensitivity * angle_difference;
-        System.out.printf("Left Set = %03.2f ; Right Set = %03.2f ;", leftSet, rightSet);
+//        System.out.printf("Left Set = %03.2f ; Right Set = %03.2f ;", leftSet, rightSet);
 
 
         Robot.twilightDrive.driveSet(leftSet, -rightSet);

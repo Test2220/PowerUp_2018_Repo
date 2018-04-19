@@ -193,6 +193,16 @@ public class TwilightDrive extends Subsystem {
         return ((int) rDriveMaster.getPosition());
     }
 
+    public int getLEncPosition() {
+        return ((int) lDriveMaster.getEncPosition());
+    }
+
+    public int getREncPosition() {
+        return ((int) rDriveMaster.getEncPosition());
+    }
+
+
+
     public double getAvgPosition() {
         return (Math.abs((getLPosition()) + Math.abs(getRPosition()))) / 2;
     }
