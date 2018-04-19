@@ -60,7 +60,7 @@ public class RobotMap {
 //            RAMP_PISTON_RETRACTED = 4;
 
 
-    public static final int FISHING_POLE = 14,
+    public static final int FISHING_POLE = 7,
             CLIMBER = 5;
 
     public static final int INTAKE_LIMIT_SWITCH = 0;

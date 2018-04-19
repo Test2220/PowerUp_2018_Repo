@@ -43,7 +43,7 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
         oi = new OI();
-        Compressor airCompressor = new Compressor();
+        Compressor airCompressor = new Compressor(0);
         airCompressor.start();
         UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
         camera.setResolution(128, 173);
@@ -64,6 +64,7 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putBoolean("Boi Boolean", true);
         SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
         SmartDashboard.putData(new PreMatchDefault());
     }
@@ -107,6 +108,8 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
 
+//        Robot.twilightDrive.rDriveMaster.set(0.5);
+//        Robot.twilightDrive.rDriveSlave.set(0.5);
     }
 
     @Override

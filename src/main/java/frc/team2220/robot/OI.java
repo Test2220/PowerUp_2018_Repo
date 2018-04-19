@@ -7,6 +7,10 @@
 
 package frc.team2220.robot;
 
+import frc.team2220.robot.commands.mechanisms.climber.ControlClimber;
+import frc.team2220.robot.commands.mechanisms.climber.FishingPoleDown;
+import frc.team2220.robot.commands.mechanisms.climber.FishingPoleUp;
+import frc.team2220.robot.commands.mechanisms.climber.StopCimber;
 import frc.team2220.robot.commands.mechanisms.intake.IntakePistons;
 import frc.team2220.robot.commands.mechanisms.intake.UnjamNow;
 import frc.team2220.robot.commands.mechanisms.shooter.*;
@@ -42,18 +46,25 @@ public class OI {
 
 
         //Nick's Side
-        manipulatorController.getAButton().whileHeld(new ShootSwitch());
-        manipulatorController.getAButton().whenReleased(new StopShooter());
-        manipulatorController.getBButton().whenPressed(new ShootScale(0.63));
-        manipulatorController.getBButton().whenReleased(new StopShooter());
-        manipulatorController.getYButton().whenPressed(new ShootScale());
-        manipulatorController.getYButton().whenReleased(new StopShooter());
-        manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
-        manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
-        manipulatorController.getXButton().whileHeld(new ShootSwitchHigh());
-        manipulatorController.getXButton().whenReleased(new StopShooter());
-        manipulatorController.getRightBumper().whileHeld(new UnjamNow());
-        manipulatorController.getRightBumper().whenReleased(new StopShooter());
+//        manipulatorController.getAButton().whileHeld(new ShootSwitch());
+//        manipulatorController.getAButton().whenReleased(new StopShooter());
+//        manipulatorController.getBButton().whenPressed(new ShootScale(0.63));
+//        manipulatorController.getBButton().whenReleased(new StopShooter());
+//        manipulatorController.getYButton().whenPressed(new ShootScale());
+//        manipulatorController.getYButton().whenReleased(new StopShooter());
+//        manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
+//        manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
+//        manipulatorController.getXButton().whileHeld(new ShootSwitchHigh());
+//        manipulatorController.getXButton().whenReleased(new StopShooter());
+//        manipulatorController.getRightBumper().whileHeld(new UnjamNow());
+//        manipulatorController.getRightBumper().whenReleased(new StopShooter());
+
+        manipulatorController.getLeftBumper().whileHeld(new FishingPoleUp());
+        manipulatorController.getLeftBumper().whenReleased(new StopCimber());
+
+        manipulatorController.getRightBumper().whileHeld(new FishingPoleDown());
+        manipulatorController.getRightBumper().whenReleased(new StopCimber());
+
 
     }
 

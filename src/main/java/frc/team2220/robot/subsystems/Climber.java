@@ -8,13 +8,16 @@ import frc.team2220.robot.utils.Converter;
 
 public class Climber extends Subsystem {
 
-    private CANTalon fishingPole;
+    public CANTalon fishingPole;
     private CANTalon winch;
 
     public Climber() {
 
         fishingPole = new CANTalon(RobotMap.FISHING_POLE);
         winch = new CANTalon(RobotMap.CLIMBER);
+
+        fishingPole.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+        winch.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
 
         winch.setInverted(true);
         fishingPole.setInverted(true);
@@ -26,11 +29,11 @@ public class Climber extends Subsystem {
     }
 
     public void spinFishingPole(double val) {
-        fishingPole.set(Converter.deadzone(val) * 0.3);
+        fishingPole.set(val);
     }
 
     public void spinWinch(double val) {
-        winch.set(Converter.deadzone(val) * 0.5);
+        winch.set(val);
     }
 
 }

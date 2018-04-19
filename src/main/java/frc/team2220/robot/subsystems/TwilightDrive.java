@@ -99,7 +99,7 @@ public class TwilightDrive extends Subsystem {
 
         lDriveMaster.reverseOutput(false);
         rDriveMaster.reverseOutput(true);
-        rDriveSlave.reverseOutput(true);
+        rDriveSlave.reverseOutput(false);
 
         // Encoder Stuff
 
