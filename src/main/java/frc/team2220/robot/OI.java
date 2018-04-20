@@ -3,10 +3,7 @@ package frc.team2220.robot;
 
 
 import frc.team2220.robot.commands.Intake.IntakePistons;
-import frc.team2220.robot.commands.auto.DriveToDistance;
-import frc.team2220.robot.commands.auto.PathEncoderFollower;
-import frc.team2220.robot.commands.auto.PreMatchDefault;
-import frc.team2220.robot.commands.auto.ReversiblePathReader;
+import frc.team2220.robot.commands.auto.*;
 import frc.team2220.robot.commands.shooter.Shoot;
 import frc.team2220.robot.commands.shooter.ShootScale;
 import frc.team2220.robot.commands.shooter.ShootSwitch;
@@ -36,8 +33,8 @@ public class OI {
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
         driverController.getAButton().whenPressed(new ReversiblePathReader("MiddleStart/MStartLSwitch", 0, ReversiblePathReader.Direction.FORWARD));
-
         driverController.getBButton().whenPressed(new PathEncoderFollower("TestPaths/ForwardFiveFeet", 1));
+        driverController.getYButton().whenPressed(new VelocityTester());
 
 
         //Nick's Side

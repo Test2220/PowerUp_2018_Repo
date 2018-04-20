@@ -10,18 +10,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/OI.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/OI.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/PathEncoderFollower.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/PathEncoderFollower.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader$1.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader$1.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader$Direction.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader$Direction.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/ReversiblePathReader.class" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/VelocityTester.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/VelocityTester.class" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/VelocityDrive.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/drive/VelocityDrive.class" />
       <change beforePath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" afterPath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet.xml" afterPath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_left_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_left_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_right_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_right_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_source_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/TestPaths/ForwardFiveFeet_source_detailed.csv" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/VelocityTester.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/VelocityTester.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -53,11 +49,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="137" column="28" lean-forward="true" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+            <state relative-caret-position="186">
+              <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemperatureLogger.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+              <folding>
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VelocityDrive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VelocityTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/VelocityTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -81,39 +110,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3105">
-              <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncoderFollower.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-Java/1.8/f99c341d8a52f2445060989aef1af8ab7bb458ed/Pathfinder-Java-1.8-sources.jar!/jaci/pathfinder/followers/EncoderFollower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-              <folding>
-                <element signature="e#522#523#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -142,7 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
-              <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -668,7 +664,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ResetEncoderPos.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/StayInPlace.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ExchangeIntake.java" />
@@ -702,11 +697,9 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Limelight.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeFollower.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/climber/ControlClimber.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/ShootScale.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java" />
@@ -714,11 +707,14 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/StopShooter.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ReversiblePathReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/VelocityTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java" />
       </list>
     </option>
   </component>
@@ -806,7 +802,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Motion_Profile_Generator" />
-    <property name="SearchEverywhereHistoryKey" value="twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;PathEn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Encoder&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Drive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;DriveWi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Tem&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;Logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Limelight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twili&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.TwilightDrive&#10;Lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twil&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Dividend&#9;null&#9;null&#10;CubeT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Encode&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Turn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Twilight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartLScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java&#10;PathEnc&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Converter&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;TwilightDrive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;PreMat&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;RStartRScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java&#10;LStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java&#10;DriveToDis&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;turn to angle&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java&#10;System.out.println&#9;null&#9;null&#10;control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;TurnTo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;prematch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;Worst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/WorstAutoGroup.java&#10;MatchData&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java&#10;Winch&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.Climber#winch&#10;drivewi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Conver&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;convert&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;turnto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
+    <property name="SearchEverywhereHistoryKey" value="Veloci&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.VelocityTester&#10;Veloc&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java&#10;twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;PathEn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Encoder&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Drive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;DriveWi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Tem&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;Logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Limelight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twili&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.TwilightDrive&#10;Lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twil&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Dividend&#9;null&#9;null&#10;CubeT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Encode&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Turn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Twilight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartLScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java&#10;PathEnc&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Converter&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;TwilightDrive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;PreMat&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;RStartRScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java&#10;LStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java&#10;DriveToDis&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;turn to angle&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java&#10;System.out.println&#9;null&#9;null&#10;control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;TurnTo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;prematch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;Worst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/WorstAutoGroup.java&#10;MatchData&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java&#10;Winch&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.Climber#winch&#10;drivewi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Conver&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;convert&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;turnto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -1089,13 +1085,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/shooter/Shoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1298,13 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1372,14 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/Converter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1415,14 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jaci.pathfinder/Pathfinder-Java/1.8/f99c341d8a52f2445060989aef1af8ab7bb458ed/Pathfinder-Java-1.8-sources.jar!/jaci/pathfinder/Pathfinder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1444,8 +1410,8 @@
         <state relative-caret-position="138">
           <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
           <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1468,11 +1434,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/VelocityTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/OI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="137" column="28" lean-forward="true" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        <state relative-caret-position="186">
+          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

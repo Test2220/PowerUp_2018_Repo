@@ -15,7 +15,7 @@ public class VelocityDrive extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        Robot.twilightDrive.changeToPercentVBus();
+        Robot.twilightDrive.changeToVelocity();
         Robot.twilightDrive.setPIDProfile(1);
     }
 
