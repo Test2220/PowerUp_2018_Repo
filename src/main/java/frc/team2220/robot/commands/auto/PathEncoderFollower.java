@@ -69,7 +69,6 @@ public class PathEncoderFollower extends Command {
         double leftSet = leftFollow.calculate(Robot.twilightDrive.getLPosition());
         double rightSet = rightFollow.calculate(Robot.twilightDrive.getRPosition());
 
-
 //        double leftVelo = leftTraj.segments[index].velocity;
 //        double rightVelo = rightTraj.segments[index].velocity;
 
