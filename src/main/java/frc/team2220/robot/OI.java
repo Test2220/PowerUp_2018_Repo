@@ -6,6 +6,7 @@ import frc.team2220.robot.commands.Intake.IntakePistons;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.PathEncoderFollower;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
+import frc.team2220.robot.commands.auto.ReversiblePathReader;
 import frc.team2220.robot.commands.shooter.Shoot;
 import frc.team2220.robot.commands.shooter.ShootScale;
 import frc.team2220.robot.commands.shooter.ShootSwitch;
@@ -34,9 +35,9 @@ public class OI {
         //Gagan's Side
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
-        driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
+        driverController.getAButton().whenPressed(new ReversiblePathReader("MiddleStart/MStartLSwitch", 0, ReversiblePathReader.Direction.FORWARD));
 
-        driverController.getBButton().whenPressed(new PathEncoderFollower("MiddleStart/MStartLSwitch", 1));
+        driverController.getBButton().whenPressed(new PathEncoderFollower("TestPaths/ForwardFiveFeet", 1));
 
 
         //Nick's Side

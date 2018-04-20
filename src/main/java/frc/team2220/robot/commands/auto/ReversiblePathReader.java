@@ -2,6 +2,7 @@ package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
@@ -84,6 +85,9 @@ public class ReversiblePathReader extends Command {
 
         double turn = turnSensitivity * angle_difference;
         System.out.printf("Turn = %03.2f ; Left Velocity = %03.2f ; Right Velocity = %03.2f ; \n", turn, leftVelo, rightVelo);
+
+        SmartDashboard.putNumber("LEFT POS", Robot.twilightDrive.getLPosition());
+        SmartDashboard.putNumber("RIGHT POS", Robot.twilightDrive.getRPosition());
 
         switch (direction) {
             case FORWARD:

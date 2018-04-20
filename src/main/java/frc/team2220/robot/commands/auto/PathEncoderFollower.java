@@ -32,8 +32,6 @@ public class PathEncoderFollower extends Command {
         leftTraj = Pathfinder.readFromCSV(new File(leftFile));
         rightTraj = Pathfinder.readFromCSV(new File(rightFile));
 
-        leftFollow = new EncoderFollower(leftTraj);
-        rightFollow = new EncoderFollower(rightTraj);
 
         this.turnSensitivity = turnSensitivity;
     }
@@ -48,15 +46,19 @@ public class PathEncoderFollower extends Command {
 
     @Override
     protected void initialize() {
+
+
+        leftFollow = new EncoderFollower(leftTraj);
+        rightFollow = new EncoderFollower(rightTraj);
+
         Robot.twilightDrive.changeToPercentVBus();
 
         Robot.twilightDrive.resetEncoderPos();
 
-        leftFollow.configureEncoder(Robot.twilightDrive.getLEncPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        leftFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
-        rightFollow.configureEncoder(Robot.twilightDrive.getREncPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        rightFollow.configurePIDVA(0.1, 0, 0, 1 / 10 , 0);
-
+        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
+        leftFollow.configurePIDVA(1, 0, 0, 1 / 10, 0);
+        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
+        rightFollow.configurePIDVA(1, 0, 0, 1 / 10 , 0);
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
 //        Robot.twilightDrive.changeToVelocity();
@@ -82,12 +84,22 @@ public class PathEncoderFollower extends Command {
 
         if (isFinished()) return;
 
-        double leftSet = leftFollow.calculate(Robot.twilightDrive.getLEncPosition());
-        double rightSet = rightFollow.calculate(Robot.twilightDrive.getREncPosition());
+        double leftSet = leftFollow.calculate(Robot.twilightDrive.getLPosition());
+        double rightSet = rightFollow.calculate(Robot.twilightDrive.getRPosition());
+
+        SmartDashboard.putNumber("LEFT ENC POS", Robot.twilightDrive.getLEncPosition());
+        SmartDashboard.putNumber("RIGHT ENC POS", Robot.twilightDrive.getREncPosition());
+
+
+        SmartDashboard.putNumber("LEFT POS", Robot.twilightDrive.getLPosition());
+        SmartDashboard.putNumber("RIGHT POS", Robot.twilightDrive.getRPosition());
 
         SmartDashboard.putNumber("LEFT CALCULATE", leftSet);
         SmartDashboard.putNumber("RIGHT CALCULATE", rightSet);
 
+        SmartDashboard.putNumber("Segment Stuff", leftTraj.segments[index].x);
+
+        SmartDashboard.putNumber("EXPECTED TICK COUNT", Converter.ftToEncTicks(leftTraj.segments[index].x));
 
 //        double leftVelo = leftTraj.segments[index].velocity;
 //        double rightVelo = rightTraj.segments[index].velocity;
