@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 
 public class VelocityTester extends Command {
@@ -24,6 +25,8 @@ public class VelocityTester extends Command {
     protected void execute() {
         Robot.twilightDrive.driveSet(300, 300);
 
+        SmartDashboard.putNumber("LEFT VELOCITY", Robot.twilightDrive.lDriveMaster.getEncVelocity());
+        SmartDashboard.putNumber("RIGHT VELOCITY", Robot.twilightDrive.rDriveMaster.getEncVelocity());
 
     }
 

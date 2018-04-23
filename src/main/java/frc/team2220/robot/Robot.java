@@ -85,11 +85,14 @@ public class Robot extends TimedRobot {
 
             autonomousCommand.start();
         }
+
     }
 
     @Override
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("NavX Angle", Robot.twilightDrive.navX.getAngle());
+
     }
 
     @Override
@@ -101,13 +104,18 @@ public class Robot extends TimedRobot {
             autonomousCommand.cancel();
         }
 
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
     }
 
 
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-
+        SmartDashboard.putBoolean("LIMIT SWITCH", Robot.intake.isBlockHalfWayLoaded());
+        SmartDashboard.putNumber("TALON TEMPERATURE", Robot.twilightDrive.lDriveMaster.getTemperature());
+        SmartDashboard.putNumber("CURRENT AVG POSITION", Robot.twilightDrive.getAvgPosition());
+        SmartDashboard.putNumber("TA Value", Robot.limelight.getTA());
+        SmartDashboard.putNumber("NavX Angle", Robot.twilightDrive.navX.getAngle());
 //        Robot.twilightDrive.rDriveMaster.set(0.5);
 //        Robot.twilightDrive.rDriveSlave.set(0.5);
     }

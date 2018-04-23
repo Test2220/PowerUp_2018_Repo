@@ -4,6 +4,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.team2220.robot.commands.mechanisms.vision.CubeTracker;
 
 public class Limelight extends Subsystem {
 
@@ -25,6 +26,13 @@ public class Limelight extends Subsystem {
         NetworkTableEntry ty = limeTable.getEntry("ty");
         return ty.getDouble(0);
     }
+
+    public double getTA() {
+        NetworkTableEntry ta = limeTable.getEntry("ta");
+        return ta.getDouble(0);
+    }
+
+
 
     //Whether the limelight has any valid targets (0 or 1)
     public boolean hasTarget() {
@@ -66,6 +74,5 @@ public class Limelight extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
-
     }
 }

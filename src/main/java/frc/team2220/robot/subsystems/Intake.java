@@ -33,8 +33,11 @@ public class Intake extends Subsystem {
         leftIntake.setInverted(true);
         rightIntake.setInverted(false);
 
-        leftTransfer.setInverted(true);
-        rightTransfer.setInverted(false);
+        leftTransfer.setInverted(false);
+        rightTransfer.setInverted(true);
+
+        leftTransfer.enableBrakeMode(true);
+        rightTransfer.enableBrakeMode(true);
 
         rampPiston = new DoubleSolenoid(RobotMap.RAMP_PISTON_EXTENDED, RobotMap.RAMP_PISTON_RETRACTED);
         intakePistons = new DoubleSolenoid(RobotMap.INTAKE_PISTON_EXTEND, RobotMap.INTAKE_PISTON_RETRACT);

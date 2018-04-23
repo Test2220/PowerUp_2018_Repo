@@ -1,7 +1,9 @@
 package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
+import frc.team2220.robot.utils.Converter;
 
 @SuppressWarnings("deprecation")
 
@@ -32,6 +34,8 @@ public class DriveToDistance extends Command {
 
     @Override
     protected void initialize() {
+        SmartDashboard.putNumber("Expected Tick", Converter.ftToEncTicks(5));
+
         Robot.twilightDrive.lDriveMaster.setProfile(0);
         Robot.twilightDrive.rDriveMaster.setProfile(0);
 
@@ -53,6 +57,7 @@ public class DriveToDistance extends Command {
 
     @Override
     protected void end() {
+        SmartDashboard.putNumber("Ending Tick", Robot.twilightDrive.getAvgPosition());
         System.out.println("FINISHED");
         Robot.twilightDrive.currentDoneCount = 0;
         Robot.twilightDrive.changeToPercentVBus();

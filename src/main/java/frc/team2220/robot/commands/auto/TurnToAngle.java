@@ -77,7 +77,7 @@ public class TurnToAngle extends Command {
         //Robot.twilightDrive.navX.reset();
         Robot.twilightDrive.resetEncoderPos();
         // Start the PID Controller
-        turnPIDController = new PIDController(0.024, 0.0002, 0.02, Robot.twilightDrive.navX, new Output());
+        turnPIDController = new PIDController(0.01, 0, 0, Robot.twilightDrive.navX, new Output());
         turnPIDController.setSetpoint(targetAngle);
         turnPIDController.setAbsoluteTolerance(1);
         turnPIDController.enable();
@@ -98,7 +98,7 @@ public class TurnToAngle extends Command {
     protected boolean isFinished() {
         SmartDashboard.putData(turnPIDController);
         double difference = Timer.getFPGATimestamp() * 1000.0 - startTime;
-        if (difference > 1000) {
+        if (difference > 3000) {
             System.out.println("TIME UP");
             return true;
         }

@@ -52,6 +52,7 @@ public class RelativeTurnToAngle extends Command {
     }
 
     public RelativeTurnToAngle(double angle) {
+        super(1);
         requires(Robot.twilightDrive);
         this.targetAngle = angle;
     }
@@ -69,7 +70,7 @@ public class RelativeTurnToAngle extends Command {
         //Robot.twilightDrive.navX.reset();
         Robot.twilightDrive.resetEncoderPos();
         // Start the PID Controller
-        turnPIDController = new PIDController(0.024, 0.0002, 0.02, Robot.twilightDrive.navX, new RelativeTurnToAngle.Output());
+        turnPIDController = new PIDController(0.024, 0.0003, 0.02, Robot.twilightDrive.navX, new RelativeTurnToAngle.Output());
         turnPIDController.setSetpoint(targetAngle);
         turnPIDController.setAbsoluteTolerance(1);
         turnPIDController.enable();
@@ -101,7 +102,7 @@ public class RelativeTurnToAngle extends Command {
             currentDoneCount = 0;
             return true;
         }
-        return false;
+        return isTimedOut();
 
     }
 

@@ -1,6 +1,7 @@
 package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 
 public class ClockwiseTurn extends Command {
@@ -23,6 +24,7 @@ public class ClockwiseTurn extends Command {
 
     @Override
     protected void initialize() {
+        SmartDashboard.putNumber("EXPECTED TICK COUNT", targetTicks);
         Robot.twilightDrive.lDriveMaster.setProfile(0);
         Robot.twilightDrive.rDriveMaster.setProfile(0);
 

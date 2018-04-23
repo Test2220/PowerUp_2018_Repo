@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Trajectory acceleration="6.0" driveBase="TANK" dt="0.01"
+    fitMethod="HERMITE_CUBIC" jerk="60.0" units="IMPERIAL"
+    velocity="10.0" wheelBaseD="0.0" wheelBaseW="3.0">
+    <Waypoint>
+        <X>17.38</X>
+        <Y>19.35</Y>
+        <Angle>0.0</Angle>
+    </Waypoint>
+    <Waypoint>
+        <X>23.0</X>
+        <Y>22.0</Y>
+        <Angle>0.0</Angle>
+    </Waypoint>
+</Trajectory>

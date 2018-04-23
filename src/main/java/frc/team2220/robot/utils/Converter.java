@@ -18,13 +18,20 @@ public class Converter {
     public static double degreesTurnToEncTicks(double degreesToTurn) {
 
         double circumFt = Constants.frameWidthFt * Math.PI;
-        double turnRatio = (degreesToTurn + 15) / 360;
+        if(degreesToTurn > 0) {
+            double turnRatio = (degreesToTurn + 15) / 360;
+            double arcLengthFt = turnRatio * circumFt;
+            double arcLengthTicks = ftToEncTicks(arcLengthFt);
+            return arcLengthTicks;
 
-        double arcLengthFt = turnRatio * circumFt;
-        double arcLengthTicks = ftToEncTicks(arcLengthFt);
+        } else {
+            double turnRatio = (degreesToTurn - 15) / 360;
+            double arcLengthFt = turnRatio * circumFt;
+            double arcLengthTicks = ftToEncTicks(arcLengthFt);
+            return arcLengthTicks;
 
+        }
 
-        return arcLengthTicks;
     }
 
     public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {

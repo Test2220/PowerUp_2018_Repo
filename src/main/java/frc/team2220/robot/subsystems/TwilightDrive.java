@@ -7,6 +7,7 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.commands.mechanisms.drive.DriveWithXBox;
 import frc.team2220.robot.utils.Constants;
@@ -79,6 +80,7 @@ public class TwilightDrive extends Subsystem {
 
 
         //Basic NavX and Drivetrain setup
+
         navX = new AHRS(SPI.Port.kMXP);
 
         lDriveMaster = new CANTalon(RobotMap.LEFTMASTER);
@@ -92,6 +94,11 @@ public class TwilightDrive extends Subsystem {
 
         rDriveSlave.changeControlMode(TalonControlMode.Follower);
         rDriveSlave.set(rDriveMaster.getDeviceID());
+
+        lDriveMaster.enableBrakeMode(true);
+        rDriveMaster.enableBrakeMode(true);
+        lDriveSlave.enableBrakeMode(true);
+        rDriveSlave.enableBrakeMode(true);
 
 
         rDriveMaster.setInverted(false);
@@ -187,7 +194,7 @@ public class TwilightDrive extends Subsystem {
     }
 
     public double getAvgPosition() {
-        return (getLPosition() + getRPosition()) / 2;
+        return Math.abs((getLPosition())) + Math.abs(getRPosition()) / 2;
     }
 
     //-------------------DRIVE TYPE MODIFIERS-------------------//
@@ -263,7 +270,8 @@ public class TwilightDrive extends Subsystem {
 
     public boolean hasZeroBothVelocity(double targetTicks) {
         // System.out.println("TARGET TICKS - AVERAGE = " + (targetTicks - getAvgPosition()));
-        System.out.println("TARGET CALC" + (Math.abs(targetTicks) - Math.abs(getAvgPosition())));
+//        System.out.println("TARGET CALC" + (Math.abs(targetTicks) - Math.abs(getAvgPosition())));
+        SmartDashboard.putNumber("EXPECTED - CURRENT ENCODER", Math.abs(targetTicks) - Math.abs(getAvgPosition()));
         if (Math.abs(targetTicks) - Math.abs(getAvgPosition()) < 400) {
             if (hasZeroLVelocity() && hasZeroRVelocity()) {
                 currentDoneCount++;

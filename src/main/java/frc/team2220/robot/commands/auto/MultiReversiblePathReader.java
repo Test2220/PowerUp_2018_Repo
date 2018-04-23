@@ -2,6 +2,7 @@ package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Converter;
 import jaci.pathfinder.Pathfinder;
@@ -33,6 +34,8 @@ public class MultiReversiblePathReader extends Command {
     private Direction direction;
     private CSVReadDirection csvReadDirection;
 
+    boolean resetNavX = true;
+
 
     public MultiReversiblePathReader(String leftFile, String rightFile, double turnSensitivity, Direction direction, CSVReadDirection csvReadDirection) {
         requires(Robot.twilightDrive);
@@ -50,6 +53,13 @@ public class MultiReversiblePathReader extends Command {
 
     }
 
+    public MultiReversiblePathReader(String baseFilePath, double turnSensitivity, Direction direction, CSVReadDirection csvReadDirection, boolean resetNavX) {
+
+        this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity, direction, csvReadDirection);
+        requires(Robot.twilightDrive);
+        this.resetNavX = resetNavX;
+    }
+
 
     @Override
     protected void initialize() {
@@ -60,15 +70,19 @@ public class MultiReversiblePathReader extends Command {
         Robot.twilightDrive.lDriveMaster.setProfile(1);
         Robot.twilightDrive.rDriveMaster.setProfile(1);
 
-        Robot.twilightDrive.navX.zeroYaw();
-        Robot.twilightDrive.navX.zeroYaw();
-        Robot.twilightDrive.navX.zeroYaw();
-        Robot.twilightDrive.navX.zeroYaw();
+        if (resetNavX) {
+            Robot.twilightDrive.navX.zeroYaw();
+            Robot.twilightDrive.navX.zeroYaw();
+            Robot.twilightDrive.navX.zeroYaw();
+            Robot.twilightDrive.navX.zeroYaw();
+        }
+
 
     }
 
     @Override
     protected void execute() {
+
 
         switch (csvReadDirection) {
             case TOP_TO_BOTTOM:
@@ -84,6 +98,9 @@ public class MultiReversiblePathReader extends Command {
 
         double leftVelo = left.segments[index].velocity;
         double rightVelo = right.segments[index].velocity;
+
+        SmartDashboard.putNumber("EXPECTED VELOCITY", left.segments[index].velocity);
+
 
         double gyro_heading = Robot.twilightDrive.navX.getAngle();// Assuming gyro angle is given in degrees
         double desired_heading = -Pathfinder.r2d(left.segments[index].heading);
