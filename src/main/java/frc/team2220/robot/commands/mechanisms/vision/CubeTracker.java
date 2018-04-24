@@ -16,9 +16,9 @@ public class CubeTracker extends InstantCommand {
 
     protected void initialize() {
         Robot.twilightDrive.changeToPercentVBus();
-        Robot.limelight.setLEDMode(Limelight.LED_MODE.ON);
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
         Robot.limelight.setCamMode(Limelight.CAM_MODE.VISION_PROCESSING);
-        Robot.limelight.setPipeline(3);
+        Robot.limelight.setPipeline(0);
     }
 
     protected void execute() {

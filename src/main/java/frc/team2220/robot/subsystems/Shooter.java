@@ -104,6 +104,10 @@ public class Shooter extends Subsystem {
         liftPistons.set(DoubleSolenoid.Value.kReverse);
     }
 
+    public boolean isShooterUp() {
+        return liftPistons.get() == DoubleSolenoid.Value.kForward;
+    }
+
     //Cube Piston
 
     public void setCubePistonDown() {

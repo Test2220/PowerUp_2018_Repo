@@ -24,12 +24,16 @@ public class ShootScale extends InstantCommand {
 
     protected void initialize() {
         Robot.shooter.changeToPercentVBus();
-        Robot.shooter.setShooterUp();
     }
 
     protected void execute() {
-        Robot.oi.getDriverController().setRumble(0.1);
-        Robot.shooter.spinAllMotors(speed);
+        if(Robot.shooter.isShooterUp()) {
+            Robot.oi.getDriverController().setRumble(0.1);
+            Robot.shooter.spinAllMotors(speed);
+        }
+        if(!Robot.shooter.isShooterUp()){
+            Robot.shooter.setShooterUp();
+        }
     }
 
 }
