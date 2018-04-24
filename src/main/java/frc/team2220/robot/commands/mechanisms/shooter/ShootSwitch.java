@@ -11,12 +11,16 @@ public class ShootSwitch extends InstantCommand {
 
     protected void initialize() {
         Robot.shooter.changeToPercentVBus();
-        Robot.shooter.setShooterDown();
     }
 
     protected void execute() {
         Robot.oi.getDriverController().setRumble(0.1);
-        Robot.shooter.spinAllMotors(0.24);
+        if(!Robot.shooter.isShooterUp()) {
+            Robot.shooter.spinAllMotors(0.24);
+        }
+        if(Robot.shooter.isShooterUp()){
+            Robot.shooter.setShooterDown();
+        }
     }
 
 
