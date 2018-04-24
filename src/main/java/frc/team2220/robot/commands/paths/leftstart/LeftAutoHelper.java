@@ -7,15 +7,10 @@ import frc.team2220.robot.commands.miscellaneous.MatchData;
 public class LeftAutoHelper extends InstantCommand {
 
     //SS stand for SAME SIDE
-    private Command LStart_LSwitchLScale = new LStart_LSwitchLScale();
-    private Command scaleAutoSS = new LStartLScale();
+    private Command lStart_LSwitchLScale = new LStart_LSwitchLScale();
+    private Command lStart_LScaleRSwitch = new LStart_LScaleRSwitch();
 
-    // private Command LStart_LSwitchLScale = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
-
-
-    //OS stand for OPPOSITE SIDE
-
-    private Command LStart_LSwitchRScale = new LStart_LSwitchRScale();
+    private Command lStart_LSwitchRScale = new LStart_LSwitchRScale();
 
     @Override
     protected void initialize() {
@@ -32,32 +27,36 @@ public class LeftAutoHelper extends InstantCommand {
 
         if (switchSide == MatchData.OwnedSide.LEFT) {
             if (scaleSide == MatchData.OwnedSide.LEFT) {
-                LStart_LSwitchLScale.start();
+                lStart_LSwitchLScale.start();
             } else {
-                LStart_LSwitchRScale.start();
+                lStart_LSwitchRScale.start();
+            }
+        } else if (switchSide == MatchData.OwnedSide.RIGHT){
+            if (scaleSide == MatchData.OwnedSide.LEFT) {
+                lStart_LScaleRSwitch.start();
             }
         }
 
 
 //        if (scaleSide == MatchData.OwnedSide.LEFT) {
-//            scaleAutoSS.start();
+//            LStart_LScaleRSwitch.start();
 //        } else {
 //            WorstAuto.start();
 //        }
 
 //        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
-//            System.out.println("SWITCH AUTO STARTED; LStart_LSwitchLScale");
-//            LStart_LSwitchLScale.start();
+//            System.out.println("SWITCH AUTO STARTED; lStart_LSwitchLScale");
+//            lStart_LSwitchLScale.start();
 //
 //        } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
 //            System.out.println("SWITCH OPPOSITE; Check for Scale");
 //
 //            if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
-//                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
-//                scaleAutoSS.start();
+//                System.out.println("SCALE IS ON THE LEFT; LStart_LScaleRSwitch");
+//                LStart_LScaleRSwitch.start();
 //
 //            } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
-//                System.out.println("SCALE IS ON THE RIGHT; LStart_LSwitchRScale");
+//                System.out.println("SCALE IS ON THE RIGHT; lStart_LSwitchRScale");
 //                WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
 //
 //            }

@@ -116,8 +116,6 @@ public class Robot extends TimedRobot {
         SmartDashboard.putNumber("CURRENT AVG POSITION", Robot.twilightDrive.getAvgPosition());
         SmartDashboard.putNumber("TA Value", Robot.limelight.getTA());
         SmartDashboard.putNumber("NavX Angle", Robot.twilightDrive.navX.getAngle());
-//        Robot.twilightDrive.rDriveMaster.set(0.5);
-//        Robot.twilightDrive.rDriveSlave.set(0.5);
     }
 
     @Override

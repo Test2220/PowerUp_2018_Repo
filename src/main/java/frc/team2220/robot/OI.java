@@ -41,11 +41,11 @@ public class OI {
         manipulatorController = new TwilightXBoxController(1);
 
         //Gagan's Side
-        driverController.getLeftBumper().whileHeld(new CubeTracker());
+        driverController.getRightBumper().whileHeld(new CubeTracker());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
-        driverController.getAButton().whenPressed(new MultiReversiblePathReader("LeftStart/LStartLScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
+        driverController.getAButton().whenPressed(new MultiReversiblePathReader("LeftStart/LStartRScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
 //        driverController.getBButton().whenPressed(new MultiReversiblePathReader("LeftStart/LStartLSwitch_2", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM, true));
-        driverController.getYButton().whenPressed(new AutoIntake(-0.8, 4));
+        driverController.getYButton().whenPressed(new ClockwiseTurn(Converter.degreesTurnToEncTicks(-40)));
         driverController.getXButton().whenPressed(new CubeFollower(4, Limelight.LED_MODE.OFF, Limelight.CAM_MODE.VISION_PROCESSING));
 
 
