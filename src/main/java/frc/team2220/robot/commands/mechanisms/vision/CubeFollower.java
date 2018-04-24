@@ -8,7 +8,7 @@ public class CubeFollower extends Command{
 
     private Command LimelightConfig;
     private double turnSensitivty = 0;
-    private int cruiseVel = 100;
+    private int cruiseVel = 400;
     private double angleError;
 
     public CubeFollower(double timeout, Limelight.LED_MODE led_mode, Limelight.CAM_MODE cam_mode) {
