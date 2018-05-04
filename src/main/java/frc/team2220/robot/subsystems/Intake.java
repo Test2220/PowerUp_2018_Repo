@@ -36,11 +36,16 @@ public class Intake extends Subsystem {
         leftTransfer.setInverted(true);
         rightTransfer.setInverted(false);
 
+
         rampPiston = new DoubleSolenoid(RobotMap.RAMP_PISTON_EXTENDED, RobotMap.RAMP_PISTON_RETRACTED);
         intakePistons = new DoubleSolenoid(RobotMap.INTAKE_PISTON_EXTEND, RobotMap.INTAKE_PISTON_RETRACT);
 
         limitSwitch = new DigitalInput(RobotMap.INTAKE_LIMIT_SWITCH);
 
+        leftIntake.enableBrakeMode(true);
+        rightIntake.enableBrakeMode(true);
+        leftTransfer.enableBrakeMode(true);
+        rightTransfer.enableBrakeMode(true);
     }
 
     public void changeToPercentVBus() {
@@ -64,11 +69,11 @@ public class Intake extends Subsystem {
     }
 
     public void setIntakePistonsExtend() {
-        intakePistons.set(DoubleSolenoid.Value.kForward);
+        intakePistons.set(DoubleSolenoid.Value.kReverse);
     }
 
     public void setIntakePistonsRetract() {
-        intakePistons.set(DoubleSolenoid.Value.kReverse);
+        intakePistons.set(DoubleSolenoid.Value.kForward);
     }
 
     public void setRampDown() {

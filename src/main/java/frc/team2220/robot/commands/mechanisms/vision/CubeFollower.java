@@ -1,13 +1,14 @@
 package frc.team2220.robot.commands.mechanisms.vision;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.subsystems.Limelight;
 
 public class CubeFollower extends Command{
 
     private Command LimelightConfig;
-    private double turnSensitivty = 0;
+    private double turnSensitivty = 20;
     private int cruiseVel = 400;
     private double angleError;
 
@@ -23,13 +24,14 @@ public class CubeFollower extends Command{
     }
 
     protected void execute() {
-        angleError = Robot.limelight.getTX();
-        double turn = angleError;
+        angleError = Robot.limelight.getTX() - 8;
+        double turn = angleError * turnSensitivty;
+        SmartDashboard.putNumber("TURN", turn);
         Robot.twilightDrive.driveSet(cruiseVel + turn, cruiseVel - turn);
     }
 
     protected boolean isFinished() {
-        return false;
+        return Robot.intake.isBlockHalfWayLoaded() || isTimedOut();
     }
 
 }

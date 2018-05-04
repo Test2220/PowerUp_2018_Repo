@@ -27,7 +27,6 @@ import frc.team2220.robot.subsystems.*;
 public class Robot extends TimedRobot {
 
 
-    public static final ExampleSubsystem kExampleSubsystem = new ExampleSubsystem(1.5, 2, 3, 4, 5);
     public static final TwilightDrive twilightDrive = new TwilightDrive();
     public static final Shooter shooter = new Shooter();
     public static final Intake intake = new Intake();
@@ -51,7 +50,7 @@ public class Robot extends TimedRobot {
         sideChooser.addDefault("LEFT", new LeftAutoHelper());
         sideChooser.addObject("MIDDLE", new MiddleAutoHelper());
         sideChooser.addObject("RIGHT", new RightAutoHelper());
-
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
         SmartDashboard.putData("Auto mode", sideChooser);
         //Logger.writeLog("YES ITS WORKING HAHAHAHHAHHA");
     }
@@ -99,18 +98,19 @@ public class Robot extends TimedRobot {
         if (autonomousCommand != null) {
             autonomousCommand.cancel();
         }
-
+        Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
     }
 
 
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-
     }
 
     @Override
     public void testPeriodic() {
-
+        Scheduler.getInstance().run();
+        Robot.climber.spinWinch(0.5);
     }
+
 }

@@ -68,8 +68,16 @@ public class TwilightXBoxController {
         return leftBumper;
     }
 
+    public Boolean getLeftBumperBoolean() {
+        return leftBumper.get();
+    }
+
     public Button getRightBumper() {
         return rightBumper;
+    }
+
+    public Boolean getRightBumperBoolean() {
+        return rightBumper.get();
     }
 
     public Button getBackButton() {

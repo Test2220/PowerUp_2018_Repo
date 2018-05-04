@@ -93,6 +93,10 @@ public class TwilightDrive extends Subsystem {
         rDriveSlave.changeControlMode(TalonControlMode.Follower);
         rDriveSlave.set(rDriveMaster.getDeviceID());
 
+        lDriveMaster.enableBrakeMode(true);
+        rDriveMaster.enableBrakeMode(true);
+        lDriveSlave.enableBrakeMode(true);
+        rDriveSlave.enableBrakeMode(true);
 
         rDriveMaster.setInverted(false);
 
@@ -187,7 +191,7 @@ public class TwilightDrive extends Subsystem {
     }
 
     public double getAvgPosition() {
-        return (getLPosition() + getRPosition()) / 2;
+        return (Math.abs(getLPosition()) + Math.abs(getRPosition())) / 2;
     }
 
     //-------------------DRIVE TYPE MODIFIERS-------------------//
@@ -277,7 +281,6 @@ public class TwilightDrive extends Subsystem {
             }
         }
         return false;
-
     }
 
     public boolean hasReachedTargetTicks(double targetTicks) {

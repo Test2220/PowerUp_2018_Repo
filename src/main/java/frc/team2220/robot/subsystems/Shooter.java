@@ -97,26 +97,26 @@ public class Shooter extends Subsystem {
     //Lift Stuff
 
     public void setShooterUp() {
-        liftPistons.set(DoubleSolenoid.Value.kForward);
-    }
-
-    public void setShooterDown() {
         liftPistons.set(DoubleSolenoid.Value.kReverse);
     }
 
+    public void setShooterDown() {
+        liftPistons.set(DoubleSolenoid.Value.kForward);
+    }
+
     public boolean isShooterUp() {
-        return liftPistons.get() == DoubleSolenoid.Value.kForward;
+        return liftPistons.get() == DoubleSolenoid.Value.kReverse;
     }
 
     //Cube Piston
 
     public void setCubePistonDown() {
-        cubePiston.set(DoubleSolenoid.Value.kReverse);
+        cubePiston.set(DoubleSolenoid.Value.kForward);
     }
 
 
     public void setCubePistonUp() {
-        cubePiston.set(DoubleSolenoid.Value.kForward);
+        cubePiston.set(DoubleSolenoid.Value.kReverse);
     }
 
     @Override

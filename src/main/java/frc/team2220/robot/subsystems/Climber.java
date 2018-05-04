@@ -18,6 +18,9 @@ public class Climber extends Subsystem {
 
         winch.setInverted(true);
         fishingPole.setInverted(true);
+
+        fishingPole.enableBrakeMode(true);
+        winch.enableBrakeMode(true);
     }
 
     @Override

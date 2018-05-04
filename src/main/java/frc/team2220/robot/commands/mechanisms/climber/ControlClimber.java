@@ -10,12 +10,35 @@ public class ControlClimber extends InstantCommand {
         requires(Robot.climber);
     }
 
+    protected void initialize() {
+    }
+
     protected void execute() {
         double triggerValLeft = Robot.oi.getManipulatorController().getTrigger(GenericHID.Hand.kLeft);
-        double triggerValRight = Robot.oi.getManipulatorController().getTrigger(GenericHID.Hand.kLeft);
+        double triggerValRight = Robot.oi.getManipulatorController().getTrigger(GenericHID.Hand.kRight);
 
-        Robot.climber.spinFishingPole(triggerValLeft);
-        Robot.climber.spinWinch(triggerValRight);
+        boolean isLeftBumper = Robot.oi.getManipulatorController().getLeftBumperBoolean();
+        boolean isRightBumper = Robot.oi.getManipulatorController().getRightBumperBoolean();
+
+//        double triggerValLeft = Robot.oi.getDriverController().getTrigger(GenericHID.Hand.kLeft);
+//        double triggerValRight = Robot.oi.getDriverController().getTrigger(GenericHID.Hand.kRight);
+//
+//        boolean isLeftBumper = Robot.oi.getDriverController().getLeftBumperBoolean();
+//        boolean isRightBumper = Robot.oi.getDriverController().getRightBumperBoolean();
+
+
+
+        if (!isLeftBumper) {
+            Robot.climber.spinFishingPole(triggerValLeft);
+        } else {
+            Robot.climber.spinFishingPole(-1);
+        }
+
+        if (!isRightBumper) {
+            Robot.climber.spinWinch(-triggerValRight);
+        } else {
+            Robot.climber.spinWinch(1);
+        }
 
     }
 

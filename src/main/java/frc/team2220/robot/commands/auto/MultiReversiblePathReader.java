@@ -25,7 +25,6 @@ public class MultiReversiblePathReader extends Command {
         COLLECTOR_FIRST, SHOOTER_FIRST;
     }
 
-
     public enum CSVReadDirection {
         TOP_TO_BOTTOM, BOTTOM_TO_TOP;
     }
@@ -36,16 +35,26 @@ public class MultiReversiblePathReader extends Command {
 
     public MultiReversiblePathReader(String leftFile, String rightFile, double turnSensitivity, Direction direction, CSVReadDirection csvReadDirection) {
         requires(Robot.twilightDrive);
-        left = Pathfinder.readFromCSV(new File(leftFile));
-        right = Pathfinder.readFromCSV(new File(rightFile));
+        File left = new File(leftFile);
+        File right = new File(rightFile);
+        if (!left.isFile()) {
+            System.out.println("FILE ERROR :" + leftFile);
+        }
+        if (!right.isFile()) {
+            System.out.println("FILE ERROR :" + rightFile);
+        }
+        this.left = Pathfinder.readFromCSV(left);
+        this.right = Pathfinder.readFromCSV(right);
         this.turnSensitivity = turnSensitivity;
         this.direction = direction;
         this.csvReadDirection = csvReadDirection;
     }
 
     public MultiReversiblePathReader(String baseFilePath, double turnSensitivity, Direction direction, CSVReadDirection csvReadDirection) {
-
         this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity, direction, csvReadDirection);
+        String leftFile = "/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv";
+        String rightFile = "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv";
+
         requires(Robot.twilightDrive);
 
     }

@@ -24,17 +24,12 @@ public class ShootSwitchHigh extends InstantCommand {
 
     protected void initialize() {
         Robot.shooter.changeToPercentVBus();
+        Robot.shooter.setShooterUp();
     }
 
     protected void execute() {
         Robot.oi.getDriverController().setRumble(0.1);
-        if (Robot.shooter.isShooterUp()) {
-            Robot.shooter.spinAllMotors(speed);
-        }
-
-        if (!Robot.shooter.isShooterUp()) {
-            Robot.shooter.setShooterUp();
-        }
+        Robot.shooter.spinAllMotors(speed);
     }
 
 }

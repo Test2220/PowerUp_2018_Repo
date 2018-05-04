@@ -12,6 +12,7 @@ public class StopShooter extends InstantCommand {
     protected void execute() {
         Robot.shooter.spinAllMotors(0);
         Robot.oi.getDriverController().setRumble(0);
+        Robot.shooter.setCubePistonDown();
     }
 
 }

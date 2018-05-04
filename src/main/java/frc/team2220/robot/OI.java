@@ -7,12 +7,20 @@
 
 package frc.team2220.robot;
 
+import frc.team2220.robot.commands.auto.ReversiblePathReader;
+import frc.team2220.robot.commands.mechanisms.intake.AutoIntake;
 import frc.team2220.robot.commands.mechanisms.intake.IntakePistons;
 import frc.team2220.robot.commands.mechanisms.intake.UnjamNow;
 import frc.team2220.robot.commands.mechanisms.shooter.*;
 import frc.team2220.robot.commands.auto.DriveToDistance;
 import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
+import frc.team2220.robot.commands.mechanisms.vision.BlinkLimelight;
+import frc.team2220.robot.commands.mechanisms.vision.CubeFollower;
+import frc.team2220.robot.commands.mechanisms.vision.CubeTracker;
+import frc.team2220.robot.commands.paths.leftstart.LStart_LScaleRSwitch;
+import frc.team2220.robot.commands.paths.leftstart.LStart_LSwitchLScale;
+import frc.team2220.robot.commands.paths.leftstart.LStart_LSwitchRScale;
 import frc.team2220.robot.utils.Converter;
 import frc.team2220.robot.utils.TwilightXBoxController;
 
@@ -34,22 +42,29 @@ public class OI {
         driverController = new TwilightXBoxController(0);
         manipulatorController = new TwilightXBoxController(1);
 
-        //Gagan's Side
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
-        driverController.getAButton().whenPressed(new DriveToDistance(-Converter.ftToEncTicks(4)));
-        driverController.getBButton().whenPressed(new MultiReversiblePathReader("TestPaths/TwoCubeGrabABox", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
+        driverController.getAButton().whenPressed(new BlinkLimelight(2));
+//        driverController.getXButton().whenPressed(new LStart_LSwitchLScale());
+        driverController.getYButton().whenPressed(new AutoIntake(-0.75, 5));
+        driverController.getRightBumper().whileHeld(new CubeTracker());
+//        driverController.getStartButton().whileHeld(new PreMatchDefault());
+//        driverController.getBackButton().whenPressed(new LStart_LSwitchRScale());
+//        driverController.getAButton().whenPressed(new LStart_LScaleRSwitch());
+//        driverController.getXButton().whenPressed(new LStart_LSwitchLScale());
+//        driverController.getYButton().whenPressed(new AutoIntake(-0.6, 5));
+//        driverController.getBButton().whileHeld(new CubeTracker());
 
 
         //Nick's Side
+
         manipulatorController.getAButton().whileHeld(new ShootSwitch());
         manipulatorController.getAButton().whenReleased(new StopShooter());
         manipulatorController.getBButton().whenPressed(new ShootScale(0.63));
         manipulatorController.getBButton().whenReleased(new StopShooter());
+
         manipulatorController.getYButton().whenPressed(new ShootScale());
         manipulatorController.getYButton().whenReleased(new StopShooter());
-        manipulatorController.getLeftBumper().whenPressed(new IntakePistons(IntakePistons.Position.RETRACT));
-        manipulatorController.getLeftBumper().whenReleased(new IntakePistons(IntakePistons.Position.EXTEND));
         manipulatorController.getXButton().whileHeld(new ShootSwitchHigh());
         manipulatorController.getXButton().whenReleased(new StopShooter());
         manipulatorController.getRightBumper().whileHeld(new UnjamNow());

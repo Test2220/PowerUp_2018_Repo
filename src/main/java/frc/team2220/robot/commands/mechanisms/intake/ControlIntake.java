@@ -2,11 +2,19 @@ package frc.team2220.robot.commands.mechanisms.intake;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.team2220.robot.Robot;
+import frc.team2220.robot.commands.mechanisms.vision.BlinkLimelight;
+import frc.team2220.robot.commands.mechanisms.vision.LimelightConfig;
+import frc.team2220.robot.subsystems.Limelight;
 import frc.team2220.robot.utils.Converter;
 
 public class ControlIntake extends Command {
 
+//    private Command blinkLimelight = new LimelightConfig(Limelight.LED_MODE.BLINKING);
+//    private Command stopLimelight = new LimelightConfig(Limelight.LED_MODE.OFF);
+
+    private Command blinklimelight = new BlinkLimelight(3);
 
     public ControlIntake() {
         requires(Robot.intake);
@@ -38,8 +46,12 @@ public class ControlIntake extends Command {
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(leftYAxis) < -0.2) {
+
+//            if (Robot.intake.isBlockHalfWayLoaded()) {
+//                blinklimelight.start();
+//            }
             Robot.intake.setIntakePistonsExtend();
-            Robot.intake.spinEntireIntake(-0.8);
+            Robot.intake.spinEntireIntake(-0.75);
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(rightYAxis) > 0.2) {

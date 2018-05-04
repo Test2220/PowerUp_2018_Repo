@@ -14,13 +14,13 @@ public class LStart_LScaleRSwitch extends CommandGroup {
 
     public LStart_LScaleRSwitch() {
         addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
-        addSequential(new MultiReversiblePathReader("LeftStart/LStartLScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
+        addSequential(new MultiReversiblePathReader("LeftStart_v2/LStartLScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
         addSequential(new ShootScale(0.6));
         addSequential(new Shoot());
         addSequential(new StopShooter());
         addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
         addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(-40)));
-        addSequential(new MultiReversiblePathReader("LeftStart/LScale_RCube", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.BOTTOM_TO_TOP));
+        addSequential(new MultiReversiblePathReader("LeftStart_v2/LScale_RCube", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.BOTTOM_TO_TOP));
         addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(90)));
         addParallel(new AutoIntake(-0.8, 2.5));
         addSequential(new CubeFollower(2.5, Limelight.LED_MODE.OFF, Limelight.CAM_MODE.VISION_PROCESSING));
