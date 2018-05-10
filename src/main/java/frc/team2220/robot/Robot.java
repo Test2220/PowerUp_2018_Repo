@@ -19,13 +19,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.paths.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper;
-import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
 import frc.team2220.robot.commands.paths.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.*;
 
 
 public class Robot extends TimedRobot {
-
 
     public static final TwilightDrive twilightDrive = new TwilightDrive();
     public static final Shooter shooter = new Shooter();
