@@ -8,6 +8,7 @@
 package frc.team2220.robot;
 
 import com.ctre.CANTalon;
+import com.mach.LightDrive.Color;
 import com.mach.LightDrive.LightDriveCAN;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.*;
@@ -71,11 +72,11 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledInit() {
-
     }
 
     @Override
     public void disabledPeriodic() {
+        lightDriveCAN.SetColor(1, Color.TEAL);
         Scheduler.getInstance().run();
     }
 
@@ -103,6 +104,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        lightDriveCAN.SetColor(1, Color.BLUE);
         Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
         Robot.limelight.setCamMode(Limelight.CAM_MODE.DRIVERSTATION_FEEDBACK);
         Robot.limelight.setPipeline(1);
