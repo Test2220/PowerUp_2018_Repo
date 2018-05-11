@@ -8,6 +8,7 @@
 package frc.team2220.robot;
 
 import com.ctre.CANTalon;
+import com.mach.LightDrive.LightDriveCAN;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Command;
@@ -37,6 +38,8 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
+    LightDriveCAN lightDriveCAN;
+
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
@@ -45,6 +48,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
+        lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         tempLogger = new TemperatureLogger(new CANTalon[] {
                 Robot.twilightDrive.rDriveMaster,
