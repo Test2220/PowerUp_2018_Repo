@@ -7,7 +7,7 @@ import frc.team2220.robot.commands.mechanisms.vision.BlinkLimelight;
 public class AutoIntake extends Command {
     private double speed;
 
-    private final int DONE_COUNT_MAX = 15;
+    private final int DONE_COUNT_MAX = 50;
     private int currentDoneCount = 0;
 
     private Command blinkLimelight = new BlinkLimelight(2);

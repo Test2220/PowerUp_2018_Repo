@@ -24,7 +24,7 @@ public class MStartLSwitch extends CommandGroup {
         addSequential(new Shoot());
         addSequential(new StopShooter());
         addSequential(new MultiReversiblePathReader("MiddleStart/LSwitch_MCube", 20, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
-        addParallel(new AutoIntake(-0.75, 5.5));
+        addParallel(new AutoIntake(-0.6, 5.5));
         addSequential(new CubeFollower(2.5, Limelight.LED_MODE.OFF, Limelight.CAM_MODE.VISION_PROCESSING));
         addSequential(new MultiReversiblePathReader("MiddleStart/MCube_RSwitch", 22, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
         addSequential(new Shoot());
