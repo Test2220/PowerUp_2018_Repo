@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import com.mach.LightDrive.LightDriveCAN;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
@@ -33,12 +34,16 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
+    LightDriveCAN lightDriveCAN;
+
+
 
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
 
     @Override
     public void robotInit() {
+        lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         Compressor airCompressor = new Compressor();
         airCompressor.start();
@@ -91,7 +96,6 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
         Robot.twilightDrive.navX.zeroYaw();
-
         Robot.shooter.setCubePistonDown();
         if (autonomousCommand != null) {
             autonomousCommand.cancel();

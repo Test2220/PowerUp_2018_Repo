@@ -66,6 +66,7 @@ dependencies {
     compile ctreLegacy()
     compile navx()
     compile pathfinder()
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 // Setting up my Jar File. In this case, adding all libraries into the main jar ('fat jar')

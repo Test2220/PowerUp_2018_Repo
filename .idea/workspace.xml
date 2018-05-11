@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/PowerUp_2018_Repo_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/PowerUp_2018_Repo_main.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/PowerUp_2018_Repo_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/PowerUp_2018_Repo_test.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/MultiReversiblePathReader$1.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/MultiReversiblePathReader$1.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/MultiReversiblePathReader.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/auto/MultiReversiblePathReader.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/miscellaneous/ExampleCommand.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/miscellaneous/ExampleSubsystem.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/rightstart/RStartRScale.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/rightstart/RStartRScale.class" />
       <change beforePath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" afterPath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/ExampleCommand.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/ExampleSubsystem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_left_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/LeftStart/LStartLSwitch_left_detailed.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -97,10 +91,12 @@
       <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="77" column="9" lean-forward="false" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="328">
+              <caret line="114" column="37" lean-forward="true" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3764#3765#0" expanded="true" />
+                <element signature="e#3809#3810#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,8 +125,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="408">
+              <caret line="72" column="77" lean-forward="false" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -472,11 +468,6 @@
                 <option name="name" value="cleanEclipseJdt" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'test'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestKotlin" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the insight into a specific dependency in root project 'PowerUp_2018_Repo'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
@@ -507,11 +498,6 @@
                 <option name="name" value="installToolchain" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'main'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileKotlin" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="build" />
@@ -533,7 +519,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3039555826302" />
+        <entry key="$PROJECT_DIR$" value="3040067788918" />
         <entry key="$PROJECT_DIR$/build.gradle" value="790248296" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1741342742" />
       </map>
@@ -552,46 +538,22 @@
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.jaci.openrio.gradle/GradleRIO/2018.02.17/972fa360b73868aac4b7af85434d43e6adb256d0/GradleRIO-2018.02.17-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.jaci.openrio.gradle/GradleRIO/2018.02.17/b05ceae0afb039bac506df0d13ee7b624e423612/GradleRIO-2018.02.17.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.21/802d96a0e07c262678aa5c87b6fc75138bdafbba/kotlin-gradle-plugin-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.21/d8563facbe83dc76939b642334c17d21f7c419f2/kotlin-gradle-plugin-1.2.21.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.jaci.gradle/DeployTools/2018.02.04/2318254e7eed26d1062310471d23793a1fbd981a/DeployTools-2018.02.04-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.jaci.gradle/DeployTools/2018.02.04/6db9c819bd87e1a68d58af927ab74b1bb098aca9/DeployTools-2018.02.04.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.undercouch/gradle-download-task/3.1.2/a770cf45a3df7a09f2ae9f9d4d781338ca316189/gradle-download-task-3.1.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.undercouch/gradle-download-task/3.1.2/dbb5911739f1a18228847ad955c700a368db1ba4/gradle-download-task-3.1.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a6dc5db8a12928e583bd3f23e72d3ab611ecd58f/gson-2.2.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.21/3fa4d78032a26f3e10a39f507694068e96f56dd/kotlin-gradle-plugin-api-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.21/59e96fa1418ae17356990c6c846d200362967f6b/kotlin-gradle-plugin-api-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/795e111c612ba96d0175f5705291228ca8167dc8/kotlin-stdlib-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/d64187eb2d9d1521be3421aa8c6774a8625cdde8/kotlin-stdlib-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.21/2f9e3088882ba774a740357ee1b4d0184deb9347/kotlin-compiler-embeddable-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.21/39456b64a42dc359e385697e2e93b5cba52e197f/kotlin-compiler-embeddable-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.21/3c35fd7f146d49051d565ed49c7c73652d8bd21d/kotlin-annotation-processing-gradle-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.21/a8217f1d15190b377518c6231200f325342a0ab1/kotlin-annotation-processing-gradle-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.21/ad0e5982cec42c5314debe5cd0ed6c7c27c4ff7f/kotlin-android-extensions-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.21/b35afe5863f02e395afd1bf61fcbd647034196a0/kotlin-android-extensions-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.21/fe77955ec5a84b8b43f3acb70fd470d3cb7fbd9e/kotlin-compiler-runner-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.21/61c6bc4b69da7c95c56192ccf4a831b89bb849a2/kotlin-compiler-runner-1.2.21.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.53/791359d94d6edcace686a56d0727ee093a2f7c33/jsch-0.1.53-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.53/658b682d5c817b27ae795637dfec047c63d29935/jsch-0.1.53.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/b9f9e3e5255b6ddc3bf21be05428c7a60d00e042/httpclient-4.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/733db77aa8d9b2d68015189df76ab06304406e50/httpclient-4.5.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.21/8a1a9172f1bc3cba8ff329bb55e5022e66543519/kotlin-script-runtime-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.21/40c37b171146be48a989ab74b937b17a96d28d87/kotlin-script-runtime-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.21/3b26eda48f049afcd1a84e78797a558d0764e471/kotlin-reflect-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.21/3159ff5936aa570a90050d385cb717fbb6c1723a/kotlin-reflect-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.21/7e3d2d64ce2c30db96682ea4cc8e4b4a2f395b14/kotlin-build-common-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.21/bfd7e4fb5a46423e1555b1a3307bc99a0c2c011e/kotlin-build-common-1.2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.21/847bcd9a08ee5d41dff38c26ca28f9169b0669e8/kotlin-daemon-client-1.2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.21/cc7bf6957ba0443ea7a89e925551e16855d76b2/kotlin-daemon-client-1.2.21.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.4/c5c19e3e6af6b452def290cde12a3ee4c35c893c/httpcore-4.4.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.4/b31526a230871fbe285fbcbe2813f9c0839ae9b0/httpcore-4.4.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/3f15fff45d57656685abfee9e8302bf14580044c/commons-codec-1.9-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$" />
@@ -745,10 +707,10 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRScale.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/RobotPose.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/RobotPose.kt" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/KotlinSubsystem.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
       </list>
     </option>
   </component>
@@ -857,7 +819,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2018Bot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../5190-Motion-Profile-Generator" />
     <property name="SearchEverywhereHistoryKey" value="RSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRScale.java&#10;RSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRSwitch.java&#10;MSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;AutoIn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Multi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;Auto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;msT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;MSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;CubeFo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;cubetr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Controlin&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Shoot&#9;PSI&#9;JAVA://frc.team2220.robot.commands.mechanisms.shooter.Shoot&#10;Contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Contro&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Cubet&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cubefo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;righ&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;RightAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;Left&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;MStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;MS&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Con&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;OI&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/OI.java&#10;Mu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;LScale_R&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/paths/LeftStart_v2/LScale_RCube.xml&#10;AutoHelp&#9;PSI&#9;JAVA://frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper&#10;LEf&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Lef&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreAutoDefault.java&#10;PreAu&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.PreAutoDefault&#10;contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;ControlC&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Sho&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Shooter.java&#10;ShootSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;Intake&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Intake.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LStart_LSwitchLScale.java&#10;MStartL&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Shoo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitchHigh.java&#10;Relati&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.RelativeTurnToAngle&#10;Copyright&#9;ACTION&#9;GenerateCopyright&#10;Pathrea&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;LeftA&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LeftAutoHelper.java&#10;MiddleAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/middlestart/MiddleAutoHelper.java" />
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
   </component>
@@ -1044,6 +1006,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1052,13 +1015,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5229167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275862" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31573275" sideWeight="0.47864583" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573275" sideWeight="0.47864583" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,7 +1034,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1405,14 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/miscellaneous/ExampleCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Limelight.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1430,22 +1385,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="77" column="9" lean-forward="false" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/RobotPose.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/KotlinSubsystem.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="72" column="77" lean-forward="false" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="114" column="37" lean-forward="true" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3764#3765#0" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
