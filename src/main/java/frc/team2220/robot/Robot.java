@@ -36,8 +36,6 @@ public class Robot extends TimedRobot {
 
     LightDriveCAN lightDriveCAN;
 
-
-
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
 

@@ -18,7 +18,7 @@ public class AutoSwitch extends Command{
     protected void execute() {
         Robot.oi.getDriverController().setRumble(0.1);
         Robot.shooter.spinAllMotors(0.24);
-        Robot.intake.spinBothTransfer(0.5);
+        Robot.intake.spinBothTransfer(-0.5);
     }
 
     protected boolean isFinished() {

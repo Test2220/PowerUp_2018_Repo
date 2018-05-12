@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/Robot.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.class" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" afterPath="$PROJECT_DIR$/build/libs/PowerUp_2018_Repo.jar" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch.xml" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch.xml" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_left_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_left_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_right_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_right_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_source_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_LSwitch_source_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_left_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_left_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_right_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_right_detailed.csv" />
-      <change beforePath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_source_detailed.csv" afterPath="$PROJECT_DIR$/src/paths/MiddleStart/MCube_RSwitch_source_detailed.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -56,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="115" column="5" lean-forward="false" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="724">
+              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,8 +53,8 @@
       <file leaf-file-name="MStartRSwitch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="391">
+              <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -89,8 +73,8 @@
       <file leaf-file-name="MStartLSwitch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="276">
+              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -99,62 +83,32 @@
       <file leaf-file-name="JitterIntake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1171#1172#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="174" column="48" lean-forward="false" selection-start-line="174" selection-start-column="48" selection-end-line="174" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/Shoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoIntake.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="Intake.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1426">
-              <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoIntake.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -534,8 +488,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3040067788918" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="790248296" />
+        <entry key="$PROJECT_DIR$" value="3040071205899" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2638396940" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1741342742" />
       </map>
     </option>
@@ -695,7 +649,6 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitchHigh.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Shooter.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Climber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/PreAutoDefault.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/UnjamNow.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/utils/TwilightXBoxController.java" />
@@ -712,7 +665,6 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRSwitch.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRScale.java" />
@@ -721,11 +673,13 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/RobotPose.kt" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/KotlinSubsystem.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
       </list>
     </option>
   </component>
@@ -752,6 +706,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -833,16 +788,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../5190-Motion-Profile-Generator" />
-    <property name="SearchEverywhereHistoryKey" value="MSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;MSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;MCubeL&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/paths/MiddleStart/MCube_LSwitch.xml&#10;MStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;RSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRScale.java&#10;RSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRSwitch.java&#10;AutoIn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Multi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;Auto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;msT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;CubeFo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;cubetr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Controlin&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Shoot&#9;PSI&#9;JAVA://frc.team2220.robot.commands.mechanisms.shooter.Shoot&#10;Contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Contro&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Cubet&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cubefo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;righ&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;RightAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;Left&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;MStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;MS&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Con&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;OI&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/OI.java&#10;Mu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;LScale_R&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/paths/LeftStart_v2/LScale_RCube.xml&#10;AutoHelp&#9;PSI&#9;JAVA://frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper&#10;LEf&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Lef&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreAutoDefault.java&#10;PreAu&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.PreAutoDefault&#10;contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;ControlC&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Sho&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Shooter.java&#10;ShootSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;Intake&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Intake.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LStart_LSwitchLScale.java&#10;MStartL&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Shoo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitchHigh.java&#10;Relati&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.RelativeTurnToAngle&#10;Copyright&#9;ACTION&#9;GenerateCopyright&#10;Pathrea&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java" />
+    <property name="SearchEverywhereHistoryKey" value="Jit&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java&#10;MStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;MSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;MSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;MCubeL&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/paths/MiddleStart/MCube_LSwitch.xml&#10;MStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;RSta&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRScale.java&#10;RSt&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RStartRSwitch.java&#10;AutoIn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Multi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;Auto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;msT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java&#10;CubeFo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;cubetr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Controlin&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Shoot&#9;PSI&#9;JAVA://frc.team2220.robot.commands.mechanisms.shooter.Shoot&#10;Contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Contro&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Cubet&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeTracker.java&#10;Cubefo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/vision/CubeFollower.java&#10;righ&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;RightAu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/rightstart/RightAutoHelper.java&#10;Left&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;Intak&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;MS&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Con&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/intake/ControlIntake.java&#10;OI&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/OI.java&#10;Mu&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/MultiReversiblePathReader.java&#10;LScale_R&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/paths/LeftStart_v2/LScale_RCube.xml&#10;AutoHelp&#9;PSI&#9;JAVA://frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper&#10;LEf&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Lef&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LeftAutoHelper.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreAutoDefault.java&#10;PreAu&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.PreAutoDefault&#10;contr&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;ControlC&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/climber/ControlClimber.java&#10;Sho&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Shooter.java&#10;ShootSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitch.java&#10;Intake&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Intake.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/leftstart/LStart_LSwitchLScale.java&#10;MStartL&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java&#10;Twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Shoo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/ShootSwitchHigh.java&#10;Relati&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.RelativeTurnToAngle&#10;Copyright&#9;ACTION&#9;GenerateCopyright" />
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1030,19 +987,20 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30926725" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5229167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275862" sideWeight="0.48541668" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30926725" sideWeight="0.48125" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="FRC" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31573275" sideWeight="0.47864583" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1051,35 +1009,13 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5229167" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39870688" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275862" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573275" sideWeight="0.47864583" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1156,13 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="27" column="61" lean-forward="false" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1231,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
+        <state relative-caret-position="1403">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
@@ -1368,7 +1297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,14 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Shooter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2507">
-          <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/RobotPose.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/KotlinSubsystem.kt" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -1406,37 +1326,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/Shoot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="115" column="5" lean-forward="false" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="138">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Shooter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/AutoSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="362">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/SpinBothTransfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="132">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <element signature="e#215#216#0" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/shooter/Shoot.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="197">
+          <caret line="173" column="35" lean-forward="false" selection-start-line="173" selection-start-column="35" selection-end-line="173" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1449,46 +1390,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="391">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartLSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="174" column="48" lean-forward="false" selection-start-line="174" selection-start-column="48" selection-end-line="174" selection-end-column="48" />
+        <state relative-caret-position="276">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/JitterIntake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/paths/middlestart/MStartRSwitch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/mechanisms/intake/AutoIntake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="724">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1496,6 +1429,18 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="Copyright.UI">
         <settings>
           <last-edited>PowerUp Profile</last-edited>
@@ -1508,9 +1453,68 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>FRC</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>PowerUp_2018_Repo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: edu.wpi.first.cscore:cscore-java:1.2.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

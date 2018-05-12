@@ -10,7 +10,29 @@ public class JitterIntake extends Command{
         requires(Robot.intake);
     }
 
+    protected void initialize() {
+
+    }
+
     protected void execute() {
+        if (timeSinceInitialized() < 0.4) {
+            Robot.intake.spinEntireIntake(-0.75);
+        } else {
+            if (timeSinceInitialized() > 0.4 && timeSinceInitialized() < 0.6){
+                Robot.intake.spinEntireIntake(0.4);
+            } else {
+                if (timeSinceInitialized() > 0.6 && timeSinceInitialized() < 1) {
+                    Robot.intake.spinEntireIntake(-0.75);
+                } else {
+                    if (timeSinceInitialized() > 1 && timeSinceInitialized() < 1.2) {
+                        Robot.intake.spinEntireIntake(0.4);
+                    } else {
+                        Robot.intake.spinEntireIntake(-0.75);
+                    }
+                }
+            }
+        }
+
 
     }
 
