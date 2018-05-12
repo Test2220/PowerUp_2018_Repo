@@ -8,7 +8,7 @@ import frc.team2220.robot.subsystems.Limelight;
 public class CubeFollower extends Command{
 
     private Command LimelightConfig;
-    private double turnSensitivty = 20;
+    private double turnSensitivty = 50;
     private int cruiseVel = 400;
     private double angleError;
 
@@ -21,6 +21,8 @@ public class CubeFollower extends Command{
     protected void initialize() {
         Robot.twilightDrive.changeToVelocity();
         LimelightConfig.start();
+        Robot.shooter.setCubePistonDown();
+
     }
 
     protected void execute() {

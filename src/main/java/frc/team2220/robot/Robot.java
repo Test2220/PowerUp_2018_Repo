@@ -65,10 +65,7 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-        lightDriveCAN.SetColor(4, Color.BLUE);
-        lightDriveCAN.SetColor(4, Color.BLUE);
-        lightDriveCAN.SetColor(4, Color.BLUE);
-        lightDriveCAN.SetColor(4, Color.BLUE);
+
 
         SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
         SmartDashboard.putData(new PreMatchDefault());

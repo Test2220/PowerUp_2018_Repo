@@ -11,6 +11,7 @@ public class AutoIntake extends Command {
     private int currentDoneCount = 0;
 
     private Command blinkLimelight = new BlinkLimelight(2);
+    private Command JitterIntake = new JitterIntake(1);
 
     public AutoIntake(double speed) {
         this.speed = speed;
@@ -26,8 +27,9 @@ public class AutoIntake extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-        Robot.intake.setRampUp();
+        Robot.intake.setRampDown();
         Robot.intake.setIntakePistonsExtend();
+        Robot.shooter.setCubePistonDown();
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -35,6 +37,7 @@ public class AutoIntake extends Command {
     protected void execute() {
         Robot.intake.spinBothIntake(speed);
         Robot.intake.spinBothTransfer(speed);
+
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -58,6 +61,7 @@ public class AutoIntake extends Command {
     @Override
     protected void end() {
         blinkLimelight.start();
+//        JitterIntake.start();
     }
 
     // Called when another command which requires one or more of the same

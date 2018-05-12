@@ -2,6 +2,7 @@ package frc.team2220.robot.commands.paths.middlestart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.team2220.robot.commands.mechanisms.intake.AutoIntake;
+import frc.team2220.robot.commands.mechanisms.intake.JitterIntake;
 import frc.team2220.robot.commands.mechanisms.shooter.AutoSwitch;
 import frc.team2220.robot.commands.mechanisms.shooter.Shoot;
 import frc.team2220.robot.commands.mechanisms.shooter.ShootSwitch;
@@ -25,12 +26,14 @@ public class MStartRSwitch extends CommandGroup {
         addSequential(new Shoot());
         addSequential(new StopShooter());
         addSequential(new MultiReversiblePathReader("MiddleStart/RSwitch_MCube", 50, MultiReversiblePathReader.Direction.COLLECTOR_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
-        addParallel(new AutoIntake(-0.75, 5));
+        addParallel(new AutoIntake(-0.8, 3));
         addSequential(new CubeFollower(2.05, Limelight.LED_MODE.OFF, Limelight.CAM_MODE.VISION_PROCESSING));
 //        addParallel(new AutoIntake(-0.6, 3));
+        addParallel(new JitterIntake(3));
         addSequential(new MultiReversiblePathReader("MiddleStart/MCube_LSwitch", 22, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
-        addSequential(new AutoSwitch(2));
+        addParallel(new JitterIntake(1));
         addParallel(new Shoot());
+        addSequential(new AutoSwitch(2));
         addSequential(new StopShooter());
         // addSequential(new StopShooter());
     }

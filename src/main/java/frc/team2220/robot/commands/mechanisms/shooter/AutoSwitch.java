@@ -19,10 +19,17 @@ public class AutoSwitch extends Command{
         Robot.oi.getDriverController().setRumble(0.1);
         Robot.shooter.spinAllMotors(0.24);
         Robot.intake.spinBothTransfer(-0.5);
+        if (timeSinceInitialized() > 0.3) {
+            Robot.shooter.setCubePistonUp();
+        }
     }
 
     protected boolean isFinished() {
         return isTimedOut();
+    }
+
+    protected void end() {
+        Robot.shooter.setShooterDown();
     }
 
 }

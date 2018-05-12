@@ -10,6 +10,7 @@ package frc.team2220.robot;
 import frc.team2220.robot.commands.auto.ReversiblePathReader;
 import frc.team2220.robot.commands.mechanisms.intake.AutoIntake;
 import frc.team2220.robot.commands.mechanisms.intake.IntakePistons;
+import frc.team2220.robot.commands.mechanisms.intake.JitterIntake;
 import frc.team2220.robot.commands.mechanisms.intake.UnjamNow;
 import frc.team2220.robot.commands.mechanisms.shooter.*;
 import frc.team2220.robot.commands.auto.DriveToDistance;
@@ -45,6 +46,7 @@ public class OI {
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
         driverController.getAButton().whenPressed(new BlinkLimelight(2));
+        driverController.getBButton().whenPressed(new JitterIntake(2));
 //        driverController.getXButton().whenPressed(new LStart_LSwitchLScale());
         driverController.getYButton().whenPressed(new AutoIntake(-0.75, 5));
         driverController.getRightBumper().whileHeld(new CubeTracker());
