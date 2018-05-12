@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11892e6a-522a-4980-9ef6-7660ce09cd18" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -38,30 +38,24 @@
       <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
+            <state relative-caret-position="345">
+              <caret line="56" column="49" lean-forward="true" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3776#3777#0" expanded="true" />
+                <element signature="e#3821#3822#0" expanded="true" />
+                <element signature="e#5157#5158#0" expanded="true" />
+                <element signature="e#5196#5197#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/RobotMap.java">
+      <file leaf-file-name="Intake.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/subsystems/Intake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1265">
-              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+            <state relative-caret-position="1311">
+              <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -654,6 +648,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -708,25 +703,14 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="robot" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="miscellaneous" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PowerUp_2018_Repo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PowerUp_2018_Repo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="robot" type="462c0819:PsiDirectoryNode" />
               <item name="subsystems" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -734,6 +718,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Motion_Profile_Generator" />
     <property name="SearchEverywhereHistoryKey" value="Veloci&#9;PSI&#9;JAVA://frc.team2220.robot.commands.auto.VelocityTester&#10;Veloc&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/VelocityDrive.java&#10;twili&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;PathEn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Encoder&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Drive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;DriveWi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Tem&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/TemperatureLogger.java&#10;Twi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;Logger&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Logger.java&#10;Limelight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twili&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.TwilightDrive&#10;Lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Twil&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;lime&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/Limelight.java&#10;Dividend&#9;null&#9;null&#10;CubeT&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Cube&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/CubeTracker.java&#10;Encode&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Turn&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Twilight&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartLScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLScale.java&#10;PathEnc&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PathEncoderFollower.java&#10;Converter&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;TwilightDrive&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/subsystems/TwilightDrive.java&#10;LStartR&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartRScale.java&#10;Shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/Shoot.java&#10;PreMat&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;RStartRScale&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRScale.java&#10;LStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStar&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartLScale.java&#10;LStartLSw&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/leftstart/LStartLSwitch.java&#10;RStart&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/rightstart/RStartRSwitch.java&#10;DriveToDis&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/DriveToDistance.java&#10;turn to angle&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;shoot&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Shooter/ControlShooter.java&#10;System.out.println&#9;null&#9;null&#10;control&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/Intake/ControlIntake.java&#10;TurnTo&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java&#10;Pre&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;prematch&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/PreMatchDefault.java&#10;Worst&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/WorstAutoGroup.java&#10;MatchData&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/miscellaneous/MatchData.java&#10;Winch&#9;PSI&#9;JAVA://frc.team2220.robot.subsystems.Climber#winch&#10;drivewi&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/drive/DriveWithXBox.java&#10;Conver&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;convert&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/utils/Converter.java&#10;turnto&#9;FILE&#9;file://D:/Programming/Java/PowerUp_2018_Repo/src/main/java/frc/team2220/robot/commands/auto/TurnToAngle.java" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -759,12 +746,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Build">
+  <component name="RunManager" selected="Gradle.Deploy">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="Robot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="frc.team2220.robot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="frc.team2220.robot.Robot" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="PowerUp_2018_Repo_main" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -894,11 +900,17 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Gradle.Build" />
       <item index="1" class="java.lang.String" itemvalue="Gradle.Deploy" />
       <item index="2" class="java.lang.String" itemvalue="Gradle.Stop Prev." />
+      <item index="3" class="java.lang.String" itemvalue="Application.Robot" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Robot" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -918,22 +930,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30926725" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5229167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.48541668" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30926725" sideWeight="0.48125" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31573275" sideWeight="0.47864583" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -942,14 +955,34 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30926725" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39870688" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.48541668" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30926725" sideWeight="0.48125" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1036,13 +1069,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="98" column="2" lean-forward="false" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/java/lang/Math.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/commands/auto/ScaledPathReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -1110,11 +1137,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1525999056436" expanded="true" signature="1640:1766" ph="{...}" />
-            <marker date="1525999056436" expanded="true" signature="1793:1940" ph="{...}" />
-            <marker date="1525999056436" expanded="true" signature="1996:2004" ph="{}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,13 +1169,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/java/io/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="222" column="18" lean-forward="false" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/src.zip!/java/io/Writer.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2018.3.2/66af8fda88c4eea15952cbce6c72b889d551773a/wpilibj-java-2018.3.2-sources.jar!/edu/wpi/first/wpilibj/livewindow/LiveWindowSendable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1335,9 +1352,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2507">
           <caret line="120" column="5" lean-forward="false" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
-          <folding>
-            <marker date="1525999056466" expanded="true" signature="3540:3595" ph="{}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,10 +1374,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team2220/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
+        <state relative-caret-position="345">
+          <caret line="56" column="49" lean-forward="true" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3776#3777#0" expanded="true" />
+            <element signature="e#3821#3822#0" expanded="true" />
+            <element signature="e#5157#5158#0" expanded="true" />
+            <element signature="e#5196#5197#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1370,9 +1389,80 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>FRC</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>PowerUp_2018_Repo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: edu.wpi.first.cscore:cscore-java:1.2.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
