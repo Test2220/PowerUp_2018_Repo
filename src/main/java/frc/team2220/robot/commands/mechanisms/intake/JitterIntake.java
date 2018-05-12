@@ -20,13 +20,13 @@ public class JitterIntake extends Command{
             Robot.intake.spinEntireIntake(-0.75);
         } else {
             if (timeSinceInitialized() > 0.4 && timeSinceInitialized() < 0.5){
-                Robot.intake.spinEntireIntake(0.2);
+                Robot.intake.spinEntireIntake(0.4);
             } else {
                 if (timeSinceInitialized() > 0.6 && timeSinceInitialized() < 1) {
                     Robot.intake.spinBothTransfer(-0.75);
                 } else {
                     if (timeSinceInitialized() > 1 && timeSinceInitialized() < 1.2) {
-                        Robot.intake.spinEntireIntake(0.2);
+                        Robot.intake.spinEntireIntake(0.4);
                     } else {
                         Robot.intake.spinEntireIntake(-0.75);
                     }
