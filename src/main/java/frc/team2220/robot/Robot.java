@@ -7,6 +7,7 @@
 
 package frc.team2220.robot;
 
+import com.mach.LightDrive.Color;
 import com.mach.LightDrive.LightDriveCAN;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
@@ -64,6 +65,11 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
+        lightDriveCAN.SetColor(4, Color.BLUE);
+        lightDriveCAN.SetColor(4, Color.BLUE);
+        lightDriveCAN.SetColor(4, Color.BLUE);
+        lightDriveCAN.SetColor(4, Color.BLUE);
+
         SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
         SmartDashboard.putData(new PreMatchDefault());
     }
