@@ -35,7 +35,6 @@ public class PathEncoderFollower extends Command {
         leftTraj = Pathfinder.readFromCSV(new File(leftFile));
         rightTraj = Pathfinder.readFromCSV(new File(rightFile));
 
-
         this.turnSensitivity = turnSensitivity;
     }
 
@@ -58,9 +57,9 @@ public class PathEncoderFollower extends Command {
         Robot.twilightDrive.resetEncoderPos();
 
         leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        leftFollow.configurePIDVA(1, 0, 0, 1 / 13, 0);
+        leftFollow.configurePIDVA(0, 0, 0, 1 / 15, 0);
         rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        rightFollow.configurePIDVA(1, 0, 0, 1 / 13 , 0);
+        rightFollow.configurePIDVA(0, 0, 0, 1 / 15 , 0);
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
 
@@ -95,16 +94,10 @@ public class PathEncoderFollower extends Command {
         SmartDashboard.putNumber("Segment Stuff", leftTraj.segments[index].x);
 
         SmartDashboard.putNumber("EXPECTED TICK COUNT", Converter.ftToEncTicks(leftTraj.segments[index].x));
-
-//        double leftVelo = leftTraj.segments[index].velocity;
-//        double rightVelo = rightTraj.segments[index].velocity;
-
         double gyro_heading = Robot.twilightDrive.navX.getAngle();// Assuming gyro angle is given in degrees
         double desired_heading = Pathfinder.r2d(leftTraj.segments[index].heading);
         double angle_difference = Pathfinder.boundHalfDegrees(desired_heading - gyro_heading);// Make sure to bound this from -180 to 180, otherwise you will get super large values
-//        System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
         double turn = turnSensitivity * angle_difference;
-//        System.out.printf("Left Set = %03.2f ; Right Set = %03.2f ;", leftSet, rightSet);
 
 
         Robot.twilightDrive.driveSet(leftSet, -rightSet);
