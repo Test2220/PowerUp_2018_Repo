@@ -1,5 +1,6 @@
 package frc.team2220.robot.commands.auto;
 
+import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -25,6 +26,8 @@ public class PathEncoderFollower extends Command {
 
     private int encTicksPerRev = 1440;
 
+    Notifier notifier;
+
     public double turnSensitivity;
 
     public PathEncoderFollower(String leftFile, String rightFile, double turnSensitivity) {
@@ -37,6 +40,7 @@ public class PathEncoderFollower extends Command {
     }
 
 
+
     public PathEncoderFollower(String baseFilePath, double turnSensitivity) {
 
         this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
@@ -46,8 +50,6 @@ public class PathEncoderFollower extends Command {
 
     @Override
     protected void initialize() {
-
-
         leftFollow = new EncoderFollower(leftTraj);
         rightFollow = new EncoderFollower(rightTraj);
 
@@ -56,23 +58,16 @@ public class PathEncoderFollower extends Command {
         Robot.twilightDrive.resetEncoderPos();
 
         leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        leftFollow.configurePIDVA(1, 0, 0, 1 / 10, 0);
+        leftFollow.configurePIDVA(1, 0, 0, 1 / 13, 0);
         rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), encTicksPerRev, Constants.wheelDiameterIn/12);
-        rightFollow.configurePIDVA(1, 0, 0, 1 / 10 , 0);
+        rightFollow.configurePIDVA(1, 0, 0, 1 / 13 , 0);
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
-//        Robot.twilightDrive.changeToVelocity();
-
-//        Robot.twilightDrive.lDriveMaster.setProfile(1);
-//        Robot.twilightDrive.rDriveMaster.setProfile(1);
-
 
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
         Robot.twilightDrive.navX.zeroYaw();
-            
-
     }
 
     @Override

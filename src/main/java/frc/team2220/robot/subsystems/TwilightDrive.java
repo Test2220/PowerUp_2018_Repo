@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import com.ctre.CANTalon.FeedbackDevice;
 import com.ctre.CANTalon.TalonControlMode;
 import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -81,7 +82,6 @@ public class TwilightDrive extends Subsystem {
 
         //Differential Drive Initialize
 
-
         //Basic NavX and Drivetrain setup
         navX = new AHRS(SPI.Port.kMXP);
 
@@ -118,6 +118,17 @@ public class TwilightDrive extends Subsystem {
         rDriveMaster.setFeedbackDevice(FeedbackDevice.QuadEncoder);
         rDriveMaster.reverseSensor(false); // TODO Check real boolean in Web Client
         rDriveMaster.setAllowableClosedLoopErr(CLOSEDLOOPERROR);
+
+        CANTalon.FeedbackDeviceStatus isLeftSensorPresent = lDriveMaster.isSensorPresent(FeedbackDevice.CtreMagEncoder_Relative);
+        CANTalon.FeedbackDeviceStatus isRightSensorPresent = rDriveMaster.isSensorPresent(FeedbackDevice.CtreMagEncoder_Relative);
+
+        if (isLeftSensorPresent != CANTalon.FeedbackDeviceStatus.FeedbackStatusPresent) {
+            DriverStation.reportError("LEFT ENCODER NOT PRESENT" + isLeftSensorPresent, false);
+        }
+
+        if (isRightSensorPresent != CANTalon.FeedbackDeviceStatus.FeedbackStatusPresent) {
+            DriverStation.reportError("RIGHT ENCODER NOT PRESENT" + isRightSensorPresent, false);
+        }
 
         //Set PID and Motion Magic Vals
         lDriveMaster.setPID(pLeft, iLeft, dLeft, fLeft, iZoneLeft, 0, 0);
