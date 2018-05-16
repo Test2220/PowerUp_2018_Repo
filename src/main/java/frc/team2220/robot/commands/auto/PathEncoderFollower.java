@@ -34,7 +34,6 @@ public class PathEncoderFollower extends Command {
         requires(Robot.twilightDrive);
         leftTraj = Pathfinder.readFromCSV(new File(leftFile));
         rightTraj = Pathfinder.readFromCSV(new File(rightFile));
-
         this.turnSensitivity = turnSensitivity;
     }
 
@@ -44,7 +43,6 @@ public class PathEncoderFollower extends Command {
 
         this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
         requires(Robot.twilightDrive);
-
     }
 
     @Override

@@ -39,7 +39,8 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
-    LightDrivePWM lightDriveCAN;
+    LightDrivePWM lightDrivePWM;
+
 
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
@@ -51,7 +52,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
         Servo servo1 = new Servo(1);
         Servo servo2 = new Servo(0);
-        lightDriveCAN = new LightDrivePWM(servo1, servo2);
+        lightDrivePWM = new LightDrivePWM(servo1, servo2);
         oi = new OI();
         tempLogger = new TemperatureLogger(new CANTalon[] {
                 Robot.twilightDrive.rDriveMaster,
@@ -78,7 +79,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledPeriodic() {
-        lightDriveCAN.SetColor(1, Color.TEAL);
+        lightDrivePWM.SetColor(1, Color.TEAL);
         Scheduler.getInstance().run();
     }
 
@@ -106,7 +107,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
-        lightDriveCAN.SetColor(1, Color.BLUE);
+        lightDrivePWM.SetColor(1, Color.BLUE);
         Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
         Robot.limelight.setCamMode(Limelight.CAM_MODE.DRIVERSTATION_FEEDBACK);
         Robot.limelight.setPipeline(1);
