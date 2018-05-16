@@ -7,7 +7,6 @@
 
 package frc.team2220.robot;
 
-import com.mach.LightDrive.Color;
 import com.mach.LightDrive.LightDriveCAN;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
@@ -23,6 +22,7 @@ import frc.team2220.robot.commands.paths.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.paths.rightstart.RightAutoHelper;
 import frc.team2220.robot.subsystems.*;
+import frc.team2220.robot.utils.TwilightXBoxController;
 
 
 public class Robot extends TimedRobot {
@@ -60,13 +60,12 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledInit() {
+        SmartDashboard.putString("ENCODER STATUS", Robot.twilightDrive.getEncoderStatus());
     }
 
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-
-
         SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
         SmartDashboard.putData(new PreMatchDefault());
     }

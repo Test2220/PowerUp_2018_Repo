@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import com.ctre.CANTalon.FeedbackDevice;
 import com.ctre.CANTalon.TalonControlMode;
 import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -11,11 +12,6 @@ import frc.team2220.robot.RobotMap;
 import frc.team2220.robot.commands.mechanisms.drive.DriveWithXBox;
 import frc.team2220.robot.utils.Constants;
 import frc.team2220.robot.utils.Converter;
-
-//import jaci.pathfinder.Pathfinder;
-//import jaci.pathfinder.Trajectory;
-//import jaci.pathfinder.Pathfinder;
-//import jaci.pathfinder.Trajectory;
 
 @SuppressWarnings("deprecation")
 
@@ -66,6 +62,8 @@ public class TwilightDrive extends Subsystem {
 
     public DifferentialDrive TwilightDrive;
 
+    private CANTalon.FeedbackDeviceStatus isLeftSensorPresent = lDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
+    private CANTalon.FeedbackDeviceStatus isRightSensorPresent = rDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
 
     @Override
     protected void initDefaultCommand() {
@@ -116,6 +114,15 @@ public class TwilightDrive extends Subsystem {
         rDriveMaster.setAllowableClosedLoopErr(CLOSEDLOOPERROR);
 
 
+
+        if (isLeftSensorPresent == CANTalon.FeedbackDeviceStatus.FeedbackStatusNotPresent) {
+            DriverStation.reportError("LEFT ENCODER NOT PRESENT" + isLeftSensorPresent, false);
+        }
+
+        if (isRightSensorPresent == CANTalon.FeedbackDeviceStatus.FeedbackStatusNotPresent) {
+            DriverStation.reportError("RIGHT ENCODER NOT PRESENT" + isRightSensorPresent, false);
+        }
+
         //Set PID and Motion Magic Vals
         lDriveMaster.setPID(pLeft, iLeft, dLeft, fLeft, iZoneLeft, 0, 0);
         lDriveMaster.setMotionMagicAcceleration(accel);
@@ -131,6 +138,22 @@ public class TwilightDrive extends Subsystem {
 
         TwilightDrive = new DifferentialDrive(lDriveMaster, rDriveMaster);
         TwilightDrive.setSafetyEnabled(false);
+
+    }
+
+    public String getEncoderStatus() {
+
+        if (isLeftSensorPresent == CANTalon.FeedbackDeviceStatus.FeedbackStatusNotPresent) {
+            String error = "ERROR : LEFT ENCODER NOT PRESENT" + isLeftSensorPresent;
+            return error;
+        }
+
+        if (isRightSensorPresent == CANTalon.FeedbackDeviceStatus.FeedbackStatusNotPresent) {
+            String error = "ERROR : RIGHT ENCODER NOT PRESENT" + isRightSensorPresent;
+            return error;
+        }
+
+        return "ALL ENCODERS FUNCTIONA";
 
     }
 
@@ -154,7 +177,7 @@ public class TwilightDrive extends Subsystem {
     }
 
     public void curvatureDrive(double xVal, double zVal) {
-        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
+        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 0.5, Converter.deadzone(zVal) * 0.5, true);
 
     }
 
