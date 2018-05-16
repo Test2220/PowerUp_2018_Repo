@@ -32,7 +32,7 @@ public class OI {
         //Gagan's Side
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
-        driverController.getAButton().whenPressed(new ReversiblePathReader("MiddleStart/MStartLSwitch", 0, ReversiblePathReader.Direction.FORWARD));
+        driverController.getAButton().whenPressed(new ReversiblePathReader("MiddleStart/MStartRSwitch", 20, ReversiblePathReader.Direction.BACKWARD));
         driverController.getBButton().whenPressed(new PathEncoderFollower("TestPaths/ForwardFiveFeet", 1));
         driverController.getYButton().whenPressed(new VelocityTester());
 

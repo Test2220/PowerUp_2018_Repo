@@ -125,6 +125,7 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         tempLogger.logTalons();
+
 //        Logger.writeLog("boiboi");
 //        SmartDashboard.putNumber("RATE OF CHANGE", Robot.twilightDrive.navX.getRate());
 //        SmartDashboard.putNumber("NAVX VALUE", Robot.twilightDrive.navX.getAngle());

@@ -35,6 +35,7 @@ public class PathEncoderFollower extends Command {
         leftTraj = Pathfinder.readFromCSV(new File(leftFile));
         rightTraj = Pathfinder.readFromCSV(new File(rightFile));
         this.turnSensitivity = turnSensitivity;
+        notifier = new Notifier(this::followPath);
     }
 
 
@@ -67,8 +68,7 @@ public class PathEncoderFollower extends Command {
         Robot.twilightDrive.navX.zeroYaw();
     }
 
-    @Override
-    protected void execute() {
+    private void followPath() {
 
         index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
 
