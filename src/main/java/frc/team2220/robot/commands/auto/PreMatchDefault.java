@@ -16,7 +16,7 @@ public class PreMatchDefault extends CommandGroup {
         addSequential(new StopShooter());
         addSequential(new IntakePistons(IntakePistons.Position.RETRACT));
         addSequential(new RampControl(RampControl.Position.RETRACTED));
-        addSequential(new CubePiston(CubePiston.Position.UP));
+        addSequential(new CubePiston(CubePiston.Position.DOWN));
     }
 
 }

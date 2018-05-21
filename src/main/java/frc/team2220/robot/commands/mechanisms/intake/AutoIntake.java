@@ -30,6 +30,7 @@ public class AutoIntake extends Command {
         Robot.intake.setRampDown();
         Robot.intake.setIntakePistonsExtend();
         Robot.shooter.setCubePistonDown();
+        Robot.shooter.setShooterDown();
     }
 
     // Called repeatedly when this Command is scheduled to run

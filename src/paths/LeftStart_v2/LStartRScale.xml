@@ -18,13 +18,8 @@
         <Angle>1.5707963267948966</Angle>
     </Waypoint>
     <Waypoint>
-        <X>17.0</X>
-        <Y>7.0</Y>
-        <Angle>1.5707963267948966</Angle>
-    </Waypoint>
-    <Waypoint>
-        <X>21.94</X>
-        <Y>3.69</Y>
+        <X>17.35</X>
+        <Y>10.0</Y>
         <Angle>1.5707963267948966</Angle>
     </Waypoint>
 </Trajectory>

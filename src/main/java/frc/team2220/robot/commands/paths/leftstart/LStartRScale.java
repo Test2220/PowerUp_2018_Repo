@@ -1,6 +1,8 @@
 package frc.team2220.robot.commands.paths.leftstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
 import frc.team2220.robot.commands.mechanisms.shooter.Shoot;
 import frc.team2220.robot.commands.mechanisms.shooter.ShootScale;
 import frc.team2220.robot.commands.mechanisms.shooter.StopShooter;
@@ -11,12 +13,9 @@ import frc.team2220.robot.utils.Converter;
 public class LStartRScale extends CommandGroup {
 
     public LStartRScale() {
-//        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
-        addSequential(new PathReader("/home/lvuser/paths/LeftStart/LStartRScale_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartRScale_right_detailed.csv", 0.1));
-        addSequential(new ClockwiseTurn(Converter.degreesTurnToEncTicks(220)));
-        addSequential(new ShootScale());
-        addSequential(new Shoot());
-        addSequential(new StopShooter());
+        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SCALE));
+        addSequential(new MultiReversiblePathReader("LeftStart_v2/LStartRScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
+
 //        addSequential(new ClockwiseTurn(-Converter.degreesTurnToEncTicks(120)));
 //        addParallel(new AutoIntake(0.6, 4));
 //        addSequential(new DriveToDistance(Converter.ftToEncTicks(6)), 4);

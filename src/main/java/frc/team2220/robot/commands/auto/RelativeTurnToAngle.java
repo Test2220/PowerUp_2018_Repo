@@ -56,6 +56,12 @@ public class RelativeTurnToAngle extends Command {
         this.targetAngle = angle;
     }
 
+    public RelativeTurnToAngle(double angle, double time) {
+        super(time);
+        requires(Robot.twilightDrive);
+        this.targetAngle = angle;
+    }
+
     // Called just before this Command runs the first time
     protected void initialize() {
         currentDoneCount = 0;
@@ -101,7 +107,7 @@ public class RelativeTurnToAngle extends Command {
             currentDoneCount = 0;
             return true;
         }
-        return false;
+        return isTimedOut();
 
     }
 

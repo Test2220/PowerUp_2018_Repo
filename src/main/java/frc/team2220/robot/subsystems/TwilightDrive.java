@@ -62,8 +62,8 @@ public class TwilightDrive extends Subsystem {
 
     public DifferentialDrive TwilightDrive;
 
-    private CANTalon.FeedbackDeviceStatus isLeftSensorPresent = lDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
-    private CANTalon.FeedbackDeviceStatus isRightSensorPresent = rDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
+    private CANTalon.FeedbackDeviceStatus isLeftSensorPresent;
+    private CANTalon.FeedbackDeviceStatus isRightSensorPresent;
 
     @Override
     protected void initDefaultCommand() {
@@ -113,6 +113,8 @@ public class TwilightDrive extends Subsystem {
         rDriveMaster.reverseSensor(false); // TODO Check real boolean in Web Client
         rDriveMaster.setAllowableClosedLoopErr(CLOSEDLOOPERROR);
 
+        isLeftSensorPresent = lDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
+        isRightSensorPresent = rDriveMaster.isSensorPresent(FeedbackDevice.QuadEncoder);
 
 
         if (isLeftSensorPresent == CANTalon.FeedbackDeviceStatus.FeedbackStatusNotPresent) {
@@ -158,6 +160,7 @@ public class TwilightDrive extends Subsystem {
     }
 
 
+
     //------------DRIVE SETS------------//
 
     public void driveSet(double leftVal, double rightVal) {
@@ -177,7 +180,7 @@ public class TwilightDrive extends Subsystem {
     }
 
     public void curvatureDrive(double xVal, double zVal) {
-        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 0.5, Converter.deadzone(zVal) * 0.5, true);
+        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
 
     }
 
@@ -215,6 +218,18 @@ public class TwilightDrive extends Subsystem {
 
     public double getAvgPosition() {
         return (Math.abs(getLPosition()) + Math.abs(getRPosition())) / 2;
+    }
+
+    public int getLeftVelocity() {
+        return lDriveMaster.getEncVelocity();
+    }
+
+    public int getRightVelocity() {
+        return rDriveMaster.getEncVelocity();
+    }
+
+    public double getAverageVelocity_MPH() {
+        return (Math.abs(getLeftVelocity()) + Math.abs(getRightVelocity()))/2;
     }
 
     //-------------------DRIVE TYPE MODIFIERS-------------------//

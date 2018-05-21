@@ -33,6 +33,7 @@ public class ControlIntake extends Command {
         if (Math.abs(Converter.deadzone(leftYAxis)) > 0.2 || Math.abs(Converter.deadzone(rightYAxis)) > 0.2) {
             Robot.intake.defaultCommandRun = true;
             Robot.intake.setRampDown();
+            Robot.shooter.setCubePistonDown();
         } else {
             if (Robot.intake.defaultCommandRun) {
                 Robot.intake.setRampUp();
@@ -44,18 +45,21 @@ public class ControlIntake extends Command {
             Robot.intake.setIntakePistonsExtend();
             Robot.intake.spinEntireIntake(0.3);
             Robot.shooter.setShooterDown();
+            Robot.shooter.setCubePistonDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(leftYAxis) < -0.2) {
 
 //            if (Robot.intake.isBlockHalfWayLoaded()) {
 //                blinklimelight.start();
 //            }
+            Robot.shooter.setCubePistonDown();
             Robot.intake.setIntakePistonsExtend();
             Robot.intake.spinEntireIntake(-0.75);
             Robot.shooter.setShooterDown();
             System.out.println("LEFT AXIS PATH");
         } else if (Converter.deadzone(rightYAxis) > 0.2) {
             System.out.println("RIGHT AXIS > 0.2");
+            Robot.shooter.setCubePistonDown();
             if (Robot.intake.isBlockHalfWayLoaded()) {
                 Robot.intake.spinEntireIntake(0);
                 System.out.println("LIMIT SWITCH TRUE");
@@ -70,6 +74,7 @@ public class ControlIntake extends Command {
             Robot.intake.setIntakePistonsExtend();
             Robot.intake.spinEntireIntake(0.25);
             Robot.shooter.setShooterDown();
+            Robot.shooter.setCubePistonDown();
         } else {
             Robot.intake.spinEntireIntake(0);
         }

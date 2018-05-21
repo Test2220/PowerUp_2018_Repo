@@ -14,9 +14,8 @@ public class LeftAutoHelper extends InstantCommand {
 
     private Command boi1 = new LStart_LSwitchLScale();
     private Command boi2 = new LStart_LSwitchRScale();
-    private Command boi3= new LStart_LScaleRSwitch();
-    private Command boi4= new DriveToDistance(Converter.ftToEncTicks(-15));
-
+    private Command boi3 = new LStart_LScaleRSwitch();
+    private Command boi4 = new DriveToDistance(Converter.ftToEncTicks(-15));
 
 
     // private Command switchAutoSS = new PathReader("/home/lvuser/paths/LStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LStart/LStartLSwitch_right_detailed.csv", 0.0015);
@@ -37,9 +36,9 @@ public class LeftAutoHelper extends InstantCommand {
         MatchData.OwnedSide switchSide = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
         MatchData.OwnedSide scaleSide = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
 
-
+//
 //        if (switchSide == MatchData.OwnedSide.LEFT) {
-//            if(scaleSide == MatchData.OwnedSide.LEFT) {
+//            if (scaleSide == MatchData.OwnedSide.LEFT) {
 //                boi1.start();
 //            } else {
 //                boi2.start();
@@ -59,34 +58,35 @@ public class LeftAutoHelper extends InstantCommand {
 //        }
 
 
-        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
-            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
-            switchAutoSS.start();
-        } else {
-            boi4.start();
-        }
-
 //        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
 //            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
 //            switchAutoSS.start();
-//
-//        } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
-//            System.out.println("SWITCH OPPOSITE; Check for Scale");
-//
-//            if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
-//                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
-//                scaleAutoSS.start();
-//
-//            } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
-//                System.out.println("SCALE IS ON THE RIGHT; LStartRScale");
-//                WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
-//
-//            }
-
-//
+//        } else {
+//            boi4.start();
 //        }
 
+        if (switchSide == MatchData.OwnedSide.LEFT) {//Lxx
+            System.out.println("SWITCH AUTO STARTED; LStartLSwitch");
+            switchAutoSS.start();
+
+        } else if (switchSide == MatchData.OwnedSide.RIGHT) {//Rxx
+            System.out.println("SWITCH OPPOSITE; Check for Scale");
+
+            if (scaleSide == MatchData.OwnedSide.LEFT) {//RLx
+                System.out.println("SCALE IS ON THE LEFT; LStartLScale");
+                scaleAutoSS.start();
+
+            } else if (scaleSide == MatchData.OwnedSide.RIGHT) {
+                System.out.println("SCALE IS ON THE RIGHT; LStartRScale");
+                WorstAuto.start(); //TODO DO BASIC STUFF DONT LEAVE THIS HERE
+
+            }
+
+
+        }
+
+//    }
+
+
     }
-
-
 }

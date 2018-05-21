@@ -16,7 +16,7 @@ public class PreAutoDefault extends CommandGroup {
 
     public PreAutoDefault(FinalShooterPosition finalShooterPosition) {
 
-        addSequential(new IntakePistons(IntakePistons.Position.EXTEND));
+        addSequential(new IntakePistons(IntakePistons.Position.RETRACT));
         switch (finalShooterPosition) {
             case SWITCH:
                 addSequential(new LiftPistons(LiftPistons.Position.RETRACTED));

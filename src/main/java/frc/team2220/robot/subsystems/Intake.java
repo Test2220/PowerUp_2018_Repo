@@ -59,8 +59,8 @@ public class Intake extends Subsystem {
     }
 
     public void spinBothTransfer(double value) {
-        leftTransfer.set(value);
-        rightTransfer.set(value);
+        leftTransfer.set(-value);
+        rightTransfer.set(-value);
     }
 
     public void spinEntireIntake(double value) {

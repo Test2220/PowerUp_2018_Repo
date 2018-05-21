@@ -1,6 +1,8 @@
 package frc.team2220.robot.commands.paths.leftstart;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.team2220.robot.commands.auto.MultiReversiblePathReader;
+import frc.team2220.robot.commands.auto.PreAutoDefault;
 import frc.team2220.robot.commands.mechanisms.shooter.LiftPistons;
 import frc.team2220.robot.commands.mechanisms.shooter.Shoot;
 import frc.team2220.robot.commands.mechanisms.shooter.ShootSwitch;
@@ -13,9 +15,9 @@ public class LStartLSwitch extends CommandGroup {
 
     public LStartLSwitch() {
 
-//        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
-        addParallel(new LiftPistons(LiftPistons.Position.RETRACTED));
-        addSequential(new PathReader("/home/lvuser/paths/LeftStart/LStartLSwitch_left_detailed.csv", "/home/lvuser/paths/LeftStart/LStartLSwitch_right_detailed.csv", 0.015));
+        addParallel(new PreAutoDefault(PreAutoDefault.FinalShooterPosition.SWITCH));
+//        addParallel(new LiftPistons(LiftPistons.Position.RETRACTED));
+        addSequential(new MultiReversiblePathReader("LeftStart_v2/LStartLSwitch", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
         addSequential(new ShootSwitch());
         addSequential(new Shoot());
         addSequential(new StopShooter());
