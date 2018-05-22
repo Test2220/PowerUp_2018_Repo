@@ -9,6 +9,7 @@ package frc.team2220.robot;
 
 import com.ctre.CANTalon;
 import com.mach.LightDrive.Color;
+import com.mach.LightDrive.LightDriveCAN;
 import com.mach.LightDrive.LightDrivePWM;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.*;
@@ -39,7 +40,7 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
-    LightDrivePWM lightDrivePWM;
+    public LightDriveCAN lightDriveCAN;
 
 
     private Command autonomousCommand;
@@ -50,9 +51,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
-        Servo servo1 = new Servo(1);
-        Servo servo2 = new Servo(0);
-        lightDrivePWM = new LightDrivePWM(servo1, servo2);
+        lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         tempLogger = new TemperatureLogger(new CANTalon[] {
                 Robot.twilightDrive.rDriveMaster,
@@ -75,12 +74,14 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledInit() {
+        lightDriveCAN.SetColor(4, Color.WHITE, 1);
+        lightDriveCAN.Update();
     }
 
     @Override
     public void disabledPeriodic() {
-        lightDrivePWM.SetColor(1, Color.TEAL);
         Scheduler.getInstance().run();
+
     }
 
     @Override
@@ -107,7 +108,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
-        lightDrivePWM.SetColor(1, Color.BLUE);
+        lightDriveCAN.SetColor(1, Color.BLUE);
+        lightDriveCAN.SetColor(4, Color.BLUE);
+        lightDriveCAN.Update();
         Robot.limelight.setLEDMode(Limelight.LED_MODE.OFF);
         Robot.limelight.setCamMode(Limelight.CAM_MODE.DRIVERSTATION_FEEDBACK);
         Robot.limelight.setPipeline(1);
