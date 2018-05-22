@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
-    private LightDriveCAN lightDriveCAN;
+    public static LightDriveCAN lightDriveCAN;
 
     private Command autonomousCommand;
     private SendableChooser<Command> sideChooser = new SendableChooser<>();
@@ -60,6 +60,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void disabledInit() {
+        lightDriveCAN.SetColor(1, Color.PURPLE);
+        lightDriveCAN.SetColor(2, Color.PURPLE);
+        lightDriveCAN.Update();
         SmartDashboard.putString("ENCODER STATUS", Robot.twilightDrive.getEncoderStatus());
     }
 
@@ -96,6 +99,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        lightDriveCAN.SetColor(1, Color.TEAL);
+        lightDriveCAN.SetColor(2, Color.TEAL);
+        lightDriveCAN.Update();
         Robot.twilightDrive.navX.zeroYaw();
         Robot.shooter.setCubePistonDown();
         if (autonomousCommand != null) {
