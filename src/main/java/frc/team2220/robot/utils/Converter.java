@@ -9,9 +9,20 @@ public class Converter {
 
     }
 
+    public static double encTicksPer100MSToFtPerSecond(double encTicks) {
+        //Input velocity multiplied by 10 --> To make it per second
+        return (((encTicks * 10) / Constants.encTickPerRev) * Constants.wheelCircumferenceIn) * 12;
+    }
+
     public static double inToEncTicks(double inputIn) {
 
         return ((inputIn) / (Constants.wheelCircumferenceIn)) * Constants.encTickPerRev;
+
+    }
+
+    public static double encTicksToIn(double encoder_distance) {
+
+        return (encoder_distance / Constants.encTickPerRev) * Constants.wheelCircumferenceIn;
 
     }
 
@@ -29,7 +40,6 @@ public class Converter {
 
     public static double ftPerSecondToNativeUnitsPer100Ms(double ftPerSecond) {
         return ftToEncTicks(ftPerSecond) * (1.0 / 10);
-
     }
 
     public static double NativeUnitsToMetresPerSecond(double nativeUnits) {

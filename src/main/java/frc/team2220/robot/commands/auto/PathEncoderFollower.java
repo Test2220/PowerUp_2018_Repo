@@ -2,6 +2,7 @@ package frc.team2220.robot.commands.auto;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.Robot;
 import frc.team2220.robot.utils.Constants;
 import frc.team2220.robot.utils.Converter;
@@ -36,19 +37,27 @@ public class PathEncoderFollower extends Command {
         this.turnSensitivity = turnSensitivity;
     }
 
+    public PathEncoderFollower(String baseFilePath, double turnSensitivity) {
+        this("/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv", "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv", turnSensitivity);
+        String leftFile = "/home/lvuser/paths/" + baseFilePath + "_left_detailed.csv";
+        String rightFile = "/home/lvuser/paths/" + baseFilePath + "_right_detailed.csv";
+
+        requires(Robot.twilightDrive);
+
+    }
+
+
     @Override
     protected void initialize() {
         Robot.twilightDrive.changeToPercentVBus();
 
-        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        leftFollow.configurePIDVA(1, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
-        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelDiameterMetres);
-        rightFollow.configurePIDVA(1, 0, 0, 1 / Converter.NativeUnitsToMetresPerSecond(Constants.maxDrivetrainVelocity), 0);
+        leftFollow.configureEncoder(Robot.twilightDrive.getLPosition(), Constants.encTickPerRev, Constants.wheelCircumferenceIn/12);
+        leftFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
+        rightFollow.configureEncoder(Robot.twilightDrive.getRPosition(), Constants.encTickPerRev, Constants.wheelCircumferenceIn/12);
+        rightFollow.configurePIDVA(0.1, 0, 0, 1 / 10, 0);
 
 
         startTime = Timer.getFPGATimestamp() * 1000.0;
-        Robot.twilightDrive.changeToVelocity();
-
 //        Robot.twilightDrive.lDriveMaster.setProfile(1);
 //        Robot.twilightDrive.rDriveMaster.setProfile(1);
 
@@ -61,24 +70,26 @@ public class PathEncoderFollower extends Command {
 
     @Override
     protected void execute() {
-        index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 10));
-
+        index = ((int) Math.floor(((Timer.getFPGATimestamp() * 1000.0) - startTime) / 20));
 
         if (isFinished()) return;
 
+
         double leftSet = leftFollow.calculate(Robot.twilightDrive.getLPosition());
         double rightSet = rightFollow.calculate(Robot.twilightDrive.getRPosition());
+        SmartDashboard.putNumber("RIGHT VELOCITY ENCODER FOLLOWER", Robot.twilightDrive.getRPosition());
 
 
-//        double leftVelo = leftTraj.segments[index].velocity;
-//        double rightVelo = rightTraj.segments[index].velocity;
+        SmartDashboard.putNumber("Left Calculate", leftSet);
+        SmartDashboard.putNumber("Right Calculate", rightSet);
+
 
         double gyro_heading = Robot.twilightDrive.navX.getAngle();// Assuming gyro angle is given in degrees
         double desired_heading = Pathfinder.r2d(leftTraj.segments[index].heading);
         double angle_difference = Pathfinder.boundHalfDegrees(desired_heading - gyro_heading);// Make sure to bound this from -180 to 180, otherwise you will get super large values
         System.out.printf("Desired Heading = %03.2f ; Gyro Heading = %03.2f ; Angle Difference = %03.2f ; Turn Sensitivity = %.4f \n", desired_heading, gyro_heading, angle_difference, turnSensitivity);
         double turn = turnSensitivity * angle_difference;
-        Robot.twilightDrive.driveSet(-Converter.ftPerSecondToNativeUnitsPer100Ms((leftSet - turn)), -Converter.ftPerSecondToNativeUnitsPer100Ms((rightSet + turn)));
+        Robot.twilightDrive.driveSet(leftSet, rightSet);
 
     }
 

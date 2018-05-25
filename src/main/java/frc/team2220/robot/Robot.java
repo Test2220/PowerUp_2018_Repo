@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
+import frc.team2220.robot.commands.auto.RobotPose;
 import frc.team2220.robot.commands.paths.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.paths.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.paths.rightstart.RightAutoHelper;
@@ -32,6 +33,7 @@ public class Robot extends TimedRobot {
     public static final Intake intake = new Intake();
     public static final Climber climber = new Climber();
     public static final Limelight limelight = new Limelight();
+    public static final RobotPose robotPose = new RobotPose();
 
     public static OI oi;
 
@@ -42,6 +44,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
+        robotPose.startNotifier(1);
         lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         Compressor airCompressor = new Compressor();
@@ -62,6 +65,8 @@ public class Robot extends TimedRobot {
     public void disabledInit() {
         lightDriveCAN.SetColor(1, Color.PURPLE);
         lightDriveCAN.SetColor(2, Color.PURPLE);
+        lightDriveCAN.SetColor(3, Color.PURPLE);
+        lightDriveCAN.SetColor(4, Color.PURPLE);
         lightDriveCAN.Update();
         SmartDashboard.putString("ENCODER STATUS", Robot.twilightDrive.getEncoderStatus());
     }
@@ -69,7 +74,6 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-        lightDriveCAN.SetColor(1, Color.GREEN);
         SmartDashboard.putString("CURRENT AUTO", sideChooser.getSelected().toString());
         SmartDashboard.putData(new PreMatchDefault());
     }
@@ -101,6 +105,8 @@ public class Robot extends TimedRobot {
     public void teleopInit() {
         lightDriveCAN.SetColor(1, Color.TEAL);
         lightDriveCAN.SetColor(2, Color.TEAL);
+        lightDriveCAN.SetColor(3, Color.TEAL);
+        lightDriveCAN.SetColor(4, Color.TEAL);
         lightDriveCAN.Update();
         Robot.twilightDrive.navX.zeroYaw();
         Robot.shooter.setCubePistonDown();
@@ -114,6 +120,7 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("LEFT VELOCITY", Robot.twilightDrive.getLeftVelocity());
     }
 
     @Override

@@ -228,9 +228,6 @@ public class TwilightDrive extends Subsystem {
         return rDriveMaster.getEncVelocity();
     }
 
-    public double getAverageVelocity_MPH() {
-        return (Math.abs(getLeftVelocity()) + Math.abs(getRightVelocity()))/2;
-    }
 
     //-------------------DRIVE TYPE MODIFIERS-------------------//
 

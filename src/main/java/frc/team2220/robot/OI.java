@@ -45,7 +45,7 @@ public class OI {
         driverController.getLeftBumper().whenPressed(new Shoot());
         driverController.getStartButton().whileHeld(new PreMatchDefault());
         driverController.getXButton().whenPressed(new JitterIntake(2));
-        driverController.getBackButton().whenPressed(new RStartRScale());
+        driverController.getBackButton().whenPressed(new MultiReversiblePathReader("LeftStart_v2/LStartRScale", 20, MultiReversiblePathReader.Direction.SHOOTER_FIRST, MultiReversiblePathReader.CSVReadDirection.TOP_TO_BOTTOM));
 //        driverController.getXButton().whenPressed(new LStart_LSwitchLScale());
         driverController.getYButton().whenPressed(new AutoIntake(-0.75, 5));
         driverController.getRightBumper().whileHeld(new CubeTracker());
