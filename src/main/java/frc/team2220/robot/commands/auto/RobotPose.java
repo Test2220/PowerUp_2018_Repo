@@ -21,8 +21,8 @@ public class RobotPose {
 
             prev_dist = Robot.twilightDrive.getAvgPosition();
 
-            double x = curentDistance * Math.cos(Math.toRadians(currentAngle));
-            double y = curentDistance * Math.sin(Math.toRadians(currentAngle));
+            double x = curentDistance * Math.sin(Math.toRadians(currentAngle));
+            double y = curentDistance * Math.cos(Math.toRadians(currentAngle));
 
             prev_x += x;
             prev_y += y;
