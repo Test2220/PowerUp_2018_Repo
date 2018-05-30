@@ -44,7 +44,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
-        robotPose.startNotifier(1);
+        robotPose.startNotifier(0.02);
         lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         Compressor airCompressor = new Compressor();

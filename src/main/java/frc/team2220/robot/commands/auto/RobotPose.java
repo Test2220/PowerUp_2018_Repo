@@ -28,6 +28,7 @@ public class RobotPose {
             prev_y += y;
             SmartDashboard.putNumber("Current X", Converter.encTicksToIn(prev_x));
             SmartDashboard.putNumber("Current Y", Converter.encTicksToIn(prev_y));
+            SmartDashboard.putNumber("Actual Path Heading", Math.toRadians(Robot.twilightDrive.navX.getAngle()));
 
         });
     }

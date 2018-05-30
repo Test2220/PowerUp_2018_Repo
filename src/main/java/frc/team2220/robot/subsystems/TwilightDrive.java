@@ -180,7 +180,7 @@ public class TwilightDrive extends Subsystem {
     }
 
     public void curvatureDrive(double xVal, double zVal) {
-        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 1, Converter.deadzone(zVal) * 1, true);
+        TwilightDrive.curvatureDrive(Converter.deadzone(xVal) * 0.5, Converter.deadzone(zVal) * 1, true);
 
     }
 
