@@ -10,7 +10,6 @@ package frc.team2220.robot;
 import com.ctre.CANTalon;
 import com.mach.LightDrive.Color;
 import com.mach.LightDrive.LightDriveCAN;
-import com.mach.LightDrive.LightDrivePWM;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Command;
@@ -19,6 +18,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team2220.robot.commands.auto.PreMatchDefault;
 import frc.team2220.robot.commands.drive.CubeTracker;
+import frc.team2220.robot.commands.drive.RobotPose;
 import frc.team2220.robot.commands.leftstart.LeftAutoHelper;
 import frc.team2220.robot.commands.middlestart.MiddleAutoHelper;
 import frc.team2220.robot.commands.miscellaneous.ExampleSubsystem;
@@ -40,6 +40,8 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
 
+    private RobotPose robotPose = new RobotPose();
+
     public LightDriveCAN lightDriveCAN;
 
 
@@ -51,6 +53,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
+        robotPose.startNotifier(0.01);
         lightDriveCAN = new LightDriveCAN();
         oi = new OI();
         tempLogger = new TemperatureLogger(new CANTalon[] {

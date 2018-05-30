@@ -15,6 +15,12 @@ public class Converter {
 
     }
 
+    public static double encTicksToIn(double encoder_distance) {
+
+        return (encoder_distance / Constants.encTickPerRev_real) * Constants.wheelCircumferenceIn;
+
+    }
+
     public static double degreesTurnToEncTicks(double degreesToTurn) {
 
         double circumFt = Constants.frameWidthFt * Math.PI;

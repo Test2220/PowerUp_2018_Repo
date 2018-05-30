@@ -5,6 +5,7 @@ public class Constants {
     //All Measurements in Inches unless specified otherwise
 
     public static int encTickPerRev = 1024; //THIS IS WRONG BUT DONT CHANgE IT CUZ ITS ACTUALLY 1440 BUT I WAS DUMB AND I TUNED IT
+    public static int encTickPerRev_real = 1440;
 
     public static double wheelDiameterIn = 4;
     public static double wheelDiameterMetres = 0.1016;
